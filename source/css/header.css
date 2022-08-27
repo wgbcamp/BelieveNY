@@ -1,0 +1,273 @@
+.header{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 22px;
+    height: 70px;
+    width: 100%;
+    max-width: 1620px;
+    color: white;
+    background-color: black;
+}
+
+.sticky{
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+.logo{
+    grid-column: 1;
+    padding-left: 7px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logoInner{
+    max-height: 42px;
+}
+
+.hamburger{
+    grid-column: 7;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    color: white;
+}
+
+.spannedMenu{
+    display: none;
+}
+
+.mobileMenu, .aboutMenu, .servicesMenu, .eventsMenu{
+    background-color: black;
+    color: white;
+    height: calc(100vh - 51px);
+    width: 100%;
+    position: absolute;
+    top: 51px;
+    transform: translateX(-100%);
+    display: grid;
+    grid-template-rows: 51px repeat(5, 70px);
+    grid-template-columns: 10% 80% 10%;
+    font-size: 24px;
+}
+
+.cancelMenu{
+    background-color: black;
+    color: white;
+    height: 51px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    transform: translateX(-100%);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.menuIn{
+    animation-name: transIn;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    transition-timing-function: ease-out;
+}
+
+.menuOut{
+    animation-name: transOut;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    transition-timing-function: ease-in;
+}
+
+.fadeIn{
+    animation-name: fadesIn;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    transition-timing-function: ease-out;
+}
+
+.fadeOut{
+    animation-name: fadesOut;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    transition-timing-function: ease-in;
+}
+
+@keyframes transIn{
+    0% {transform: translateX(-100%);
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+    }
+    100% {transform: translateX(0%);
+    opacity: 1;}
+}
+
+@keyframes transOut{
+    from {transform: translateX(0%);
+    opacity: 1;}
+    to {transform: translateX(-100%);
+    opacity: 0;}
+}
+
+@keyframes fadesOut{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes fadesIn{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.cat1{
+    grid-row: 2;
+}
+
+.cat2{
+    grid-row: 3;   
+}
+
+.cat3{
+    grid-row: 4;  
+}
+
+.cat4{
+    grid-row: 5;  
+}
+
+.cat5{
+    grid-row: 6;  
+}
+
+.cat1, .cat2, .cat3, .cat4, .cat5{
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+}
+
+.aArrow, .bArrow, .cArrow, .xCancel{
+    grid-column: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aArrow{
+    grid-row: 2; 
+}
+.bArrow{
+    grid-row: 3; 
+}
+.cArrow{
+    grid-row: 4; 
+}
+.xCancel{
+    grid-row: 1;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.spannedHeader{
+    background-color: pink;
+    width: 100%;
+    height: 30px;
+}
+
+.spannedItems{
+    background-color: grey;
+    width: 100%;
+    height: 250px;
+    display: grid;
+    grid-template-columns: 120px 1fr 780px;}
+
+.aboutSpan, .servicesSpan, .eventsSpan{
+    display: none;
+    grid-template-rows: repeat(4, 1fr);
+    width: 350px;
+    height: 250px;
+    background-color: white;
+    color: black;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: absolute;
+    top: 70px;
+    box-shadow:  5px 10px 40px -2px rgba(0, 0, 0, 0.25);
+}
+
+.sCat1, .sCat2, .sCat3, .sCat4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    font-size: 20px;
+}
+
+.sCat1{
+    grid-row: 1;
+}
+
+.sCat2{
+    grid-row: 2;
+}
+
+.sCat3{
+    grid-row: 3;
+}
+
+.sCat4{
+    grid-row: 4;
+}
+
+.showSpanGrid{
+    display: grid;
+}
+
+/*above 1000*/
+@media only screen and (min-width: 1000px) {
+    .header{
+        grid-template-columns: 1fr;         
+    }
+
+    .hamburger, .cancelMenu{
+        display: none;
+    }
+
+    .spannedMenu{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-column: 1;
+    }
+
+    .category1, .category2, .category3, .category4, .category5{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        position: relative;
+    }
+
+    .category5{   
+        
+    }
+
+    .category5a{
+        background-color: #553fa4;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobileMenu, .aboutMenu, .servicesMenu, .eventsMenu{
+        display: none;
+    }
+
+
+}
