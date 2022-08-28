@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import "../../css/header.css";
+import "./header.css";
 import BNYLogoCircle from "../../images/BNYLogoFull-02.png";
 
 const Header = () => {

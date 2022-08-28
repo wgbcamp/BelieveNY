@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import "../../css/main.css";
+import "./main.css";
 import House from "../../images/House.webp";
 import atRiskHelp from "../../images/AtRiskHelp.webp";
 import recoveryIcon from "../../images/RecoveryIcon.webp";
@@ -9,6 +9,7 @@ import openSpaceLogo from "../../images/OpenSpaceLogoProfilePic.webp";
 import folksAndFood from "../../images/folksAndFood.webp";
 import Header from './header';
 import Footer from './footer';
+import VolunteerBox from './volunteerBox';
 
 
 
@@ -82,17 +83,6 @@ const App = () => {
                         </div>
                     </div>
                 </div>
-            {/* <div className="statementContainer">
-                <div className="statement">
-                Now is the time to advance our city, and the lives of New Yorkers.
-                </div>
-                <div className="statePhotoContainer">
-                    <img src={folksAndFood} className="statementPhoto"></img>
-                </div>
-            </div> */}
-            {/* <div className="videoContainer">
-                <iframe width="100%" height="100%" src="https://video.wixstatic.com/video/3666d4_adaf4ae111ef4b6bb0809e2a93ead6d4/1080p/mp4/file.mp4" ></iframe>
-            </div> */}
                 <div className='bigStatement'>     
                     <p>
                     Believe New York is on a mission—to improve the lives of all individuals and families in New York City.
@@ -107,22 +97,26 @@ const App = () => {
                     
                         <div className='catBox'>
                             <div className='catGrid'> 
-                                <div className="catText">The <g className="t1">Open Space</g> offers a safe place to <g className="t1">speak anonymously</g>.</div>
+                            <div className="gridTitle">The Open Space</div>
+                                <div className="catText"> A safe place to speak anonymously.</div>
+                            </div>
+                        </div>
+                        <div className='catBox'>
+                            <div className='catGrid'>
+                            <div className="gridTitle">Contact Us</div>
+                                <div className="catText">Email or by phone for immediate assistance.</div>
+                            </div>
+                        </div>
+                        <div className='catBox'>
+                            <div className='catGrid'>
+                            <div className="gridTitle">Food First</div> 
+                                <div className="catText">Donate your essential items on your own schedule.</div>
                             </div>
                         </div>
                         <div className='catBox'>
                             <div className='catGrid'> 
-                                <div className="catText"><g className="t2">Contact us by e-mail</g> or <g className="t2">phone</g> for immediate assistance.</div>
-                            </div>
-                        </div>
-                        <div className='catBox'>
-                            <div className='catGrid'> 
-                                <div className="catText"><g className="t3">Donate your essential items</g> on your own schedule through <g className="t3">Food First</g>.</div>
-                            </div>
-                        </div>
-                        <div className='catBox'>
-                            <div className='catGrid'> 
-                                <div className="catText"><g className="t4">Get involved</g> with community clean-up events and <g className="t4">build sustainable solutions</g>.</div>
+                            <div className="gridTitle">Get Involved</div>
+                                <div className="catText">Join community clean-up events and build sustainable solutions.</div>
                             </div>
                         </div>  
                 </div>
@@ -150,19 +144,7 @@ const App = () => {
                     </div>
                 </div>
                 </div>
-                <div className="volGrid borderBottom">
-                    <img src={folksAndFood} className="slideshow3"></img>
-                    <div className="volCol2">
-                    <div className="volTitle">Become a Volunteer</div>
-                    <div className="volText1">If you'd like to volunteer with us, and help improve the lives of New Yorkers, we'd love to hear from you!</div>
-                    <div className="volText2">Our volunteers work directly with people in need, creative social media posts, and help with new fundraising efforts. If you think you'd be a great fit don't hesitate to apply!</div>
-                    <div className="volBtnOut">
-                        <div className="volBtnIn">
-                        Volunteer
-                        </div>
-                    </div>
-                    </div>
-                </div>
+                <VolunteerBox app={{folksAndFood}}/>
                 
 
 
