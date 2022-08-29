@@ -1,7 +1,6 @@
 import React from 'react'
-
-import "./footer.css"
-import BNYLogoFull from "../../images/BNYLogoFull-02.png"
+import "../css/footer.css"
+import BNYLogoFull from "../images/BNYLogoFull-02.png"
 const Footer = () => {
 
     return(

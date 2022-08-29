@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import "./header.css";
-import BNYLogoCircle from "../../images/BNYLogoFull-02.png";
+import { Link } from 'react-router-dom'
+import "../css/header.css";
+import BNYLogoCircle from "../images/BNYLogoFull-02.png";
 
 const Header = () => {
 
@@ -67,11 +68,11 @@ const Header = () => {
             <div className={`header`}>
                 {/* Spanned menu */}
                 <div className="spannedMenu">
-                    <div className="logo"><img src={BNYLogoCircle} className="logoInner"/></div>
+                    <Link to="/" className="logo"><img src={BNYLogoCircle} className="logoInner"/></Link>
                     
                     <div className="category1" onMouseEnter={() => spanDropDown("about")} onMouseLeave={() => spanDropDown("about")}>About
                         <div className={`aboutSpan ${aboutSpanPres ? "showSpanGrid" : ""}`}>
-                            <div className="sCat1">About Us</div>
+                            <Link to="/aboutUs" className="sCat1">About Us</Link>
                             <div className="sCat2">Diversity and Inclusion</div>
                             <div className="sCat3">Founding Supporters</div>
                             <div className="sCat4">How We Help</div>

@@ -206,6 +206,8 @@
     align-items: center;
     word-wrap: break-word;
     font-size: 20px;
+    text-decoration: none;
+    color: black;
 }
 
 .sCat1{

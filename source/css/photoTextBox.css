@@ -1,0 +1,62 @@
+.mScontainer{
+    color: white;
+    /* background: linear-gradient(to right top, rgb(221, 64, 200), rgb(255, 120, 9)); */
+    background-color: #f2f2f2;
+    color: black;
+    display: grid;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.slideshow1{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.padText{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 35px;
+}
+
+/* in between 700 & 1200 */
+@media only screen and (min-width: 700px) and (max-width: 1200px) {
+
+    .textGrid1{
+        display: grid;
+        margin: 25px; 
+    } 
+}
+
+/* above 1200 */
+@media only screen and (min-width: 1200px) {
+
+    .mScontainer{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        padding-right: 0px;
+        line-height: 35px;
+        overflow: hidden;
+    }
+
+    .textGrid1{
+        grid-column: 2;
+    }
+
+    .slideshow1{
+        grid-column: 1;
+    }
+
+    .textGrid1{
+        display: grid;
+        margin: 25px; 
+    }
+}
+

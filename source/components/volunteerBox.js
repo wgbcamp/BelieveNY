@@ -1,5 +1,5 @@
 import React from 'react'
-import "./main.css";
+import "../css/home.css";
 
 const volunteerBox = (props) => {
     return(

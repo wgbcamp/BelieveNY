@@ -6,7 +6,8 @@ module.exports = {
     entry: './source/index.js',
     output: {
       path: path.join(__dirname, '/build'),
-      filename: 'bundlefile.js'
+      filename: 'bundlefile.js',
+      publicPath: '/'
     },
     module: {
         rules: [
@@ -20,22 +21,16 @@ module.exports = {
             {
                 test:/\.css$/,
                 exclude: /node_modules/,
-                use: [
-                    "style-loader",
-                        {
-                            loader: "css-loader",
-                            options: {
-                                importLoaders: 1,
-                                modules: true,
-                            },
-                        },
-                    ]
+                use: ["style-loader", "css-loader"]
             },
             {
                 test:/\.(png|jpg|webp)$/i,
                 type: 'asset/resource'
             }
         ]
+    },
+    devServer: {
+        historyApiFallback: true,
     },
     plugins: [
         new HtmlWebpackPlugin({

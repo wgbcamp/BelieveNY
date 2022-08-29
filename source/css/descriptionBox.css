@@ -1,0 +1,14 @@
+.dContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.dText{
+    background-color: #f2f2f2;
+    text-align: center;
+    font-size: 18px;
+    max-width: 85%;
+    border-radius: 15px;
+    line-height: 30px;
+    padding: 10px;
+}

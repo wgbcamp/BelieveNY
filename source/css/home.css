@@ -31,7 +31,7 @@ body{
 }
 
 .titleBackground{
-    background-image: url("../../images/folksAndFood.webp");
+    background-image: url("../images/folksAndFood.webp");
     background-position: 50% 75%;
     height: 750px;
     border-bottom-left-radius: 10px;
