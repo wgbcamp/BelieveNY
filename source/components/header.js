@@ -79,27 +79,28 @@ const Header = () => {
                     </div>
                     <div className="category2" onMouseEnter={() => spanDropDown("services")} onMouseLeave={() => spanDropDown("services")}>Our Services
                         <div className={`servicesSpan ${servicesSpanPres ? "showSpanGrid" : ""}`}>
-                            <div className="sCat1">Get Help</div>
-                            <div className="sCat2">Food First</div>
-                            <div className="sCat3">The Open Space</div>
-                            <div className="sCat4">Environmental Projects</div>
+                            <Link to="/getHelp" className="sCat1">Get Help</Link>
+                            <Link to="/foodFirst" className="sCat2">Food First</Link>
+                            <Link to="/theOpenSpace" className="sCat3">The Open Space</Link>
+                            <Link to="/environmentalProjects" className="sCat4">Environmental Projects</Link>
                         </div>
                     </div>
                     <div className="category3" onMouseEnter={() => spanDropDown("events")} onMouseLeave={() => spanDropDown("events")}>Events
                         <div className={`eventsSpan ${eventsSpanPres ? "showSpanGrid" : ""}`}>
-                            <div className="sCat1">Upcoming Events</div>
-                            <div className="sCat2">Past Events</div>
-                            <div className="sCat3">Event Sponsors</div>
-                            <div className="sCat4">Donate to Special Events Fund</div>
+                            <Link to="/upcomingEvents" className="sCat1">Upcoming Events</Link>
+                            <Link to="/pastEvents" className="sCat2">Past Events</Link>
+                            <Link to="/eventSponsors" className="sCat3">Event Sponsors</Link>
+                            <Link to="/specialEventsFund" className="sCat4">Donate to Special Events Fund</Link>
                         </div>
                     </div>
-                    <div className="category4">Volunteer</div>
-                    <div className="category5">
+                    <Link to="/volunteer" className="category4">Volunteer</Link>
+                    <Link to="/donate" className="category5">
                         <div className='category5a'>Donate</div>
-                        </div>
+                        </Link>
                 </div>
 
                 {/* Mobile menu */}
+                <Link to="/" className="logoMobile"><img src={BNYLogoCircle} className="logoInner"/></Link>
                 <div className={`hamburger ${dropdownPresence ? "fadeOut" : dropdownPresence === 0 ? "" : "fadeIn"}`} onClick={() => dropDown("main")}>
                     <div className="fa-solid fa-bars fa-2xl">
                     </div>
@@ -120,24 +121,23 @@ const Header = () => {
             </div>
 
             <div className={`aboutMenu ${aboutPresence ? "menuIn" : aboutPresence === 0 ? "" : "menuOut"}`}>
-                <div className="cat1">About Us</div>
-                <div className="cat2">Diversity and Inclusion</div>
-                <div className="cat3">Founding Supporters</div>
-                <div className="cat4">How We Help</div>
+                <Link to="/aboutUs" className="cat1">About Us</Link>
+                <Link to="/diversityAndInclusion" className="cat2">Diversity and Inclusion</Link>
+                <Link to="/foundingSupporters" className="cat3">Founding Supporters</Link>
             </div>
 
             <div className={`servicesMenu ${servicesPresence ? "menuIn" : servicesPresence === 0 ? "" : "menuOut"}`}>
-                <div className="cat1">Get Help</div>
-                <div className="cat2">Food First</div>
-                <div className="cat3">The Open Space</div>
-                <div className="cat4">Environmental Projects</div>
+                <Link to="/getHelp" className="cat1">Get Help</Link>
+                <Link to="/foodFirst" className="cat2">Food First</Link>
+                <Link to="/theOpenSpace" className="cat3">The Open Space</Link>
+                <Link to="/environmentalProjects" className="cat4">Environmental Projects</Link>
             </div>
 
             <div className={`eventsMenu ${eventsPresence ? "menuIn" : eventsPresence === 0 ? "" : "menuOut"}`}>
-                <div className="cat1">Upcoming Events</div>
-                <div className="cat2">Past Events</div>
-                <div className="cat3">Event Sponsors</div>
-                <div className="cat4">Donate to Special Events Fund</div>
+                <Link to="/upcomingEvents" className="cat1">Upcoming Events</Link>
+                <Link to="/pastEvents" className="cat2">Past Events</Link>
+                <Link to="/eventSponsors" className="cat3">Event Sponsors</Link>
+                <Link to="/specialEventsFund" className="cat4">Donate to Special Events Fund</Link>
             </div>
         </div>
     )

@@ -41,17 +41,17 @@ body{
     color: white;
 }
 
-    .tbAlpha{
-    line-height: 120px;
-    background-color: rgba(0, 0, 0, 0.55);
-    height: 100%;
-    width:100%;
-    display: grid;
-    grid-template-columns: 1fr 80% 1fr;
-    grid-template-rows: 50% 1fr;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    }
+.tbAlpha{
+line-height: 120px;
+background-color: rgba(0, 0, 0, 0.55);
+height: 100%;
+width:100%;
+display: grid;
+grid-template-columns: 1fr 80% 1fr;
+grid-template-rows: 50% 1fr;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+}
 
 .tbText{
     grid-column: 2;
@@ -152,7 +152,7 @@ body{
     font-weight: 400;
     padding-left: 45px;
     padding-right: 45px;
-    padding-bottom: 145px;
+    padding-bottom: 70px;
 }
 
 .mScontainer{
@@ -165,6 +165,7 @@ body{
     line-height: 32px;
     margin-bottom: 25px;
     overflow: hidden;
+    width: 90%;
 }
 
 .borderTop{
@@ -221,6 +222,7 @@ body{
     margin-bottom: 25px;
     overflow: hidden;
     background-color: #f2f2f2;
+    width: 90%;
 }
 
 .volTitle, .volText1, .volText2, .volBtnOut{
@@ -248,6 +250,8 @@ body{
 .volText1, .volText2{
     font-size: 22px;
     line-height: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .volCol2{
@@ -307,6 +311,10 @@ body{
         line-height: unset;
     }
 
+    .subStatement{
+        padding-bottom: 145px;
+    }
+
     .statePhotoContainer{
         height: 300px;
     }
@@ -321,6 +329,7 @@ body{
         padding-right: 0px;
         line-height: 35px;
         overflow: hidden;
+        width: unset;
     }
 
     .textGrid1{
@@ -332,11 +341,10 @@ body{
     }
 
     .slideshow1{
-
         grid-column: 1;
     }
-    .slideshow2{
 
+    .slideshow2{
         grid-column: 2;
     }
 
@@ -364,6 +372,7 @@ body{
         grid-template-rows: 1fr;
         color: white;
         margin-bottom: 25px;
+        width: unset;
     }
 
     .slideshow3{

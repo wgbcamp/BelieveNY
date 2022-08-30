@@ -93,31 +93,35 @@ const Home = () => {
                         </div>  
                 </div>
 
-
-                <div className="mScontainer shiftLeft borderTop">
-                <img src={folksAndFood} className="slideshow1"></img>
-                <div className="textGrid1">
-                    <div className='padText' id="text1">
-                    Domestic violence, homelessness, drug abuse, lack of physical and mental wellness, and malnutrition have been at devastatingly high rates in our city for far too long. It's heartbreaking, we all deserve better. 
+                <div className="simpleFlex">
+                    <div className="mScontainer shiftLeft borderTop">
+                    <img src={folksAndFood} className="slideshow1"></img>
+                    <div className="textGrid1">
+                        <div className='padText' id="text1">
+                        Domestic violence, homelessness, drug abuse, lack of physical and mental wellness, and malnutrition have been at devastatingly high rates in our city for far too long. It's heartbreaking, we all deserve better. 
+                        </div>
+                        <div className='padText' id="text2">
+                        Now is the time to advance our city, and the lives of New Yorkers. Believe New York was founded by a native New Yorker who has seen hardship, struggle and loss around every corner of the five boroughs.
+                        </div>
                     </div>
-                    <div className='padText' id="text2">
-                    Now is the time to advance our city, and the lives of New Yorkers. Believe New York was founded by a native New Yorker who has seen hardship, struggle and loss around every corner of the five boroughs.
-                    </div>
-                </div>
-                </div>
-                <div className="mScontainer shiftRight">
-                <img src={folksAndFood} className="slideshow2"></img>
-                <div className="textGrid2">                    
-                    <div className='padText' id="text3">
-                    We started with the goal to make New York City a home where we all can be safe, thrive, and live with our family in peace, prosperity and justice. Together, we will fulfill that goal, and make our city the safest and happiest place in the world for all to live, achieve and grow. 
-                    </div>
-                    <div className='padText' id="text4">
-                    Join our movement, because we believe in all of us.
                     </div>
                 </div>
+                <div className="simpleFlex">
+                    <div className="mScontainer shiftRight">
+                    <img src={folksAndFood} className="slideshow2"></img>
+                    <div className="textGrid2">                    
+                        <div className='padText' id="text3">
+                        We started with the goal to make New York City a home where we all can be safe, thrive, and live with our family in peace, prosperity and justice. Together, we will fulfill that goal, and make our city the safest and happiest place in the world for all to live, achieve and grow. 
+                        </div>
+                        <div className='padText' id="text4">
+                        Join our movement, because we believe in all of us.
+                        </div>
+                    </div>
+                    </div>
                 </div>
-                <VolunteerBox app={{folksAndFood}}/>
-                
+                <div className="simpleFlex">
+                    <VolunteerBox app={{folksAndFood}}/>
+                </div>
 
 
             </div>
