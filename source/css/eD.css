@@ -1,0 +1,34 @@
+.eDflex{
+    display: flex;
+    justify-content: center;
+}
+
+.eDgrid{
+    width: 80%;    
+}
+
+.eDtitle{
+    font-size: 20px;
+}
+
+.eDcontent{
+    line-height: 30px;
+    
+}
+
+
+
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+    
+    .eDgrid{
+        
+    }
+}
+
+@media screen and (min-width: 1200px){
+
+    .eDgrid{
+        width: 90%;
+    }
+
+}

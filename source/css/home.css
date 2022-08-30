@@ -257,7 +257,7 @@ body{
 }
 
 /* in between 700 & 1200 */
-@media only screen and (min-width: 700px) and (max-width: 1200px) {
+@media screen and (min-width: 700px) and (max-width: 1200px) {
 
     .tbText{
         font-size: 48px;
@@ -285,7 +285,7 @@ body{
 }
 
 /* above 1200 */
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
 
     .tbText{
         font-size: 75px;

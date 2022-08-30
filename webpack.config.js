@@ -26,6 +26,12 @@ module.exports = {
             {
                 test:/\.(png|jpg|webp)$/i,
                 type: 'asset/resource'
+            },
+            {
+                test:/\.ico$/,
+                use: {
+                    loader: 'file-loader'
+                }
             }
         ]
     },
@@ -34,7 +40,9 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './source/index.html'
-        })
+            template: './source/index.html',
+            favicon: './source/favicon.ico',
+            filename: './index.html'
+        }),
     ]
   }

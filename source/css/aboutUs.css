@@ -9,3 +9,36 @@
 .logoResize{
     width: 350px;
 }
+
+.cardGrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+}
+
+.bylawTitle{
+    font-size: 38px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 90px;
+    padding-bottom: 70px;
+}
+
+.bottomPad{
+    padding-bottom: 90px;
+}
+
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+  
+    .cardGrid{
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media screen and (min-width: 1200px){
+    
+    .cardGrid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
