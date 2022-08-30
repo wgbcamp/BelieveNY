@@ -10,7 +10,7 @@ const easyDropdown = (props) => {
             <div className="eDgrid">
                 <div className="eDtitle" onClick={() => toggleDD(!dDstatus)}>
                     {}
-                    {props.info.title} <i class="fa-solid fa-plus fa-md"></i>
+                    {props.info.title} <i class="fa-solid fa-plus fa-sm"></i>
                 </div>
                 <div className="eDcontent">
                     {dDstatus ? <div></div> : props.info.content}

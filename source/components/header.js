@@ -73,9 +73,8 @@ const Header = () => {
                     <div className="category1" onMouseEnter={() => spanDropDown("about")} onMouseLeave={() => spanDropDown("about")}>About
                         <div className={`aboutSpan ${aboutSpanPres ? "showSpanGrid" : ""}`}>
                             <Link to="/aboutUs" className="sCat1">About Us</Link>
-                            <div className="sCat2">Diversity and Inclusion</div>
-                            <div className="sCat3">Founding Supporters</div>
-                            <div className="sCat4">How We Help</div>
+                            <Link to="/diversityAndInclusion" className="sCat2">Diversity and Inclusion</Link>
+                            <Link to="/foundingSupporters" className="sCat3">Founding Supporters</Link>
                         </div>
                     </div>
                     <div className="category2" onMouseEnter={() => spanDropDown("services")} onMouseLeave={() => spanDropDown("services")}>Our Services

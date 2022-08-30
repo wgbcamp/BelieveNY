@@ -1,0 +1,37 @@
+.resizeImage{
+    width: 240px;
+    height: 261px;
+    background-image: url("../images/BNYCitySmall.png");
+}
+
+.thankYou{
+    text-align: center;
+}
+
+@media screen and (min-width: 1200px){
+
+    .fSgrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .thankYou{
+        grid-column: 4;
+        max-width: 434px;
+        text-align: left;
+    }
+
+    .col1breakpoint{
+        display: grid;
+    }
+
+    .padTop40{
+    }
+
+    .resizeImage{
+        width: 547px;
+        height: 710px;
+        background-image: url("../images/BNYCity.png");
+    }
+}

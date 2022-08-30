@@ -1,0 +1,52 @@
+.simpleTitle{
+    font-size: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.simpleFlex{
+    display: flex;
+    justify-content: center;
+}
+
+.size18Font{
+    font-size: 18px;
+}
+
+.lineHeight30{
+    line-height: 30px;
+}
+
+.padding50{
+    padding: 50px;
+}
+
+.padding20{
+    padding: 20px;
+}
+
+.maxWidth{
+    max-width: 1620px;
+}
+
+.width80Per{
+    width: 80%;
+}
+
+.padBottom40{
+    padding-bottom: 40px;
+}
+
+.padTop40{
+    padding-top: 40px;
+}
+
+ul.no-bullets{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.italicize{
+    font-style: italic;
+}
