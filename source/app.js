@@ -7,6 +7,8 @@ import AboutUs from './pages/aboutUs';
 import DiversityInclusion from './pages/diversityInclusion';
 import FoundingSupporters from './pages/foundingSupporters';
 import GetHelp from './pages/getHelp';
+import FoodFirst from './pages/foodFirst';
+import TheOpenSpace from './pages/theOpenSpace';
 
 function App(){
     return(
@@ -16,9 +18,9 @@ function App(){
                 <Route path="/aboutUs/" element={<AboutUs/>}/>
                 <Route path="/diversityAndInclusion/" element={<DiversityInclusion/>}/>
                 <Route path="/foundingSupporters/" element={<FoundingSupporters/>}/>
-                <Route path="/getHelp" element={<getHelp/>}/>
-                <Route path="/foodFirst"/>
-                <Route path="/theOpenSpace"/>
+                <Route path="/getHelp" element={<GetHelp/>}/>
+                <Route path="/foodFirst" element={<FoodFirst/>}/>
+                <Route path="/theOpenSpace" element={<TheOpenSpace/>}/>
                 <Route path="/environmentalProjects"/>
                 <Route path="/upcomingEvents"/>
                 <Route path="/pastEvents"/>

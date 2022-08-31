@@ -8,7 +8,7 @@ const diversityInclusion = () => {
         <div>
             <Header/>
             <div className="simpleFlex">
-                <div className="maxWidth dIsizing">
+                <div className="maxWidth width80Per">
                     <div className="padding20"></div>
                     <div className="simpleTitle"><u>We Believe In Diversity, Sensitivity, and Inclusivity</u>
                     </div>

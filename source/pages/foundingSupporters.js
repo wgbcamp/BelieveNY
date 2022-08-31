@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../components/header';
 import Footer from '../components/footer';
-import '../css/fS.css';
+import '../css/foundingSupporters.css';
 import BNYCity from '../images/BNYCity.png';
 
 const foundingSupporters = () => {
@@ -16,7 +16,7 @@ const foundingSupporters = () => {
                     </div>
                     <div className="col2breakpoint">
                     <div className="simpleFlex">
-                        <div className='simpleTitle'>OUR FOUNDING SUPPORTERS</div>
+                        <div className='ofsTitle simpleTitle'>OUR FOUNDING SUPPORTERS</div>
                     </div>
                     <div className="simpleFlex">
                         <div className="size18Font width80Per padBottom40 thankYou">The biggest thank you to all of the generous donors who contributed to get us started. You all are amazing and we appreciate every single one of you.</div>

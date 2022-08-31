@@ -57,10 +57,10 @@ const Footer = () => {
             
             <div></div>
             <div className="socialMedia">
-            <i class="fa-brands fa-square-facebook fa-2xl"></i>
-                <i class="fa-brands fa-square-twitter fa-2xl iconPad"></i>
-                <i class="fa-brands fa-square-instagram fa-2xl iconPad"></i>
-                <i class="fa-brands fa-square-youtube fa-2xl iconPad"></i>
+                <i className="fa-brands fa-square-facebook fa-2xl"></i>
+                <i className="fa-brands fa-square-twitter fa-2xl iconPad"></i>
+                <i className="fa-brands fa-square-instagram fa-2xl iconPad"></i>
+                <i className="fa-brands fa-square-youtube fa-2xl iconPad"></i>
             </div>
             <div className="copyright">©2021 by Believe New York Philanthropies, Inc.</div>
             </div>
