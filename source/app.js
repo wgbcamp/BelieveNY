@@ -9,6 +9,7 @@ import FoundingSupporters from './pages/foundingSupporters';
 import GetHelp from './pages/getHelp';
 import FoodFirst from './pages/foodFirst';
 import TheOpenSpace from './pages/theOpenSpace';
+import EnvironmentalProjects from './pages/environmentalProjects';
 
 function App(){
     return(
@@ -21,7 +22,7 @@ function App(){
                 <Route path="/getHelp" element={<GetHelp/>}/>
                 <Route path="/foodFirst" element={<FoodFirst/>}/>
                 <Route path="/theOpenSpace" element={<TheOpenSpace/>}/>
-                <Route path="/environmentalProjects"/>
+                <Route path="/environmentalProjects" element={<EnvironmentalProjects/>}/>
                 <Route path="/upcomingEvents"/>
                 <Route path="/pastEvents"/>
                 <Route path="/eventSponsors"/>
