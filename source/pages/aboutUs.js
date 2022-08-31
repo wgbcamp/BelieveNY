@@ -1,6 +1,4 @@
 import React from 'react'
-import Header from '../components/header';
-import Footer from '../components/footer';
 import DescriptionBox from '../components/descriptionBox';
 import PersonCard from '../components/personCard';
 import '../css/aboutUs.css';
@@ -58,7 +56,6 @@ const legal = [
 const aboutUs = () => {
     return(
         <div>
-            <Header/>
             <div className="mainContainer">
                 <div className="touchBarrier">
                 <div className="bigLogo">
@@ -77,7 +74,6 @@ const aboutUs = () => {
                 <div className="bottomPad"></div>
                 </div>
             </div>
-            <Footer/>
         </div>
     )
 }

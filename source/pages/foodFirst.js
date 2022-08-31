@@ -1,12 +1,9 @@
 import React from 'react'
-import Header from '../components/header'
-import Footer from '../components/footer'
 import '../css/foodFirst.css'
 
 const foodFirst = () => {
     return(
         <div>
-            <Header/>
             <div className="simpleFlex">
                 <div className="maxWidth width80Per">
                 <div className='ffBig centerText'>FOOD FIRST BY BELIEVE NEW YORK: 
@@ -45,7 +42,6 @@ const foodFirst = () => {
                 </div>
                 </div>
             </div>
-            <Footer/>
         </div>
     )
 }

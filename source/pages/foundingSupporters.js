@@ -1,13 +1,10 @@
 import React from 'react'
-import Header from '../components/header';
-import Footer from '../components/footer';
 import '../css/foundingSupporters.css';
 import BNYCity from '../images/BNYCity.png';
 
 const foundingSupporters = () => {
     return(
         <div>
-            <Header/>
             <div className="simpleFlex">
                 <div className="maxWidth fSgrid padTop40">
                     
@@ -54,7 +51,6 @@ const foundingSupporters = () => {
                     </div>
                 </div>
             </div>
-            <Footer/>
         </div>
     )
 }

@@ -2,6 +2,8 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './css/main.css';
 import './css/home.css';
+import Header from './components/header';
+import Footer from './components/footer';
 import Home from './pages/home.js';
 import AboutUs from './pages/aboutUs';
 import DiversityInclusion from './pages/diversityInclusion';
@@ -13,7 +15,10 @@ import EnvironmentalProjects from './pages/environmentalProjects';
 
 function App(){
     return(
+        <div>
+            
         <BrowserRouter>
+        <Header/>
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/aboutUs/" element={<AboutUs/>}/>
@@ -31,7 +36,9 @@ function App(){
                 <Route path="/donate"/>
                 <Route path="*"/>
             </Routes>
+        <Footer/>
         </BrowserRouter>
+        </div>
     )
 }
 export default App;

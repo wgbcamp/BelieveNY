@@ -1,12 +1,9 @@
 import React from 'react'
 import '../css/dI.css'
-import Header from '../components/header';
-import Footer from '../components/footer';
 
 const diversityInclusion = () => {
     return(
         <div>
-            <Header/>
             <div className="simpleFlex">
                 <div className="maxWidth width80Per">
                     <div className="padding20"></div>
@@ -25,7 +22,6 @@ const diversityInclusion = () => {
                     <div className="padding50"></div>
                 </div>
             </div>
-            <Footer/>
         </div>
     )
 }

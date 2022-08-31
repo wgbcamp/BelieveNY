@@ -49,18 +49,6 @@ const Header = () => {
     var [servicesSpanPres, toggleSSP] = useState(0);
     var [eventsSpanPres, toggleESP] = useState(0);
 
-    function spanDropDown(data){
-        if(data === "about"){
-            toggleASP(!aboutSpanPres);
-        }
-        if(data === "services"){
-            toggleSSP(!servicesSpanPres);
-        }
-        if(data === "events"){
-            toggleESP(!eventsSpanPres);
-        }
-
-    }
 
     return(
 
@@ -70,14 +58,14 @@ const Header = () => {
                 <div className="spannedMenu">
                     <Link to="/" className="logo"><img src={BNYLogoCircle} className="logoInner"/></Link>
                     
-                    <div className="category1" onMouseEnter={() => spanDropDown("about")} onMouseLeave={() => spanDropDown("about")}>About
+                    <div className="category1" onMouseEnter={() => toggleASP(true)} onMouseLeave={() => toggleASP(false)} onClick={() => toggleASP(false)}>About
                         <div className={`aboutSpan ${aboutSpanPres ? "showSpanGrid" : ""}`}>
                             <Link to="/aboutUs" className="sCat1">About Us</Link>
                             <Link to="/diversityAndInclusion" className="sCat2">Diversity and Inclusion</Link>
                             <Link to="/foundingSupporters" className="sCat3">Founding Supporters</Link>
                         </div>
                     </div>
-                    <div className="category2" onMouseEnter={() => spanDropDown("services")} onMouseLeave={() => spanDropDown("services")}>Our Services
+                    <div className="category2" onMouseEnter={() => toggleSSP(true)} onMouseLeave={() => toggleSSP(false)} onClick={() => toggleSSP(false)}>Our Services
                         <div className={`servicesSpan ${servicesSpanPres ? "showSpanGrid" : ""}`}>
                             <Link to="/getHelp" className="sCat1">Get Help</Link>
                             <Link to="/foodFirst" className="sCat2">Food First</Link>
@@ -85,7 +73,7 @@ const Header = () => {
                             <Link to="/environmentalProjects" className="sCat4">Environmental Projects</Link>
                         </div>
                     </div>
-                    <div className="category3" onMouseEnter={() => spanDropDown("events")} onMouseLeave={() => spanDropDown("events")}>Events
+                    <div className="category3" onMouseEnter={() => toggleESP(true)} onMouseLeave={() => toggleESP(false)} onClick={() => toggleESP(false)}>Events
                         <div className={`eventsSpan ${eventsSpanPres ? "showSpanGrid" : ""}`}>
                             <Link to="/upcomingEvents" className="sCat1">Upcoming Events</Link>
                             <Link to="/pastEvents" className="sCat2">Past Events</Link>
@@ -121,23 +109,23 @@ const Header = () => {
             </div>
 
             <div className={`aboutMenu ${aboutPresence ? "menuIn" : aboutPresence === 0 ? "" : "menuOut"}`}>
-                <Link to="/aboutUs" className="cat1">About Us</Link>
-                <Link to="/diversityAndInclusion" className="cat2">Diversity and Inclusion</Link>
-                <Link to="/foundingSupporters" className="cat3">Founding Supporters</Link>
+                <Link to="/aboutUs" className="cat1" onClick={() => {dropDown("about"); dropDown("main");} }>About Us</Link>
+                <Link to="/diversityAndInclusion" className="cat2" onClick={() => {dropDown("about"); dropDown("main");} }>Diversity and Inclusion</Link>
+                <Link to="/foundingSupporters" className="cat3" onClick={() => {dropDown("about"); dropDown("main");} }>Founding Supporters</Link>
             </div>
 
             <div className={`servicesMenu ${servicesPresence ? "menuIn" : servicesPresence === 0 ? "" : "menuOut"}`}>
-                <Link to="/getHelp" className="cat1">Get Help</Link>
-                <Link to="/foodFirst" className="cat2">Food First</Link>
-                <Link to="/theOpenSpace" className="cat3">The Open Space</Link>
-                <Link to="/environmentalProjects" className="cat4">Environmental Projects</Link>
+                <Link to="/getHelp" className="cat1" onClick={() => {dropDown("services"); dropDown("main");} }>Get Help</Link>
+                <Link to="/foodFirst" className="cat2" onClick={() => {dropDown("services"); dropDown("main");} }>Food First</Link>
+                <Link to="/theOpenSpace" className="cat3" onClick={() => {dropDown("services"); dropDown("main");} }>The Open Space</Link>
+                <Link to="/environmentalProjects" className="cat4" onClick={() => {dropDown("services"); dropDown("main");} }>Environmental Projects</Link>
             </div>
 
             <div className={`eventsMenu ${eventsPresence ? "menuIn" : eventsPresence === 0 ? "" : "menuOut"}`}>
-                <Link to="/upcomingEvents" className="cat1">Upcoming Events</Link>
-                <Link to="/pastEvents" className="cat2">Past Events</Link>
-                <Link to="/eventSponsors" className="cat3">Event Sponsors</Link>
-                <Link to="/specialEventsFund" className="cat4">Donate to Special Events Fund</Link>
+                <Link to="/upcomingEvents" className="cat1" onClick={() => {dropDown("events"); dropDown("main");} }>Upcoming Events</Link>
+                <Link to="/pastEvents" className="cat2" onClick={() => {dropDown("events"); dropDown("main");} }>Past Events</Link>
+                <Link to="/eventSponsors" className="cat3" onClick={() => {dropDown("events"); dropDown("main");} }>Event Sponsors</Link>
+                <Link to="/specialEventsFund" className="cat4" onClick={() => {dropDown("events"); dropDown("main");} }>Donate to Special Events Fund</Link>
             </div>
         </div>
     )

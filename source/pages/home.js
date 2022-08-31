@@ -1,8 +1,6 @@
 import React, { useState, useRef } from 'react'
 import "../css/home.css";
 import folksAndFood from "../images/folksAndFood.webp";
-import Header from '../components/header';
-import Footer from '../components/footer';
 import VolunteerBox from '../components/volunteerBox';
 
 
@@ -45,7 +43,6 @@ const Home = () => {
     return(
         
         <div id="root">
-            <Header/>
             <div className="mainContainer">  
             <div className='touchBarrier' onTouchStart={() => removeMenu()}>
                 <div className="titleBackground">
@@ -126,7 +123,6 @@ const Home = () => {
 
             </div>
             </div>
-            <Footer/>
             </div>
     )
 }

@@ -1,12 +1,9 @@
 import React from 'react'
-import Header from '../components/header'
-import Footer from '../components/footer'
 import '../css/theOpenSpace.css';
 
 const theOpenSpace = () => {
     return(
         <div>
-            <Header/>
             <div className="simpleFlex">
                 <div className="maxWidth width80Per">
                     <div className="size24Font padTop40 centerText lineHeight30">Are you living with loneliness? Sadness? Anxiety? Are you stressed about school, work or difficult relationships? Are you struggling with addictions, violence, or losses in your life?</div>
@@ -27,7 +24,6 @@ const theOpenSpace = () => {
 
                 </div>
             </div>
-            <Footer/>
         </div>
     )
 }

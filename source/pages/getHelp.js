@@ -1,13 +1,10 @@
 import React from 'react'
 import '../css/getHelp.css'
-import Header from '../components/header'
-import Footer from '../components/footer'
 
 const getHelp = () => {
     return(
         
         <div>
-            <Header/>
             <div className="simpleFlex">
                 <div className="maxWidth width80Per">
                     <div className="simpleTitle centerText">NEED HELP?</div>
@@ -40,7 +37,6 @@ const getHelp = () => {
                     </div>
                 </div>
             </div>
-            <Footer/>
         </div>
     )
     
