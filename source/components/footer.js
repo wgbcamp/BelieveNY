@@ -48,7 +48,7 @@ const Footer = () => {
             </div>
             <div className="lowerContainer">
                 <div className="phone">
-                    <div>Phone: (347) NYC-0011</div>
+                    <div>Text: (347) NYC-0011</div>
                 </div>
                 <div className="email">
                     <div>Email: GetHelp@BelieveNY.org</div>

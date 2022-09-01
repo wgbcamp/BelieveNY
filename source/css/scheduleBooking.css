@@ -1,0 +1,121 @@
+.calendarAppGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+}
+
+.appCol1{
+
+}
+
+.appCol2{
+
+}
+
+.mtSwitchGrid{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 190px 27px 27px 45px 63px;
+
+}
+
+.mtArrow{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mtToday{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dayGrid{
+    display: grid;
+    grid-template-columns: repeat(7, 90px);
+}
+
+.calendar{
+    display: grid;
+    grid-template-columns: repeat(7, 90px);
+    grid-template-rows: repeat(7, 60px);
+}
+
+.calTile{
+    border: 0.05rem solid gray;
+}
+
+.calTile:hover{
+    background-color: rgb(203, 255, 211);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.dayPeriodGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 184px);
+    column-gap: 40px;;
+}
+
+.infoBoxGrid{
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    width: 260px;
+    border: 0.05rem solid gray;
+}
+
+.infoBox{
+    display: grid;
+    grid-template-rows: 20px 40px 40px 80px 40px 20px;
+    
+  
+}
+
+.ibTitle{
+    font-size: 22px;
+}
+
+.timeInfo{
+    display: flex;
+    align-items: center;
+    border-bottom: 0.05rem solid gray;
+    width: 200px;
+}
+
+.dateSelected{
+    display: flex;
+    align-items: center;
+}
+
+.nextButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3c2d73;
+    color: white;
+}
+
+.morning, .afternoon, .evening{
+    color: black;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.mStyle, .aStyle, .eStyle{
+    height: 50px;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0.05rem solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mStyle:hover, .aStyle:hover, .eStyle:hover{
+    font-weight: 600;
+    border: 0.15rem solid black;
+}

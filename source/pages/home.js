@@ -72,8 +72,8 @@ const Home = () => {
                         </div>
                         <div className='catBox'>
                             <div className='catGrid'>
-                            <div className="gridTitle">Contact Us</div>
-                                <div className="catText">Email or by phone for immediate assistance.</div>
+                            <div className="gridTitle">Need Help?</div>
+                                <div className="catText">Call, text, or email for immediate assistance.</div>
                             </div>
                         </div>
                         <div className='catBox'>

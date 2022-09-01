@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../css/theOpenSpace.css';
 
 const theOpenSpace = () => {
@@ -12,9 +13,9 @@ const theOpenSpace = () => {
                     <div className='simpleFlex padTop40 padBottom40'>
                     {/* <div className='fixIcon'><i class="fa-solid fa-phone fa-2xl"></i>
                                 </div> */}
-                            <div className="submitButton1">
+                            <Link to="/scheduleBooking" className="submitButton1">
                               Book an Anonymous Session Here
-                            </div> 
+                            </Link> 
                     </div>
                     <div className="centerText size24Font">What is The Open Space?</div>
                     <div className="size18Font centerText lineHeight25 padTop40">The Open Space offers a safe, nonjudgemental, place to talk about what you are going through and remain anonymous. 100% free of charge and confidential. Sessions can be scheduled for up to 45 minutes and take place over the phone or Zoom, audio only. Regular sessions are welcome and encouraged!</div>

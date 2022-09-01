@@ -13,6 +13,10 @@
     font-size: 18px;
 }
 
+.size22Font{
+    font-size: 22px;
+}
+
 .size24Font{
     font-size: 24px;
 }
@@ -59,6 +63,10 @@
 
 .padBottom40{
     padding-bottom: 40px;
+}
+
+.padBottom20{
+    padding-bottom: 20px;
 }
 
 .padTop40{

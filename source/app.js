@@ -12,6 +12,7 @@ import GetHelp from './pages/getHelp';
 import FoodFirst from './pages/foodFirst';
 import TheOpenSpace from './pages/theOpenSpace';
 import EnvironmentalProjects from './pages/environmentalProjects';
+import ScheduleBooking from './pages/scheduleBooking';
 
 function App(){
     return(
@@ -28,6 +29,7 @@ function App(){
                 <Route path="/foodFirst" element={<FoodFirst/>}/>
                 <Route path="/theOpenSpace" element={<TheOpenSpace/>}/>
                 <Route path="/environmentalProjects" element={<EnvironmentalProjects/>}/>
+                <Route path="/scheduleBooking" element={<ScheduleBooking/>}/>
                 <Route path="/upcomingEvents"/>
                 <Route path="/pastEvents"/>
                 <Route path="/eventSponsors"/>
