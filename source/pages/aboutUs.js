@@ -71,7 +71,6 @@ const aboutUs = () => {
                 {legal.map((value) => (
                     <EasyDropdown info={{title: value.title, content: value.content}}/>
                 ))}
-                <div className="bottomPad"></div>
                 </div>
             </div>
         </div>

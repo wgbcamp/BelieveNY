@@ -18,7 +18,7 @@ const foundingSupporters = () => {
                     <div className="simpleFlex">
                         <div className="size18Font width80Per padBottom40 thankYou">The biggest thank you to all of the generous donors who contributed to get us started. You all are amazing and we appreciate every single one of you.</div>
                     </div>
-                    <div className="simpleFlex padBottom40 italicize lineHeight30">
+                    <div className="simpleFlex italicize lineHeight30">
                         <ul className="no-bullets">
                             <li>Denise Bulanchuk</li>
                             <li>Edward Murphy</li>

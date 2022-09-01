@@ -6,6 +6,10 @@
     grid-row: 3;
 }
 
+.heightFix{
+    height: 200px;
+}
+
 .ghEmail{
     grid-column: 2;
     grid-row: 1;
@@ -34,7 +38,7 @@
 
 .emailGrid{
     display: grid;
-    grid-template-rows: 50px 50px 50px 50px 150px 50px 70px 50px;
+    grid-template-rows: 50px 50px 50px 50px 150px 50px 70px 80px;
     row-gap: 5px;
 }
 

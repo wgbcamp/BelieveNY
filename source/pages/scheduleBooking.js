@@ -17,24 +17,38 @@ function monthDays(year, month){
     const dates = [];
 
     while (date.getMonth() === month){
-        dates.push(new Date(date));
+        dates.push(new Date(date).toString());
         date.setDate(date.getDate() + 1);
     }
     return dates;
 }
 const now = new Date();
-console.log(monthDays(now.getFullYear(), now.getMonth()));
+console.log(now.toDateString().slice(0,3));
 
-//early testing for getting today button to select proper tile
-console.log(new Date().getFullYear());
-console.log(new Date().getMonth());
-console.log(new Date().getDay());
-console.log(new Date());
+//finds starting day to place on calendar
+var todayValue;
+const week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+for (var i=0; i<week.length; i++){
+    if(now.toDateString().slice(0,3) === week[i]){
+        todayValue = i;
+    }
+}
 
+//pushes all the days of the current month into array
+var thisMonth = monthDays(now.getFullYear(), now.getMonth());
+console.log(thisMonth);
 
+//pushes the end of the previous month into the start of the thisMonth array equivalent to the open calendar spaces
+var prevMonth = monthDays(now.getFullYear(), now.getMonth()-1).slice(-todayValue);
+console.log(prevMonth);
+thisMonth = prevMonth.concat(thisMonth);
+console.log(thisMonth);
 
-
-
+//pushes the start of the next month to the end of the thisMonth array equivalent to the open calendar spaces
+var nextMonth = monthDays(now.getFullYear(), now.getMonth()+1).slice(0,42-thisMonth.length);
+console.log(nextMonth);
+thisMonth = thisMonth.concat(nextMonth);
+console.log(thisMonth);
 
 const scheduleBooking = () => {
 
@@ -92,48 +106,10 @@ const scheduleBooking = () => {
                                 <b>Sat.</b>
                             </div>
                             <div className="calendar">
-                                <div className="calTile">31</div>
-                                <div className="calTile">1</div>
-                                <div className="calTile">2</div>
-                                <div className="calTile til1">3</div>
-                                <div className="calTile">4</div>
-                                <div className="calTile">5</div>
-                                <div className="calTile">6</div>
-                                <div className="calTile">7</div>
-                                <div className="calTile">8</div>
-                                <div className="calTile">9</div>
-                                <div className="calTile">10</div>
-                                <div className="calTile">11</div>
-                                <div className="calTile">12</div>
-                                <div className="calTile">13</div>
-                                <div className="calTile">14</div>
-                                <div className="calTile">15</div>
-                                <div className="calTile">16</div>
-                                <div className="calTile">17</div>
-                                <div className="calTile">18</div>
-                                <div className="calTile">19</div>
-                                <div className="calTile">20</div>
-                                <div className="calTile">21</div>
-                                <div className="calTile">22</div>
-                                <div className="calTile">23</div>
-                                <div className="calTile">24</div>
-                                <div className="calTile">25</div>
-                                <div className="calTile">26</div>
-                                <div className="calTile">27</div>
-                                <div className="calTile">28</div>
-                                <div className="calTile">29</div>
-                                <div className="calTile">30</div>
-                                <div className="calTile">31</div>
-                                <div className="calTile">1</div>
-                                <div className="calTile">2</div>
-                                <div className="calTile">3</div>
-                                <div className="calTile">4</div>
-                                <div className="calTile">5</div>
-                                <div className="calTile">6</div>
-                                <div className="calTile">7</div>
-                                <div className="calTile">8</div>
-                                <div className="calTile">9</div>
-                                <div className="calTile">10</div>
+                                {thisMonth.map((value) => (
+                                    <div className="calTile">{value.slice(8,10)}</div>
+                                ))}
+                                
                             </div>
                             <div className='dayPeriodGrid'>
                                 <div className="morning">

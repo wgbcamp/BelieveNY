@@ -17,9 +17,8 @@ import ScheduleBooking from './pages/scheduleBooking';
 function App(){
     return(
         <BrowserRouter>
-        <div className='pageContainer'>
-            <Header/>
-                
+            <div className='pageContainer'>
+                <Header/>
                     <Routes>
                         <Route path="/" element={<Home/>}/>
                         <Route path="/aboutUs/" element={<AboutUs/>}/>
@@ -38,8 +37,8 @@ function App(){
                         <Route path="/donate"/>
                         <Route path="*"/>
                     </Routes>
-            <div className="contentWrapper"></div> 
-            <Footer/>
+                <div className="contentWrapper"></div> 
+                <Footer/>
             </div>
         </BrowserRouter>
     )

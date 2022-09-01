@@ -31,7 +31,7 @@ const getHelp = () => {
                         <input placeholder="Best callback time" className=""/>
                         <div className="placeholderCaptcha">PLACEHOLDER CAPTCHA</div>
                         <div className="simpleFlex">
-                            <div className="submitButton">Get Help</div>
+                            <div className="submitButton2">Get Help</div>
                         </div>
                         
                     </div>
