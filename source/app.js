@@ -16,31 +16,32 @@ import ScheduleBooking from './pages/scheduleBooking';
 
 function App(){
     return(
-        <div>
-            
         <BrowserRouter>
-        <Header/>
-            <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/aboutUs/" element={<AboutUs/>}/>
-                <Route path="/diversityAndInclusion/" element={<DiversityInclusion/>}/>
-                <Route path="/foundingSupporters/" element={<FoundingSupporters/>}/>
-                <Route path="/getHelp" element={<GetHelp/>}/>
-                <Route path="/foodFirst" element={<FoodFirst/>}/>
-                <Route path="/theOpenSpace" element={<TheOpenSpace/>}/>
-                <Route path="/environmentalProjects" element={<EnvironmentalProjects/>}/>
-                <Route path="/scheduleBooking" element={<ScheduleBooking/>}/>
-                <Route path="/upcomingEvents"/>
-                <Route path="/pastEvents"/>
-                <Route path="/eventSponsors"/>
-                <Route path="/donateToSpecialEventsFund"/>
-                <Route path="/volunteer"/>
-                <Route path="/donate"/>
-                <Route path="*"/>
-            </Routes>
-        <Footer/>
+        <div className='pageContainer'>
+            <Header/>
+                
+                    <Routes>
+                        <Route path="/" element={<Home/>}/>
+                        <Route path="/aboutUs/" element={<AboutUs/>}/>
+                        <Route path="/diversityAndInclusion/" element={<DiversityInclusion/>}/>
+                        <Route path="/foundingSupporters/" element={<FoundingSupporters/>}/>
+                        <Route path="/getHelp" element={<GetHelp/>}/>
+                        <Route path="/foodFirst" element={<FoodFirst/>}/>
+                        <Route path="/theOpenSpace" element={<TheOpenSpace/>}/>
+                        <Route path="/environmentalProjects" element={<EnvironmentalProjects/>}/>
+                        <Route path="/scheduleBooking" element={<ScheduleBooking/>}/>
+                        <Route path="/upcomingEvents"/>
+                        <Route path="/pastEvents"/>
+                        <Route path="/eventSponsors"/>
+                        <Route path="/donateToSpecialEventsFund"/>
+                        <Route path="/volunteer"/>
+                        <Route path="/donate"/>
+                        <Route path="*"/>
+                    </Routes>
+            <div className="contentWrapper"></div> 
+            <Footer/>
+            </div>
         </BrowserRouter>
-        </div>
     )
 }
 export default App;

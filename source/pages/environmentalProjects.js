@@ -2,7 +2,7 @@ import React from 'react'
 import '../css/environmentalProjects.css'
 import Tree from '../images/EnvironmentalImpact.webp'
 
-const unused = () => {
+const environmentalProjects = () => {
     return(
         <div>
             <div className="simpleFlex">
@@ -27,4 +27,4 @@ const unused = () => {
     )
 }
 
-export default unused;
+export default environmentalProjects;

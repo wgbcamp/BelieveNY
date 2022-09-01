@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&family=Raleway:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    overflow-x: hidden;  
+}
+
+.pageContainer{
+    position: relative;
+    min-height: 100vh;
+}
+
+.contentWrapper{
+    height: 756px;
+}
+
 .simpleTitle{
     font-size: 30px;
     padding-top: 40px;

@@ -3,8 +3,6 @@ import "../css/home.css";
 import folksAndFood from "../images/folksAndFood.webp";
 import VolunteerBox from '../components/volunteerBox';
 
-
-
 const Home = () => {
 
     var [burgerStatus, toggleBurgerStatus] = useState("");
@@ -42,9 +40,9 @@ const Home = () => {
 
     return(
         
-        <div id="root">
-            <div className="mainContainer">  
-            <div className='touchBarrier' onTouchStart={() => removeMenu()}>
+        <div>
+            <div className="simpleFlex">  
+            <div className='maxWidth' onTouchStart={() => removeMenu()}>
                 <div className="titleBackground">
                     <div className="tbAlpha">
                         <div className="tbText">

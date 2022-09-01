@@ -56,8 +56,8 @@ const legal = [
 const aboutUs = () => {
     return(
         <div>
-            <div className="mainContainer">
-                <div className="touchBarrier">
+            <div className="simpleFlex">
+                <div className="maxWidth">
                 <div className="bigLogo">
                         <img className="logoResize" src={BNYLogoFull}></img>
                 </div>
