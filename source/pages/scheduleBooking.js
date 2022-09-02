@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react'
 import '../css/scheduleBooking.css'
 
 const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+const longMonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const longWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
 //gets all the values of the days of the month
 function monthDays(year, month){
@@ -32,6 +36,7 @@ const scheduleBooking = () => {
     
     var [currMonth, changeMonth] = useState(0);
     var [currYear, changeYear] = useState(0);
+    var [superDate, setSuperDate] = useState(actualDate);
 
     function fillCalendar(data){
         if(data === 1){
@@ -58,7 +63,6 @@ const scheduleBooking = () => {
 
     //finds starting day to place on calendar
     var todayValue;
-    const week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     var startDateArray = monthDays(customYear, customMonth);
     for (var i=0; i<startDateArray.length; i++){
         if (startDateArray[i].slice(8,10) === "01"){
@@ -149,13 +153,14 @@ const scheduleBooking = () => {
     //maps the values to the calendar tiles
     newCalValue(thisMonth.map((value) => (
 
-        <div className={`calTile ${thisMonth.indexOf(value)} ${value.length > 5 ? value.slice(4,7).concat(value.slice(8,10)): "invalid"}`} onClick={() => toggleSelection(thisMonth.indexOf(value))} key={value.toString()}>{value.length > 5 ? value.slice(8,10) : value.slice(3,5)}</div>
+        <div className={`calTile ${thisMonth.indexOf(value)} ${value.slice(11,15)} ${value.length > 5 ? value.slice(4,7).concat(value.slice(8,10)): "invalid"}`} onClick={() => toggleSelection(thisMonth.indexOf(value), value.slice(0,15))} key={value.toString()}>{value.length > 5 ? value.slice(8,10) : value.slice(3,5)}</div>
     )));  
 }
 
-    function toggleSelection(data){
+    //changes css classes based on whether the date is valid and which valid dates have been selected
+    function toggleSelection(data1, data2){
         const containsCalTile = Array.from(document.getElementsByClassName("calTile"));
-        const containsClass = Array.from(document.getElementsByClassName(data));
+        const containsClass = Array.from(document.getElementsByClassName(data1));
         const containsInvalid = Array.from(document.getElementsByClassName("invalid"));
 
         containsCalTile.forEach(element => {
@@ -171,6 +176,16 @@ const scheduleBooking = () => {
         containsInvalid.forEach(element => {
             element.classList.remove("calTileSelected");
         })
+        
+        var dPart1 = longWeek[week.indexOf(data2.slice(0,3))] + ", ";
+        var dPart2 = longMonth[month.indexOf(data2.slice(4,7))] + " ";
+        var dPart3 = data2.slice(8,10) + ", ";
+        var dPart4 = data2.slice(11,15);
+        
+        if (dPart1 !== "undefined, "){
+            console.log(dPart1)
+            setSuperDate(dPart1.concat(dPart2.concat(dPart3.concat(dPart4))));
+        }
     }
     
     useEffect(() => {
@@ -187,12 +202,12 @@ const scheduleBooking = () => {
             <div className="simpleFlex">
                 <div className="maxWidth width80Per">
                     <div className="padTop40"></div>
-                    <div className="simpleTitle">Schedule Online</div>
+                    <div className="simpleTitle bookingTitle">Schedule Online</div>
                     <div className="padTop40"></div>
+                    <div className='simpleFlex'>
                     <div className="calendarAppGrid">
                         <div className="appCol1">
                             <div className="mtSwitchGrid padBottom40">
-                                {/* <div className="size22Font">{currMonth} {currYear}</div> */}
                                 <div className="size22Font">{currMonth} {currYear}</div>
                                 <div className="mtArrow" onClick={() =>fillCalendar(-1)}><i className="fa-solid fa-caret-left fa-xl"></i></div>
                                 <div className="mtArrow" onClick={() => fillCalendar(1)}><i className="fa-solid fa-caret-right fa-xl"></i></div>
@@ -213,6 +228,7 @@ const scheduleBooking = () => {
                              {calendarValue}
                                 
                             </div>
+                            <div className='simpleFlex'>
                             <div className='dayPeriodGrid'>
                                 <div className="morning">
                                     <div className=''></div>
@@ -234,6 +250,7 @@ const scheduleBooking = () => {
                                     ))}
                                 </div>
                             </div>
+                            </div>
                         </div>
                         <div className="appCol2">
                         <div className="infoBoxGrid">
@@ -244,13 +261,14 @@ const scheduleBooking = () => {
                                         The Open Space
                                     </div>
                                     <div className="timeInfo">45 min</div>
-                                    <div className="dateSelected">September 03, 2022</div>
+                                    <div className="dateSelected">{superDate}</div>
                                     <div className="nextButton">Next</div>
                                     <div></div>
                                 </div>
                                 <div></div>
                             </div>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>
