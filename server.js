@@ -2,7 +2,7 @@ var path = require("path");
 var express = require("express");
 
 var buildDirectory = path.join(__dirname, "build");
-var PORT = 3000;
+var PORT = 8080;
 var app = express();
 
 app.use(express.static(buildDirectory));
