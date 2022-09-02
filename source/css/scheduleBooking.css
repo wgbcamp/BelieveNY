@@ -1,7 +1,10 @@
+.bookingTitle{
+    text-align: center;
+}
+
 .calendarAppGrid{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 80px;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .appCol1{
@@ -9,7 +12,8 @@
 }
 
 .appCol2{
-
+   display: flex;
+   justify-content: center;
 }
 
 .mtSwitchGrid{
@@ -88,6 +92,7 @@
     display: grid;
     grid-template-columns: 10% 1fr 10%;
     width: 260px;
+    height: 240px;
     border: 0.05rem solid gray;
 }
 
@@ -142,4 +147,28 @@
 .mStyle:hover, .aStyle:hover, .eStyle:hover{
     font-weight: 600;
     border: 0.15rem solid black;
+}
+
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+  
+
+
+}
+
+@media screen and (min-width: 1200px){
+
+    .calendarAppGrid{
+        grid-template-rows: unset;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 80px;
+    }
+
+    .appCol2{
+        grid-column: 2;
+    }
+
+    .bookingTitle{
+        text-align: unset;
+    }
+
 }
