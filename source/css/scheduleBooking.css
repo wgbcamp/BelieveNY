@@ -54,6 +54,30 @@
     font-size: 18px;
 }
 
+.calTileSelected{
+    border: 0.15rem solid black;
+    background-color: rgb(44, 123, 44);
+    color: white;
+}
+
+.calTileSelected:hover{
+    border: 0.15rem solid black;
+    background-color: rgb(44, 123, 44);
+    color: white;
+}
+
+.invalid{
+    border: 0.05rem solid rgb(230, 230, 230);
+    color: rgb(230, 230, 230);
+}
+
+.invalid:hover{
+    background-color: unset;
+    font-size: unset;
+    font-weight: unset;
+
+}
+
 .dayPeriodGrid{
     display: grid;
     grid-template-columns: repeat(3, 184px);
