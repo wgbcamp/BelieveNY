@@ -106,24 +106,25 @@ const scheduleBooking = () => {
     for (var i=0; i<thisMonth.length; i++){
         var y = month.indexOf(thisMonth[i].slice(4,7));
         var z = month.indexOf(actualDate.slice(4,7));
-        var e = week.indexOf(thisMonth[i].slice(0,3));
-        var r = week.indexOf(actualDate.slice(0,3));
+        var e = thisMonth[i].slice(8,10);
+        var r = actualDate.slice(8,10);
         var cMonth = month.indexOf(thisMonth[i].slice(4,7));
         var aMonth = month.indexOf(actualDate.slice(4,7));
         var cYear = thisMonth[i].slice(11,15);
         var aYear = actualDate.slice(11,15);
         var g = false;
 
-        //invalidates previous months
+        console.log("test")
+        console.log(thisMonth[i].slice(0,15))
+
+
+        //invalidates days of previous months
         if ( y < z && (cYear <= aYear)){
+            console.log(thisMonth[i].slice(4,7))
             g = true;
         }
-        //invalidates previous day
-        if ( (e < r) && ( thisMonth[i+1].slice(0,15) === actualDate )){
-            g = true;
-        }
-        //invalidates current day
-        if (thisMonth[i].slice(0,15) === actualDate){
+        //invalidates previous days and today of current matching month
+        if ( (e <= r) && (y === z )){
             g = true;
         }
        
@@ -133,7 +134,7 @@ const scheduleBooking = () => {
         }
 
         //re-validates future dates 
-        if (cMonth > aMonth && (cYear >= aYear)){
+        if ((cMonth > aMonth && cYear >= aYear) || cYear > aYear){
             g = false;
         }
 
