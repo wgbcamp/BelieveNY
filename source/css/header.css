@@ -1,6 +1,7 @@
 .header{
     display: grid;
     grid-template-columns: 270px repeat(2, 1fr);
+    grid-template-rows: 70px 20px;
     font-size: 18px;
     height: 70px;
     width: 100%;
@@ -11,7 +12,7 @@
 
 .sticky{
     position: sticky;
-    top: 0px;
+    top: 19px;
     display: flex;
     justify-content: center;
     background-color: black;
@@ -239,10 +240,15 @@
     display: grid;
 }
 
+
+
 /*above 1000*/
 @media only screen and (min-width: 1000px) {
     .header{
-        grid-template-columns: 1fr;         
+        grid-template-columns: 1fr;    
+        grid-template-rows: 70px 20px;
+        font-size: 18px;
+        height: 70px;     
     }
 
     .hamburger, .cancelMenu, .logoMobile{

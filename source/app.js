@@ -14,13 +14,15 @@ import TheOpenSpace from './pages/theOpenSpace';
 import EnvironmentalProjects from './pages/environmentalProjects';
 import ScheduleBooking from './pages/scheduleBooking';
 import Construction from './components/construction';
+import ContactBanner from './components/contactBanner';
 
 function App(){
     return(
         <BrowserRouter>
             <div className='pageContainer'>
+            <Construction/>
                 <Header/>
-                <Construction/>
+                <ContactBanner/>
                     <Routes>
                         <Route path="/" element={<Home/>}/>
                         <Route path="/aboutUs/" element={<AboutUs/>}/>

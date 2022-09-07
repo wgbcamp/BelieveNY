@@ -93,6 +93,7 @@ const Header = () => {
                     <div className="fa-solid fa-bars fa-2xl">
                     </div>
                 </div>
+
             </div>
 
             <div className={`cancelMenu ${dropdownPresence ? "menuIn" : dropdownPresence === 0 ? maxCheck ? "menuOut" : "" : ""}`}><i className='fa-solid fa-xmark fa-2xl xCancel' onClick={() => dropDown(lastMenu)}></i></div>
