@@ -13,12 +13,14 @@ import FoodFirst from './pages/foodFirst';
 import TheOpenSpace from './pages/theOpenSpace';
 import EnvironmentalProjects from './pages/environmentalProjects';
 import ScheduleBooking from './pages/scheduleBooking';
+import Construction from './components/construction';
 
 function App(){
     return(
         <BrowserRouter>
             <div className='pageContainer'>
                 <Header/>
+                <Construction/>
                     <Routes>
                         <Route path="/" element={<Home/>}/>
                         <Route path="/aboutUs/" element={<AboutUs/>}/>

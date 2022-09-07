@@ -1,0 +1,13 @@
+.constructSticky{
+    position: sticky;
+    top: 70px;
+    display: flex;
+    justify-content: center;
+    background-color: #6a3de5;
+}
+
+.constructContent{
+    color: white;
+    font-weight: 600;
+}
+

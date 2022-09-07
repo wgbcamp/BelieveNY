@@ -88,7 +88,7 @@ const Header = () => {
                 </div>
 
                 {/* Mobile menu */}
-                <Link to="/" className="logoMobile"><img src={BNYLogoCircle} className="logoInner"/></Link>
+                <Link to="/" className="logoMobile"><img src={BNYLogoCircle} className="logoInner"/>Believe New York</Link>
                 <div className={`hamburger ${dropdownPresence ? "fadeOut" : dropdownPresence === 0 ? "" : "fadeIn"}`} onClick={() => dropDown("main")}>
                     <div className="fa-solid fa-bars fa-2xl">
                     </div>
