@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import "../css/header.css";
-import BNYLogoCircle from "../images/BNYLogoFull-02.png";
+import BNYLogoCircle from "../images/BNYLogoCircle-03.webp";
 
 const Header = () => {
 
@@ -56,7 +56,7 @@ const Header = () => {
             <div className={`header`}>
                 {/* Spanned menu */}
                 <div className="spannedMenu">
-                    <Link to="/" className="logo"><img src={BNYLogoCircle} className="logoInner"/></Link>
+                    <Link to="/" className="logo"><img src={BNYLogoCircle} className="logoInner"/>Believe New York</Link>
                     
                     <div className="category1" onMouseEnter={() => toggleASP(true)} onMouseLeave={() => toggleASP(false)} onClick={() => toggleASP(false)}>About
                         <div className={`aboutSpan ${aboutSpanPres ? "showSpanGrid" : ""}`}>

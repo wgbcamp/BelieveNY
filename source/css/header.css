@@ -1,7 +1,7 @@
 .header{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    font-size: 22px;
+    font-size: 18px;
     height: 70px;
     width: 100%;
     max-width: 1620px;
@@ -248,11 +248,11 @@
 
     .spannedMenu{
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: 270px repeat(5, 1fr);
         grid-column: 1;
     }
 
-    .category1, .category2, .category3, .category4, .category5{
+    .category1, .category2, .category3, .category4, .category5, .logo{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -260,6 +260,10 @@
         position: relative;
         text-decoration: none;
         color: white;
+    }
+
+    .logo{
+        justify-content: flex-start;
     }
 
     .category5{   
