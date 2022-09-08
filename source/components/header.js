@@ -62,7 +62,6 @@ const Header = () => {
             updateS1(window.scrollY);
             updateS2(false);
         }
-        console.log(window.scrollY);   
     })
 
 
@@ -105,14 +104,14 @@ const Header = () => {
 
                 {/* Mobile menu */}
                 <Link to="/" className="logoMobile" onClick={() => {dropDown(lastMenu); dropDown("main")}}><img src={BNYLogoCircle} className="logoInner"/>Believe New York</Link>
-                <div className={`hamburger ${dropdownPresence ? "fadeOut" : dropdownPresence === 0 ? "" : "fadeIn"}`} onClick={() => dropDown("main")}>
+                <div className={`hamburger ${dropdownPresence ? "fadeOut" : dropdownPresence === 0 ? "" : "fadeIn"}`} onClick={() => {dropDown("main"); updateS2(false);}}>
                     <div className="fa-solid fa-bars fa-2xl">
                     </div>
                 </div>
             
             </div>
             
-            <div className={`cancelMenu ${dropdownPresence ? "menuIn" : dropdownPresence === 0 ? maxCheck ? "menuOut" : "" : ""}`}><i className='fa-solid fa-xmark fa-2xl xCancel' onClick={() => dropDown(lastMenu)}></i></div>
+            <div className={`cancelMenu ${dropdownPresence ? "menuIn" : dropdownPresence === 0 ? maxCheck ? "menuOut" : "" : ""}`}><i className='fa-solid fa-xmark fa-2xl xCancel' onClick={() => {dropDown(lastMenu); updateS2(true);}}></i></div>
 
             <div className={`mobileMenu ${dropdownPresence ? "menuIn" : dropdownPresence === 0 ? maxCheck ? "menuOut" : "" : ""}`}>
                 <div className="cat1" onClick={() => dropDown("about")}>About</div>
