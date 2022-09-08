@@ -18,6 +18,7 @@ const Header = () => {
         });
     });
 
+    //mobile menu
     var [dropdownPresence, toggleDP] = useState(0);
     var [eventsPresence, toggleEP] = useState(0);
     var [servicesPresence, toggleSP] = useState(0);
@@ -45,14 +46,29 @@ const Header = () => {
         }
     }
 
+    //large screen dropdowns
     var [aboutSpanPres, toggleASP] = useState(0);
     var [servicesSpanPres, toggleSSP] = useState(0);
     var [eventsSpanPres, toggleESP] = useState(0);
 
+    //site contact banner 
+    var [scroll1, updateS1] = useState(0);
+    var [scroll2, updateS2] = useState(0);
+
+    window.addEventListener('scroll', function(){
+        if (window.scrollY < scroll1){
+            updateS2(true);
+        }else if(window.scrollY > 20){
+            updateS1(window.scrollY);
+            updateS2(false);
+        }
+        console.log(window.scrollY);   
+    })
+
 
     return(
-
-        <div className='sticky'> 
+        <div className="stickyContainer">
+        <div className='headerContainer'> 
             <div className={`header`}>
                 {/* Spanned menu */}
                 <div className="spannedMenu">
@@ -88,14 +104,14 @@ const Header = () => {
                 </div>
 
                 {/* Mobile menu */}
-                <Link to="/" className="logoMobile"><img src={BNYLogoCircle} className="logoInner"/>Believe New York</Link>
+                <Link to="/" className="logoMobile" onClick={() => {dropDown(lastMenu); dropDown("main")}}><img src={BNYLogoCircle} className="logoInner"/>Believe New York</Link>
                 <div className={`hamburger ${dropdownPresence ? "fadeOut" : dropdownPresence === 0 ? "" : "fadeIn"}`} onClick={() => dropDown("main")}>
                     <div className="fa-solid fa-bars fa-2xl">
                     </div>
                 </div>
-
+            
             </div>
-
+            
             <div className={`cancelMenu ${dropdownPresence ? "menuIn" : dropdownPresence === 0 ? maxCheck ? "menuOut" : "" : ""}`}><i className='fa-solid fa-xmark fa-2xl xCancel' onClick={() => dropDown(lastMenu)}></i></div>
 
             <div className={`mobileMenu ${dropdownPresence ? "menuIn" : dropdownPresence === 0 ? maxCheck ? "menuOut" : "" : ""}`}>
@@ -128,6 +144,10 @@ const Header = () => {
                 <Link to="/eventSponsors" className="cat3" onClick={() => {dropDown("events"); dropDown("main");} }>Event Sponsors</Link>
                 <Link to="/specialEventsFund" className="cat4" onClick={() => {dropDown("events"); dropDown("main");} }>Donate to Special Events Fund</Link>
             </div>
+        </div>
+        <div className={`contactBanner ${scroll2 === 0 ? "" : scroll2 ? "showBanner" : "hideBanner"}`}>
+        NEED HELP? CONTACT US | GetHelp@BelieveNY.org | 347-NYC-0011
+        </div>
         </div>
     )
 }
