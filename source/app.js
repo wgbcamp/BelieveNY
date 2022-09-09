@@ -14,6 +14,7 @@ import TheOpenSpace from './pages/theOpenSpace';
 import EnvironmentalProjects from './pages/environmentalProjects';
 import ScheduleBooking from './pages/scheduleBooking';
 import Construction from './components/construction';
+import UpcomingEvents from './components/upcomingEvents';
 
 function App(){
     return(
@@ -31,7 +32,7 @@ function App(){
                         <Route path="/theOpenSpace" element={<TheOpenSpace/>}/>
                         <Route path="/environmentalProjects" element={<EnvironmentalProjects/>}/>
                         <Route path="/scheduleBooking" element={<ScheduleBooking/>}/>
-                        <Route path="/upcomingEvents"/>
+                        <Route path="/upcomingEvents" element={<UpcomingEvents/>}/>
                         <Route path="/pastEvents"/>
                         <Route path="/eventSponsors"/>
                         <Route path="/donateToSpecialEventsFund"/>

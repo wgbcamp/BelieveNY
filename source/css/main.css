@@ -93,6 +93,9 @@ body{
 .padTop40{
     padding-top: 40px;
 }
+.padTop80{
+    padding-top: 80px;
+}
 
 .padTop20{
     padding-top: 20px;
@@ -160,6 +163,11 @@ ul.no-bullets{
 
 .colorRed{
     color: #ff4040;
+}
+
+.styleLink{
+    text-decoration: none;
+    color: black;
 }
 
 @media screen and (min-width: 700px){
