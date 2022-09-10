@@ -30,6 +30,11 @@ body{
     justify-content: center;
 }
 
+.verticalAlign{
+    display: flex;
+    align-items: center;
+}
+
 .size18Font{
     font-size: 18px;
 }
@@ -86,6 +91,10 @@ body{
     padding-bottom: 40px;
 }
 
+.padBottom80{
+    padding-bottom: 80px;
+}
+
 .padBottom20{
     padding-bottom: 20px;
 }
@@ -109,6 +118,14 @@ body{
     padding-top: 5px;
 }
 
+.marginTop20{
+    margin-top: 20px;
+}
+
+.height100{
+    height: 100px;
+}
+
 ul.no-bullets{
     list-style-type: none;
     padding: 0;
@@ -123,7 +140,27 @@ ul.no-bullets{
     text-align: center;
 }
 
+.leftText{
+    text-align: left;
+}
+
+.rightText{
+    text-align: right;
+}
+
+.testMe{
+    color: white;
+    background-color: #3c2d73;
+    height: 70%;
+    width: 60%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .submitButton{
+    text-decoration: none;
     background-color: #3c2d73;
     color: white;
     height: 70%;
@@ -135,6 +172,7 @@ ul.no-bullets{
 }
 
 .submitButton1{
+    text-decoration: none;
     background-color: #3c2d73;
     color: white;
     height: 70px;
@@ -146,6 +184,7 @@ ul.no-bullets{
 }
 
 .submitButton2{
+    text-decoration: none;
     background-color: #3c2d73;
     color: white;
     height: 100%;
