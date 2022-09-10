@@ -27,10 +27,10 @@ const getHelp = () => {
                         <input placeholder="Phone #" className=""/>
                         <input placeholder="Email" className=""/>
                         <input placeholder="Subject" className=""/>
-                        <textarea placeholder="Tell us what's going on..." type="big" className=""/>
-                        <input placeholder="Best callback time" className=""/>
+                        <textarea placeholder="Tell us what's going on..." type="big" className="bigTextArea"/>
+                        <input placeholder="Best callback time" className="callback"/>
                         <div className="placeholderCaptcha">PLACEHOLDER CAPTCHA</div>
-                        <div className="simpleFlex">
+                        <div className="simpleFlex getHelpButton">
                             <div className="submitButton2">Get Help</div>
                         </div>
                         

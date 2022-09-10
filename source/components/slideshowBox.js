@@ -8,8 +8,8 @@ const slideshowBox = (props) => {
 
             <div className={`ssBoxContainer border${props.content.series}`}>
             <img src={folksAndFood} className={`slideshow1${props.content.version}`}></img>
-            <div className={`textGrid1${props.content.version} slideTextAlign${props.content.version}`}>
-                <div className='padText size36Font' id="text1">
+            <div className={`textGrid1${props.content.version} centerText`}>
+                <div className='padText size36Font centerText' id="text1">
                 {props.content.title} 
                 </div>
                 <div className='padText size22Font' id="text2">
