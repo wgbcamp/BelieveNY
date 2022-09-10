@@ -11,7 +11,7 @@ const eventSponsors = () => {
         <div className="simpleFlex">
             <div className="maxWidth width80Per">
                 <div className='padTop80'></div>
-                <div className="simpleFlex verticalAlign sponsorTitle">
+                <div className="simpleFlex verticalAlign sT">
                     <div className="size36Font ">Sponsor An Event With Believe New York</div>  
                 </div>
                 <div className="perkAndFormGrid">
