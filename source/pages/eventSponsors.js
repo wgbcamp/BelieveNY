@@ -59,7 +59,7 @@ const eventSponsors = () => {
                         </div>
                 </div>
                 <div className="padTop80"></div>
-                <div className="simpleFlex verticalAlign sponsorTitle">
+                <div className="simpleFlex verticalAlign sT">
                     <div className="size36Font ">Past Sponsors</div>  
                 </div>
                 <PhotoTextBoxNoLogo content={{description: "Summer 2021, stylists from Cutler Salon joined us in Washington Square Park to give free haircuts to persons living with poverty. From the event itself, Cutler Salon reported back a 30% increase in bookings, and spike in social media engagements. And come tax season, the stylists and the business will get a sizable tax deduction for their services.", image: CutlerSalons, title: "Cutler Salon", series: "Top", version: "Left"}}/>
