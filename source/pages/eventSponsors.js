@@ -2,7 +2,7 @@ import React from 'react'
 import '../css/eventSponsors.css'
 import PhotoTextBox from '../components/photoTextBox'
 import PhotoTextBoxNoLogo from '../components/photoTextBoxNoLogo'
-import Lilfrankies from '../images/Lilfrankies.webp'
+import Lilfrankies from '../images/LilFrankies.webp'
 import HavanaCentral from '../images/havana-central-logo-v3.webp'
 import CutlerSalons from '../images/Cutler-Salons.webp'
 
