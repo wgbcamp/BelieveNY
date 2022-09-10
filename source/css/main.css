@@ -198,6 +198,8 @@ ul.no-bullets{
     justify-content: center;
     align-items: center;
     font-size: 24px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .colorGreen{
@@ -211,6 +213,11 @@ ul.no-bullets{
 .styleLink{
     text-decoration: none;
     color: black;
+}
+
+.simpleTitleGrid{
+    display: grid;
+    grid-template-rows: 10% 90%;
 }
 
 @media screen and (min-width: 700px){

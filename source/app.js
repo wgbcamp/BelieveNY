@@ -18,6 +18,7 @@ import UpcomingEvents from './pages/upcomingEvents';
 import PastEvents from './pages/pastEvents';
 import SpecialEventsFund from './pages/SpecialEventsFund';
 import Donate from './pages/donate';
+import EventSponsors from './pages/eventSponsors';
 
 function App(){
     return(
@@ -37,7 +38,7 @@ function App(){
                         <Route path="/scheduleBooking" element={<ScheduleBooking/>}/>
                         <Route path="/upcomingEvents" element={<UpcomingEvents/>}/>
                         <Route path="/pastEvents" element={<PastEvents/>}/>
-                        <Route path="/eventSponsors"/>
+                        <Route path="/eventSponsors" element={<EventSponsors/>}/>
                         <Route path="/SpecialEventsFund" element={<SpecialEventsFund/>}/>
                         <Route path="/volunteer"/>
                         <Route path="/donate" element={<Donate/>}/>

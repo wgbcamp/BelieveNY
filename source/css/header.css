@@ -73,7 +73,8 @@
     height: 51px;
     width: 100%;
     position: absolute;
-    top: 0px;
+    top: 10px;
+    right: 5px;
     transform: translateX(-100%);
     display: flex;
     align-items: center;
