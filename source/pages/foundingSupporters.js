@@ -1,12 +1,8 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import '../css/foundingSupporters.css';
 import BNYCity from '../images/BNYCity.png';
 
 const foundingSupporters = () => {
-
-    useEffect(() => {
-        window.scrollTo(0,0);
-    }, []);
 
     return(
         <div>

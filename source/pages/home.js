@@ -1,13 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState} from 'react'
 import "../css/home.css";
 import folksAndFood from "../images/folksAndFood.webp";
 import VolunteerBox from '../components/volunteerBox';
 
 const Home = () => {
-
-    useEffect(() => {
-        window.scrollTo(0,0);
-    }, []);
 
     var [burgerStatus, toggleBurgerStatus] = useState("");
 

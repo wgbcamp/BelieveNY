@@ -1,11 +1,7 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import '../css/getHelp.css'
 
 const getHelp = () => {
-
-    useEffect(() => {
-        window.scrollTo(0,0);
-    }, []);
 
     return(
         

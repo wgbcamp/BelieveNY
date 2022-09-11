@@ -1,12 +1,8 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import '../css/environmentalProjects.css'
 import Tree from '../images/EnvironmentalImpact.webp'
 
 const environmentalProjects = () => {
-
-    useEffect(() => {
-        window.scrollTo(0,0);
-    }, []);
 
     return(
         <div>

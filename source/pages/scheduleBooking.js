@@ -28,10 +28,6 @@ var customYear = actualDate.slice(-4);
 
 
 const scheduleBooking = () => {
-    
-    useEffect(() => {
-        window.scrollTo(0,0);
-    }, []);
 
     const timeValues = ["Morning", "Afternoon", "Evening"];
     const morningTimes = ["9:00 am", "10:00 am", "11:00 am"];
