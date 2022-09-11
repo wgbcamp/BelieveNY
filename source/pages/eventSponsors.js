@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import '../css/eventSponsors.css'
 import PhotoTextBox from '../components/photoTextBox'
 import PhotoTextBoxNoLogo from '../components/photoTextBoxNoLogo'
@@ -7,6 +7,11 @@ import HavanaCentral from '../images/havana-central-logo-v3.webp'
 import CutlerSalons from '../images/Cutler-Salons.webp'
 
 const eventSponsors = () => {
+
+    useEffect(() => {
+        window.scrollTo(0,0);
+    }, []);
+
     return(
         <div className="simpleFlex">
             <div className="maxWidth width80Per">

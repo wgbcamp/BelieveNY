@@ -1,7 +1,12 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import '../css/dI.css'
 
 const diversityInclusion = () => {
+
+    useEffect(() => {
+        window.scrollTo(0,0);
+    }, []);
+    
     return(
         <div>
             <div className="simpleFlex">

@@ -16,6 +16,7 @@ const Footer = () => {
                 <div><b>100% of public contributions go towards our mission.</b></div>
                 </div>
                 <div className="footerBorderOut">
+                    <Link to="/aboutUs" className='fixLinkColor'><u className="simpleFlex padTop20 ros size18Font">Read our statement</u></Link>
                     <div className="footerBorder"></div>
                 </div>
                 

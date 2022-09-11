@@ -39,14 +39,14 @@
 
 }
 
-.footerBorderOut{
-    margin-bottom: 20px;
+.ros{
+    font-weight: 600;
 }
 
 .footerBorder{
     border-bottom: 1.5px solid;
-    height: 35px;
     width: 70%;
+    height: 15px;
     margin: auto;
 }
 
@@ -175,7 +175,6 @@
 
     .footerBorder{
         border-bottom: 1.5px solid;
-        height: 35px;
         width: 85%;
     }
 }

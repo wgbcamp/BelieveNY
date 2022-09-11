@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import DescriptionBox from '../components/descriptionBox';
 import PersonCard from '../components/personCard';
 import '../css/aboutUs.css';
@@ -54,6 +54,11 @@ const legal = [
 ]
 
 const aboutUs = () => {
+
+    useEffect(() => {
+        window.scrollTo(0,0);
+    }, []);
+
     return(
         <div>
             <div className="simpleFlex">
