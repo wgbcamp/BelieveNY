@@ -4,6 +4,10 @@ import "../css/footer.css"
 import BNYLogoFull from "../images/BNYLogoFull-02.png"
 const Footer = () => {
 
+    function restoreTop(){
+        window.scrollTo(0,0);
+    }
+
     return(
         <div className="bg">
             <div className="upperFlex">
@@ -16,7 +20,7 @@ const Footer = () => {
                 <div><b>100% of public contributions go towards our mission.</b></div>
                 </div>
                 <div className="footerBorderOut">
-                    <Link to="/aboutUs" className='fixLinkColor'><u className="simpleFlex padTop20 ros size18Font">Read our statement</u></Link>
+                    <Link to="/aboutUs" className='fixLinkColor' onClick={() => restoreTop()}><u className="simpleFlex padTop20 ros size18Font">Read our statement</u></Link>
                     <div className="footerBorder"></div>
                 </div>
                 
@@ -25,22 +29,22 @@ const Footer = () => {
                     <div className="rightRow1">
                         <div className="innerCol1">
                             <b>Who We Are</b>
-                            <Link to="/aboutUs" className='fixLinkColor'>About Us</Link>
+                            <Link to="/aboutUs" className='fixLinkColor' onClick={() => restoreTop()}>About Us</Link>
                             <div>Finances</div>
-                            <Link to="/foundingSupporters" className='fixLinkColor'>Founding Supporters</Link>
+                            <Link to="/foundingSupporters" className='fixLinkColor' onClick={() => restoreTop()}>Founding Supporters</Link>
                         </div>
                         <div className="innerCol2">
                             <b>What We Do</b>
-                            <Link to="/getHelp" className='fixLinkColor'>Get Help</Link>
-                            <Link to="theOpenSpace" className='fixLinkColor'>The Open Space</Link>
-                            <Link to="foodFirst" className="fixLinkColor">Food First Program</Link>
-                            <Link to="pastEvents" className="fixLinkColor">Community Events</Link>
+                            <Link to="/getHelp" className='fixLinkColor' onClick={() => restoreTop()}>Get Help</Link>
+                            <Link to="theOpenSpace" className='fixLinkColor' onClick={() => restoreTop()}>The Open Space</Link>
+                            <Link to="foodFirst" className="fixLinkColor" onClick={() => restoreTop()}>Food First Program</Link>
+                            <Link to="pastEvents" className="fixLinkColor" onClick={() => restoreTop()}>Community Events</Link>
                         </div>
                         <div className="innerCol3">
                             <b>Ways to Help</b>
-                            <Link to="/donate" className="fixLinkColor">Donate to our programs</Link>
-                            <Link to="/specialEventsFund" className="fixLinkColor">Donate to our Events Fund</Link>
-                            <Link to="/volunteer" className="fixLinkColor">Join Us</Link>
+                            <Link to="/donate" className="fixLinkColor" onClick={() => restoreTop()}>Donate to our programs</Link>
+                            <Link to="/specialEventsFund" className="fixLinkColor" onClick={() => restoreTop()}>Donate to our Events Fund</Link>
+                            <Link to="/volunteer" className="fixLinkColor" onClick={() => restoreTop()}>Join Us</Link>
                             <div className="blank">blank</div>
                         </div>
                     </div>
