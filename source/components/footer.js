@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import "../css/footer.css"
 import BNYLogoFull from "../images/BNYLogoFull-02.png"
 const Footer = () => {
@@ -57,10 +58,11 @@ const Footer = () => {
             
             <div></div>
             <div className="socialMedia">
-                <i className="fa-brands fa-square-facebook fa-2xl"></i>
-                <i className="fa-brands fa-square-twitter fa-2xl iconPad"></i>
-                <i className="fa-brands fa-square-instagram fa-2xl iconPad"></i>
-                <i className="fa-brands fa-square-youtube fa-2xl iconPad"></i>
+                
+                <a href="https://www.facebook.com/believeny" className="fixLinkColor"><i className="fa-brands fa-square-facebook fa-2xl"></i></a>
+                <a href="https://www.twitter.com/Believe_NewYork" className="fixLinkColor"><i className="fa-brands fa-square-twitter fa-2xl iconPad"></i></a>
+                <a href="https://www.instagram.com/believeny" className='fixLinkColor'><i className="fa-brands fa-square-instagram fa-2xl iconPad"></i></a>
+                <a href="https://www.youtube.com/channel/UCbz9owENALBUb8O6NrFv7oQ" className='fixLinkColor'><i className="fa-brands fa-square-youtube fa-2xl iconPad"></i></a>
             </div>
             <div className="copyright">©2021 by Believe New York Philanthropies, Inc.</div>
             </div>

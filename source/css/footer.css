@@ -5,7 +5,6 @@
     bottom: 0%;
     width: 100%;
     height: 1128px;
-    z-index: -1;
 }
 
 .blank{
@@ -76,7 +75,13 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
+    align-items: center;
     padding-top: 35px;
+}
+
+.fixLinkColor{
+    text-decoration: none;
+    color: white;
 }
 
 .copyright{
@@ -88,7 +93,7 @@
 .footerImage{
     width: 250px;
 }
- /**/
+
 .leftRow1{
     padding-left: 10%;
     padding-right: 10%;

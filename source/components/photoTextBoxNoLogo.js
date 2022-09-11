@@ -3,7 +3,7 @@ import folksAndFood from '../images/folksAndFood.webp'
 
 const photoTextBoxNoLogo = (props) => {
     return(
-            <div className={`mScontainer shiftLeft border${props.content.series}`}>
+            <div className={`mScontainer mScontainer2 shiftLeft border${props.content.series}`}>
                 <div className="slideshowContain simpleTitleGrid">
                     <div className="simpleFlex">
                         <u className='verticalAlign'>{props.content.title}</u>
