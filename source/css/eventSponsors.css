@@ -7,8 +7,9 @@
 .sT{
     background-color: #f2f2f2;
     border-radius: 15px;
-    height: 150px;
+    height: 80px;
     margin-bottom: 50px;
+    font-weight: 600;
 }
 
 .perkAndFormGrid{
