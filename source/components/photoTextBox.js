@@ -8,7 +8,7 @@ const photoTextBox = (props) => {
                 <div className="verticalAlign simpleFlex">
                     <img src={props.content.image} className="slideshowContain"></img>
                 </div>
-                <div className={`textGrid1${props.content.version}`}>
+                <div className={`textGrid1${props.content.version} verticalAlign`}>
                     <div className='padText' id="text1">
                         {props.content.description}
                     </div>

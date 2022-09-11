@@ -172,6 +172,10 @@ border-bottom-right-radius: 10px;
     border-bottom-right-radius: 15px;
 }
 
+.borderBoth{
+    border-radius: 15px;
+}
+
 .shiftLeft{
     text-align: center;
 }
