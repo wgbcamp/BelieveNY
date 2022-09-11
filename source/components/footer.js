@@ -24,23 +24,22 @@ const Footer = () => {
                     <div className="rightRow1">
                         <div className="innerCol1">
                             <b>Who We Are</b>
-                            <div>About Us</div>
+                            <Link to="/aboutUs" className='fixLinkColor'>About Us</Link>
                             <div>Finances</div>
-                            <div>Founding Supporters</div>
-                            <div>How we help FAQ</div>
+                            <Link to="/foundingSupporters" className='fixLinkColor'>Founding Supporters</Link>
                         </div>
                         <div className="innerCol2">
                             <b>What We Do</b>
-                            <div>Get Help</div>
-                            <div>The Open Space</div>
-                            <div>Food First Program</div>
-                            <div>Community Events</div>
+                            <Link to="/getHelp" className='fixLinkColor'>Get Help</Link>
+                            <Link to="theOpenSpace" className='fixLinkColor'>The Open Space</Link>
+                            <Link to="foodFirst" className="fixLinkColor">Food First Program</Link>
+                            <Link to="pastEvents" className="fixLinkColor">Community Events</Link>
                         </div>
                         <div className="innerCol3">
                             <b>Ways to Help</b>
-                            <div>Donate to our programs</div>
-                            <div>Donate to our Events Fund</div>
-                            <div>Join Us</div>
+                            <Link to="/donate" className="fixLinkColor">Donate to our programs</Link>
+                            <Link to="/specialEventsFund" className="fixLinkColor">Donate to our Events Fund</Link>
+                            <Link to="/volunteer" className="fixLinkColor">Join Us</Link>
                             <div className="blank">blank</div>
                         </div>
                     </div>
