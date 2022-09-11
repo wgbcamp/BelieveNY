@@ -19,6 +19,7 @@ import PastEvents from './pages/pastEvents';
 import SpecialEventsFund from './pages/SpecialEventsFund';
 import Donate from './pages/donate';
 import EventSponsors from './pages/eventSponsors';
+import Volunteer from './pages/volunteer';
 
 function App(){
     return(
@@ -40,9 +41,9 @@ function App(){
                         <Route path="/pastEvents" element={<PastEvents/>}/>
                         <Route path="/eventSponsors" element={<EventSponsors/>}/>
                         <Route path="/SpecialEventsFund" element={<SpecialEventsFund/>}/>
-                        <Route path="/volunteer"/>
+                        <Route path="/volunteer" element={<Volunteer/>}/>
                         <Route path="/donate" element={<Donate/>}/>
-                        <Route path="*"/>
+                        <Route path="*" element={<Home/>}/>
                     </Routes>
                 <div className="contentWrapper"></div> 
                 <Footer/>
