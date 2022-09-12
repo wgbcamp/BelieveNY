@@ -1,13 +1,10 @@
 var path = require("path");
 var express = require("express");
 const sgMail = require('@sendgrid/mail');
-var cors = require('cors');
 
 var buildDirectory = path.join(__dirname, "build");
 var PORT = 8080;
-var IP = process.env.IP || 'localhost';
 var app = express();
-app.use(cors());
 
 app.use(express.static(buildDirectory));
 
@@ -16,7 +13,6 @@ app.get("*", function (req, res){
 });
 
 app.post('/', function (req, res){
-    
     
     sgMail.setApiKey(process.env.SENDGRID_API_KEY)
     const msg = {
@@ -37,5 +33,5 @@ app.post('/', function (req, res){
 });
 
 app.listen(PORT, IP, () => {
-    console.log(`Express server at ${IP}:${PORT}.`);
+    console.log(`Express server at port: ${PORT}.`);
 });
