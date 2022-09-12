@@ -32,6 +32,6 @@ app.post('/', function (req, res){
     })
 });
 
-app.listen(PORT, IP, () => {
+app.listen(PORT, () => {
     console.log(`Express server at port: ${PORT}.`);
 });
