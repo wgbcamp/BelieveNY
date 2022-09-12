@@ -8,7 +8,12 @@
 }
 
 .blank{
-    opacity: 0;
+    opacity: 1;
+}
+
+.upperFlex{
+    background-color: #979797;
+
 }
 
 .iconPad{
@@ -56,6 +61,10 @@
 }
 
 .phone, .email, .socialMedia, .copyright{
+    background-color: #5c5a65;
+}
+
+.lowerContainer{
     background-color: #5c5a65;
 }
 

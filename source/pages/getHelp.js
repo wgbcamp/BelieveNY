@@ -1,7 +1,51 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import '../css/getHelp.css'
 
 const getHelp = () => {
+
+    // const constraints = {
+    //     name: {
+    //         presence: { allowEmpty: false }
+    //     },
+    //     email: {
+    //         presence: { allowEmpty: false },
+    //         email: true
+    //     },
+    //     message: {
+    //         presence: { allowEmpty: false }
+    //     }
+    // };
+
+    // useEffect(() => {
+
+    //     const form = document.getElementById('contact-form');
+
+    //     form.addEventListener('submit', function (event) {
+    //         const formValues = {
+    //             name: form.elements.name.value,
+    //             email: form.elements.email.value,
+    //             message: form.elements.message.value
+    //         };
+    //         const errors = validate(formValues, constraints);
+    //         if (errors) {
+    //           e.preventDefault();
+    //           const errorMessage = Object
+    //               .values(errors)
+    //               .map(function (fieldValues) { return fieldValues.join(', ')})
+    //               .join("\n");
+    //           alert(errorMessage);
+    //         }
+    //       }, false);
+    // }, []);
+
+    function test(){
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/", true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify({
+            value: "value"
+        }));
+    }
 
     return(
         
@@ -33,10 +77,19 @@ const getHelp = () => {
                         
                         <div className="placeholderCaptcha">PLACEHOLDER CAPTCHA</div>
                         <div className="simpleFlex getHelpButton">
-                            <div className="submitButton2">Get Help</div>
+                            <div className="submitButton2" onClick={() => test()}>Get Help</div>
                         </div>
                         
                     </div>
+                    
+                        {/* <form method="POST" action="form.php" id="contact-form">
+                        <h2>Contact us</h2>
+                        <p><label>First Name:</label> <input name="name" type="text" /></p>
+                        <p><label>Email Address:</label> <input name="email" type="text" /></p>
+                        <p><label>Message:</label>  <textarea name="message"></textarea> </p>
+                        <p><input type="submit" value="Send"/></p>
+                    </form> */}
+
                 </div>
             </div>
         </div>
