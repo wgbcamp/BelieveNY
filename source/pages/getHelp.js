@@ -1,5 +1,8 @@
 import React, {useEffect} from 'react'
 import '../css/getHelp.css'
+import facebook from '../images/facebook-square-brands.png'
+import twitter from '../images/twitter-square-brands.png'
+import instagram from '../images/instagram-square-brands.png'
 
 const getHelp = () => {
 
@@ -81,7 +84,11 @@ const getHelp = () => {
                         </div>
                         
                     </div>
-                    
+                    <div id="fontawesomeIconStorage">
+                        <img src={facebook}></img>
+                        <img src={twitter}></img>
+                        <img src={instagram}></img>
+                    </div>
                         {/* <form method="POST" action="form.php" id="contact-form">
                         <h2>Contact us</h2>
                         <p><label>First Name:</label> <input name="name" type="text" /></p>
