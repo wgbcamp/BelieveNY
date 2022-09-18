@@ -10,13 +10,16 @@ var PORT = 8080;
 var app = express();
 
 app.use(express.static(buildDirectory));
+app.use(express.json());
 
 app.get("*", function (req, res){
     res.sendFile(path.join(buildDirectory, "index.html"));
 });
 
 app.post('/', function (req, res){
-    mailer.sendMail();
+    console.log(JSON.stringify(req.body));
+    mailer.sendMail(req.body);
+    res.send("success");
 });
 
 app.listen(PORT, () => {

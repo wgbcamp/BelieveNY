@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import '../css/getHelp.css'
 import facebook from '../images/facebook-square-brands.png'
 import twitter from '../images/twitter-square-brands.png'
@@ -6,48 +6,57 @@ import instagram from '../images/instagram-square-brands.png'
 
 const getHelp = () => {
 
-    // const constraints = {
-    //     name: {
-    //         presence: { allowEmpty: false }
-    //     },
-    //     email: {
-    //         presence: { allowEmpty: false },
-    //         email: true
-    //     },
-    //     message: {
-    //         presence: { allowEmpty: false }
-    //     }
-    // };
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [subject, setSubject] = useState('');
+    const [time, setTime] = useState('');
+    const [text, setText] = useState('');
 
-    // useEffect(() => {
+    const updateName = event => {
+        setName(event.target.value);
+    }
+    const updatePhone = event => {
+        setPhone(event.target.value);
+    }
+    const updateEmail = event => {
+        setEmail(event.target.value);
+    }
+    const updateSubject = event => {
+        setSubject(event.target.value);
+    }
+    const updateTime = event => {
+        setTime(event.target.value);
+    }
+    const updateText = event => {
+        setText(event.target.value);
+    }
 
-    //     const form = document.getElementById('contact-form');
+    function refreshFields(){
+        setName("");
+        setPhone("");
+        setEmail("");
+        setSubject("");
+        setTime("");
+        setText("");
+        alert("Your form has been submitted, thank you.");
+    }
 
-    //     form.addEventListener('submit', function (event) {
-    //         const formValues = {
-    //             name: form.elements.name.value,
-    //             email: form.elements.email.value,
-    //             message: form.elements.message.value
-    //         };
-    //         const errors = validate(formValues, constraints);
-    //         if (errors) {
-    //           e.preventDefault();
-    //           const errorMessage = Object
-    //               .values(errors)
-    //               .map(function (fieldValues) { return fieldValues.join(', ')})
-    //               .join("\n");
-    //           alert(errorMessage);
-    //         }
-    //       }, false);
-    // }, []);
 
-    function test(){
+    function submitEmail(){
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "/", true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify({
-            value: "value"
+            type: "contactForm",
+            name: name,
+            email: email,
+            phone: phone,
+            subject: subject,
+            time: time,
+            text: text
         }));
+        refreshFields();
     }
 
     return(
@@ -71,16 +80,16 @@ const getHelp = () => {
                         </div>
                     </div>
                     <div className="emailGrid">
-                        <input placeholder="Name" type="email" className="fName styleEmGrid"/>
-                        <input placeholder="Phone #" className="fPhone styleEmGrid"/>
-                        <input placeholder="Email" className="fEmail styleEmGrid"/>
-                        <input placeholder="Subject" className="fSubject styleEmGrid"/>
-                        <input placeholder="Best callback time" className="callback styleEmGrid"/>
-                        <textarea placeholder="Tell us what's going on..." type="big" className="bigTextArea"/>
+                        <input placeholder="Name" type="email" className="fName styleEmGrid" onChange={updateName} value={name}/>
+                        <input placeholder="Phone #" className="fPhone styleEmGrid" onChange={updatePhone} value={phone}/>
+                        <input placeholder="Email" className="fEmail styleEmGrid" onChange={updateEmail} value={email}/>
+                        <input placeholder="Subject" className="fSubject styleEmGrid" onChange={updateSubject} value={subject}/>
+                        <input placeholder="Best callback time" className="callback styleEmGrid" onChange={updateTime} value={time}/>
+                        <textarea placeholder="Tell us what's going on..." type="big" className="bigTextArea" onChange={updateText} value={text}/>
                         
                         <div className="placeholderCaptcha">PLACEHOLDER CAPTCHA</div>
                         <div className="simpleFlex getHelpButton">
-                            <div className="submitButton2" onClick={() => test()}>Get Help</div>
+                            <div className="submitButton2" onClick={() => submitEmail()}>Get Help</div>
                         </div>
                         
                     </div>
