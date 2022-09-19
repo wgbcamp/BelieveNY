@@ -5,7 +5,7 @@ function sendMail(data){
     if (data.type === 'contactForm'){
         sgMail.setApiKey(process.env.SENDGRID_API_KEY)
         const msg = {
-            to: process.env.TEST_TO_EMAIL, // Change to your recipient
+            to: process.env.FROM_EMAIL, // Change to your recipient
             from: process.env.FROM_EMAIL, // Change to your verified sender
             subject: data.subject,
             text: 'Test email',
@@ -222,7 +222,7 @@ function sendMail(data){
     if (data.type === 'booking'){
         sgMail.setApiKey(process.env.SENDGRID_API_KEY)
         const msg = {
-            to: process.env.TEST_TO_EMAIL, // Change to your recipient
+            to: process.env.FROM_EMAIL, // Change to your recipient
             from: process.env.FROM_EMAIL, // Change to your verified sender
             subject: `${data.name} booked an appointment for ${data.date} at ${data.time}`,
             text: 'Test email',
