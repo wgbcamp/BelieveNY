@@ -1,8 +1,8 @@
 var path = require("path");
 var express = require("express");
 const mailer = require("./emailSource/sendMail.js");
-var mongoUtil = require('./mongoUtil');
-mongoUtil.connectServer();
+// var mongoUtil = require('./mongoUtil');
+// mongoUtil.connectServer();
 
 var buildDirectory = path.join(__dirname, "build");
 var PORT = 8080;
