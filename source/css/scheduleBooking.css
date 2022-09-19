@@ -7,6 +7,22 @@
     grid-template-rows: 1fr 1fr 1fr;
 }
 
+.bookingInfoGrid{
+    display: grid;
+    grid-template-rows: 10px 40px 10px 20px 40px 20px 40px 20px 40px 20px 200px 200px;
+    grid-template-columns: minmax(300px, 700px);
+    row-gap: 25px;
+}
+
+.bCol1{
+    grid-column: 1;
+}
+
+.confirmationBox{
+    grid-column: 1;
+    grid-row: 12;
+}
+
 .appCol1{
 
 }
@@ -149,6 +165,17 @@
     border: 0.15rem solid black;
 }
 
+.invalidTime{
+    border: 0.05rem solid rgb(230, 230, 230);
+    color: rgb(230, 230, 230);
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media screen and (min-width: 700px) and (max-width: 1200px) {
   
 
@@ -171,4 +198,19 @@
         text-align: unset;
     }
 
+    .bookingInfoGrid{
+        display: grid;
+        grid-template-rows: 10px 40px 10px 20px 40px 20px 40px 20px 40px 20px 100px 1fr;
+        grid-template-columns: minmax(300px, 1200px) 100px 1fr;
+        row-gap: 25px;
+    }    
+
+    .bCol1{
+        grid-column: 1;
+    }
+    
+    .confirmationBox{
+        grid-column: 3;
+        grid-row: 1/8;
+    }
 }

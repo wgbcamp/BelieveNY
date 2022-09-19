@@ -5,7 +5,7 @@ const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov"
 const week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 const longMonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-const longWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+const longWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 //gets all the values of the days of the month
 function monthDays(year, month){
@@ -29,11 +29,80 @@ var customYear = actualDate.slice(-4);
 
 const scheduleBooking = () => {
 
-    const timeValues = ["Morning", "Afternoon", "Evening"];
-    const morningTimes = ["9:00 am", "10:00 am", "11:00 am"];
-    const afternoonTimes = ["12:00 pm", "1:00 pm", "2:00 pm", "3:00 pm"];
-    const eveningTimes = ["6:00 pm", "7:00 pm", "8:00 pm"];
+    var schedule = [
+        {"day":"Mon","time":["9:00 AM","10:00 AM","11:00 AM","12:00 PM","1:00 PM","2:00 PM","3:00 PM","4:00 PM","5:00 PM"]},
+        {"day":"Tue","time":["8:00 AM","9:00 AM","10:00 AM","11:00 AM","12:00 PM","1:00 PM","2:00 PM","3:00 PM","4:00 PM"]},
+        {"day":"Wed","time":["9:00 AM","10:00 AM","11:00 AM","12:00 PM","1:00 PM","2:00 PM","3:00 PM","4:00 PM","5:00 PM","6:00 PM","7:00 PM","8:00 PM","9:00 PM"]},
+        {"day":"Thu","time":["10:00 AM","11:00 AM","12:00 PM","1:00 PM","2:00 PM","3:00 PM","4:00 PM","5:00 PM","6:00 PM"]},
+        {"day":"Fri","time":["10:00 AM","11:00 AM","12:00 PM","1:00 PM","2:00 PM","3:00 PM","4:00 PM","5:00 PM","6:00 PM","7:00 PM","8:00 PM"]},
+        {"day":"Sat","time":["9:00 AM","10:00 AM","11:00 AM","12:00 PM","1:00 PM","2:00 PM","3:00 PM"]},
+        {"day":"Sun","time":["12:00 PM","1:00 PM","2:00 PM","3:00 PM","4:00 PM"]}];    
+
     
+    var [morningslots, updatemTimeslots] = useState("");
+    var [afternoonslots, updateaTimeslots] = useState("");
+    var [eveningslots, updateeTimeslots] = useState("");
+
+    var [timeChosen, updateTC] = useState("");
+
+    const morningTimes = ["9:00 AM", "10:00 AM", "11:00 AM"];
+    const afternoonTimes = ["12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM"];
+    const eveningTimes = ["5:00 PM", "6:00 PM", "7:00 PM", "8:00 PM"];
+
+    var [calendarSwitch, swCal] = useState(true);
+    function checkTime(){
+        if (timeChosen !== ""){
+            swCal(!calendarSwitch);
+        }
+    }
+    
+    
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [message, setMessage] = useState('');
+    //superdate and time chosen as well
+
+    const updateName = event => {
+        setName(event.target.value);
+    }
+    const updateEmail = event => {
+        setEmail(event.target.value);
+    }
+    const updatePhone = event => {
+        setPhone(event.target.value);
+    }
+    const updateMessage = event => {
+        setMessage(event.target.value);
+    }
+
+    function submitBooking(){
+        if (name !== "" && email !== "" && phone !== "" && message !== "" && superDate !== "" && timeChosen !== ""){
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/booking", true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.send(JSON.stringify({
+                type: "booking",
+                name: name,
+                email: email,
+                phone: phone,
+                message: message,
+                date: superDate,
+                time: timeChosen
+            }));
+            refreshFields();
+        }else{
+            alert("Please fill out every field below before booking your appointment.");
+        }
+
+    }
+
+    function refreshFields(){
+
+        alert("Your appointment has been submitted. Thank you.");
+        location.reload();
+    }
+
     var [currMonth, changeMonth] = useState(0);
     var [currYear, changeYear] = useState(0);
     var [superDate, setSuperDate] = useState(actualDate);
@@ -154,7 +223,7 @@ const scheduleBooking = () => {
     //maps the values to the calendar tiles
     newCalValue(thisMonth.map((value) => (
 
-        <div className={`calTile ${thisMonth.indexOf(value)} ${value.slice(11,15)} ${value.length > 5 ? value.slice(4,7).concat(value.slice(8,10)): "invalid"}`} onClick={() => toggleSelection(thisMonth.indexOf(value), value.slice(0,15))} key={value.toString()}>{value.length > 5 ? value.slice(8,10) : value.slice(3,5)}</div>
+        <div className={`calTile ${thisMonth.indexOf(value)} ${value.slice(11,15)} ${value.length > 5 ? value.slice(4,7).concat(value.slice(8,10)): "invalid"}`} onClick={() => { toggleSelection(thisMonth.indexOf(value), value.slice(0,15)); updateTC("");}} key={value.toString()}>{value.length > 5 ? value.slice(8,10) : value.slice(3,5)}</div>
     )));  
 }
 
@@ -186,6 +255,24 @@ const scheduleBooking = () => {
         if (dPart1 !== "undefined, "){
             console.log(dPart1)
             setSuperDate(dPart1.concat(dPart2.concat(dPart3.concat(dPart4))));
+
+            for (var i=0;i<schedule.length; i++){
+                console.log("ugh");
+                if (schedule[i].day === dPart1.slice(0,3)){
+                    updatemTimeslots(morningTimes.map((value) => (
+                        <div className={`${morningTimes.includes(value) === true && schedule[i].time.includes(value) === true ? 'mStyle' : 'invalidTime'}`} onClick={() => morningTimes.includes(value) === true && schedule[i].time.includes(value) === true ? updateTC(value) : null} key={value}>{value}</div>
+                    )));
+                    updateaTimeslots(afternoonTimes.map((value) => (
+                        <div className={`${afternoonTimes.includes(value) === true && schedule[i].time.includes(value) === true ? 'mStyle' : 'invalidTime'}`} onClick={() => afternoonTimes.includes(value) === true && schedule[i].time.includes(value) === true ? updateTC(value) : null} key={value}>{value}</div>
+                    )));
+                    updateeTimeslots(eveningTimes.map((value) => (
+                        <div className={`${eveningTimes.includes(value) === true && schedule[i].time.includes(value) === true ? 'mStyle' : 'invalidTime'}`} onClick={() => eveningTimes.includes(value) === true && schedule[i].time.includes(value) === true ? updateTC(value) : null} key={value}>{value}</div>
+                    )));
+
+                    break;
+                }
+            }
+
         }
     }
     
@@ -206,70 +293,99 @@ const scheduleBooking = () => {
                     <div className="simpleTitle bookingTitle">Schedule Online</div>
                     <div className="padTop40"></div>
                     <div className='simpleFlex'>
-                    <div className="calendarAppGrid">
-                        <div className="appCol1">
-                            <div className="mtSwitchGrid padBottom40">
-                                <div className="size22Font">{currMonth} {currYear}</div>
-                                <div className="mtArrow" onClick={() =>fillCalendar(-1)}><i className="fa-solid fa-caret-left fa-xl"></i></div>
-                                <div className="mtArrow" onClick={() => fillCalendar(1)}><i className="fa-solid fa-caret-right fa-xl"></i></div>
-                                <div></div>
-                                <div className='mtToday' onClick={() => fillCalendar(0)}>Today</div>
-                            </div>
-                        
-                            <div className="dayGrid padBottom20">
-                                <b>Sun.</b>
-                                <b>Mon.</b>
-                                <b>Tue.</b>
-                                <b>Wed.</b>
-                                <b>Thu.</b>
-                                <b>Fri.</b>
-                                <b>Sat.</b>
-                            </div>
-                            <div className="calendar">
-                             {calendarValue}
-                                
-                            </div>
-                            <div className='simpleFlex'>
-                            <div className='dayPeriodGrid'>
-                                <div className="morning">
-                                    <div className=''></div>
-                                    <div>Morning</div>
-                                    {morningTimes.map((value) => (
-                                        <div className="mStyle" key={value}>{value}</div>
-                                    ))}
-                                </div>
-                                <div className="afternoon">
-                                    <div>Afternoon</div>
-                                    {afternoonTimes.map((value) => (
-                                        <div className="aStyle" key={value}>{value}</div>
-                                    ))}
-                                </div>
-                                <div className="evening">
-                                    <div>Evening</div>
-                                    {eveningTimes.map((value) => (
-                                        <div className="eStyle" key={value}>{value}</div>
-                                    ))}
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                        <div className="appCol2">
-                        <div className="infoBoxGrid">
-                            <div></div>
-                                <div className="infoBox">
+                    <div>{calendarSwitch ?
+                        <div className="calendarAppGrid">
+                            <div className="appCol1">
+                                <div className="mtSwitchGrid padBottom40">
+                                    <div className="size22Font">{currMonth} {currYear}</div>
+                                    <div className="mtArrow" onClick={() =>fillCalendar(-1)}><i className="fa-solid fa-caret-left fa-xl"></i></div>
+                                    <div className="mtArrow" onClick={() => fillCalendar(1)}><i className="fa-solid fa-caret-right fa-xl"></i></div>
                                     <div></div>
-                                    <div className="ibTitle">
-                                        The Open Space
+                                    <div className='mtToday' onClick={() => fillCalendar(0)}>Today</div>
+                                </div>
+                            
+                                <div className="dayGrid padBottom20">
+                                    <b>Sun.</b>
+                                    <b>Mon.</b>
+                                    <b>Tue.</b>
+                                    <b>Wed.</b>
+                                    <b>Thu.</b>
+                                    <b>Fri.</b>
+                                    <b>Sat.</b>
+                                </div>
+                                <div className="calendar">
+                                {calendarValue}
+                                    
+                                </div>
+                                <div className='simpleFlex'>
+                                <div className='dayPeriodGrid'>
+                                    <div className="morning">
+                                        <div className=''></div>
+                                        <div>Morning</div>
+                                        {morningslots}
                                     </div>
-                                    <div className="timeInfo">45 min</div>
-                                    <div className="dateSelected">{superDate}</div>
-                                    <div className="nextButton">Next</div>
+                                    <div className="afternoon">
+                                        <div>Afternoon</div>
+                                        {afternoonslots}
+                                    </div>
+                                    <div className="evening">
+                                        <div>Evening</div>
+                                        {eveningslots}
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div className="appCol2">
+                            <div className="infoBoxGrid">
+                                <div></div>
+                                    <div className="infoBox">
+                                        <div></div>
+                                        <div className="ibTitle">
+                                            The Open Space
+                                        </div>
+                                        <div className="timeInfo">45 min</div>
+                                        <div className="dateSelected">{superDate} {timeChosen}</div>
+                                        <div className="nextButton" onClick={() => checkTime()}>Next</div>
+                                        <div></div>
+                                    </div>
                                     <div></div>
                                 </div>
-                                <div></div>
                             </div>
+                    </div> 
+                    
+                    : 
+                    <div className='maxWidth width80Per padBottom80'>
+                    <div className="bookingInfoGrid">
+                        <div className='bCol1' onClick={() => checkTime()}>Go Back</div>
+                        <div className="bCol1 simpleTitle">Add Your Info</div>
+                        <div className='bCol1'></div>
+                        <div className='bCol1'>Name</div>
+                        <input className='bCol1' onChange={updateName} value={name}></input>
+                        <div className='bCol1'>Email</div>
+                        <input className='bCol1' onChange={updateEmail} value={email}></input>
+                        <div className='bCol1'>Phone Number</div>
+                        <input className='bCol1' onChange={updatePhone} value={phone}></input>
+                        <div className='bCol1'>Add Your Message</div>
+                        <textarea className='bCol1' onChange={updateMessage} value={message}></textarea>
+                        <div className="infoBoxGrid confirmationBox">
+                                <div></div>
+                                    <div className="infoBox">
+                                        <div></div>
+                                        <div className="ibTitle">
+                                            The Open Space
+                                        </div>
+                                        <div className="timeInfo">45 min</div>
+                                        <div className="dateSelected">{superDate} {timeChosen}</div>
+                                        <div className="nextButton" onClick={() => {swCal(!calendarSwitch); submitBooking();}}>Request to Book</div>
+                                        <div></div>
+                                    </div>
+                                    <div></div>
                         </div>
                     </div>
+                    </div>
+                    }</div>
+
+
                     </div>
                 </div>
             </div>
