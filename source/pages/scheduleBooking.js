@@ -29,6 +29,36 @@ var customYear = actualDate.slice(-4);
 
 const scheduleBooking = () => {
 
+    useEffect(() => {
+        
+        getBookings();
+    
+        }, [])
+
+    var z = [];
+    var blockedTime = [];
+
+    function getBookings(){
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/getBookings", true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify({
+            date: "Thu 2022 Sep22", 
+            time: "1:00 PM"
+        }));
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === XMLHttpRequest.DONE){
+                console.log(xhr.status)
+                z = JSON.parse(xhr.responseText);
+                for (var i=0; i<z.length; i++){
+                    blockedTime.push(z[i].date);
+                }
+                console.log("#########");
+                console.log(blockedTime);
+            }
+        }
+    }
+
     var schedule = [
         {"day":"Mon","time":["9:00 AM","10:00 AM","11:00 AM","12:00 PM","1:00 PM","2:00 PM","3:00 PM","4:00 PM","5:00 PM"]},
         {"day":"Tue","time":["8:00 AM","9:00 AM","10:00 AM","11:00 AM","12:00 PM","1:00 PM","2:00 PM","3:00 PM","4:00 PM"]},
@@ -90,17 +120,17 @@ const scheduleBooking = () => {
                 date: superDate,
                 time: timeChosen
             }));
-            refreshFields();
+            xhr.onreadystatechange = () => {
+                if(xhr.readyState === XMLHttpRequest.DONE){
+                    alert(xhr.responseText);
+                    location.reload();
+                }
+            }
+            
         }else{
             alert("Please fill out every field below before booking your appointment.");
         }
 
-    }
-
-    function refreshFields(){
-
-        alert("Your appointment has been submitted. Thank you.");
-        location.reload();
     }
 
     var [currMonth, changeMonth] = useState(0);
@@ -223,7 +253,7 @@ const scheduleBooking = () => {
     //maps the values to the calendar tiles
     newCalValue(thisMonth.map((value) => (
 
-        <div className={`calTile ${thisMonth.indexOf(value)} ${value.slice(11,15)} ${value.length > 5 ? value.slice(4,7).concat(value.slice(8,10)): "invalid"}`} onClick={() => { toggleSelection(thisMonth.indexOf(value), value.slice(0,15)); updateTC("");}} key={value.toString()}>{value.length > 5 ? value.slice(8,10) : value.slice(3,5)}</div>
+        <div className={`calTile ${thisMonth.indexOf(value)} ${value.slice(0,3)} ${value.slice(11,15)} ${value.length > 5 ? value.slice(4,7).concat(value.slice(8,10)): "invalid"}`} onClick={() => { toggleSelection(thisMonth.indexOf(value), value.slice(0,15)); updateTC("");}} key={value.toString()}>{value.length > 5 ? value.slice(8,10) : value.slice(3,5)}</div>
     )));  
 }
 
@@ -255,24 +285,27 @@ const scheduleBooking = () => {
         if (dPart1 !== "undefined, "){
             console.log(dPart1)
             setSuperDate(dPart1.concat(dPart2.concat(dPart3.concat(dPart4))));
+            var tempDate = dPart1.concat(dPart2.concat(dPart3.concat(dPart4)));
+            console.log("@@@@@@@@")
+            console.log(tempDate);
+            console.log(tempDate.concat(" ", "1:00 PM"));
 
             for (var i=0;i<schedule.length; i++){
                 console.log("ugh");
                 if (schedule[i].day === dPart1.slice(0,3)){
                     updatemTimeslots(morningTimes.map((value) => (
-                        <div className={`${morningTimes.includes(value) === true && schedule[i].time.includes(value) === true ? 'mStyle' : 'invalidTime'}`} onClick={() => morningTimes.includes(value) === true && schedule[i].time.includes(value) === true ? updateTC(value) : null} key={value}>{value}</div>
+                        <div className={`${morningTimes.includes(value) === true && schedule[i].time.includes(value) === true && !blockedTime.includes(tempDate.concat(" ", value)) ? 'mStyle' : 'invalidTime'}`} onClick={() => morningTimes.includes(value) === true && schedule[i].time.includes(value) === true && morningTimes.includes(value) === true && schedule[i].time.includes(value) === true && !blockedTime.includes(tempDate.concat(" ", value)) ? updateTC(value) : null} key={value}>{value}</div>
                     )));
                     updateaTimeslots(afternoonTimes.map((value) => (
-                        <div className={`${afternoonTimes.includes(value) === true && schedule[i].time.includes(value) === true ? 'mStyle' : 'invalidTime'}`} onClick={() => afternoonTimes.includes(value) === true && schedule[i].time.includes(value) === true ? updateTC(value) : null} key={value}>{value}</div>
+                        <div className={`${afternoonTimes.includes(value) === true && schedule[i].time.includes(value) === true && !blockedTime.includes(tempDate.concat(" ", value)) ? 'mStyle' : 'invalidTime'}`} onClick={() => afternoonTimes.includes(value) === true && schedule[i].time.includes(value) === true && afternoonTimes.includes(value) === true && schedule[i].time.includes(value) === true && !blockedTime.includes(tempDate.concat(" ", value)) ? updateTC(value) : null} key={value}>{value}</div>
                     )));
                     updateeTimeslots(eveningTimes.map((value) => (
-                        <div className={`${eveningTimes.includes(value) === true && schedule[i].time.includes(value) === true ? 'mStyle' : 'invalidTime'}`} onClick={() => eveningTimes.includes(value) === true && schedule[i].time.includes(value) === true ? updateTC(value) : null} key={value}>{value}</div>
+                        <div className={`${eveningTimes.includes(value) === true && schedule[i].time.includes(value) === true && !blockedTime.includes(tempDate.concat(" ", value)) ? 'mStyle' : 'invalidTime'}`} onClick={() => eveningTimes.includes(value) === true && schedule[i].time.includes(value) === true && eveningTimes.includes(value) === true && schedule[i].time.includes(value) === true && !blockedTime.includes(tempDate.concat(" ", value)) ? updateTC(value) : null} key={value}>{value}</div>
                     )));
 
                     break;
                 }
             }
-
         }
     }
     

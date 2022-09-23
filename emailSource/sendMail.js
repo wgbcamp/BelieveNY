@@ -405,7 +405,7 @@ function sendMail(data){
                                     <table class="fullWidth" style="font-family: 'Raleway', sans-serif;width: 100%;border-spacing: 0px!important;">
                                         <tr>
                                             <td class="thirdWidth" style="width: 33%;"></td>
-                                            <td class="button textSize2" style="font-weight: 500;background-color: rgb(245, 192, 255);color: black;height: 66px;width: 33%;border-radius: 5px;font-size: 22px;">Click Here</td>
+                                            <td class="button textSize2" style="font-weight: 500; text-align: center; background-color: rgb(245, 192, 255);color: black;height: 66px;width: 33%;border-radius: 5px;font-size: 22px;">Click Here</td>
                                             <td class="thirdWidth" style="width: 33%;"></td> 
                                         </tr>
                                     </table>
