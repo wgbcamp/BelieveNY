@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../css/eventSponsors.css'
 import PhotoTextBox from '../components/photoTextBox'
 import PhotoTextBoxNoLogo from '../components/photoTextBoxNoLogo'
@@ -7,6 +7,52 @@ import HavanaCentral from '../images/havana-central-logo-v3.webp'
 import CutlerSalons from '../images/Cutler-Salons.webp'
 
 const eventSponsors = () => {
+
+    const [businessName, setBName] = useState('');
+    const [contactName, setCName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [text, setText] = useState('');
+
+    const updateBName = event => {
+        setBName(event.target.value);
+    }
+    const updatePhone = event => {
+        setPhone(event.target.value);
+    }
+    const updateEmail = event => {
+        setEmail(event.target.value);
+    }
+    const updateCName = event => {
+        setCName(event.target.value);
+    }
+    const updateText = event => {
+        setText(event.target.value);
+    }
+
+    function refreshFields(){
+        setBName("");
+        setPhone("");
+        setEmail("");
+        setCName("");
+        setText("");
+        alert("Your form has been submitted, thank you.");
+    }
+
+    function submitEmail(){
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/", true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify({
+            type: "eventSponsor",
+            contactName: contactName,
+            businessName: businessName,
+            email: email,
+            phone: phone,
+            text: text
+        }));
+        refreshFields();
+    }
 
     return(
         <div className="simpleFlex">
@@ -43,17 +89,17 @@ const eventSponsors = () => {
                                 <div className="sponsorBoxTitle">Become An Event Sponsor</div>
                             </div>
                             <div className="fieldContainer">
-                            <input placeholder="Business Name" type="text" className="b1"/>
-                            <input placeholder="Contact Name" type="text" className="b2"/>
-                            <input placeholder="Email" type="text" className="b3"/>
-                            <input placeholder="Phone" type="text" className="b4"/>
-                            <textarea placeholder="Type your message here..." type="text" className=""/>
+                            <input placeholder="Business Name" type="text" className="b1" onChange={updateBName} value={businessName}/>
+                            <input placeholder="Contact Name" type="text" className="b2" onChange={updateCName} value={contactName}/>
+                            <input placeholder="Email" type="text" className="b3" onChange={updateEmail} value={email}/>
+                            <input placeholder="Phone" type="text" className="b4" onChange={updatePhone} value={phone}/>
+                            <textarea placeholder="Type your message here..." type="text" className="" onChange={updateText} value={text}/>
                             </div>
                             <div className="verticalAlign">
                                 <div className="captcha simpleFlex verticalAlign">Placeholder Captcha</div>
                             </div>
                             <div className="verticalAlign horizontalEnd">
-                                <div className="formButton simpleFlex verticalAlign">Submit</div>
+                                <div className="formButton simpleFlex verticalAlign" onClick={() => submitEmail()}>Submit</div>
                             </div>
                             
                             </div>
