@@ -26,6 +26,14 @@ const donate = () => {
                         </div>
                     </div>
                     <div className="padBottom40"></div>
+                    <div className="size36Font">
+                    <div>Venmo:</div>
+                    <div>@Believeny</div>
+                    <div className="padBottom20"></div>
+                    <div>Cash App:</div>
+                    <div>$Believeny</div>
+                    </div>
+                    <div className="padBottom40"></div>
                     <a href="mailto:believenewyork@gmail.com" className="styleLink size26Font">Question? Click here to email our staff!</a>
                     <div className="padBottom40"></div>
                 </div>
