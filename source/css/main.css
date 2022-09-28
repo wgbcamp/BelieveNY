@@ -136,6 +136,10 @@ ul.no-bullets{
     margin: 0;
 }
 
+.weight500{
+    font-weight: 500;
+}
+
 .italicize{
     font-style: italic;
 }

@@ -322,6 +322,8 @@ const scheduleBooking = () => {
         <div>
             <div className="simpleFlex">
                 <div className="maxWidth width80Per">
+                    <div className='padTop80'></div>
+                    <div className='weight500 lineHeight25'>Important Disclaimer: The Open Space is not a substitute for clinical mental health treatment and/or a cure for any mental health issues and/or disorders. Although our Counselors are comprehensively trained, they are not certified nor licensed mental health specialists. They are trained in active listening techniques, empathy, and compassion and will provide support and resource referrals as needed.</div>
                     <div className="padTop40"></div>
                     <div className="simpleTitle bookingTitle">Schedule Online</div>
                     <div className="padTop40"></div>
