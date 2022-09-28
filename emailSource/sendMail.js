@@ -191,9 +191,9 @@ function sendMail(data){
                                     <table class="fullWidth" style="font-family: 'Raleway', sans-serif;width: 100%;border-spacing: 0px!important;">
                                         <tr style="font-weight: 500"> 
                                             <td class="spaceMiddle textLeft" style="text-align: left;width: 33%;">
-                                                <img src="https://www.believeny.org/c25eacea879db34dceeb.png">
-                                                <img src="https://www.believeny.org/37a16ce61b3d48080b95.png">
-                                                <img src="https://www.believeny.org/b4c003cfc757cd8ff84c.png">
+                                                <a href="https://www.facebook.com/believeny"><img src="https://www.believeny.org/c25eacea879db34dceeb.png"></a>
+                                                <a href="https://www.twitter.com/Believe_NewYork"><img src="https://www.believeny.org/37a16ce61b3d48080b95.png"></a>
+                                                <a href="https://www.instagram.com/believeny"><img src="https://www.believeny.org/b4c003cfc757cd8ff84c.png"></a>
                                             </td>
                                             <td class="textCenter" style="text-align: center;">GetHelp@BelieveNY.org</td>
                                             <td class="textRight" style="text-align: right;width: 33%;">(347) NYC-0011</td> 
@@ -385,9 +385,9 @@ function sendMail(data){
                                     <table class="fullWidth" style="font-family: 'Raleway', sans-serif;width: 100%;border-spacing: 0px!important;">
                                         <tr style="font-weight: 500"> 
                                             <td class="spaceMiddle textLeft" style="text-align: left;width: 33%;">
-                                                <img src="https://www.believeny.org/c25eacea879db34dceeb.png">
-                                                <img src="https://www.believeny.org/37a16ce61b3d48080b95.png">
-                                                <img src="https://www.believeny.org/b4c003cfc757cd8ff84c.png">
+                                            <a href="https://www.facebook.com/believeny"><img src="https://www.believeny.org/c25eacea879db34dceeb.png"></a>
+                                            <a href="https://www.twitter.com/Believe_NewYork"><img src="https://www.believeny.org/37a16ce61b3d48080b95.png"></a>
+                                            <a href="https://www.instagram.com/believeny"><img src="https://www.believeny.org/b4c003cfc757cd8ff84c.png"></a>
                                             </td>
                                             <td class="textCenter" style="text-align: center;">GetHelp@BelieveNY.org</td>
                                             <td class="textRight" style="text-align: right;width: 33%;">(347) NYC-0011</td> 
@@ -627,9 +627,9 @@ function sendMail(data){
                                     <table class="fullWidth" style="font-family: 'Raleway', sans-serif;width: 100%;border-spacing: 0px!important;">
                                         <tr style="font-weight: 500"> 
                                             <td class="spaceMiddle textLeft" style="text-align: left;width: 33%;">
-                                                <img src="https://www.believeny.org/c25eacea879db34dceeb.png">
-                                                <img src="https://www.believeny.org/37a16ce61b3d48080b95.png">
-                                                <img src="https://www.believeny.org/b4c003cfc757cd8ff84c.png">
+                                            <a href="https://www.facebook.com/believeny"><img src="https://www.believeny.org/c25eacea879db34dceeb.png"></a>
+                                            <a href="https://www.twitter.com/Believe_NewYork"><img src="https://www.believeny.org/37a16ce61b3d48080b95.png"></a>
+                                            <a href="https://www.instagram.com/believeny"><img src="https://www.believeny.org/b4c003cfc757cd8ff84c.png"></a>
                                             </td>
                                             <td class="textCenter" style="text-align: center;">GetHelp@BelieveNY.org</td>
                                             <td class="textRight" style="text-align: right;width: 33%;">(347) NYC-0011</td> 
