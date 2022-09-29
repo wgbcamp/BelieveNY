@@ -20,6 +20,7 @@ import SpecialEventsFund from './pages/SpecialEventsFund';
 import Donate from './pages/donate';
 import EventSponsors from './pages/eventSponsors';
 import Volunteer from './pages/volunteer';
+import CancelAppointment from './pages/cancelAppointment';
 
 function App(){
     return(
@@ -43,6 +44,7 @@ function App(){
                         <Route path="/SpecialEventsFund" element={<SpecialEventsFund/>}/>
                         <Route path="/volunteer" element={<Volunteer/>}/>
                         <Route path="/donate" element={<Donate/>}/>
+                        <Route path="/cancelAppointment/*" element={<CancelAppointment/>}/>
                         <Route path="*" element={<Home/>}/>
                     </Routes>
                 <div className="contentWrapper"></div> 

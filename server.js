@@ -27,13 +27,27 @@ app.post("/getBookings", function (req, res){
     }
 })
 
+app.post("/findOneBooking", function (req, res){
+    mongoUtil.findOneBooking(req.body, response);
+    function response(data){
+        res.send(data);
+    }
+})
+
+app.post("/deleteOneBooking", function (req, res){
+    mongoUtil.deleteOneBooking(req.body, response);
+    function response(data){
+        res.send(data);
+    }
+})
+
 app.post("/booking", function (req, res){
 
     mongoUtil.postBooking(req.body, response);
-    function response(validate){
-        console.log(JSON.stringify(req.body));
+    function response(validate, data){
+        console.log(JSON.stringify(data));
         if (validate === true){
-            mailer.sendMail(req.body);
+            mailer.sendMail(data);
             res.send("booking successful");
         }else{
             res.send("We're sorry but your booking could not be completed. Please contact us by phone or email for further assistance.")

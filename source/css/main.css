@@ -254,6 +254,48 @@ ul.no-bullets{
     display: none;
 }
 
+.cancelAppCard{
+    height: 300px;
+    width: 300px;
+    box-shadow: 2px 4px 12px rgb(0 0 0 / 8%)
+}
+
+.cAgrid{
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    height: 100%;
+    border-radius: 9px;
+}
+
+.cAleft{
+    grid-column: 1;
+}
+
+.cAcenter{
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: 10% 30% 30% 20% 10%;
+}
+
+.cAright{
+    grid-column: 3;
+}
+
+.cAdate{
+    grid-row: 2;
+}
+
+.cAbutton{
+    color: white;
+    background-color: #3c2d73;
+    text-align: center;
+    grid-row: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+}
+
 @media screen and (min-width: 700px){
 
     .contentWrapper{

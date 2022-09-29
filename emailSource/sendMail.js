@@ -417,7 +417,7 @@ function sendMail(data){
     if (data.type === 'booking'){
         sgMail.setApiKey(process.env.SENDGRID_API_KEY)
         const msg = {
-            to: process.env.FROM_EMAIL, // Change to your recipient
+            to: process.env.TEST_TO_EMAIL, // Change to your recipient
             from: process.env.FROM_EMAIL, // Change to your verified sender
             subject: `${data.name} booked an appointment for ${data.date} at ${data.time}`,
             text: 'Test email',
@@ -600,7 +600,7 @@ function sendMail(data){
                                     <table class="fullWidth" style="font-family: 'Raleway', sans-serif;width: 100%;border-spacing: 0px!important;">
                                         <tr>
                                             <td class="thirdWidth" style="width: 33%;"></td>
-                                            <td class="button textSize2" style="font-weight: 500; text-align: center; background-color: rgb(245, 192, 255);color: black;height: 66px;width: 33%;border-radius: 5px;font-size: 22px;">Click Here</td>
+                                            <td class="button textSize2" style="font-weight: 500; text-align: center; background-color: rgb(245, 192, 255);color: black;height: 66px;width: 33%;border-radius: 5px;font-size: 22px;text-decoration: none;color: black;"><a href="https://www.believeny.org/cancelAppointment/${data.id}">Click Here</a></td>
                                             <td class="thirdWidth" style="width: 33%;"></td> 
                                         </tr>
                                     </table>

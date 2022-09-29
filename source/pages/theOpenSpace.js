@@ -8,7 +8,7 @@ const theOpenSpace = () => {
         <div>
             <div className="simpleFlex">
                 <div className="maxWidth width80Per">
-                    <div className="size24Font padTop40 centerText lineHeight30">Are you living with loneliness? Sadness? Anxiety? Are you stressed about school, work or difficult relationships? Are you struggling with addictions, violence, or losses in your life?</div>
+                    <div className="size24Font padTop80 centerText lineHeight30">Are you living with loneliness? Sadness? Anxiety? Are you stressed about school, work or difficult relationships? Are you struggling with addictions, violence, or losses in your life?</div>
                     <div className="size36Font padTop40 centerText">We are here for you.</div>
                     <div className="size26Font padTop40 centerText"> We are here to listen and help you through your next steps.</div>
                     <div className='simpleFlex padTop40 padBottom40'>

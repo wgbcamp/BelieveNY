@@ -23,18 +23,43 @@ module.exports = {
         cb(result);
     },
 
+    findOneBooking: async function (data, cb){
+
+        var result = await schedule.findOne({_id: data.id});
+        if (result === null){
+            result = "This appointment does not exist."
+        }else{
+            result = result.date;
+        }
+        cb(result);
+    },
+
+    deleteOneBooking: async function (data, cb){
+
+        var result = await schedule.deleteOne({_id: data.id});
+        console.log(result);
+        if (result.deletedCount < 1){
+            result = "We encountered an error when submitting your cancellation request. Your appointment may have already been deleted."
+        }else{
+            result = "Your appointment has been cancelled. Thank you.";
+        }
+        cb(result);
+    },
+
     postBooking: async function (data, cb){
         var validate;
         const findDuplicate = await schedule.findOne({date: data.date.concat(" ", data.time)});
 
         if (findDuplicate === null){
-            const post = await schedule.insertOne({date: data.date.concat(" ", data.time), name: data.name});
+            var uniqueID = Math.random().toString(36).substring(2).concat(Math.random().toString(36).substring(2));
+            const post = await schedule.insertOne({_id: uniqueID, date: data.date.concat(" ", data.time), name: data.name});
             console.log(`Logged booking for ${data.date.concat(" ", data.time)}`);
+            data.id = uniqueID;
             validate = true;
         }else{
             validate = false;
         }
         
-        cb(validate);
+        cb(validate, data);
     }
 };
