@@ -661,7 +661,7 @@ function sendMail(data){
         const msg = {
             to: process.env.TEST_TO_EMAIL, // Change to your recipient
             from: process.env.FROM_EMAIL, // Change to your verified sender
-            subject: `${data.name} has cancelled their appointment for ${data.date} at ${data.time}`,
+            subject: `${data.name} has cancelled their appointment for ${data.date}`,
             text: 'Test email',
             html: `<!DOCTYPE html>
             <html lang="en">
@@ -701,10 +701,6 @@ function sendMail(data){
                         </tr>
                         <tr>
                             <th></th>
-                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">${data.email}</th>
-                        </tr>
-                        <tr>
-                            <th></th>
                             <th class="pad40 white " style="height: 40px;background-color: white;"></th>
                         </tr>
                         <tr>
@@ -714,19 +710,11 @@ function sendMail(data){
                         </tr>
                         <tr>
                             <th></th>
-                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">${data.phone}</th>
-                        </tr>
-                        <tr>
-                            <th></th>
                             <th class="pad40 white " style="height: 40px;background-color: white;"></th>
                         </tr>
                         <tr>
                             <th></th>
                             <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">Message: </th>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">${data.message}</th>
                         </tr>
                         <tr>
                             <th></th>
@@ -748,10 +736,6 @@ function sendMail(data){
                             <th></th>
                             <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">Time:</th>
                         </tr>
-                        <tr>
-                            <th></th>
-                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">${data.time}</th>
-                        </tr>    
                         <tr>
                             <th></th>
                             <th class="pad40 white borderBottom" style="height: 40px;background-color: white;border-bottom-left-radius: 8px;border-bottom-right-radius: 8px;"></th>
