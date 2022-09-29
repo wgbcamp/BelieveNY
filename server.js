@@ -36,8 +36,12 @@ app.post("/findOneBooking", function (req, res){
 
 app.post("/deleteOneBooking", function (req, res){
     mongoUtil.deleteOneBooking(req.body, response);
-    function response(data){
-        res.send(data);
+    function response(message, deleteCount, data){
+        if (deleteCount === 1){
+            data.type = "cancellation";
+            mailer.sendMail(data);
+        }
+        res.send(message);
     }
 })
 

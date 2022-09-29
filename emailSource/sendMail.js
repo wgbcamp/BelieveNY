@@ -417,7 +417,7 @@ function sendMail(data){
     if (data.type === 'booking'){
         sgMail.setApiKey(process.env.SENDGRID_API_KEY)
         const msg = {
-            to: process.env.FROM_EMAIL, // Change to your recipient
+            to: process.env.TEST_TO_EMAIL, // Change to your recipient
             from: process.env.FROM_EMAIL, // Change to your verified sender
             subject: `${data.name} booked an appointment for ${data.date} at ${data.time}`,
             text: 'Test email',
@@ -654,6 +654,121 @@ function sendMail(data){
                 console.log(process.env.FROM_EMAIL)
             })
         }
+    }
+
+    if (data.type === "cancellation"){
+        sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+        const msg = {
+            to: process.env.TEST_TO_EMAIL, // Change to your recipient
+            from: process.env.FROM_EMAIL, // Change to your verified sender
+            subject: `${data.name} has cancelled their appointment for ${data.date} at ${data.time}`,
+            text: 'Test email',
+            html: `<!DOCTYPE html>
+            <html lang="en">
+              <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                
+                    
+              </head>
+              <body style="background-color: rgb(231, 231, 231);">
+                <table class="flexTable" style="font-family: 'Raleway', sans-serif;width: 100%;border-spacing: 0px!important;">
+                    <tr>
+                        <th class="sideDiv" style="width: 50px;"></th>
+                        <th>
+                            <img src="https://www.believeny.org/c589220876aa06bb46c6.png" class="paddingBottom40">
+                        </th>
+                        <th class="sideDiv" style="width: 50px;"></th>
+                    </tr>
+                        <!-- white area -->
+                        <tr>
+                            <th></th>
+                            <th class="pad40 white borderTop" style="height: 40px;background-color: white;border-top-left-radius: 8px;border-top-right-radius: 8px;"></th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="white textSize1" style="font-weight: 500;background-color: white;font-size: 36px;">${data.name} cancelled an appointment.</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="pad40 white " style="height: 40px;background-color: white;"></th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">Email address: 
+                            </th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">${data.email}</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="pad40 white " style="height: 40px;background-color: white;"></th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">Phone number: 
+                            </th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">${data.phone}</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="pad40 white " style="height: 40px;background-color: white;"></th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">Message: </th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">${data.message}</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="pad40 white " style="height: 40px;background-color: white;"></th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">Date: </th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">${data.date}</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="pad40 white " style="height: 40px;background-color: white;"></th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">Time:</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">${data.time}</th>
+                        </tr>    
+                        <tr>
+                            <th></th>
+                            <th class="pad40 white borderBottom" style="height: 40px;background-color: white;border-bottom-left-radius: 8px;border-bottom-right-radius: 8px;"></th>
+                        </tr>
+                </table>
+            </body>
+            </html>`,
+        }
+        sgMail
+        .send(msg)
+        .then(() => {
+            console.log('Email sent to believeny.');
+        })
+        .catch((error) => {
+            console.error(error)
+            console.log(process.env.FROM_EMAIL)
+        })
     }
 }
 

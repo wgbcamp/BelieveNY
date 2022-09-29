@@ -36,14 +36,16 @@ module.exports = {
 
     deleteOneBooking: async function (data, cb){
 
+        var getData = await schedule.findOne({_id: data.id});
         var result = await schedule.deleteOne({_id: data.id});
+        var message;
         console.log(result);
         if (result.deletedCount < 1){
-            result = "We encountered an error when submitting your cancellation request. Your appointment may have already been deleted."
+            message = "We encountered an error when submitting your cancellation request. Your appointment may have already been deleted."
         }else{
-            result = "Your appointment has been cancelled. Thank you.";
+            message = "Your appointment has been cancelled. Thank you.";
         }
-        cb(result);
+        cb(message, result.deletedCount, getData);
     },
 
     postBooking: async function (data, cb){
