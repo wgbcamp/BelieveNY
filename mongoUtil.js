@@ -17,6 +17,7 @@ module.exports = {
         const result = await schedule.find().toArray();
         for (var i=0; i<result.length; i++){
             delete result[i]._id;
+            delete result[i].name;
         }
         console.log(result);
         cb(result);
@@ -27,7 +28,7 @@ module.exports = {
         const findDuplicate = await schedule.findOne({date: data.date.concat(" ", data.time)});
 
         if (findDuplicate === null){
-            const post = await schedule.insertOne({date: data.date.concat(" ", data.time)});
+            const post = await schedule.insertOne({date: data.date.concat(" ", data.time), name: data.name});
             console.log(`Logged booking for ${data.date.concat(" ", data.time)}`);
             validate = true;
         }else{
