@@ -417,7 +417,7 @@ function sendMail(data){
     if (data.type === 'booking'){
         sgMail.setApiKey(process.env.SENDGRID_API_KEY)
         const msg = {
-            to: process.env.TEST_TO_EMAIL, // Change to your recipient
+            to: process.env.FROM_EMAIL, // Change to your recipient
             from: process.env.FROM_EMAIL, // Change to your verified sender
             subject: `${data.name} booked an appointment for ${data.date} at ${data.time}`,
             text: 'Test email',
@@ -659,7 +659,7 @@ function sendMail(data){
     if (data.type === "cancellation"){
         sgMail.setApiKey(process.env.SENDGRID_API_KEY)
         const msg = {
-            to: process.env.TEST_TO_EMAIL, // Change to your recipient
+            to: process.env.FROM_EMAIL, // Change to your recipient
             from: process.env.FROM_EMAIL, // Change to your verified sender
             subject: `${data.name} has cancelled their appointment for ${data.date}`,
             text: 'Test email',
@@ -696,25 +696,11 @@ function sendMail(data){
                         </tr>
                         <tr>
                             <th></th>
-                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">Email address: 
-                            </th>
-                        </tr>
-                        <tr>
-                            <th></th>
                             <th class="pad40 white " style="height: 40px;background-color: white;"></th>
                         </tr>
                         <tr>
                             <th></th>
-                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">Phone number: 
-                            </th>
-                        </tr>
-                        <tr>
-                            <th></th>
                             <th class="pad40 white " style="height: 40px;background-color: white;"></th>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">Message: </th>
                         </tr>
                         <tr>
                             <th></th>
@@ -731,10 +717,6 @@ function sendMail(data){
                         <tr>
                             <th></th>
                             <th class="pad40 white " style="height: 40px;background-color: white;"></th>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">Time:</th>
                         </tr>
                         <tr>
                             <th></th>
