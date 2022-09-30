@@ -84,6 +84,7 @@ const scheduleBooking = () => {
     function checkTime(){
         if (timeChosen !== ""){
             swCal(!calendarSwitch);
+            window.scrollTo(0,0);
         }
     }
     
@@ -393,6 +394,7 @@ const scheduleBooking = () => {
                                     <div></div>
                                 </div>
                             </div>
+                            <div className="padTop80"></div>
                     </div> 
                     
                     : 
