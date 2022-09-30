@@ -300,6 +300,10 @@ ul.no-bullets{
     border-radius: 9px;
 }
 
+.noBorder{
+    border: unset;
+}
+
 @media screen and (min-width: 700px){
 
     .contentWrapper{

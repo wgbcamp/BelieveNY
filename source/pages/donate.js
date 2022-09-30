@@ -25,18 +25,23 @@ const donate = () => {
                         <div className="width80Per">We cannot explain in words how much we appreciate every single one of you. Thank you so much for taking the time to read this page and donate to our organization. We cannot keep doing this work without people supporting us. We are so grateful for the support and it is only motivation to keep going. Thank you for believing in New York and allowing us to continue and help as many people as possible! 
                         </div>
                     </div>
-                    <div className="padBottom40"></div>
-                    <div className="size36Font">
-                    <div>Venmo:</div>
-                    <div>@Believeny</div>
                     <div className="padBottom20"></div>
-                    <div>Cash App:</div>
-                    <div>$Believeny</div>
+                    <div className="size24Font">
+                    <div>Donate with Paypal:</div>
+                    <div className="padBottom20"></div>
                     </div>
+                    <form action="https://www.paypal.com/donate" method="post" target="_top">
+                    <input type="hidden" name="business" value="" />
+                    <input type="hidden" name="no_recurring" value="0" />
+                    <input type="hidden" name="currency_code" value="USD" />
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" className="noBorder"/>
+                    <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                    </form>
                     <div className="padBottom40"></div>
                     <a href="mailto:believenewyork@gmail.com" className="styleLink size26Font">Question? Click here to email our staff!</a>
                     <div className="padBottom40"></div>
                 </div>
+                
             </div>
         </div>
     )

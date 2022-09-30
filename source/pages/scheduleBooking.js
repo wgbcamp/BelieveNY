@@ -81,6 +81,7 @@ const scheduleBooking = () => {
     const eveningTimes = ["5:00 PM", "6:00 PM", "7:00 PM", "8:00 PM"];
 
     var [calendarSwitch, swCal] = useState(true);
+
     function checkTime(){
         if (timeChosen !== ""){
             swCal(!calendarSwitch);
@@ -88,6 +89,11 @@ const scheduleBooking = () => {
         }
     }
     
+     function scrollToIBG(){
+        document.getElementById('ibg').scrollIntoView({
+            behavior: 'smooth' 
+        });
+    }
     
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -413,7 +419,7 @@ const scheduleBooking = () => {
                         <div className='bCol1'>Add Your Message</div>
                         <textarea className='bCol1 borderTopSolid' onChange={updateMessage} value={message}></textarea>
                         <div className="simpleFlex confirmationBox">
-                        <div className="infoBoxGrid ">
+                        <div className="infoBoxGrid" id="ibg">
                                 <div></div>
                                     <div className="infoBox">
                                         <div></div>
