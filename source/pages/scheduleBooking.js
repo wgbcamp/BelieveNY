@@ -401,7 +401,7 @@ const scheduleBooking = () => {
                     <div className="simpleFlex">
                     <div className='maxWidth width80Per padBottom80'>
                     <div className="bookingInfoGrid">
-                        <div className='bCol1' onClick={() => {checkTime(); updateST(false);}}><div className="borderBlack">Go Back</div></div>
+                        <div className='bCol1' onClick={() => {checkTime(); updateST(false); setSuperDate(now.toDateString()); updateTC("");}}><div className="borderBlack">Go Back</div></div>
                         <div className="bCol1 simpleTitle">Add Your Info</div>
                         <div className='bCol1'></div>
                         <div className='bCol1'>Name</div>
