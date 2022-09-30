@@ -388,7 +388,7 @@ const scheduleBooking = () => {
                                         </div>
                                         <div className="timeInfo">45 min</div>
                                         <div className="dateSelected">{superDate} {timeChosen}</div>
-                                        <div className="nextButton" onClick={() => checkTime()}>Next</div>
+                                        <div className={`${superDate !== "" && timeChosen !== "" ? "nextButton" : "visibleNo"}`} onClick={() => checkTime()}>Next</div>
                                         <div></div>
                                     </div>
                                     <div></div>
