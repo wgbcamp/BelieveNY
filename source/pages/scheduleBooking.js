@@ -74,6 +74,7 @@ const scheduleBooking = () => {
     var [eveningslots, updateeTimeslots] = useState("");
 
     var [timeChosen, updateTC] = useState("");
+    var [slotTitles, updateST] = useState(false);
 
     const morningTimes = ["9:00 AM", "10:00 AM", "11:00 AM"];
     const afternoonTimes = ["12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM"];
@@ -253,7 +254,7 @@ const scheduleBooking = () => {
     //maps the values to the calendar tiles
     newCalValue(thisMonth.map((value) => (
 
-        <div className={`calTile ${thisMonth.indexOf(value)} ${value.slice(0,3)} ${value.slice(11,15)} ${value.length > 5 ? value.slice(4,7).concat(value.slice(8,10)): "invalid"}`} onClick={() => { toggleSelection(thisMonth.indexOf(value), value.slice(0,15)); updateTC("");}} key={value.toString()}>{value.length > 5 ? value.slice(8,10) : value.slice(3,5)}</div>
+        <div className={`calTile ${thisMonth.indexOf(value)} ${value.slice(0,3)} ${value.slice(11,15)} ${value.length > 5 ? value.slice(4,7).concat(value.slice(8,10)): "invalid"}`} onClick={() => { toggleSelection(thisMonth.indexOf(value), value.slice(0,15)); updateTC(""); updateST(true);}} key={value.toString()}>{value.length > 5 ? value.slice(8,10) : value.slice(3,5)}</div>
     )));  
 }
 
@@ -324,21 +325,26 @@ const scheduleBooking = () => {
                 <div className="maxWidth width80Per">
                     <div className='padTop80'></div>
                     <div className='weight500 lineHeight25'>Important Disclaimer: The Open Space is not a substitute for clinical mental health treatment and/or a cure for any mental health issues and/or disorders. Although our Counselors are comprehensively trained, they are not certified nor licensed mental health specialists. They are trained in active listening techniques, empathy, and compassion and will provide support and resource referrals as needed.</div>
-                    <div className="padTop40"></div>
-                    <div className="simpleTitle bookingTitle">Schedule Online</div>
-                    <div className="padTop40"></div>
+                    <div className="padTop80"></div>
+                    
+                    
                     <div className='simpleFlex'>
+                        
                     <div>{calendarSwitch ?
                         <div className="calendarAppGrid">
                             <div className="appCol1">
-                                <div className="mtSwitchGrid padBottom40">
-                                    <div className="size22Font">{currMonth} {currYear}</div>
-                                    <div className="mtArrow" onClick={() =>fillCalendar(-1)}><i className="fa-solid fa-caret-left fa-xl"></i></div>
-                                    <div className="mtArrow" onClick={() => fillCalendar(1)}><i className="fa-solid fa-caret-right fa-xl"></i></div>
-                                    <div></div>
-                                    <div className='mtToday' onClick={() => fillCalendar(0)}>Today</div>
+                            <div className="bookingTitle size30Font">Schedule Online</div>
+                            <div className="padTop80"></div>
+                                <div className="simpleFlex">
+                                    <div className="mtSwitchGrid padBottom40">
+                                        <div className="size22Font">{currMonth} {currYear}</div>
+                                        <div className="mtArrow" onClick={() =>fillCalendar(-1)}><i className="fa-solid fa-caret-left fa-xl"></i></div>
+                                        <div className="mtArrow" onClick={() => fillCalendar(1)}><i className="fa-solid fa-caret-right fa-xl"></i></div>
+                                        <div></div>
+                                        <div className='mtToday' onClick={() => fillCalendar(0)}>Today</div>
+                                    </div>
                                 </div>
-                            
+                            <div className='simpleFlex'>
                                 <div className="dayGrid padBottom20">
                                     <b>Sun.</b>
                                     <b>Mon.</b>
@@ -348,14 +354,15 @@ const scheduleBooking = () => {
                                     <b>Fri.</b>
                                     <b>Sat.</b>
                                 </div>
+                            </div>
+                                <div className='simpleFlex'>
                                 <div className="calendar">
                                 {calendarValue}
-                                    
+                                </div>
                                 </div>
                                 <div className='simpleFlex'>
-                                <div className='dayPeriodGrid'>
+                                <div className={`dayPeriodGrid ${slotTitles === true ? "" : "visibleNo"}`}>
                                     <div className="morning">
-                                        <div className=''></div>
                                         <div>Morning</div>
                                         {morningslots}
                                     </div>
@@ -389,9 +396,10 @@ const scheduleBooking = () => {
                     </div> 
                     
                     : 
+                    <div className="simpleFlex">
                     <div className='maxWidth width80Per padBottom80'>
                     <div className="bookingInfoGrid">
-                        <div className='bCol1' onClick={() => checkTime()}>Go Back</div>
+                        <div className='bCol1' onClick={() => {checkTime(); updateST(false);}}><div className="borderBlack">Go Back</div></div>
                         <div className="bCol1 simpleTitle">Add Your Info</div>
                         <div className='bCol1'></div>
                         <div className='bCol1'>Name</div>
@@ -401,8 +409,9 @@ const scheduleBooking = () => {
                         <div className='bCol1'>Phone Number</div>
                         <input className='bCol1' onChange={updatePhone} value={phone}></input>
                         <div className='bCol1'>Add Your Message</div>
-                        <textarea className='bCol1' onChange={updateMessage} value={message}></textarea>
-                        <div className="infoBoxGrid confirmationBox">
+                        <textarea className='bCol1 borderTopSolid' onChange={updateMessage} value={message}></textarea>
+                        <div className="simpleFlex confirmationBox">
+                        <div className="infoBoxGrid ">
                                 <div></div>
                                     <div className="infoBox">
                                         <div></div>
@@ -411,11 +420,13 @@ const scheduleBooking = () => {
                                         </div>
                                         <div className="timeInfo">45 min</div>
                                         <div className="dateSelected">{superDate} {timeChosen}</div>
-                                        <div className="nextButton" onClick={() => {swCal(!calendarSwitch); submitBooking();}}>Request to Book</div>
+                                        <div className="nextButton" onClick={() => submitBooking()}>Request to Book</div>
                                         <div></div>
                                     </div>
                                     <div></div>
                         </div>
+                        </div>
+                    </div>
                     </div>
                     </div>
                     }</div>

@@ -18,6 +18,20 @@
     grid-column: 1;
 }
 
+.borderBlack{
+    border: solid black 1px;
+    width: 75px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.borderTopSolid{
+    border-top: solid black 1px;
+
+}
+
 .confirmationBox{
     grid-column: 1;
     grid-row: 12;
@@ -35,8 +49,8 @@
 .mtSwitchGrid{
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 190px 27px 27px 45px 63px;
-
+    grid-template-columns: 50% 10% 10% 15% 15%;
+    width: 630px;
 }
 
 .mtArrow{
@@ -101,7 +115,7 @@
 .dayPeriodGrid{
     display: grid;
     grid-template-columns: repeat(3, 184px);
-    column-gap: 40px;;
+    column-gap: 40px;
 }
 
 .infoBoxGrid{
@@ -176,9 +190,34 @@
     align-items: center;
 }
 
-@media screen and (min-width: 700px) and (max-width: 1200px) {
-  
+.visibleNo{
+    display: none;
+}
 
+@media screen and (max-width: 700px){
+  
+    .calendar{
+        grid-template-columns: repeat(7, 50px);
+        grid-template-rows: repeat(7, 60px);
+    }
+
+    .dayGrid{
+        display: grid;
+        grid-template-columns: repeat(7, 50px);
+    }
+
+    .mtSwitchGrid{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 50% 10% 10% 15% 15%;
+        width: 350px;
+    }
+
+    .dayPeriodGrid{
+        display: grid;
+        grid-template-columns: repeat(3, 90px);
+        column-gap: 40px;
+    }
 
 }
 
@@ -186,7 +225,7 @@
 
     .calendarAppGrid{
         grid-template-rows: unset;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr ;
         column-gap: 80px;
     }
 
