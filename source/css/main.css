@@ -546,7 +546,7 @@ textarea[type=text]{
 .resizeImage{
     width: 240px;
     height: 261px;
-    background-image: url("../images/BNYCitySmall.png");
+    background-image: url("../../images/BNYCitySmall.png");
 }
 
 .thankYou{
@@ -697,7 +697,7 @@ input[type="email"]::placeholder{
 }
 
 .titleBackground{
-    background-image: url("../images/folksAndFood.webp");
+    background-image: url("../../images/folksAndFood.webp");
     background-position: 50% 75%;
     height: 750px;
     border-bottom-left-radius: 10px;
@@ -1427,7 +1427,7 @@ border-bottom-right-radius: 10px;
     .resizeImage{
         width: 547px;
         height: 710px;
-        background-image: url("../images/BNYCity.png");
+        background-image: url("../../images/BNYCity.png");
     }
 
     .emailGrid{
@@ -1491,7 +1491,7 @@ border-bottom-right-radius: 10px;
         padding-right: 0px;
         line-height: 35px;
         overflow: hidden;
-        width: unset;
+        width: 95%;
     }
 
     .ssBoxContainer{
@@ -1562,7 +1562,7 @@ border-bottom-right-radius: 10px;
         grid-template-rows: 1fr;
         color: white;
         margin-bottom: 25px;
-        width: unset;
+        width: 95%;
     }
 
     .slideshow3{

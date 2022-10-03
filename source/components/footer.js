@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import "../css/footer.css"
-import BNYLogoFull from "../images/BNYLogoFull-02.png"
+import BNYLogoFull from "../../images/BNYLogoFull-02.png"
 const Footer = () => {
 
     function restoreTop(){

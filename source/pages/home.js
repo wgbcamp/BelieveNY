@@ -1,5 +1,5 @@
 import React, { useState} from 'react'
-import folksAndFood from "../images/folksAndFood.webp";
+import folksAndFood from "../../images/folksAndFood.webp";
 import VolunteerBox from '../components/volunteerBox';
 
 const Home = () => {

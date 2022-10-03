@@ -1,5 +1,5 @@
 import React from 'react'
-import CanvasBag from '../images/CanvasBagv2.webp'
+import CanvasBag from '../../images/CanvasBagv2.webp'
 import PhotoTextBox from '../components/photoTextBox'
 
 const volunteer = () => {

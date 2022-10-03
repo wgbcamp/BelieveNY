@@ -2,11 +2,11 @@ import React from 'react'
 import DescriptionBox from '../components/descriptionBox';
 import PersonCard from '../components/personCard';
 import EasyDropdown from '../components/easyDropdown';
-import BNYLogoFull from '../images/BNYLogoFull-02.png';
-import nicole from '../images/nicole.webp';
-import sonny from '../images/sonny.webp';
-import zach from '../images/zach.webp';
-import chiara from '../images/chiara.webp';
+import BNYLogoFull from '../../images/BNYLogoFull-02.png';
+import nicole from '../../images/nicole.webp';
+import sonny from '../../images/sonny.webp';
+import zach from '../../images/zach.webp';
+import chiara from '../../images/chiara.webp';
 import BelieveNyBylaws from "../../downloads/BelieveNyBylaws.pdf";
 import CC from "../../downloads/CC_BELIEVE NEW YORK PHILANTHROPIES.pdf";
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import "../css/header.css";
-import BNYLogoCircle from "../images/BNYLogoCircle-03.webp";
+import BNYLogoCircle from "../../images/BNYLogoCircle-03.webp";
 
 const Header = () => {
 

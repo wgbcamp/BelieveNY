@@ -1,5 +1,5 @@
 import React from 'react'
-import folksAndFood from '../images/folksAndFood.webp'
+import folksAndFood from '../../images/folksAndFood.webp'
 
 const photoTextBox = (props) => {
     return(
