@@ -1,6 +1,4 @@
 import React from 'react'
-import '../css/construction.css';
-
 
 const construction = () => {
     return(

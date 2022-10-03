@@ -1,5 +1,4 @@
 import React from 'react'
-import '../css/environmentalProjects.css'
 import Tree from '../images/EnvironmentalImpact.webp'
 
 const environmentalProjects = () => {

@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import '../css/eventSponsors.css'
 import PhotoTextBox from '../components/photoTextBox'
 import PhotoTextBoxNoLogo from '../components/photoTextBoxNoLogo'
 import Lilfrankies from '../images/LilFrankies.webp'

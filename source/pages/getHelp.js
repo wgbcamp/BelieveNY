@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import '../css/getHelp.css'
 import facebook from '../images/facebook-square-brands.png'
 import twitter from '../images/twitter-square-brands.png'
 import instagram from '../images/instagram-square-brands.png'

@@ -1,7 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './css/main.css';
-import './css/home.css';
 import Header from './components/header';
 import Footer from './components/footer';
 import Home from './pages/home.js';

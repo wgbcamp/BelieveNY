@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import '../css/personCard.css';
+
 const personCard = (props) => {
 
     var [descriptStatus, toggleDS] = useState(false);

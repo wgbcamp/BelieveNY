@@ -1,6 +1,4 @@
 import React from 'react'
-import '../css/foundingSupporters.css';
-import BNYCity from '../images/BNYCity.png';
 
 const foundingSupporters = () => {
 

@@ -1,13 +1,15 @@
 import React from 'react'
 import DescriptionBox from '../components/descriptionBox';
 import PersonCard from '../components/personCard';
-import '../css/aboutUs.css';
 import EasyDropdown from '../components/easyDropdown';
 import BNYLogoFull from '../images/BNYLogoFull-02.png';
 import nicole from '../images/nicole.webp';
 import sonny from '../images/sonny.webp';
 import zach from '../images/zach.webp';
 import chiara from '../images/chiara.webp';
+import BelieveNyBylaws from "../../downloads/BelieveNyBylaws.pdf";
+import CC from "../../downloads/CC_BELIEVE NEW YORK PHILANTHROPIES.pdf";
+
 
 const people = [
     {name: "Nicole Bulanchuk", title: "Executive Director, President, Founder", photo: nicole, story: "Nicole is a born and raised New Yorker and has lived all over the state including Long Island, Queens, Brooklyn, Albany, and Manhattan. Nicole founded Believe New York after seeing and experiencing first-hand the struggle many New Yorkers live through. Nicole is currently a Clinical Psychology PhD student at Fairleigh Dickinson. She graduated from Columbia University with her masters. Nicole is committed to improving the lives of all people and has always volunteered and worked with nonprofits and community organizations including Columbia Health Sexual Violence Response, The ETS Sponsorship Program, NAMI-NYS, Save the Children, Care International, The Nature Conservancy, ASPCA, Green Peace, Berny's Hope, the Community Emergency Response Team, West Albany FD, Middle Earth Peer-Assistance Program, Women in Need Shelter, and several Rescue Missions. Nicole aspires to develop and expand Believe NY until we are a household charity name. She aims to serve under-resourced areas around the US and world."}, 
@@ -58,7 +60,7 @@ const aboutUs = () => {
     return(
         <div>
             <div className="simpleFlex">
-                <div className="maxWidth">
+                <div className="maxWidth width80Per">
                 <div className="bigLogo">
                         <img className="logoResize" src={BNYLogoFull}></img>
                 </div>
@@ -68,10 +70,30 @@ const aboutUs = () => {
                     <PersonCard aboutUs={{name: value.name, title: value.title, photo: value.photo, story: value.story}} key={value.toString()}/>
                 ))}
                 </div>
-                <div className="bylawTitle">Believe New York Bylaws</div>
-                {legal.map((value) => (
-                    <EasyDropdown info={{title: value.title, content: value.content}}/>
-                ))}
+
+                <div className='simpleTitle padTop80'>
+                    <div className='sT centerFlex'>
+                    Legal Documents
+                    </div>
+                </div>
+                <div className="lawGrid">
+                    <a href={BelieveNyBylaws} download className="styleLink centerFlex">
+                        <div
+                        className="lawButton centerFlex">
+                            <div>
+                            Believe New York Bylaws
+                            </div>
+                        </div>
+                    </a>
+                    <a href={CC} download className="styleLink centerFlex">
+                        <div
+                        className="lawButton centerFlex">
+                            <div>
+                            Certificate of Incorporation
+                            </div>
+                        </div>
+                    </a>
+                </div>          
                 </div>
             </div>
         </div>

@@ -1,5 +1,4 @@
 import React, { useState} from 'react'
-import "../css/home.css";
 import folksAndFood from "../images/folksAndFood.webp";
 import VolunteerBox from '../components/volunteerBox';
 

@@ -1,7 +1,5 @@
 import React from 'react'
 import folksAndFood from '../images/folksAndFood.webp'
-import '../css/home.css'
-import '../css/slideshowBox.css'
 
 const slideshowBox = (props) => {
     return(

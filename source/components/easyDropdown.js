@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import "../css/eD.css";
 
 const easyDropdown = (props) => {
 

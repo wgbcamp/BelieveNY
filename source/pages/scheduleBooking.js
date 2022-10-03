@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import '../css/scheduleBooking.css'
 
 const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];

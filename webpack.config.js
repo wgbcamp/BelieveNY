@@ -28,11 +28,12 @@ module.exports = {
                 type: 'asset/resource'
             },
             {
-                test:/\.ico$/,
+                test:/\.(ico|pdf)$/,
                 use: {
                     loader: 'file-loader'
-                }
-            }
+                },
+            },
+
         ]
     },
     devServer: {

@@ -1,5 +1,4 @@
 import React from 'react'
-import '../css/eventSponsors.css'
 import CanvasBag from '../images/CanvasBagv2.webp'
 import PhotoTextBox from '../components/photoTextBox'
 
