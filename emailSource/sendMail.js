@@ -419,7 +419,7 @@ function sendMail(data){
         const msg = {
             to: process.env.FROM_EMAIL, // Change to your recipient
             from: process.env.FROM_EMAIL, // Change to your verified sender
-            subject: `${data.name} booked an appointment for ${data.date} at ${data.time}`,
+            subject: `${data.name} booked a session for ${data.date} at ${data.time}`,
             text: 'Test email',
             html: `<!DOCTYPE html>
             <html lang="en">
@@ -446,7 +446,7 @@ function sendMail(data){
                         </tr>
                         <tr>
                             <th></th>
-                            <th class="white textSize1" style="font-weight: 500;background-color: white;font-size: 36px;">${data.name} booked an appointment.</th>
+                            <th class="white textSize1" style="font-weight: 500;background-color: white;font-size: 36px;">${data.name} booked a session.</th>
                         </tr>
                         <tr>
                             <th></th>
@@ -534,7 +534,7 @@ function sendMail(data){
             const msg2 = {
                 to: data.email, // Change to your recipient
                 from: process.env.FROM_EMAIL, // Change to your verified sender
-                subject: 'Thank you for booking your appointment!',
+                subject: 'Thank you for booking your session!',
                 text: 'Test email',
                 html: `<!DOCTYPE html>
                 <html lang="en">
@@ -561,7 +561,7 @@ function sendMail(data){
                             </tr>
                             <tr>
                                 <th></th>
-                                <th class="white textSize1" style="font-weight: 500;background-color: white;font-size: 36px;">Thank you for booking your appointment!</th>
+                                <th class="white textSize1" style="font-weight: 500;background-color: white;font-size: 36px;">Thank you for booking your session!</th>
                             </tr>
                             <tr>
                                 <th></th>
@@ -587,7 +587,7 @@ function sendMail(data){
                             </tr>
                             <tr>
                                 <th></th>
-                                <th class="gray textSize1" style="font-weight: 500;background-color: rgb(101, 101, 101);color: white;font-size: 36px;">Need to reschedule or cancel your appointment?
+                                <th class="gray textSize1" style="font-weight: 500;background-color: rgb(101, 101, 101);color: white;font-size: 36px;">Need to reschedule or cancel your session?
                                 </th>
                             </tr>
                             <tr>
@@ -600,7 +600,7 @@ function sendMail(data){
                                     <table class="fullWidth" style="font-family: 'Raleway', sans-serif;width: 100%;border-spacing: 0px!important;">
                                         <tr>
                                             <td class="thirdWidth" style="width: 33%;"></td>
-                                            <td class="button textSize2" style="font-weight: 500; text-align: center; background-color: rgb(245, 192, 255);color: black;height: 66px;width: 33%;border-radius: 5px;font-size: 22px;text-decoration: none;color: black;"><a href="https://www.believeny.org/cancelAppointment/${data.id}">Click Here</a></td>
+                                            <td class="button textSize2" style="font-weight: 500; text-align: center; background-color: rgb(245, 192, 255);color: black;height: 66px;width: 33%;border-radius: 5px;font-size: 22px;text-decoration: none;color: black;"><a href="https://www.believeny.org/cancelSession/${data.id}">Click Here</a></td>
                                             <td class="thirdWidth" style="width: 33%;"></td> 
                                         </tr>
                                     </table>
@@ -661,7 +661,7 @@ function sendMail(data){
         const msg = {
             to: process.env.FROM_EMAIL, // Change to your recipient
             from: process.env.FROM_EMAIL, // Change to your verified sender
-            subject: `${data.name} has cancelled their appointment for ${data.date}`,
+            subject: `${data.name} has cancelled their session for ${data.date}`,
             text: 'Test email',
             html: `<!DOCTYPE html>
             <html lang="en">
@@ -688,7 +688,7 @@ function sendMail(data){
                         </tr>
                         <tr>
                             <th></th>
-                            <th class="white textSize1" style="font-weight: 500;background-color: white;font-size: 36px;">${data.name} cancelled an appointment.</th>
+                            <th class="white textSize1" style="font-weight: 500;background-color: white;font-size: 36px;">${data.name} cancelled a session.</th>
                         </tr>
                         <tr>
                             <th></th>

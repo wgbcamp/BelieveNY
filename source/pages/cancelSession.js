@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
-const cancelAppointment = () => {
+const cancelSession = () => {
 
 
     useEffect(() => {
@@ -43,8 +43,8 @@ const cancelAppointment = () => {
     return(
         <div className="simpleFlex padTop80">
             <div className="maxWidth width80Per">
-                <div className="simpleTitle centerText">Are you sure you would like to cancel your appointment?</div>
-                <div className="size18Font centerText">Click the button below to cancel the appointment for:</div>
+                <div className="simpleTitle centerText">Are you sure you would like to cancel your session?</div>
+                <div className="size18Font centerText">Click the button below to cancel the session for:</div>
                 <div className="padBottom40"></div>
                 <div className='simpleFlex'>
                     <div className="cancelAppCard size24Font">
@@ -54,7 +54,7 @@ const cancelAppointment = () => {
                                 <div></div>
                                 <div className="cAdate size28Font centerText">{date}</div>
                                 <div></div>
-                                <div className="cAbutton" onClick={() => deleteBooking()}>Cancel Appointment</div>
+                                <div className="cAbutton" onClick={() => deleteBooking()}>Cancel Session</div>
                             </div>
                             <div className='cARight'></div>
                         </div>
@@ -65,4 +65,4 @@ const cancelAppointment = () => {
     )
 }
 
-export default cancelAppointment;
+export default cancelSession;
