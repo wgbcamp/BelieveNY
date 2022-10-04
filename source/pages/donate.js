@@ -1,4 +1,5 @@
 import React from 'react'
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
 const donate = () => {
 
@@ -27,16 +28,23 @@ const donate = () => {
                     </div>
                     <div className="padBottom20"></div>
                     <div className="size24Font">
-                    <div>Donate with Paypal:</div>
+                    <div>Donate to BelieveNY:</div>
                     <div className="padBottom20"></div>
                     </div>
-                    <form action="https://www.paypal.com/donate" method="post" target="_top">
-                    <input type="hidden" name="business" value="" />
-                    <input type="hidden" name="no_recurring" value="0" />
-                    <input type="hidden" name="currency_code" value="USD" />
-                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" className="noBorder"/>
-                    <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-                    </form>
+
+                    <PayPalScriptProvider options={{ "client-id": "AYM37NMZprF4qeHi95IYmuYlcbiUKrZUKuDw5ilfXcgAdeRzXNzyJ0cyzgtp0J45PrXVWjGoqXaxwIlG", currency: "USD", components: "buttons,funding-eligibility", "enable-funding": "card", "enable-funding": "venmo"}}>
+                        <PayPalButtons style={{ layout: "horizontal" }} fundingSource="paypal" onApprove={function (data, actions){
+                            return actions.order.capture().then(function (){
+                                alert("Thank you for your donation!");
+                            })
+                        }}/>
+                        <PayPalButtons style={{ layout: "horizontal" }} fundingSource="venmo" onApprove={function (data, actions){
+                            return actions.order.capture().then(function (){
+                                alert("Thank you for your donation!");
+                            })
+                        }}/>
+                    </PayPalScriptProvider>
+
                     <div className="padBottom40"></div>
                     <a href="mailto:believenewyork@gmail.com" className="styleLink size26Font">Question? Click here to email our staff!</a>
                     <div className="padBottom40"></div>
