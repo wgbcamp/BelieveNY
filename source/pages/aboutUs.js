@@ -72,9 +72,10 @@ const aboutUs = () => {
                 </div>
 
                 <div className='simpleTitle padTop80'>
-                    <div className='sT centerFlex'>
+                    <div className='simpleFlex'>
                     Legal Documents
                     </div>
+                    <div className='simpleFlex size22Font padTop20 centerText'>View Believe New York's Bylaws and legal documentation</div>
                 </div>
                 <div className="lawGrid">
                     <a href={BelieveNyBylaws} download className="styleLink centerFlex">

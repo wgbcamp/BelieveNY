@@ -354,12 +354,11 @@ ul.no-bullets{
 
 
 .lawGrid{
-    padding-top: 100px;
-    padding-bottom: 100px;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 20px;
-    background-color: pink;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 45px;
 }
 
 .constructSticky{
@@ -1375,12 +1374,6 @@ border-bottom-right-radius: 10px;
     
     .cardGrid{
         grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .lawGrid{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding-bottom: unset;
     }
 
     .dText{
