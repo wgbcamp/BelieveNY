@@ -315,6 +315,15 @@ const scheduleBooking = () => {
             }
         }
     }
+
+    function getToday(){
+        var tilePosition = actualDate.slice(8,10);
+        if (tilePosition.charAt(0) === 0){
+            tilePosition = tilePosition.charAt(1);
+        }
+        toggleSelection(tilePosition, actualDate.slice(0,15));
+        updateST("");
+    }
     
     useEffect(() => {
         
@@ -347,7 +356,7 @@ const scheduleBooking = () => {
                                         <div className="mtArrow" onClick={() =>fillCalendar(-1)}><i className="fa-solid fa-caret-left fa-xl"></i></div>
                                         <div className="mtArrow" onClick={() => fillCalendar(1)}><i className="fa-solid fa-caret-right fa-xl"></i></div>
                                         <div></div>
-                                        <div className='mtToday' onClick={() => fillCalendar(0)}>Today</div>
+                                        <div className='mtToday' onClick={() => {fillCalendar(0); getToday();}}>Today</div>
                                     </div>
                                 </div>
                             <div className='simpleFlex'>
