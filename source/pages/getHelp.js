@@ -86,7 +86,7 @@ const getHelp = () => {
                         <input placeholder="Best callback time" className="callback styleEmGrid" onChange={updateTime} value={time}/>
                         <textarea placeholder="Tell us what's going on..." type="big" className="bigTextArea" onChange={updateText} value={text}/>
                         
-                        <div className="placeholderCaptcha">PLACEHOLDER CAPTCHA</div>
+                        {/* <div className="placeholderCaptcha">PLACEHOLDER CAPTCHA</div> */}
                         <div className="simpleFlex getHelpButton">
                             <div className="submitButton2" onClick={() => submitEmail()}>Get Help</div>
                         </div>

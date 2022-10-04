@@ -16,7 +16,7 @@ body{
 }
 
 .contentWrapper{
-    height: 1128px;
+    height: 1300px;
 }
 
 .simpleTitle{
@@ -831,7 +831,7 @@ border-bottom-right-radius: 10px;
     line-height: 32px;
     margin-bottom: 25px;
     overflow: hidden;
-    width: 90%;
+    width: 100%;
 }
 
 .ssBoxContainer{
@@ -1246,6 +1246,17 @@ border-bottom-right-radius: 10px;
     text-decoration: none;
 }
 
+.donateButtonContainer{
+    width: 300px;
+    margin: auto;
+    position: relative;
+    z-index: 0;
+}
+
+.testthis{
+    z-index: -1;
+}
+
 @media screen and (min-width: 700px){
 
     .contentWrapper{
@@ -1491,7 +1502,6 @@ border-bottom-right-radius: 10px;
         padding-right: 0px;
         line-height: 35px;
         overflow: hidden;
-        width: 95%;
     }
 
     .ssBoxContainer{

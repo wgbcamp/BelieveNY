@@ -32,6 +32,7 @@ const donate = () => {
                     <div className="padBottom20"></div>
                     </div>
 
+                    <div className="donateButtonContainer">
                     <PayPalScriptProvider options={{ "client-id": "AYM37NMZprF4qeHi95IYmuYlcbiUKrZUKuDw5ilfXcgAdeRzXNzyJ0cyzgtp0J45PrXVWjGoqXaxwIlG", currency: "USD", components: "buttons,funding-eligibility", "enable-funding": "card", "enable-funding": "venmo"}}>
                         <PayPalButtons style={{ layout: "horizontal" }} fundingSource="paypal" onApprove={function (data, actions){
                             return actions.order.capture().then(function (){
@@ -44,7 +45,7 @@ const donate = () => {
                             })
                         }}/>
                     </PayPalScriptProvider>
-
+                    </div>
                     <div className="padBottom40"></div>
                     <a href="mailto:believenewyork@gmail.com" className="styleLink size26Font">Question? Click here to email our staff!</a>
                     <div className="padBottom40"></div>

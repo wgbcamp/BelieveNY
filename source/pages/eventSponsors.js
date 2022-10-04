@@ -95,7 +95,7 @@ const eventSponsors = () => {
                             <textarea placeholder="Type your message here..." type="text" className="" onChange={updateText} value={text}/>
                             </div>
                             <div className="verticalAlign">
-                                <div className="captcha simpleFlex verticalAlign">Placeholder Captcha</div>
+                                {/* <div className="captcha simpleFlex verticalAlign">Placeholder Captcha</div> */}
                             </div>
                             <div className="verticalAlign horizontalEnd">
                                 <div className="formButton simpleFlex verticalAlign" onClick={() => submitEmail()}>Submit</div>
