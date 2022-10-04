@@ -569,7 +569,7 @@ function sendMail(data){
                             </tr>
                             <tr>
                                 <th></th>
-                                <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px; text-align: center">We will contact you at the time and date that you have scheduled.
+                                <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px; text-align: center">We will send you a Google Meet invite shortly. We look forward to seeing you at this time:
                                 </th>
                             </tr>
                             <tr>

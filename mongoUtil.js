@@ -27,7 +27,7 @@ module.exports = {
 
         var result = await schedule.findOne({_id: data.id});
         if (result === null){
-            result = "This appointment does not exist."
+            result = "This session does not exist."
         }else{
             result = result.date;
         }
@@ -41,9 +41,9 @@ module.exports = {
         var message;
         console.log(result);
         if (result.deletedCount < 1){
-            message = "We encountered an error when submitting your cancellation request. Your appointment may have already been deleted."
+            message = "We encountered an error when submitting your cancellation request. Your session may have already been deleted."
         }else{
-            message = "Your appointment has been cancelled. Thank you.";
+            message = "Your session has been cancelled. Thank you.";
         }
         cb(message, result.deletedCount, getData);
     },
