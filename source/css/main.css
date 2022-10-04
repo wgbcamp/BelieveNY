@@ -1,5 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&family=Raleway:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
 
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+  }
+  .fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-out;
+  }
+  .fade-exit {
+    opacity: 1;
+  }
+  .fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-out;
+  }
+
+  /* .fade-enter {
+    opacity: 0;
+    transform: translate(0, 25px);
+    z-index: 1;
+  }
+  .fade-enter.fade-enter-active {
+    opacity: 1;
+    transform: translate(0, 0);
+  
+    transition: opacity 250ms ease-out, transform 300ms ease;
+  }
+  .fade-exit {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  .fade-exit.fade-exit-active {
+    opacity: 0;
+    transform: translate(0, 30px);
+  
+    transition: opacity 250ms ease-out, transform 300ms ease;
+  }   */
+
 html{
     height: 100%;
 }
