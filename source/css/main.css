@@ -246,6 +246,7 @@ ul.no-bullets{
 
 .financialPlan{
     background-color: #f2f2f2;
+    border-radius: 8px;
 }
 
 .fpGrid{
@@ -1253,14 +1254,42 @@ border-bottom-right-radius: 10px;
     z-index: 0;
 }
 
-.testthis{
-    z-index: -1;
+.donatePhoto{
+    background-image: url("../../images/folksAndFood.webp");
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+
+.donateAlpha{
+    line-height: 120px;
+    background-color: rgba(0, 0, 0, 0.55);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+
+.donateFont{
+    color: white;
+    font-size: 42px;
+    font-weight: 600;
 }
 
 @media screen and (min-width: 700px){
 
     .contentWrapper{
         height: 1099px;
+    }
+
+    .msContainerMain{
+        width: 90%;
     }
 
 }
@@ -1634,5 +1663,8 @@ border-bottom-right-radius: 10px;
     }
     .slideTextAlignRight{
         text-align: center;
+    }
+    .donateFont{
+        line-height: 90px;
     }
 }

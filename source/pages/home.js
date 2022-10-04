@@ -88,7 +88,7 @@ const Home = () => {
                 </div>
 
                 <div className="simpleFlex">
-                    <div className="mScontainer shiftLeft borderTop">
+                    <div className="mScontainer msContainerMain shiftLeft borderTop">
                     <img src={folksAndFood} className="slideshow1"></img>
                     <div className="textGrid1">
                         <div className='padText' id="text1">
@@ -101,7 +101,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="simpleFlex">
-                    <div className="mScontainer shiftRight">
+                    <div className="mScontainer msContainerMain shiftRight">
                     <img src={folksAndFood} className="slideshow2"></img>
                     <div className="textGrid2">                    
                         <div className='padText' id="text3">

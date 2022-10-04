@@ -1,16 +1,25 @@
 import React from 'react'
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import folksAndFood from "../../images/folksAndFood.webp";
 
 const donate = () => {
 
     return(
         <div className="simpleFlex padTop80">
             <div className='maxWidth width80Per'>
+                
                 <div className="financialPlan centerText">
+                <div className='simpleFlex'>
+                    <div className="maxWidth width80Per">
+                        <div className="donatePhoto">
+                            <div className="donateAlpha donateFont">
+                                Your support goes a long way
+                            </div>
+                        </div>
+                    </div>
+                </div>
                     <div className="simpleTitle">OUR FINANCIAL PLAN</div>
-
-                    <div className='padBottom40 size22Font'>Your support goes a long way!</div>
-                    <div className='padBottom40 size22Font'>100% of of every donation goes towards:</div>
+                    <div className='padBottom40 size22Font'>100% of every donation goes towards:</div>
                     <div className="simpleFlex">
                         <ol className="fpGrid size18Font width80Per leftText">
                             <li>Maintaining BNY's phone and e-mail services, by keeping the website and email/phone line running and bills paid!</li>
