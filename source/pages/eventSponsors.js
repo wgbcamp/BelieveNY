@@ -4,7 +4,7 @@ import PhotoTextBoxNoLogo from '../components/photoTextBoxNoLogo'
 import Lilfrankies from '../../images/LilFrankies.webp'
 import HavanaCentral from '../../images/havana-central-logo-v3.webp'
 import CutlerSalons from '../../images/Cutler-Salons.webp'
-import CutlerLogo from '../../images/CutlerLogo.png'
+import CutlerLogo from '../../images/cutlerLogo.png'
 
 const eventSponsors = () => {
 
