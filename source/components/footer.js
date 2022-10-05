@@ -20,7 +20,7 @@ const Footer = () => {
                 <div><b>100% of public contributions go towards our mission.</b></div>
                 </div>
                 <div className="footerBorderOut">
-                    <Link to="/aboutUs" className='fixLinkColor' onClick={() => restoreTop()}><u className="simpleFlex padTop20 ros size18Font">Read our statement</u></Link>
+                    <Link to="/aboutUs" className='fixLinkColor' onClick={() => restoreTop()}><u className="simpleFlex padTop20 ros size18Font">Learn about our mission</u></Link>
                     <div className="footerBorder"></div>
                 </div>
                 

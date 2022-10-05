@@ -952,7 +952,7 @@ border-bottom-right-radius: 10px;
     margin-bottom: 25px;
     overflow: hidden;
     background-color: #f2f2f2;
-    width: 90%;
+    width: 95%;
 }
 
 .volTitle, .volText1, .volText2, .volBtnOut{
@@ -1294,7 +1294,7 @@ border-bottom-right-radius: 10px;
 .donatePhoto{
     background-image: url("../../images/folksAndFood.webp");
     width: 100%;
-    height: 500px;
+    height: 550px;
     background-size: cover;
     background-repeat: no-repeat;
     border-bottom-left-radius: 9px;
@@ -1306,18 +1306,50 @@ border-bottom-right-radius: 10px;
     background-color: rgba(0, 0, 0, 0.55);
     height: 100%;
     width: 100%;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+
+.deelevate{
+    position: relative;
+    z-index: 0;
+}
+
+.alphaGrid{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 62px 62px 15px;
+}
+
+.alphaFlexStart{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.alphaFlexEnd{
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    border-bottom-left-radius: 9px;
-    border-bottom-right-radius: 9px;
+    flex-direction: row;
+    column-gap: 50px;
 }
 
 .donateFont{
     color: white;
     font-size: 42px;
     font-weight: 600;
+    text-align: left;
+    padding-right: 30px;
+    padding-left: 30px;
 }
+
+.autoMargin{
+    margin: auto;
+}
+
+
 
 @media screen and (min-width: 700px){
 
@@ -1328,6 +1360,8 @@ border-bottom-right-radius: 10px;
     .msContainerMain{
         width: 90%;
     }
+
+
 
 }
 
@@ -1357,6 +1391,10 @@ border-bottom-right-radius: 10px;
         column-gap: 40px;
     }
 
+    .donateFont{
+        font-size: 32px;
+        line-height: 60px;
+    }
 }
 
 @media screen and (min-width: 700px) and (max-width: 1200px) {
@@ -1406,6 +1444,9 @@ border-bottom-right-radius: 10px;
     .cardGrid{
     }
 
+    .donateFont{
+        line-height: 90px;
+    }
 }
 
 @media screen and (min-width: 1200px){
@@ -1632,7 +1673,7 @@ border-bottom-right-radius: 10px;
         grid-template-rows: 1fr;
         color: white;
         margin-bottom: 25px;
-        width: 95%;
+        width: 90%;
     }
 
     .slideshow3{
@@ -1694,8 +1735,5 @@ border-bottom-right-radius: 10px;
     }
     .slideTextAlignRight{
         text-align: center;
-    }
-    .donateFont{
-        line-height: 90px;
     }
 }

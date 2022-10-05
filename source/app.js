@@ -1,4 +1,6 @@
 import React from 'react'
+import { createRef } from 'react'
+import { createRoot } from 'react-dom/client'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './css/main.css';
@@ -32,11 +34,11 @@ function App(){
             <Construction/>
                 <Header/>
                     <TransitionGroup component={null}>
-                        <CSSTransition key={location.key} classNames="fade" timeout={2000}>
+                        <CSSTransition key={location.key} classNames="fade" timeout={2000} nodeRef={createRef()}>
                             <Routes location={location}>
                                 <Route path="/" element={<Home/>}/>
-                                <Route path="/aboutUs/" element={<AboutUs/>}/>
-                                <Route path="/diversityAndInclusion/" element={<DiversityInclusion/>}/>
+                                <Route path="/aboutUs/" element={<AboutUs/>} nodeRef={createRef()}/>
+                                <Route path="/diversityAndInclusion/" element={<DiversityInclusion/>} nodeRef={createRef()}/>
                                 <Route path="/foundingSupporters/" element={<FoundingSupporters/>}/>
                                 <Route path="/getHelp" element={<GetHelp/>}/>
                                 <Route path="/foodFirst" element={<FoodFirst/>}/>

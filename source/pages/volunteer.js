@@ -6,9 +6,8 @@ const volunteer = () => {
     return(
         <div className='simpleFlex padTop80'>
             <div className='maxWidth width80Per'>
-                <div className='simpleFlex verticalAlign sT size36Font'>WE NEED EVERYONE!</div>
-                <div className='size24Font simpleFlex padBottom40'>We all have skills that contribute to Believe New York's helpful and efficient service for all New Yorkers!</div>
-                <PhotoTextBox content={{description: "For Labor Day Weekend 2021, Havana Central graciously donated meals for our Meal Handout in the Upper West. Havana Central also saw an increase in social media engagements leading up to the event. They will also enjoy a sizable tax deduction for the 2021 tax year, as well as earning a charitable reputation in their neighborhood.", image: CanvasBag, series: "Both", version: "Right"}}/>
+                <div className='size36Font simpleFlex padBottom80 padTop40 centerText'>We all have skills that contribute to Believe New York's helpful and efficient service for all New Yorkers!</div>
+
                 <div className="padTop20"></div>
                 <div className='simpleFlex verticalAlign sT size36Font marginTop40'>Open Volunteer Positions
                 </div>

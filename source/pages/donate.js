@@ -12,48 +12,48 @@ const donate = () => {
                 <div className='simpleFlex'>
                     <div className="maxWidth width80Per">
                         <div className="donatePhoto">
-                            <div className="donateAlpha donateFont">
-                                Your support goes a long way
+                            
+                            <div className="donateAlpha">
+                                <div className="alphaGrid">
+                                            <div className="alphaFlexStart">
+                                                <div className="donateFont">Your support goes a long way</div>
+                                            </div>
+                                        <PayPalScriptProvider options={{ "client-id": "AYM37NMZprF4qeHi95IYmuYlcbiUKrZUKuDw5ilfXcgAdeRzXNzyJ0cyzgtp0J45PrXVWjGoqXaxwIlG", currency: "USD", components: "buttons,funding-eligibility", "enable-funding": "card", "enable-funding": "venmo"}}>
+                                            <div className="width80Per autoMargin">
+                                                <PayPalButtons style={{ layout: "horizontal", height: 55 }} fundingSource="paypal" onApprove={function (data, actions){
+                                                    return actions.order.capture().then(function (){
+                                                        alert("Thank you for your donation!");
+                                                    })
+                                                }} className="deelevate"/>
+                                            </div>
+                                            <div className="width80Per autoMargin">
+                                            <PayPalButtons style={{ layout: "horizontal", height: 55 }} fundingSource="venmo" onApprove={function (data, actions){
+                                                return actions.order.capture().then(function (){
+                                                    alert("Thank you for your donation!");
+                                                })
+                                            }} className="deelevate"/>
+                                            </div>
+                                        </PayPalScriptProvider>
+
+                                    <div className="alphaFlexEnd">
+                                    <div className="donateFont"></div> 
+                                    </div>
+                               </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                    <div className="simpleTitle">OUR FINANCIAL PLAN</div>
-                    <div className='padBottom40 size22Font'>100% of every donation goes towards:</div>
-                    <div className="simpleFlex">
-                        <ol className="fpGrid size18Font width80Per leftText">
-                            <li>Maintaining BNY's phone and e-mail services, by keeping the website and email/phone line running and bills paid!</li>
-                            <li>Maintaining our training course to train more Advocates and Counselors to reach more people in need.</li>
-                            <li>Insurance for our Advocates and Counselors. Our Advocates and Counselors frequently interact with inliiduals who are in an emotional place. Unfortunately these situations can be difficult and dangerous in some circumstances. We aim to protect every one of the amazing volunteers that makes Believe New York's mission possible.</li>
-                            <li>Buying, collecting and delivering items directly to people in need through our Food First Program. </li>
-                            <li>Planning and executing community impact projects and events to directly improve and serve people in NYC.</li>
-                            <li>Maintaining fundraising and marketing operations to expand our reach!</li>
-                            <li>Planning and saving for growth and expansion to help every person in need in NYC and beyond.</li>
-                        </ol>
-                    </div>
-                    <div className="simpleFlex padTop40 size24Font padBottom40">
-                        <div className="width80Per">We cannot explain in words how much we appreciate every single one of you. Thank you so much for taking the time to read this page and donate to our organization. We cannot keep doing this work without people supporting us. We are so grateful for the support and it is only motivation to keep going. Thank you for believing in New York and allowing us to continue and help as many people as possible! 
+                    <div className="padBottom20"></div>
+                    <div className="simpleFlex padTop40 size24Font padBottom40 lineHeight35">
+                        <div className="width80Per">
+                            <div>We cannot explain in words how much we appreciate every single one of you. Thank you so much for taking the time to read this page and donate to our organization. 
+                            </div>
+                            <br></br>
+                            We cannot keep doing this work without people supporting us. We are so grateful for the support and it is only motivation to keep going. Thank you for believing in New York and allowing us to continue and help as many people as possible! 
                         </div>
                     </div>
                     <div className="padBottom20"></div>
-                    <div className="size24Font">
-                    <div>Donate to BelieveNY:</div>
-                    <div className="padBottom20"></div>
-                    </div>
-
                     <div className="donateButtonContainer">
-                    <PayPalScriptProvider options={{ "client-id": "AYM37NMZprF4qeHi95IYmuYlcbiUKrZUKuDw5ilfXcgAdeRzXNzyJ0cyzgtp0J45PrXVWjGoqXaxwIlG", currency: "USD", components: "buttons,funding-eligibility", "enable-funding": "card", "enable-funding": "venmo"}}>
-                        <PayPalButtons style={{ layout: "horizontal" }} fundingSource="paypal" onApprove={function (data, actions){
-                            return actions.order.capture().then(function (){
-                                alert("Thank you for your donation!");
-                            })
-                        }}/>
-                        <PayPalButtons style={{ layout: "horizontal" }} fundingSource="venmo" onApprove={function (data, actions){
-                            return actions.order.capture().then(function (){
-                                alert("Thank you for your donation!");
-                            })
-                        }}/>
-                    </PayPalScriptProvider>
                     </div>
                     <div className="padBottom40"></div>
                     <a href="mailto:believenewyork@gmail.com" className="styleLink size26Font">Question? Click here to email our staff!</a>

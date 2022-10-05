@@ -6,7 +6,7 @@
 
 .header{
     display: grid;
-    grid-template-columns: 270px repeat(2, 1fr);
+    grid-template-columns: 200px minmax(20px, 1fr);
     grid-template-rows: 70px 20px;
     font-size: 18px;
     height: 70px;

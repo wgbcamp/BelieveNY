@@ -1,6 +1,7 @@
 import React, { useState} from 'react'
 import folksAndFood from "../../images/folksAndFood.webp";
 import VolunteerBox from '../components/volunteerBox';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -37,6 +38,10 @@ const Home = () => {
 
     }
 
+    function restoreTop(){
+        window.scrollTo(0,0);
+    }
+
     return(
         
         <div>
@@ -60,31 +65,32 @@ const Home = () => {
                     </p>
                 </div>
                 <div className='catBoxContainer'>
-                    
-                        <div className='catBox'>
-                            <div className='catGrid'> 
-                            <div className="gridTitle">The Open Space</div>
-                                <div className="catText"> A safe place to speak anonymously.</div>
-                            </div>
-                        </div>
-                        <div className='catBox'>
+                        
+                            <Link to="/theOpenSpace" className='catBox styleLink' onClick={() => restoreTop()}>
+                                <div className='catGrid'> 
+                                <div className="gridTitle">The Open Space</div>
+                                    <div className="catText"> A safe place to speak anonymously.</div>
+                                </div>
+                            </Link>
+                        
+                        <Link to="/getHelp" className='catBox styleLink' onClick={() => restoreTop()}>
                             <div className='catGrid'>
                             <div className="gridTitle">Need Help?</div>
                                 <div className="catText">Call, text, or email for immediate assistance.</div>
                             </div>
-                        </div>
-                        <div className='catBox'>
+                        </Link>
+                        <Link to="/foodFirst" className='catBox styleLink' onClick={() => restoreTop()}>
                             <div className='catGrid'>
                             <div className="gridTitle">Food First</div> 
                                 <div className="catText">Donate your essential items on your own schedule.</div>
                             </div>
-                        </div>
-                        <div className='catBox'>
+                        </Link>
+                        <Link to="upcomingEvents" className='catBox styleLink' onClick={() => restoreTop()}>
                             <div className='catGrid'> 
                             <div className="gridTitle">Get Involved</div>
                                 <div className="catText">Join community clean-up events and build sustainable solutions.</div>
                             </div>
-                        </div>  
+                        </Link>  
                 </div>
 
                 <div className="simpleFlex">
@@ -108,7 +114,6 @@ const Home = () => {
                         We started with the goal to make New York City a home where we all can be safe, thrive, and live with our family in peace, prosperity and justice. Together, we will fulfill that goal, and make our city the safest and happiest place in the world for all to live, achieve and grow. 
                         </div>
                         <div className='padText' id="text4">
-                        Join our movement, because we believe in all of us.
                         </div>
                     </div>
                     </div>

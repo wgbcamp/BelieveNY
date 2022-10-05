@@ -4,6 +4,7 @@ import PhotoTextBoxNoLogo from '../components/photoTextBoxNoLogo'
 import Lilfrankies from '../../images/LilFrankies.webp'
 import HavanaCentral from '../../images/havana-central-logo-v3.webp'
 import CutlerSalons from '../../images/Cutler-Salons.webp'
+import CutlerLogo from '../../images/CutlerLogo.png'
 
 const eventSponsors = () => {
 
@@ -108,7 +109,7 @@ const eventSponsors = () => {
                 <div className="simpleFlex verticalAlign sT">
                     <div className="size36Font ">Past Sponsors</div>  
                 </div>
-                <PhotoTextBoxNoLogo content={{description: "Summer 2021, stylists from Cutler Salon joined us in Washington Square Park to give free haircuts to persons living with poverty. From the event itself, Cutler Salon reported back a 30% increase in bookings, and spike in social media engagements. And come tax season, the stylists and the business will get a sizable tax deduction for their services.", image: CutlerSalons, title: "Cutler Salon", series: "Top", version: "Left"}}/>
+                <PhotoTextBox content={{description: "Summer 2021, stylists from Cutler Salon joined us in Washington Square Park to give free haircuts to persons living with poverty. From the event itself, Cutler Salon reported back a 30% increase in bookings, and spike in social media engagements. And come tax season, the stylists and the business will get a sizable tax deduction for their services.", image: CutlerLogo, series: "Top", version: "Left"}}/>
                 <PhotoTextBox content={{description: "For Labor Day Weekend 2021, Havana Central graciously donated meals for our Meal Handout in the Upper West. Havana Central also saw an increase in social media engagements leading up to the event. They will also enjoy a sizable tax deduction for the 2021 tax year, as well as earning a charitable reputation in their neighborhood.", image: HavanaCentral, series: "", version: "Right"}}/>
                 <PhotoTextBox content={{description: "Our Thanksgiving Hot Meal and Warm Clothes handout was a huge success in no small part to Lil' Frankies and Supper. They'll be noticing that tax-deduction come April! They've also now received some well earned attention from their community. ", image: Lilfrankies, series: "Bottom", version: "Left"}}/>
                 
