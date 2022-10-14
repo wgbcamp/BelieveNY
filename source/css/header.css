@@ -56,7 +56,7 @@
 }
 
 .mobileMenu, .aboutMenu, .servicesMenu, .eventsMenu{
-    background-color: black;
+    background-color: #7B70C2;
     color: white;
     height: calc(100vh - 51px);
     width: 100%;
@@ -65,12 +65,11 @@
     transform: translateX(-100%);
     display: grid;
     grid-template-rows: 51px repeat(5, 70px);
-    grid-template-columns: 10% 80% 10%;
+    grid-template-columns: 5% 80% 15%;
     font-size: 24px;
 }
 
 .cancelMenu{
-    background-color: black;
     color: white;
     height: 70px;
     width: 100%;
