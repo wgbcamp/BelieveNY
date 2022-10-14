@@ -990,7 +990,7 @@ grid-template-rows: 50% 1fr;
     margin-bottom: 25px;
     overflow: hidden;
     background-color: #F0EEFB;
-    width: 95%;
+    width: 90%;
 }
 
 .volTitle, .volText1, .volText2, .volBtnOut{
