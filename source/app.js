@@ -32,7 +32,7 @@ function App(){
 
             <div className='pageContainer'>
             <Construction/>
-                <Header/>
+                <Header location={location}/>
                     <TransitionGroup component={null}>
                         <CSSTransition key={location.key} classNames="fade" timeout={2000} nodeRef={createRef()}>
                             <Routes location={location}>

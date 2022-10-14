@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import "../css/header.css";
 import BNYLogoCircle from "../../images/BNYLogoCircle-03.webp";
 
-const Header = () => {
+const Header = (props) => {
 
     var [maxCheck, toggleMC] = useState(false);
 
@@ -65,36 +65,42 @@ const Header = () => {
     var [servicesSpanPres, toggleSSP] = useState(0);
     var [eventsSpanPres, toggleESP] = useState(0);
 
-    //site contact banner 
-    var [scroll1, updateS1] = useState(0);
-    var [scroll2, updateS2] = useState(0);
+    //site contact banner, the css classes are showbanner and hidebanner 
+    // var [scroll1, updateS1] = useState(0);
+    // var [scroll2, updateS2] = useState(0);
 
-    window.addEventListener('scroll', function(){
-        if (window.scrollY < scroll1){
-            updateS2(true);
-        }else if(window.scrollY > 20){
-            updateS1(window.scrollY);
-            updateS2(false);
-        }
-    })
+    //function for hiding and showing contact info
+    // window.addEventListener('scroll', function(){
+    //     if (window.scrollY < scroll1){
+    //         updateS2(true);
+    //     }else if(window.scrollY > 20){
+    //         updateS1(window.scrollY);
+    //         updateS2(false);
+    //     }
+    // })
 
+    var path = props.location.pathname;
 
     return(
         <div className="stickyContainer">
+            <div className={`contactBanner`}>
+                <div className="contactBannerText">NEED HELP? CONTACT US | GetHelp@BelieveNY.org | 347-NYC-0011</div>
+            </div>
         <div className='headerContainer'> 
+      
             <div className={`header`}>
                 {/* Spanned menu */}
                 <div className="spannedMenu">
-                    <Link to="/" className="logo" onClick={() => restoreTop()}><img src={BNYLogoCircle} className="logoInner"/>Believe New York</Link>
+                    <Link to="/" className={`logo ${path === "/" ? "currentPage" : ""}`} onClick={() => restoreTop()}><img src={BNYLogoCircle} className="logoInner"/>Believe New York</Link>
                     
-                    <div className="category1" onMouseEnter={() => toggleASP(true)} onMouseLeave={() => toggleASP(false)} onClick={() => toggleASP(false)}>About
+                    <div className={`category1 ${path === "/aboutUs" || path === "/diversityAndInclusion" || path === "/foundingSupporters" ? "currentPage" : ""}`} onMouseEnter={() => toggleASP(true)} onMouseLeave={() => toggleASP(false)} onClick={() => toggleASP(false)}>About
                         <div className={`aboutSpan ${aboutSpanPres ? "showSpanGrid" : ""}`} onClick={() => restoreTop()}>
                             <Link to="/aboutUs" className="sCat1">About Us</Link>
                             <Link to="/diversityAndInclusion" className="sCat2">Diversity and Inclusion</Link>
                             <Link to="/foundingSupporters" className="sCat3">Founding Supporters</Link>
                         </div>
                     </div>
-                    <div className="category2" onMouseEnter={() => toggleSSP(true)} onMouseLeave={() => toggleSSP(false)} onClick={() => toggleSSP(false)}>Our Services
+                    <div className={`category2 ${path === "/getHelp" || path === "/foodFirst" || path ===  "/theOpenSpace" || path === "/environmentalProjects" || path === "/scheduleBooking" ? "currentPage" : ""}`} onMouseEnter={() => toggleSSP(true)} onMouseLeave={() => toggleSSP(false)} onClick={() => toggleSSP(false)}>Our Services
                         <div className={`servicesSpan ${servicesSpanPres ? "showSpanGrid" : ""}`} onClick={() => restoreTop()}>
                             <Link to="/getHelp" className="sCat1">Get Help</Link>
                             <Link to="/foodFirst" className="sCat2">Food First</Link>
@@ -102,7 +108,7 @@ const Header = () => {
                             <Link to="/environmentalProjects" className="sCat4">Environmental Projects</Link>
                         </div>
                     </div>
-                    <div className="category3" onMouseEnter={() => toggleESP(true)} onMouseLeave={() => toggleESP(false)} onClick={() => toggleESP(false)}>Events
+                    <div className={`category3 ${path === "/upcomingEvents" || path === "/pastEvents" || path === "/eventSponsors" || path === "/specialEventsFund" ? "currentPage" : ""}`} onMouseEnter={() => toggleESP(true)} onMouseLeave={() => toggleESP(false)} onClick={() => toggleESP(false)}>Events
                         <div className={`eventsSpan ${eventsSpanPres ? "showSpanGrid" : ""}`} onClick={() => restoreTop()}>
                             <Link to="/upcomingEvents" className="sCat1">Upcoming Events</Link>
                             <Link to="/pastEvents" className="sCat2">Past Events</Link>
@@ -110,7 +116,7 @@ const Header = () => {
                             <Link to="/specialEventsFund" className="sCat4">Donate to Special Events Fund</Link>
                         </div>
                     </div>
-                    <Link to="/volunteer" className="category4" onClick={() => restoreTop()}>Volunteer</Link>
+                    <Link to="/volunteer" className={`category4 ${path === "/volunteer" ? "currentPage" : ""}`} onClick={() => restoreTop()}>Volunteer</Link>
                     <Link to="/donate" className="category5" onClick={() => restoreTop()}>
                         <div className='category5a'>Donate</div>
                         </Link>
@@ -118,14 +124,14 @@ const Header = () => {
 
                 {/* Mobile menu */}
                 <Link to="/" className="logoMobile" onClick={() => {dropDown("killAll"); restoreTop();}}><img src={BNYLogoCircle} className="logoInner"/>Believe New York</Link>
-                <div className={`hamburger ${dropdownPresence ? "fadeOut" : dropdownPresence === 0 ? "" : "fadeIn"}`} onClick={() => {dropDown("main"); updateS2(false);}}>
+                <div className={`hamburger ${dropdownPresence ? "fadeOut" : dropdownPresence === 0 ? "" : "fadeIn"}`} onClick={() => {dropDown("main");}}>
                     <div className="fa-solid fa-bars fa-2xl">
                     </div>
                 </div>
             
             </div>
             
-            <div className={`cancelMenu ${dropdownPresence ? "menuIn" : dropdownPresence === 0 ? maxCheck ? "menuOut" : "" : ""}`}><i className='fa-solid fa-xmark fa-2xl xCancel' onClick={() => {dropDown(lastMenu); updateS2(true);}}></i></div>
+            <div className={`cancelMenu ${dropdownPresence ? "menuIn" : dropdownPresence === 0 ? maxCheck ? "menuOut" : "" : ""}`}><i className='fa-solid fa-xmark fa-2xl xCancel' onClick={() => {dropDown(lastMenu);}}></i></div>
 
             <div className={`mobileMenu ${dropdownPresence ? "menuIn" : dropdownPresence === 0 ? maxCheck ? "menuOut" : "" : ""}`}>
                 <div className="cat1" onClick={() => dropDown("about")}>About</div>
@@ -157,9 +163,6 @@ const Header = () => {
                 <Link to="/eventSponsors" className="cat3" onClick={() => {dropDown("events"); dropDown("main");} }>Event Sponsors</Link>
                 <Link to="/specialEventsFund" className="cat4" onClick={() => {dropDown("events"); dropDown("main");} }>Donate to Special Events Fund</Link>
             </div>
-        </div>
-        <div className={`contactBanner ${scroll2 === 0 ? "" : scroll2 ? "showBanner" : "hideBanner"}`}>
-        NEED HELP? CONTACT US | GetHelp@BelieveNY.org | 347-NYC-0011
         </div>
         </div>
     )

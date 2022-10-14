@@ -40,7 +40,7 @@ const Home = () => {
 
     function restoreTop(){
         window.scrollTo(0,0);
-    }
+    }   
 
     return(
         
@@ -49,18 +49,25 @@ const Home = () => {
             <div className='maxWidth' onTouchStart={() => removeMenu()}>
                 <div className="titleBackground">
                     <div className="tbAlpha">
-                        <div className="tbText">
-                        Now is the time to advance our city, and the lives of New Yorkers.
+                        <div className="tbTextFlex">
+                            <div className="tbText">
+                                <div className="textHighlight">NOW IS THE TIME TO ADVANCE OUR CITY..</div>
+                            </div>
+                            <div className="tbText2">
+                            <div className="textHighlight">
+                            ..AND THE LIVES OF<b className="black"> NEW YORKERS.</b>
+                            </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div className='bigStatement'>     
-                    <p>
-                    Believe New York is on a mission—to improve the lives of all individuals and families in New York City.
-                    </p>
+                   
+                    <span className='bold'>Believe New York </span>is on a mission—to improve the <span className="bold">lives of all individuals and families in New York City.</span>
+              
                 </div>
                 <div className='subStatement'>
-                    <p>
+                    <p className="bold">
                     Join our movement, because we believe in all of us.
                     </p>
                 </div>
