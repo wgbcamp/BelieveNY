@@ -71,7 +71,7 @@ const Home = () => {
                     Join our movement, because we believe in all of us.
                     </p>
                 </div>
-                <div className="simpleFlex">
+           
                     <div className='catBoxContainer'>
                             
                                 <Link to="/theOpenSpace" className='catBox styleLink' onClick={() => restoreTop()}>
@@ -113,7 +113,7 @@ const Home = () => {
                                 </div>
                             </Link>  
                     </div>
-                </div>
+          
                 <div className="simpleFlex">
                     <div className="mScontainer msContainerMain shiftLeft borderTop">
                     <img src={folksAndFood} className="slideshow1"></img>
