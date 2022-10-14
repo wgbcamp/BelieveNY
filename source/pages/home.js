@@ -71,35 +71,49 @@ const Home = () => {
                     Join our movement, because we believe in all of us.
                     </p>
                 </div>
-                <div className='catBoxContainer'>
-                        
-                            <Link to="/theOpenSpace" className='catBox styleLink' onClick={() => restoreTop()}>
-                                <div className='catGrid'> 
-                                <div className="gridTitle">The Open Space</div>
-                                    <div className="catText"> A safe place to speak anonymously.</div>
+                <div className="simpleFlex">
+                    <div className='catBoxContainer'>
+                            
+                                <Link to="/theOpenSpace" className='catBox styleLink' onClick={() => restoreTop()}>
+                                    <div className='catGrid'>
+                                    <i class="fa-solid fa-microphone iconColor fa-2xl"></i>
+                                    <div className="gridTitle">
+                                        <div>The Open Space</div>
+                                    </div>
+                                    <div className="catText"> A safe place to speak anonymously.
+                                    </div>
+                                    </div>
+                                </Link>
+                            
+                            <Link to="/getHelp" className='catBox styleLink' onClick={() => restoreTop()}>
+                                <div className='catGrid'>
+                                <i class="fa-solid fa-circle-question iconColor fa-2xl"></i>
+                                <div className="gridTitle">
+                                        <div>Need Help?</div>
+                                </div>
+                                    <div className="catText">Call, text, or email for immediate assistance.</div>
                                 </div>
                             </Link>
-                        
-                        <Link to="/getHelp" className='catBox styleLink' onClick={() => restoreTop()}>
-                            <div className='catGrid'>
-                            <div className="gridTitle">Need Help?</div>
-                                <div className="catText">Call, text, or email for immediate assistance.</div>
-                            </div>
-                        </Link>
-                        <Link to="/foodFirst" className='catBox styleLink' onClick={() => restoreTop()}>
-                            <div className='catGrid'>
-                            <div className="gridTitle">Food First</div> 
-                                <div className="catText">Donate your essential items on your own schedule.</div>
-                            </div>
-                        </Link>
-                        <Link to="upcomingEvents" className='catBox styleLink' onClick={() => restoreTop()}>
-                            <div className='catGrid'> 
-                            <div className="gridTitle">Get Involved</div>
-                                <div className="catText">Join community clean-up events and build sustainable solutions.</div>
-                            </div>
-                        </Link>  
+                            <Link to="/foodFirst" className='catBox styleLink' onClick={() => restoreTop()}>
+                                <div className='catGrid'>
+                                <i class="fa-solid fa-clipboard iconColor fa-2xl"></i>
+                                <div className="gridTitle">
+                                        <div>Food First</div>
+                                </div>
+                                    <div className="catText">Donate your essential items on your own schedule.</div>
+                                </div>
+                            </Link>
+                            <Link to="upcomingEvents" className='catBox styleLink' onClick={() => restoreTop()}>
+                                <div className='catGrid'> 
+                                <i class="fa-solid fa-user-plus iconColor fa-2xl"></i>
+                                <div className="gridTitle">
+                                        <div>Get Involved</div>
+                                </div>
+                                    <div className="catText">Join community clean-up events and build sustainable solutions.</div>
+                                </div>
+                            </Link>  
+                    </div>
                 </div>
-
                 <div className="simpleFlex">
                     <div className="mScontainer msContainerMain shiftLeft borderTop">
                     <img src={folksAndFood} className="slideshow1"></img>
