@@ -1371,11 +1371,11 @@ grid-template-rows: 50% 1fr;
     height: 550px;
     background-size: cover;
     background-repeat: no-repeat;
-    border-bottom-left-radius: 9px;
-    border-bottom-right-radius: 9px;
+    border-radius: 9px;
 }
 
 .donateAlpha{
+    border-radius: 9px;
     line-height: 120px;
     background-color: rgba(0, 0, 0, 0.55);
     height: 100%;

@@ -11,7 +11,7 @@ const donate = () => {
                 
                 <div className="financialPlan centerText">
                 <div className='simpleFlex'>
-                    <div className="maxWidth width80Per">
+                    <div className="maxWidth padTop20">
                         <div className="donatePhoto">
                             
                             <div className="donateAlpha">
