@@ -748,6 +748,26 @@ input[type="email"]::placeholder{
     font-weight: 400;
 }
 
+.fixed{
+    height: 100%;
+    border: none;
+    vertical-align: top;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #f2ba36;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    max-width: 750px;
+
+}
+
+.fixed2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .titleBackground{
     background-image: url("https://i.imgur.com/DuTbJYr.jpeg");
     height: 466px;

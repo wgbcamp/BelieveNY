@@ -1,6 +1,7 @@
 import React from 'react'
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import folksAndFood from "../../images/folksAndFood.webp";
+import paypalLogo from "../../images/paypal-wordmark-color.png"
 
 const donate = () => {
 
@@ -18,14 +19,12 @@ const donate = () => {
                                             <div className="alphaFlexStart">
                                                 <div className="donateFont">Your support goes a long way</div>
                                             </div>
-                                        <PayPalScriptProvider options={{ "client-id": "AYM37NMZprF4qeHi95IYmuYlcbiUKrZUKuDw5ilfXcgAdeRzXNzyJ0cyzgtp0J45PrXVWjGoqXaxwIlG", currency: "USD", components: "buttons,funding-eligibility", "enable-funding": "card", "enable-funding": "venmo"}}>
-                                            <div className="width80Per autoMargin">
-                                                <PayPalButtons style={{ layout: "horizontal", height: 55 }} fundingSource="paypal" onApprove={function (data, actions){
-                                                    return actions.order.capture().then(function (){
-                                                        alert("Thank you for your donation!");
-                                                    })
-                                                }} className="deelevate"/>
+                                            <div className="width80Per autoMargin fixed">
+                                            <a href="https://www.paypal.com/donate/?hosted_button_id=GJ7HV5PUBAMQS" className="fixed2">
+                                            <img src={paypalLogo} height="26px"></img>
+                                            </a>
                                             </div>
+                                        <PayPalScriptProvider options={{ "client-id": "AYM37NMZprF4qeHi95IYmuYlcbiUKrZUKuDw5ilfXcgAdeRzXNzyJ0cyzgtp0J45PrXVWjGoqXaxwIlG", currency: "USD", components: "buttons,funding-eligibility", "enable-funding": "card", "enable-funding": "venmo"}}>
                                             <div className="width80Per autoMargin">
                                             <PayPalButtons style={{ layout: "horizontal", height: 55 }} fundingSource="venmo" onApprove={function (data, actions){
                                                 return actions.order.capture().then(function (){
@@ -34,10 +33,6 @@ const donate = () => {
                                             }} className="deelevate"/>
                                             </div>
                                         </PayPalScriptProvider>
-
-                                    <div className="alphaFlexEnd">
-                                    <div className="donateFont"></div> 
-                                    </div>
                                </div>
                             </div>
                         </div>
