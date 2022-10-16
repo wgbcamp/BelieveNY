@@ -49,6 +49,7 @@ body{
     background-color: #3c2d73; 
 }
 
+
 .contentWrapper{
     height: 1200px;
 }
@@ -1423,17 +1424,38 @@ grid-template-rows: 50% 1fr;
 .bottomContact{
     display: flex;
     justify-content: center;
-    align-items: center;
     background-color: #5F2D73;
     color: white;
     font-size: 24px;
     font-weight: 700;
     height: 83px;
-    padding-left: 25px;
-    padding-right: 25px;
+    width: 100vw;
     text-align: center;
-    position: sticky;
+    position: fixed;
     bottom: 0;
+}
+
+.bottomContactGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+    max-width: 1620px;
+}
+
+.contact1{
+    grid-column: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact2{
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .blankSpace{
