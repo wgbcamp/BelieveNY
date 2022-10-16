@@ -4,7 +4,7 @@ const foodFirst = () => {
 
     return(
         <div>
-            <div className="simpleFlex">
+            <div className="simpleFlex whiten">
                 <div className="maxWidth width80Per">
                 <div className='ffBig centerText'>FOOD FIRST BY BELIEVE NEW YORK: 
                 </div>

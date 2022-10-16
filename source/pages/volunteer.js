@@ -9,7 +9,7 @@ const volunteer = () => {
                 <div className='size36Font simpleFlex padBottom80 padTop40 centerText'>We all have skills that contribute to Believe New York's helpful and efficient service for all New Yorkers!</div>
 
                 <div className="padTop20"></div>
-                <div className='simpleFlex verticalAlign sT size36Font marginTop40'>Open Volunteer Positions
+                <div className='simpleFlex verticalAlign sT size36Font marginTop40 lightPurple'>Open Volunteer Positions
                 </div>
                     <div className='volPosGrid'>
                         <div>

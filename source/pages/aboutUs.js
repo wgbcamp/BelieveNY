@@ -62,7 +62,7 @@ const aboutUs = () => {
             <div className="simpleFlex">
                 <div className="maxWidth width80Per">
                 <div className="bigLogo">
-                        <img className="logoResize" src={BNYLogoFull}></img>
+                        {/* <img className="logoResize" src={BNYLogoFull}></img> */}
                 </div>
             <DescriptionBox/> 
                 <div className='cardGrid'>
@@ -71,7 +71,7 @@ const aboutUs = () => {
                 ))}
                 </div>
 
-                <div className='simpleTitle padTop80'>
+                <div className='simpleTitle padTop80 whiten'>
                     <div className='simpleFlex'>
                     Legal Documents
                     </div>

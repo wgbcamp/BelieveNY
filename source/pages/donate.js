@@ -40,7 +40,7 @@ const donate = () => {
                 </div>
                     <div className="padBottom20"></div>
                     <div className="simpleFlex padTop40 size24Font padBottom40 lineHeight35">
-                        <div className="width80Per">
+                        <div className="width80Per blacken">
                             <div>We cannot explain in words how much we appreciate every single one of you. Thank you so much for taking the time to read this page and donate to our organization. 
                             </div>
                             <br></br>

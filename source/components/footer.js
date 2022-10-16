@@ -52,24 +52,22 @@ const Footer = () => {
             </div>
             </div>
             <div className="lowerContainer">
-                <div className="phone">
+                {/* <div className="phone">
                     <div>Text: (347) NYC-0011</div>
                 </div>
                 <div className="email">
                     <div>Email: GetHelp@BelieveNY.org</div>
-                </div>
-            
-            
+                </div> */}
             <div></div>
             <div className="socialMedia">
-                
-                <a href="https://www.facebook.com/believeny" className="fixLinkColor"><i className="fa-brands fa-square-facebook fa-2xl"></i></a>
-                <a href="https://www.twitter.com/Believe_NewYork" className="fixLinkColor"><i className="fa-brands fa-square-twitter fa-2xl iconPad"></i></a>
-                <a href="https://www.instagram.com/believeny" className='fixLinkColor'><i className="fa-brands fa-square-instagram fa-2xl iconPad"></i></a>
-                <a href="https://www.youtube.com/channel/UCbz9owENALBUb8O6NrFv7oQ" className='fixLinkColor'><i className="fa-brands fa-square-youtube fa-2xl iconPad"></i></a>
+                <a href="https://www.facebook.com/believeny" className="linkToWhite"><i className="fa-brands fa-square-facebook fa-2xl"></i></a>
+                <a href="https://www.twitter.com/Believe_NewYork" className="linkToWhite"><i className="fa-brands fa-square-twitter fa-2xl iconPad"></i></a>
+                <a href="https://www.instagram.com/believeny" className='linkToWhite'><i className="fa-brands fa-square-instagram fa-2xl iconPad"></i></a>
+                <a href="https://www.youtube.com/channel/UCbz9owENALBUb8O6NrFv7oQ" className='linkToWhite'><i className="fa-brands fa-square-youtube fa-2xl iconPad"></i></a>
             </div>
             <div className="copyright">©2021 by Believe New York Philanthropies, Inc.</div>
             </div>
+            
         </div>
     )
 }

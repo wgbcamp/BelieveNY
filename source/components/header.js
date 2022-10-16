@@ -83,24 +83,24 @@ const Header = (props) => {
 
     return(
         <div className="stickyContainer">
-            <div className={`contactBanner`}>
-                <div className="contactBannerText">NEED HELP? CONTACT US | GetHelp@BelieveNY.org | 347-NYC-0011</div>
-            </div>
         <div className='headerContainer'> 
       
             <div className={`header`}>
                 {/* Spanned menu */}
                 <div className="spannedMenu">
-                    <Link to="/" className={`logo ${path === "/" ? "currentPage" : ""}`} onClick={() => restoreTop()}><img src={BNYLogoCircle} className="logoInner"/>Believe New York</Link>
+                    <Link to="/" className={`logo`} onClick={() => restoreTop()}><img src={BNYLogoCircle} className="logoInner"/>Believe New York</Link>
                     
-                    <div className={`category1 ${path === "/aboutUs" || path === "/diversityAndInclusion" || path === "/foundingSupporters" ? "currentPage" : ""}`} onMouseEnter={() => toggleASP(true)} onMouseLeave={() => toggleASP(false)} onClick={() => toggleASP(false)}>About
+
+                    <div></div>
+                    <div className="categoryGrid">
+                    <div className={`category1`} onMouseEnter={() => toggleASP(true)} onMouseLeave={() => toggleASP(false)} onClick={() => toggleASP(false)}>About
                         <div className={`aboutSpan ${aboutSpanPres ? "showSpanGrid" : ""}`} onClick={() => restoreTop()}>
                             <Link to="/aboutUs" className="sCat1">About Us</Link>
                             <Link to="/diversityAndInclusion" className="sCat2">Diversity and Inclusion</Link>
                             <Link to="/foundingSupporters" className="sCat3">Founding Supporters</Link>
                         </div>
                     </div>
-                    <div className={`category2 ${path === "/getHelp" || path === "/foodFirst" || path ===  "/theOpenSpace" || path === "/environmentalProjects" || path === "/scheduleBooking" ? "currentPage" : ""}`} onMouseEnter={() => toggleSSP(true)} onMouseLeave={() => toggleSSP(false)} onClick={() => toggleSSP(false)}>Our Services
+                    <div className={`category2`} onMouseEnter={() => toggleSSP(true)} onMouseLeave={() => toggleSSP(false)} onClick={() => toggleSSP(false)}>Our Services
                         <div className={`servicesSpan ${servicesSpanPres ? "showSpanGrid" : ""}`} onClick={() => restoreTop()}>
                             <Link to="/getHelp" className="sCat1">Get Help</Link>
                             <Link to="/foodFirst" className="sCat2">Food First</Link>
@@ -108,7 +108,7 @@ const Header = (props) => {
                             <Link to="/environmentalProjects" className="sCat4">Environmental Projects</Link>
                         </div>
                     </div>
-                    <div className={`category3 ${path === "/upcomingEvents" || path === "/pastEvents" || path === "/eventSponsors" || path === "/specialEventsFund" ? "currentPage" : ""}`} onMouseEnter={() => toggleESP(true)} onMouseLeave={() => toggleESP(false)} onClick={() => toggleESP(false)}>Events
+                    <div className={`category3`} onMouseEnter={() => toggleESP(true)} onMouseLeave={() => toggleESP(false)} onClick={() => toggleESP(false)}>Events
                         <div className={`eventsSpan ${eventsSpanPres ? "showSpanGrid" : ""}`} onClick={() => restoreTop()}>
                             <Link to="/upcomingEvents" className="sCat1">Upcoming Events</Link>
                             <Link to="/pastEvents" className="sCat2">Past Events</Link>
@@ -116,11 +116,24 @@ const Header = (props) => {
                             <Link to="/specialEventsFund" className="sCat4">Donate to Special Events Fund</Link>
                         </div>
                     </div>
-                    <Link to="/volunteer" className={`category4 ${path === "/volunteer" ? "currentPage" : ""}`} onClick={() => restoreTop()}>Volunteer</Link>
+                    <Link to="/volunteer" className={`category4`} onClick={() => restoreTop()}>Volunteer</Link>
                     <Link to="/donate" className="category5" onClick={() => restoreTop()}>
                         <div className='category5a'>Donate</div>
                         </Link>
+                    </div>
                 </div>
+
+                {/* Slider */}
+
+                    <div className="sliderGrid">
+                        <div className={`${path === "/" ? "slider" : ""}`}></div>
+                        <div></div>
+                        <div className={`${path === "/aboutUs" || path === "/diversityAndInclusion" || path === "/foundingSupporters" ? "slider" : ""}`}></div>
+                        <div className={`${path === "/getHelp" || path === "/foodFirst" || path ===  "/theOpenSpace" || path === "/environmentalProjects" || path === "/scheduleBooking" ? "slider" : ""}`}></div>
+                        <div className={`${path === "/upcomingEvents" || path === "/pastEvents" || path === "/eventSponsors" || path === "/specialEventsFund" ? "slider" : ""}`}></div>
+                        <div className={`${path === "/volunteer" ? "slider" : ""}`}></div>
+                        <div className={`${path === "/donate" ? "sliderFake" : ""}`}></div>
+                    </div>
 
                 {/* Mobile menu */}
                 <Link to="/" className="logoMobile" onClick={() => {dropDown("killAll"); restoreTop();}}><img src={BNYLogoCircle} className="logoInner"/>Believe New York</Link>

@@ -4,7 +4,7 @@ const foundingSupporters = () => {
 
     return(
         <div>
-            <div className="simpleFlex">
+            <div className="simpleFlex whiten">
                 <div className="maxWidth fSgrid padTop40">
                     
                     <div className="simpleFlex padTop40  col1breakpoint">

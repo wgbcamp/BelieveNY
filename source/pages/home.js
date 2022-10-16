@@ -49,20 +49,13 @@ const Home = () => {
             <div className='maxWidth' onTouchStart={() => removeMenu()}>
                 <div className="titleBackground">
                     <div className="tbAlpha">
-                        <div className="tbTextFlex">
-                            <div className="tbText">
-                                <div className="textHighlight">NOW IS THE TIME TO ADVANCE OUR CITY..</div>
-                            </div>
-                            <div className="tbText2">
-                            <div className="textHighlight">
-                            ..AND THE LIVES OF<b className="black"> NEW YORKERS.</b>
-                            </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
+                <div className='evenBiggerStatement'>
+                    <div className="centerText">NOW IS THE TIME TO ADVANCE OUR CITY</div>
+                    <div className="centerText">AND THE LIVES OF NEW YORKERS.</div>
+                </div>
                 <div className='bigStatement'>     
-                   
                     <span className='bold'>Believe New York </span>is on a mission—to improve the <span className="bold">lives of all individuals and families in New York City.</span>
               
                 </div>
@@ -76,7 +69,7 @@ const Home = () => {
                             
                                 <Link to="/theOpenSpace" className='catBox styleLink' onClick={() => restoreTop()}>
                                     <div className='catGrid'>
-                                    <i class="fa-solid fa-microphone iconColor fa-2xl"></i>
+                                    <i className="fa-solid fa-comment-dots fa-2xl iconColor"></i>
                                     <div className="gridTitle">
                                         <div>The Open Space</div>
                                     </div>

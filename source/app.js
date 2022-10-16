@@ -23,6 +23,7 @@ import Donate from './pages/donate';
 import EventSponsors from './pages/eventSponsors';
 import Volunteer from './pages/volunteer';
 import CancelSession from './pages/cancelSession';
+import BottomContact from './components/bottomContact';
 
 function App(){
 
@@ -30,7 +31,7 @@ function App(){
     
     return(
 
-            <div className='pageContainer'>
+            <div className="whiten">
             <Construction/>
                 <Header location={location}/>
                     <TransitionGroup component={null}>
@@ -56,8 +57,9 @@ function App(){
                             </Routes>
                         </CSSTransition>
                     </TransitionGroup>
-                <div className="contentWrapper"></div> 
+                    
                 <Footer/>
+                <BottomContact/>
             </div>
     )
 }

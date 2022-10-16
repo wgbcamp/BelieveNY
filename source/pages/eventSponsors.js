@@ -58,8 +58,8 @@ const eventSponsors = () => {
         <div className="simpleFlex">
             <div className="maxWidth width80Per">
                 <div className='padTop80'></div>
-                <div className="simpleFlex verticalAlign sT">
-                    <div className="size36Font ">Sponsor An Event With Believe New York</div>  
+                <div className="simpleFlex verticalAlign sT lightPurple">
+                    <div className="size36Font">Sponsor An Event With Believe New York</div>  
                 </div>
                 <div className="perkAndFormGrid">
                     <div className="">
@@ -85,7 +85,7 @@ const eventSponsors = () => {
                     </div>
                         <div className="superSponsorContainer">
                             <div className="sponsorContainer">
-                            <div className="sponsorBoxTitleFlex">
+                            <div className="sponsorBoxTitleFlex lightPurple">
                                 <div className="sponsorBoxTitle">Become An Event Sponsor</div>
                             </div>
                             <div className="fieldContainer">
@@ -106,8 +106,8 @@ const eventSponsors = () => {
                         </div>
                 </div>
                 <div className="padTop80"></div>
-                <div className="simpleFlex verticalAlign sT">
-                    <div className="size36Font ">Past Sponsors</div>  
+                <div className="simpleFlex verticalAlign sT lightPurple">
+                    <div className="size36Font">Past Sponsors</div>  
                 </div>
                 <PhotoTextBox content={{description: "Summer 2021, stylists from Cutler Salon joined us in Washington Square Park to give free haircuts to persons living with poverty. From the event itself, Cutler Salon reported back a 30% increase in bookings, and spike in social media engagements. And come tax season, the stylists and the business will get a sizable tax deduction for their services.", image: CutlerLogo, series: "Top", version: "Left"}}/>
                 <PhotoTextBox content={{description: "For Labor Day Weekend 2021, Havana Central graciously donated meals for our Meal Handout in the Upper West. Havana Central also saw an increase in social media engagements leading up to the event. They will also enjoy a sizable tax deduction for the 2021 tax year, as well as earning a charitable reputation in their neighborhood.", image: HavanaCentral, series: "", version: "Right"}}/>
