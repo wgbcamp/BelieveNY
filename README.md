@@ -2,4 +2,4 @@
 
 Rebuild of BelieveNY website with React.
 
-![Preview image](/images/preview.png)
+![Preview image](/images/previewSite.png)
