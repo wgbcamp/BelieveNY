@@ -47,9 +47,13 @@ const Home = () => {
         <div>
             <div className="simpleFlex">  
             <div className='maxWidth' onTouchStart={() => removeMenu()}>
-                <div className="titleBackground">
-                    <div className="tbAlpha">
-                    </div>
+                <div id="titleBackground">
+               
+                        <div className="third"></div>
+                        <div className="second"></div>
+                        <div className="first"></div>
+                        
+                   
                 </div>
                 <div className='evenBiggerStatement'>
                     <div className="centerText">NOW IS THE TIME TO ADVANCE OUR CITY</div>
