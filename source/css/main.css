@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&family=Raleway:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
 
+:root{
+    --purple: white;
+    --darkblue: #6F52AD;
+    --lightblue: #998CEC;
+    --gray: #474747;
+}
+
 .fade-enter {
     opacity: 0;
     z-index: 1;
@@ -46,7 +53,8 @@ body{
     font-family: 'Raleway', sans-serif;
     margin: 0;
     overflow-x: hidden;
-    background-color: #3c2d73; 
+    /* background-color: #7226D9;  */
+    background-color: var(--purple);
 }
 
 
@@ -197,7 +205,7 @@ ul.no-bullets{
 
 .testMe{
     color: white;
-    background-color: #3c2d73;
+    background-color: var(--purple);
     height: 70%;
     width: 60%;
     border-radius: 10px;
@@ -208,7 +216,7 @@ ul.no-bullets{
 
 .submitButton{
     text-decoration: none;
-    background-color: #3c2d73;
+    background-color: var(--darkblue);
     color: white;
     height: 70%;
     width: 60%;
@@ -220,7 +228,7 @@ ul.no-bullets{
 
 .submitButton1{
     text-decoration: none;
-    background-color: #3c2d73;
+    background-color: var(--darkblue);
     color: white;
     height: 70px;
     border-radius: 8px;
@@ -228,11 +236,14 @@ ul.no-bullets{
     display: flex;
     justify-content: center;
     align-items: center;
+    grid-column: 3;
+    width: 300px;
+    text-decoration: none;
 }
 
 .submitButton2{
     text-decoration: none;
-    background-color: #4F3B98;
+    background-color: var(--darkblue);
     color: white;
     height: 100%;
     width: 60%;
@@ -340,7 +351,7 @@ ul.no-bullets{
 
 .cAbutton{
     color: white;
-    background-color: #3c2d73;
+    background-color: var(--darkblue);
     text-align: center;
     grid-row: 4;
     display: flex;
@@ -432,8 +443,7 @@ ul.no-bullets{
 }
 
 .dText{
-    background-color: #2d4173;
-    color: white;
+    background-color: #f2f2f2;
     text-align: center;
     font-size: 18px;
     max-width: 85%;
@@ -484,7 +494,7 @@ ul.no-bullets{
     display: grid;
     grid-template-columns: 20px 1fr 20px;
     grid-template-rows: 20px 1fr 20px;
-    border: solid 5px #3c2d73;
+    border: solid 5px var(--darkblue);
     background-color: #e7e1fd;
 }
 
@@ -557,9 +567,9 @@ textarea[type=text]{
     border-right: solid 1px;
 }
 
-.whiten{
+/* .whiten{
     color: white;
-}
+} */
 
 .blacken{
     color: black;
@@ -577,7 +587,7 @@ textarea[type=text]{
 }
 
 .formButton{
-    background-color: #3c2d73;
+    background-color: var(--darkblue);
     color: white;
     width: 200px;
     height: 80%;
@@ -775,18 +785,165 @@ input[type="email"]::placeholder{
 }
 
 #titleBackground{
-    height: 65vh;
+    height: 500px;
     width: 100%;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 #titleBackground div{
-    height: 100%;
-    width: 100%;
-    position: absolute;
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
     animation-name: fadeImages;
     animation-iteration-count: infinite;
     animation-duration: 21s;
+    border-radius: 80%;
+    border: solid white 7px;
+    background-color: #bbbbbb;
+
+}
+
+.circleBoxFlex{
+    display: flex;
+    justify-content: center;
+}
+
+.circleBoxGrid{
+    display: grid;
+    grid-template-rows: 212px 70px 90px 90px 40px;
+    grid-template-columns: 1fr;
+    width: 90%;
+}
+
+.circlePhoto{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+}
+
+.photo1{
+    background-image: url('https://i.imgur.com/iaWr1P9.jpeg');  
+}
+
+.photo2{
+    background-image: url('https://i.imgur.com/cyyijEC.jpeg');  
+}
+
+.photo3{
+    background-image: url('https://i.imgur.com/zfdFae1.jpeg');  
+}
+
+.circleTitle{
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+}
+
+.circleText{
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    text-align: center;
+    line-height: 25px;
+}
+
+.circleButton{
+    color: var(--darkblue);
+    font-weight: bold;
+    border: solid 2px var(--darkblue);
+    border-radius: 4px;
+    height: 55%;
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.changeToPurp{
+    animation-name: changeToPurp;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+
+}
+
+.changeToWhite{
+    animation-name: changeToWhite;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes changeToPurp {
+    0% {
+        color: var(--darkblue); 
+        background-color: white;
+      }
+      100% {
+        color: white;
+        background-color: var(--darkblue);
+      }
+}
+
+@keyframes changeToWhite{
+    0% {
+        color: white;
+        background-color: var(--darkblue);   
+      }
+      100% {
+        color: var(--darkblue); 
+        background-color: white;
+      }
+}
+
+
+.circleStyleFlex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circleFlexStart{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.mailingListFlex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mailingListGrid{
+    background-color: #6f52ad74;
+    height: 360px;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-rows: 80px 100px 90px 80px;
+}
+
+.mailingListText{
+    width: 75%;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.mailingListButton{
+    color: white;
+    font-weight: bold;
+    background-color:  var(--darkblue);
+    border-radius: 4px;
+    height: 55%;
+    width: 30%;
+}
+
+.mlButtonText{
+    height: 100%;
 }
 
 @keyframes fadeImages {
@@ -807,7 +964,6 @@ input[type="email"]::placeholder{
       }
 }
 
-
 .first{
     animation-delay: 0s;
 }
@@ -820,21 +976,22 @@ input[type="email"]::placeholder{
     animation-delay: 14s;
 }
 
+#titleBackground div{
+    position: absolute;
+}
+
 #titleBackground div.first {
-    background: linear-gradient(0.25turn, #3c2d73 2%, rgba(0,0,0,0), #3c2d73 98%),
-    linear-gradient(0.5turn, rgba(0,0,0,0) 75%, #3c2d73), url("https://i.imgur.com/DuTbJYr.jpeg") no-repeat;
+    background-image: url("https://i.imgur.com/DuTbJYr.jpeg");
     background-size: cover;  
 }
 
 #titleBackground div.second {
-    background: linear-gradient(0.25turn, #3c2d73 2%, rgba(0,0,0,0), #3c2d73 98%),
-    linear-gradient(0.5turn, rgba(0,0,0,0) 75%, #3c2d73), url("https://i.imgur.com/h0N8Pap.jpeg") no-repeat;
+    background-image: url("https://i.imgur.com/h0N8Pap.jpeg");
     background-size: cover;
 }
 
 #titleBackground div.third {
-    background: linear-gradient(0.25turn, #3c2d73 2%, rgba(0,0,0,0), #3c2d73 98%),
-    linear-gradient(0.5turn, rgba(0,0,0,0) 75%, #3c2d73), url("https://i.imgur.com/DVdcHmg.jpeg") no-repeat 50% 50%;
+    background-image: url("https://i.imgur.com/DVdcHmg.jpeg");
     background-size: cover;
 }
 
@@ -852,15 +1009,12 @@ input[type="email"]::placeholder{
 
 .evenBiggerStatement{
     padding-top: 25px;
-    padding-left: 45px;
-    padding-right: 45px;
-    color: white;
+    color: var(--darkblue);
     font-weight: 700;
     font-style: italic;
-    font-size: 48px;
+    font-size: 32px;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
 }
 
@@ -889,11 +1043,11 @@ input[type="email"]::placeholder{
 }
 
 .catBox{
-    background-color: white;
+    background-color: #6f52ad48;
     height: 350px;
     width: 100%;
     border-radius: 15px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25); */
     font-weight: 700;
     font-size: 22px;
     display: flex;
@@ -910,7 +1064,7 @@ input[type="email"]::placeholder{
 
 .gridTitle{    
     font-size: 32px;
-    color: #7B70C2;
+    color: var(--darkblue);
     grid-row: 2;
     display: flex;
     align-items: center;
@@ -922,7 +1076,7 @@ input[type="email"]::placeholder{
 }
 
 .iconColor{
-    color: #7B70C2;
+    color: var(--darkblue);
     grid-row: 1;
     padding-top: 20px;
 }
@@ -941,26 +1095,35 @@ input[type="email"]::placeholder{
     height: 100%;
 }
 
+.colorBackground{
+    background: radial-gradient(circle at top, rgb(255, 255, 255), white 25%, rgba(48, 8, 77, 0.75) 75%, rgba(43, 3, 92, 0.85) 92%, rgb(255, 255, 255) 92.2%);
+}
+
+.statementContainer{
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 50px;
+}
+
 .bigStatement{
-    font-size: 24px;
-    padding-top: 75px;
-    padding-left: 45px;
-    padding-right: 45px;
-    text-align: center;
+    font-size: 18px;
+    padding-top: 25px;
+    padding-bottom: 40px;
     font-weight: 400;
     color: white;
+    color: var(--darkblue);
 }
 
 .subStatement{
-    font-size: 20px;
+    font-size: 24px;
     display: flex;
     justify-content: center;
     text-align: center;
     font-weight: 400;
-    padding-left: 45px;
-    padding-right: 45px;
-    padding-bottom: 40px;
-    color: white;
+    padding-bottom: 10px;
+    color: var(--darkblue);
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .mScontainer{
@@ -1071,7 +1234,7 @@ input[type="email"]::placeholder{
 }
 
 .volBtnIn{
-    background-color: #FF9A61;
+    background-color: var(--darkblue);
     color: white;
     height: 70%;
     width: 60%;
@@ -1111,8 +1274,6 @@ input[type="email"]::placeholder{
     width: 385px;
     border-radius: 10px;
     box-shadow: 0px 6px 80px -42px black;
-    background-color: #2d4173;
-
 }
 
 .person{
@@ -1131,7 +1292,6 @@ input[type="email"]::placeholder{
     grid-template-rows: repeat(7, 1fr);
     grid-template-columns: 10% 1fr 10%;
     height: 40%;
-    color: white;
 }
 
 .name{
@@ -1154,7 +1314,6 @@ input[type="email"]::placeholder{
     grid-column: 2;
     font-weight: 600;
     font-size: 17px;
-    color: white;
 }
 
 .cardDescriptor{
@@ -1249,7 +1408,6 @@ input[type="email"]::placeholder{
     display: grid;
     grid-template-columns: repeat(7, 90px);
     grid-template-rows: repeat(6, 60px);
-    background-color: #e7e1fd;
     margin-bottom: 20px;
     color: black;
 }
@@ -1329,19 +1487,17 @@ input[type="email"]::placeholder{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #4F3B98;
+    background-color: var(--darkblue);
     color: white;
 }
 
 .morning, .afternoon, .evening{
-    color: white;
     text-align: center;
     padding-bottom: 80px;
 }
 
 .mStyle, .aStyle, .eStyle{
     height: 50px;
-    color: white;
     margin-top: 20px;
     margin-bottom: 20px;
     border: 0.05rem solid gray;
@@ -1386,13 +1542,6 @@ input[type="email"]::placeholder{
 .fixIcon{
     transform: translateY(38%);
     color: black;
-}
-
-.submitButton1{
-    grid-column: 3;
-    width: 300px;
-    text-decoration: none;
-    background-color: #4F3B98;
 }
 
 .donateButtonContainer{
@@ -1465,11 +1614,34 @@ input[type="email"]::placeholder{
     margin: auto;
 }
 
+.bottomIconGrid{
+    height: 175px;
+    width: 80px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding-bottom: 35px;
+    padding-right: 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10px;
+}
+
+.iconBubble{
+    background-color: var(--darkblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    color: white;
+}
+
 .bottomContact{
     display: flex;
     justify-content: center;
-    background-color: #5F2D73;
-    color: white;
+    background-color: var(--darkblue);
+    color: var(--gray);
     font-size: 24px;
     font-weight: 700;
     height: 83px;
@@ -1485,6 +1657,10 @@ input[type="email"]::placeholder{
     grid-template-rows: 1fr;
     height: 100%;
     max-width: 1620px;
+}
+
+.iconCircle{
+    background-color: #cfeaf9;
 }
 
 .contact1{
@@ -1518,8 +1694,58 @@ input[type="email"]::placeholder{
         width: 90%;
     }
 
+    .statementContainer{
+        position: relative;
+        top: 100px;
+        right: 0px;
+    }
 
+    #titleBackground{
+        justify-content: flex-end;
+    }
 
+    .idkbro{
+        display: grid;
+        grid-template-columns: 400px 1fr;
+        height: 800px;
+    }
+
+    .colorBackground{
+        background: radial-gradient(circle at top right, rgba(48, 8, 77, 0.75), rgba(48, 8, 77, 0.75) 20%, rgba(43, 3, 92, 0.85) 50%, rgb(255, 255, 255) 50.1%);
+        border-radius: 5px;
+    }
+
+    #titleBackground div{
+        height: 300px;
+        width: 300px;
+        margin-right: 25px;
+        margin-top: 50px;
+    }
+
+    .evenBiggerStatement{
+        align-items: flex-start;
+        width: 250px;
+        font-size: 26px;
+    }
+
+    .bigStatement{
+        width: 250px;
+        font-size: 22px;
+    }
+
+    .idkbro{
+        height: 550px;
+    }
+
+    .subStatement{
+        font-size: 34px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-weight: 400;
+        padding-bottom: 10px;
+        color: var(--darkblue);
+    }
 }
 
 
@@ -1554,14 +1780,11 @@ input[type="email"]::placeholder{
     }
 
     .evenBiggerStatement{
-        font-size: 36px;
-        padding-left: 25px;
-        padding-right: 25px;
     }
     
     .tbAlpha{
         background: linear-gradient(0.25turn, rgba(60, 45, 115, 0.60) 0%, rgba(0,0,0,0), rgba(60, 45, 115, 0.60) 98%),
-        linear-gradient(0.5turn, rgba(0,0,0,0) 75%, #3c2d73);
+        linear-gradient(0.5turn, rgba(0,0,0,0) 75%, #7226D9);
     }
 
     .catBox{
@@ -1570,6 +1793,45 @@ input[type="email"]::placeholder{
 
     .bottomContact{
         font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .colorBackground{
+        background: radial-gradient(circle at top right, rgba(48, 8, 77, 0.75), rgba(48, 8, 77, 0.75) 20%, rgba(43, 3, 92, 0.85) 47%, rgb(255, 255, 255) 47.1%);
+        border-radius: 5px;
+    }
+
+    #titleBackground div{
+        height: 360px;
+        width: 360px;
+        margin-right: 25px;
+        margin-top: 50px;
+    }
+
+    .evenBiggerStatement{
+        align-items: flex-start;
+        width: 350px;
+        font-size: 34px;
+    }
+
+    .bigStatement{
+        width: 350px;
+        font-size: 28px;
+    }
+
+    .circleCol{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .circleBoxGrid{
+        grid-template-rows: 212px 70px 135px 90px 40px;
+        width: 80%;
+    }
+
+    .idkbro{
+        height: 700px;
     }
 }
 
@@ -1764,12 +2026,6 @@ input[type="email"]::placeholder{
         grid-column: 2;
     }
 
-    .statementContainer{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr ;
-    }
-
     .statement{
         grid-column: 1;
         grid-row: 1;
@@ -1920,6 +2176,55 @@ input[type="email"]::placeholder{
 
     .tbText, .tbText2{
         font-size: 32px;
+    }
+
+    .colorBackground{
+        background: radial-gradient(circle at top right, rgba(48, 8, 77, 0.75), rgba(48, 8, 77, 0.75) 20%, rgba(43, 3, 92, 0.85) 50%, rgb(255, 255, 255) 50.1%);
+        border-radius: 5px;
+    }
+
+    #titleBackground div{
+        height: 500px;
+        width: 500px;
+        margin-right: 25px;
+        margin-top: 50px;
+    }
+
+    .evenBiggerStatement{
+        font-size: 40px;
+        width: 450px;
+    }
+
+    .bigStatement{
+        font-size: 36px;
+    }
+
+    .idkbro{
+        height: 900px;
+    }
+}
+
+@media screen and (min-width: 1500px){
+    #titleBackground div{
+        height: 610px;
+        width: 610px;
+        margin-right: 65px;
+        margin-top: 50px;
+    }
+
+    .evenBiggerStatement{
+        font-size: 57px;
+        width: 650px;
+    }
+
+    .bigStatement{
+        font-size: 42px;
+        width: 500px;
+        margin-top: 40px;
+    }
+
+    .colorBackground{
+        height: 950px;
     }
 }
 

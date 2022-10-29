@@ -31,7 +31,7 @@ function App(){
     
     return(
 
-            <div className="whiten">
+        <div>
             <Construction/>
                 <Header location={location}/>
                     <TransitionGroup component={null}>
@@ -60,7 +60,7 @@ function App(){
                     
                 <Footer/>
                 <BottomContact/>
-            </div>
+        </div>
     )
 }
 export default App;
