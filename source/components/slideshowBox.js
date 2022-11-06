@@ -1,110 +1,120 @@
 import e from 'cors';
 import React, {useState} from 'react'
-import folksAndFood from '../../images/folksAndFood.webp'
 
 const slideshowBox = (props) => {
 
     const array = ["https://i.imgur.com/3jKvhFY.jpeg", "https://i.imgur.com/J2l4uLI.jpeg", "https://i.imgur.com/iaWr1P9.jpeg", "https://i.imgur.com/DuTbJYr.jpeg", "https://i.imgur.com/zfdFae1.jpeg", "https://i.imgur.com/cyyijEC.jpeg", "https://i.imgur.com/h0N8Pap.jpeg", "https://i.imgur.com/DVdcHmg.jpeg"];
 
-    var [leftIndex, updateLeftIndex] = useState(0);
-    var [rightIndex, updateRightIndex] = useState(0);
-
     function moveImage(direction){
-        const captureRight = Array.from(document.querySelectorAll(".centerToRight,.rightToCenter"));
-        const captureLeft = Array.from(document.querySelectorAll(".leftToCenter,.centerToLeft"));
-        const captureHold = Array.from(document.getElementsByClassName("hold"));
 
-        var a = "centerToRight";
-        var b = "centerToLeft";
-        var c = "leftToCenter";
-        var d = "rightToCenter";
-        var x;
-        var y;
-
-        captureRight.forEach(element => {             
-            if (element.classList.contains("centerToRight")){
-                if (direction === "left"){
-                    x = a;
-                    y = c;
-                    
-                    if (element.classList.contains("rightIndex")){
-                        if (rightIndex === 0 || leftIndex === 0){
-                            updateRightIndex(array.length-1);
-                        }else{
-                            updateRightIndex(leftIndex-1);
-                        }
-                    }else{
-                        updateLeftIndex(rightIndex-1);
-                    }
-                    
-                }else{
-                    x = a;
-                    y = d;
-
-                    if (element.classList.contains("rightIndex")){
-                        if (rightIndex === 0 || leftIndex === 0){
-                            updateRightIndex(1);
-                        }else{
-                            updateRightIndex(leftIndex+1);
-                        }
-                    }else{
-                        updateLeftIndex(rightIndex+1);
-                    }
-
-                }
-            }else{
-                if (direction === "left"){
-                    x = d;
-                    y = a;
-                }else{
-                    x = d;
-                    y = b;
-                }
-            }
-            element.classList.replace(x, y);
-        });
-        
-        captureHold.forEach(element => {
-            x = "hold";
+        //cases for css animations
+        if (props.content.leftCSS === "hold"){
             if (direction === "left"){
-                y = a;           
-            }else{
-                y = b;
+                props.updateLeftCSS("centerToRight");
+                props.updateRightCSS("leftToCenter");
             }
-            element.classList.replace(x, y);
-        });
-
-        captureLeft.forEach(element => {
-            if (element.classList.contains("leftToCenter")){
+            if (direction === "right"){
+                props.updateLeftCSS("centerToLeft");
+                props.updateRightCSS("rightToCenter");
+            }
+        }else{
+            if (props.content.leftCSS === "centerToRight"){
                 if (direction === "left"){
-                    x = c;
-                    y = a;
-                }else{
-                    x = c;
-                    y = b;
+                    props.updateLeftCSS("leftToCenter");
+                    props.updateRightCSS("centerToRight");
                 }
-            }else{
+                if (direction === "right"){
+                    props.updateLeftCSS("rightToCenter");
+                    props.updateRightCSS("centerToLeft");
+                }
+            }
+            if (props.content.leftCSS === "leftToCenter"){
                 if (direction === "left"){
-                    x = b;
-                    y = c;
-                }else{
-                    x = b;
-                    y = d;
+                    props.updateLeftCSS("centerToRight");
+                    props.updateRightCSS("leftToCenter");
+                }
+                if (direction === "right"){
+                    props.updateLeftCSS("centerToLeft");
+                    props.updateRightCSS("rightToCenter");
+                }
+            }
+            if (props.content.leftCSS === "centerToLeft"){
+                if (direction === "left"){
+                    props.updateLeftCSS("leftToCenter");
+                    props.updateRightCSS("centerToRight");
+                }
+                if (direction === "right"){
+                    props.updateLeftCSS("rightToCenter");
+                    props.updateRightCSS("centerToLeft");  
+                }
+            }
+            if (props.content.leftCSS === "rightToCenter"){
+                if (direction === "left"){
+                    props.updateLeftCSS("centerToRight");
+                    props.updateRightCSS("leftToCenter");
+                }
+                if (direction === "right"){
+                    props.updateLeftCSS("centerToLeft");
+                    props.updateRightCSS("rightToCenter");
+                }
+            }
+        }
 
-                    if (element.classList.contains("leftIndex")){
-                        if (rightIndex === array.length-1 || leftIndex === array.length-1){
-                            updateLeftIndex(0);
-                        }else{
-                            updateLeftIndex(rightIndex+1);
-                        }
+        //track array intervals for each image source
+        if (direction === "left"){
+            if (props.content.currentSelection === ""){
+                props.updateRight(array.length-1);
+                props.updateSelection("left");
+            }
+            
+            if (props.content.currentSelection === "left"){
+                if (props.content.preventChange === false){
+                    props.updatePC(true);
+                }else{
+                    props.updateLeft(props.content.rightIndex - 1);
+                }
+                props.updateSelection("right");
+            }
+
+            if (props.content.currentSelection === "right"){
+                if (props.content.preventChange === true){
+                    props.updateLeft(props.content.leftIndex - 2);
+                    props.updatePC(false);
+                }else{
+                    if (props.content.leftIndex === 0){
+                        props.updateRight(array.length-1);
                     }else{
-                        updateRightIndex(leftIndex+1);
+                        props.updateRight(props.content.leftIndex - 1);
                     }
-
                 }
+                props.updateSelection("left");
             }
-            element.classList.replace(x, y);
-        });
+
+        }
+
+        if (direction === "right"){
+            if (props.content.currentSelection === ""){
+                props.updateRight(1);
+                props.updateSelection("right");
+            }
+
+            if (props.content.currentSelection === "left"){
+                props.updateRight(props.content.leftIndex + 1);
+                props.updateSelection("right");
+            }
+
+            if (props.content.currentSelection === "right"){
+                if (props.content.rightIndex === array.length - 1){
+                    props.updateLeft(0);
+                }else{
+                    props.updateLeft(props.content.rightIndex + 1);
+                }
+                props.updateSelection("left");
+            }
+        }
+
+
+
     }
 
     return(
@@ -133,13 +143,9 @@ const slideshowBox = (props) => {
                                 <i class="fa-solid fa-arrow-right fa-2xl"></i>
                             </div>
                         </div>
-                        <img src={array[leftIndex]} className="imageNumber1 hold leftIndex"></img>
-                        <img src={array[rightIndex]} className="imageNumber1 centerToRight rightIndex"></img>
-
- 
+                        <img src={array[props.content.leftIndex]} className={`imageNumber1 ${props.content.leftCSS}`}></img>
+                        <img src={array[props.content.rightIndex]} className={`imageNumber1 ${props.content.rightCSS}`}></img> 
                 </div>
-
-
         </div>
     )
 }

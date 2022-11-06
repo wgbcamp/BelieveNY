@@ -1,3 +1,4 @@
+import e from 'cors';
 import React, { useState, useEffect } from 'react'
 
 const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
@@ -20,10 +21,25 @@ function monthDays(year, month){
 }
 const now = new Date();
 var actualDate = now.toDateString();
+console.log(actualDate);
+var tomorrow = new Date(now);
+tomorrow.setDate(tomorrow.getDate() + 1);
+var tomorrowDate = tomorrow.toString().slice(4,10).split(" ").join("");
 var customMonth = month.indexOf(actualDate.slice(4,7));
 var customYear = actualDate.slice(-4);
 
-
+//set initial time for state function below
+var initialTime = new Date().getHours();
+if (initialTime > 12){
+    initialTime = initialTime-12;
+    initialTime = initialTime.toString() + ":00 PM";
+}
+if (initialTime === 12){
+    initialTime = initialTime.toString() + ":00 PM";
+}
+if (initialTime < 12){
+    initialTime = initialTime.toString() + ":00 AM";
+}
 
 
 const scheduleBooking = () => {
@@ -58,6 +74,25 @@ const scheduleBooking = () => {
         }
     }
 
+    //update actual time to prevent submissions within 24 hours
+    var [actualTime, updateAT] = useState(initialTime);
+    const interval = setInterval(updateTime, 60000);
+    function updateTime(){
+        initialTime = new Date().getHours();
+        if (initialTime > 12){
+            initialTime = initialTime-12;
+            initialTime = initialTime.toString() + ":00 PM";
+        }
+        if (initialTime === 12){
+            initialTime = initialTime.toString() + ":00 PM";
+        }
+        if (initialTime < 12){
+            initialTime = initialTime.toString() + ":00 AM";
+        }
+        updateAT(initialTime);
+        console.log("Let me remember...")
+    }
+
     var schedule = [
         {"day":"Mon","time":["9:00 AM","10:00 AM","11:00 AM","12:00 PM","1:00 PM","2:00 PM","3:00 PM","4:00 PM","5:00 PM"]},
         {"day":"Tue","time":["8:00 AM","9:00 AM","10:00 AM","11:00 AM","12:00 PM","1:00 PM","2:00 PM","3:00 PM","4:00 PM","5:00 PM","6:00 PM"]},
@@ -67,6 +102,7 @@ const scheduleBooking = () => {
         {"day":"Sat","time":["9:00 AM","10:00 AM","11:00 AM","12:00 PM","1:00 PM","2:00 PM","3:00 PM"]},
         {"day":"Sun","time":["12:00 PM","1:00 PM","2:00 PM","3:00 PM","4:00 PM"]}];    
 
+       
     
     var [morningslots, updatemTimeslots] = useState("");
     var [afternoonslots, updateaTimeslots] = useState("");
@@ -293,7 +329,7 @@ const scheduleBooking = () => {
             console.log(dPart1)
             setSuperDate(dPart1.concat(dPart2.concat(dPart3.concat(dPart4))));
             var tempDate = dPart1.concat(dPart2.concat(dPart3.concat(dPart4)));
-            console.log("@@@@@@@@")
+            var tileTomorrowDate = dPart2.slice(0,3).concat(dPart3.slice(0,2));
             console.log(tempDate);
             console.log(tempDate.concat(" ", "1:00 PM"));
 
@@ -301,13 +337,13 @@ const scheduleBooking = () => {
                 console.log("ugh");
                 if (schedule[i].day === dPart1.slice(0,3)){
                     updatemTimeslots(morningTimes.map((value) => (
-                        <div className={`${morningTimes.includes(value) === true && schedule[i].time.includes(value) === true && !blockedTime.includes(tempDate.concat(" ", value)) ? 'mStyle' : 'invalidTime'}`} onClick={() => morningTimes.includes(value) === true && schedule[i].time.includes(value) === true && morningTimes.includes(value) === true && schedule[i].time.includes(value) === true && !blockedTime.includes(tempDate.concat(" ", value)) ? updateTC(value) : null} key={value}>{value}</div>
+                        <div className={`${schedule[i].time.includes(value) && !blockedTime.includes(tempDate.concat(" ", value)) && !(tomorrowDate === tileTomorrowDate && ((actualTime.slice(-2) === value.slice(-2)) && (actualTime.slice(0,2).split(":").join("")*1) < 12 && (actualTime.slice(0,2).split(":").join("")*1) >= value.slice(0,2).split(":").join("") || (actualTime.slice(-2) === "PM" && value.slice(-2) === "AM") || (actualTime.slice(-2) === "PM" && (actualTime.slice(0,2).split(":").join("")*1) === value.slice(0,2).split(":").join("")))) ? 'mStyle' : 'invalidTime'}`} onClick={(e) => e.target.classList.contains("mStyle") ? updateTC(value) : null} key={value}>{value}</div>
                     )));
                     updateaTimeslots(afternoonTimes.map((value) => (
-                        <div className={`${afternoonTimes.includes(value) === true && schedule[i].time.includes(value) === true && !blockedTime.includes(tempDate.concat(" ", value)) ? 'mStyle' : 'invalidTime'}`} onClick={() => afternoonTimes.includes(value) === true && schedule[i].time.includes(value) === true && afternoonTimes.includes(value) === true && schedule[i].time.includes(value) === true && !blockedTime.includes(tempDate.concat(" ", value)) ? updateTC(value) : null} key={value}>{value}</div>
+                        <div className={`${schedule[i].time.includes(value) && !blockedTime.includes(tempDate.concat(" ", value)) && !(tomorrowDate === tileTomorrowDate && ((actualTime.slice(-2) === value.slice(-2)) && (actualTime.slice(0,2).split(":").join("")*1) < 12 && (actualTime.slice(0,2).split(":").join("")*1) >= value.slice(0,2).split(":").join("") || (actualTime.slice(-2) === "PM" && value.slice(-2) === "AM") || (actualTime.slice(-2) === "PM" && (actualTime.slice(0,2).split(":").join("")*1) === value.slice(0,2).split(":").join("")))) ? 'mStyle' : 'invalidTime'}`} onClick={(e) => e.target.classList.contains("mStyle") ? updateTC(value) : null} key={value}>{value}</div>
                     )));
                     updateeTimeslots(eveningTimes.map((value) => (
-                        <div className={`${eveningTimes.includes(value) === true && schedule[i].time.includes(value) === true && !blockedTime.includes(tempDate.concat(" ", value)) ? 'mStyle' : 'invalidTime'}`} onClick={() => eveningTimes.includes(value) === true && schedule[i].time.includes(value) === true && eveningTimes.includes(value) === true && schedule[i].time.includes(value) === true && !blockedTime.includes(tempDate.concat(" ", value)) ? updateTC(value) : null} key={value}>{value}</div>
+                        <div className={`${schedule[i].time.includes(value) && !blockedTime.includes(tempDate.concat(" ", value)) && !(tomorrowDate === tileTomorrowDate && ((actualTime.slice(-2) === value.slice(-2)) && (actualTime.slice(0,2).split(":").join("")*1) < 12 && (actualTime.slice(0,2).split(":").join("")*1) >= value.slice(0,2).split(":").join("") || (actualTime.slice(-2) === "PM" && value.slice(-2) === "AM") || (actualTime.slice(-2) === "PM" && (actualTime.slice(0,2).split(":").join("")*1) === value.slice(0,2).split(":").join("")))) ? 'mStyle' : 'invalidTime'}`} onClick={(e) => e.target.classList.contains("mStyle") ? updateTC(value) : null} key={value}>{value}</div>
                     )));
 
                     break;
