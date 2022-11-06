@@ -1607,6 +1607,7 @@ input[type="email"]::placeholder{
     justify-content: center;
     background-color: var(--darkblue);
     color: white;
+    cursor: pointer;
 }
 
 .morning, .afternoon, .evening{
