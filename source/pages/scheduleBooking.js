@@ -325,6 +325,10 @@ const scheduleBooking = () => {
         var dPart3 = data2.slice(8,10) + ", ";
         var dPart4 = data2.slice(11,15);
         
+        var morningValues = [];
+        var afternoonValues = [];
+        var eveningValues = [];
+
         if (dPart1 !== "undefined, "){
             console.log(dPart1)
             setSuperDate(dPart1.concat(dPart2.concat(dPart3.concat(dPart4))));
@@ -336,6 +340,15 @@ const scheduleBooking = () => {
             for (var i=0;i<schedule.length; i++){
                 console.log("ugh");
                 if (schedule[i].day === dPart1.slice(0,3)){
+
+                    // for (var a=0; a<schedule[i].time.length; a++){
+                    //     if (schedule[i].time[a] === )
+                    // }
+                    // for (var a=0; a<morningTimes.length; a++){
+                    //     if (schedule[i].time.includes(morningTimes[a]) && !blockedTime.includes(tempDate.concat(" ", morningTimes[a]))){
+                            
+                    //     }
+                    // }
                     updatemTimeslots(morningTimes.map((value) => (
                         <div className={`${schedule[i].time.includes(value) && !blockedTime.includes(tempDate.concat(" ", value)) && !(tomorrowDate === tileTomorrowDate && ((actualTime.slice(-2) === value.slice(-2)) && (actualTime.slice(0,2).split(":").join("")*1) < 12 && (actualTime.slice(0,2).split(":").join("")*1) >= value.slice(0,2).split(":").join("") || (actualTime.slice(-2) === "PM" && value.slice(-2) === "AM") || (actualTime.slice(-2) === "PM" && (actualTime.slice(0,2).split(":").join("")*1) < 12 && value.slice(0,2).split(":").join("") === "12"))) ? 'mStyle' : 'invalidTime'}`} onClick={(e) => e.target.classList.contains("mStyle") ? updateTC(value) : null} key={value}>{value}</div>
                     )));
