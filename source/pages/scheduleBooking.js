@@ -288,7 +288,7 @@ const scheduleBooking = () => {
     //removes tomorrow on calendar if all scheduled timeslots are invalid
     for (var i=0; i<schedule.length; i++){
         if (tomorrow.toString().slice(0,3) === schedule[i].day){
-            if ((actualTime.slice(0,2).split(":").join("")*1 >= schedule[i].time[schedule[i].time.length-1].slice(0,2).split(":").join("")*1) && actualTime.slice(-2) === "PM"){
+            if ((actualTime.slice(0,2).split(":").join("")*1 >= schedule[i].time[schedule[i].time.length-1].slice(0,2).split(":").join("")*1) && actualTime.slice(-2) === "PM" && actualTime.slice(0,2).split(":").join("")*1 !== 12){
                 invalidDays.push(tomorrowDate);
             }
         }
@@ -403,7 +403,7 @@ const scheduleBooking = () => {
                             }
                         }
                         for (var d=0; d<eveningValues.length; d++){
-                            if (actualTime.slice(-2) === "PM" && actualTime.slice(0,2).split(":").join("")*1 >= eveningValues[d].slice(0,2).split(":").join("")*1){
+                            if (actualTime.slice(-2) === "PM" && actualTime.slice(0,2).split(":").join("")*1 >= eveningValues[d].slice(0,2).split(":").join("")*1 && actualTime.slice(0,2).split(":").join("")*1 !== 12){
                                 eveningValues.splice(d, 1);
                                 d--;
                             }
