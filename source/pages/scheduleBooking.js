@@ -76,22 +76,22 @@ const scheduleBooking = () => {
 
     //update actual time to prevent submissions within 24 hours
     var [actualTime, updateAT] = useState(initialTime);
-    const interval = setInterval(updateTime, 60000);
-    function updateTime(){
-        initialTime = new Date().getHours();
-        if (initialTime > 12){
-            initialTime = initialTime-12;
-            initialTime = initialTime.toString() + ":00 PM";
-        }
-        if (initialTime === 12){
-            initialTime = initialTime.toString() + ":00 PM";
-        }
-        if (initialTime < 12){
-            initialTime = initialTime.toString() + ":00 AM";
-        }
-        updateAT(initialTime);
-        console.log("Let me remember...")
-    }
+    // const interval = setInterval(updateTime, 60000);
+    // function updateTime(){
+    //     initialTime = new Date().getHours();
+    //     if (initialTime > 12){
+    //         initialTime = initialTime-12;
+    //         initialTime = initialTime.toString() + ":00 PM";
+    //     }
+    //     if (initialTime === 12){
+    //         initialTime = initialTime.toString() + ":00 PM";
+    //     }
+    //     if (initialTime < 12){
+    //         initialTime = initialTime.toString() + ":00 AM";
+    //     }
+    //     updateAT(initialTime);
+    //     console.log("Let me remember...")
+    // }
 
     var schedule = [
         {"day":"Mon","time":["9:00 AM","10:00 AM","11:00 AM","12:00 PM","1:00 PM","2:00 PM","3:00 PM","4:00 PM","5:00 PM"]},
@@ -285,6 +285,16 @@ const scheduleBooking = () => {
         }
     }
 
+    //removes tomorrow on calendar if all scheduled timeslots are invalid
+    for (var i=0; i<schedule.length; i++){
+        if (tomorrow.toString().slice(0,3) === schedule[i].day){
+            if ((actualTime.slice(0,2).split(":").join("")*1 >= schedule[i].time[schedule[i].time.length-1].slice(0,2).split(":").join("")*1) && actualTime.slice(-2) === "PM"){
+                invalidDays.push(tomorrowDate);
+            }
+        }
+    }
+
+    //removes days that are invalid
     console.log("Here are days that must be greyed out:")
     console.log(invalidDays);
     console.log(thisMonth)
@@ -332,34 +342,84 @@ const scheduleBooking = () => {
         if (dPart1 !== "undefined, "){
             console.log(dPart1)
             setSuperDate(dPart1.concat(dPart2.concat(dPart3.concat(dPart4))));
-            var tempDate = dPart1.concat(dPart2.concat(dPart3.concat(dPart4)));
             var tileTomorrowDate = dPart2.slice(0,3).concat(dPart3.slice(0,2));
-            console.log(tempDate);
-            console.log(tempDate.concat(" ", "1:00 PM"));
 
             for (var i=0;i<schedule.length; i++){
                 console.log("ugh");
                 if (schedule[i].day === dPart1.slice(0,3)){
+                    console.log(dPart1.slice(0,3))
+                    
+                    //adds timeslots based on schedule and time
+                    for (var a=0; a<schedule[i].time.length; a++){
+                        if ((schedule[i].time[a].slice(0,2).split(":").join("")*1) < 12 && schedule[i].time[a].slice(-2) === "AM"){
+                            morningValues.push(schedule[i].time[a]);
+                        }
+                        if (((schedule[i].time[a].slice(0,2).split(":").join("")*1) === 12 || (schedule[i].time[a].slice(0,2).split(":").join("")*1) <= 4) && schedule[i].time[a].slice(-2) === "PM"){
+                            afternoonValues.push(schedule[i].time[a]);
+                        }
+                        if (((schedule[i].time[a].slice(0,2).split(":").join("")*1) !== 12 && (schedule[i].time[a].slice(0,2).split(":").join("")*1) >= 5) && schedule[i].time[a].slice(-2) === "PM"){
+                            eveningValues.push(schedule[i].time[a]);
+                        }
+                    }
 
-                    // for (var a=0; a<schedule[i].time.length; a++){
-                    //     if (schedule[i].time[a] === )
-                    // }
-                    // for (var a=0; a<morningTimes.length; a++){
-                    //     if (schedule[i].time.includes(morningTimes[a]) && !blockedTime.includes(tempDate.concat(" ", morningTimes[a]))){
-                            
-                    //     }
-                    // }
-                    updatemTimeslots(morningTimes.map((value) => (
-                        <div className={`${schedule[i].time.includes(value) && !blockedTime.includes(tempDate.concat(" ", value)) && !(tomorrowDate === tileTomorrowDate && ((actualTime.slice(-2) === value.slice(-2)) && (actualTime.slice(0,2).split(":").join("")*1) < 12 && (actualTime.slice(0,2).split(":").join("")*1) >= value.slice(0,2).split(":").join("") || (actualTime.slice(-2) === "PM" && value.slice(-2) === "AM") || (actualTime.slice(-2) === "PM" && (actualTime.slice(0,2).split(":").join("")*1) < 12 && value.slice(0,2).split(":").join("") === "12"))) ? 'mStyle' : 'invalidTime'}`} onClick={(e) => e.target.classList.contains("mStyle") ? updateTC(value) : null} key={value}>{value}</div>
-                    )));
-                    updateaTimeslots(afternoonTimes.map((value) => (
-                        <div className={`${schedule[i].time.includes(value) && !blockedTime.includes(tempDate.concat(" ", value)) && !(tomorrowDate === tileTomorrowDate && ((actualTime.slice(-2) === value.slice(-2)) && (actualTime.slice(0,2).split(":").join("")*1) < 12 && (actualTime.slice(0,2).split(":").join("")*1) >= value.slice(0,2).split(":").join("") || (actualTime.slice(-2) === "PM" && value.slice(-2) === "AM") || (actualTime.slice(-2) === "PM" && (actualTime.slice(0,2).split(":").join("")*1) < 12 && value.slice(0,2).split(":").join("") === "12"))) ? 'mStyle' : 'invalidTime'}`} onClick={(e) => e.target.classList.contains("mStyle") ? updateTC(value) : null} key={value}>{value}</div>
-                    )));
-                    updateeTimeslots(eveningTimes.map((value) => (
-                        <div className={`${schedule[i].time.includes(value) && !blockedTime.includes(tempDate.concat(" ", value)) && !(tomorrowDate === tileTomorrowDate && ((actualTime.slice(-2) === value.slice(-2)) && (actualTime.slice(0,2).split(":").join("")*1) < 12 && (actualTime.slice(0,2).split(":").join("")*1) >= value.slice(0,2).split(":").join("") || (actualTime.slice(-2) === "PM" && value.slice(-2) === "AM") || (actualTime.slice(-2) === "PM" && (actualTime.slice(0,2).split(":").join("")*1) < 12 && value.slice(0,2).split(":").join("") === "12"))) ? 'mStyle' : 'invalidTime'}`} onClick={(e) => e.target.classList.contains("mStyle") ? updateTC(value) : null} key={value}>{value}</div>
-                    )));
+                    //removes timeslots that have been reserved by clients
+                    for (var b=0; b<blockedTime.length; b++){
+                        for (var c=0; c<morningValues.length; c++){
+                            if (blockedTime[b] === morningValues[c]){
+                                morningValues.splice(c, 1);
+                            }
+                        }
+                        for (var c=0; c<afternoonValues.length; c++){
+                            if (blockedTime[b] === afternoonValues[c]){
+                                afternoonValues.splice(c, 1);
+                            }
+                        }
+                        for (var c=0; c<eveningValues.length; c++){
+                            if (blockedTime[b] === eveningValues[c]){
+                                eveningValues.splice(c, 1);
+                            }
+                        }
+                    }
+                   
+                    //removes timeslots that are within 24hrs of the client's time
+                    if (tomorrowDate === tileTomorrowDate){
+                        for (var d=0; d<morningValues.length; d++){
+                            if (actualTime.slice(0,2).split(":").join("")*1 < 12 && actualTime.slice(-2) === "AM" && actualTime.slice(0,2).split(":").join("")*1 >= morningValues[d].slice(0,2).split(":").join("")*1){
+                                morningValues.splice(d, 1);
+                                d--;
+                            }
+                            if (actualTime.slice(-2) === "PM"){
+                                morningValues.splice(d, 1);
+                                d--;
+                            }
+                        }
+                        for (var d=0; d<afternoonValues.length; d++){
+                            if (afternoonValues[d].slice(0,2).split(":").join("")*1 === 12 && actualTime.slice(-2) === "PM"){
+                                afternoonValues.splice(d, 1);
+                            }
+                            if (actualTime.slice(-2) === "PM" && actualTime.slice(0,2).split(":").join("")*1 >= afternoonValues[d].slice(0,2).split(":").join("")*1 && actualTime.slice(0,2).split(":").join("")*1 !== 12){
+                                afternoonValues.splice(d, 1);
+                                d--;
+                            }
+                        }
+                        for (var d=0; d<eveningValues.length; d++){
+                            if (actualTime.slice(-2) === "PM" && actualTime.slice(0,2).split(":").join("")*1 >= eveningValues[d].slice(0,2).split(":").join("")*1){
+                                eveningValues.splice(d, 1);
+                                d--;
+                            }
+                        }
+                    }
 
-                    break;
+                    //updates state values
+                    updatemTimeslots(morningValues.map((value) => (
+                        <div className={"mStyle"} onClick={(e) => e.target.classList.contains("mStyle") ? updateTC(value) : null} key={value}>{value}</div>
+                    )));
+                    updateaTimeslots(afternoonValues.map((value) => (
+                        <div className={"mStyle"} onClick={(e) => e.target.classList.contains("mStyle") ? updateTC(value) : null} key={value}>{value}</div>
+                    )));
+                    updateeTimeslots(eveningValues.map((value) => (
+                        <div className={"mStyle"} onClick={(e) => e.target.classList.contains("mStyle") ? updateTC(value) : null} key={value}>{value}</div>
+                    )));
                 }
             }
         }
@@ -426,15 +486,15 @@ const scheduleBooking = () => {
                                 </div>
                                 <div className='simpleFlex'>
                                 <div className={`dayPeriodGrid ${slotTitles === true ? "" : "visibleNo"}`}>
-                                    <div className="morning">
+                                    <div className={`${morningslots.length > 0 ? "morning": "opacityZero"}`}>
                                         <div>Morning</div>
                                         {morningslots}
                                     </div>
-                                    <div className="afternoon">
+                                    <div className={`${afternoonslots.length > 0 ? "afternoon": "opacityZero"}`}>
                                         <div>Afternoon</div>
                                         {afternoonslots}
                                     </div>
-                                    <div className="evening">
+                                    <div className={`${eveningslots.length > 0 ? "evening": "opacityZero"}`}>
                                         <div>Evening</div>
                                         {eveningslots}
                                     </div>

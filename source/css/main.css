@@ -1645,6 +1645,10 @@ input[type="email"]::placeholder{
     display: none;
 }
 
+.opacityZero{
+    opacity: 0;
+}
+
 .slideTextAlignLeft{
     text-align: left;
 }
