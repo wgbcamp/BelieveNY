@@ -209,7 +209,7 @@ const scheduleBooking = () => {
     for (var i=0; i<startDateArray.length; i++){
         if (startDateArray[i].slice(8,10) === "01"){
             //changes the name of the month on the calendar
-            changeMonth(startDateArray[i].slice(4,7));
+            changeMonth(longMonth[month.indexOf(startDateArray[i].slice(4,7))]);
             changeYear(startDateArray[i].slice(10,15));
             //decides the todayValue, used to choose how many days of the prev and next month to gather
             for (var a=0; a<week.length; a++){
@@ -289,7 +289,12 @@ const scheduleBooking = () => {
     for (var i=0; i<schedule.length; i++){
         if (tomorrow.toString().slice(0,3) === schedule[i].day){
             if ((actualTime.slice(0,2).split(":").join("")*1 >= schedule[i].time[schedule[i].time.length-1].slice(0,2).split(":").join("")*1) && actualTime.slice(-2) === "PM" && actualTime.slice(0,2).split(":").join("")*1 !== 12){
-                invalidDays.push(tomorrowDate);
+                for (var a=0; a<thisMonth.length; a++){
+                    if (thisMonth[a].slice(4,10).split(" ").join("") === tomorrowDate && actualDate.slice(-4)*1 === thisMonth[a].slice(11,15).split(" ").join("")*1){
+                        invalidDays.push(tomorrowDate);
+                    }
+                }
+              
             }
         }
     }
@@ -461,7 +466,7 @@ const scheduleBooking = () => {
                             <div className="padTop80"></div>
                                 <div className="simpleFlex">
                                     <div className="mtSwitchGrid padBottom40">
-                                        <div className="size22Font">{currMonth} {currYear}</div>
+                                        <div className="size36Font"><b>{currMonth}</b> {currYear}</div>
                                         <div className="mtArrow" onClick={() =>fillCalendar(-1)}><i className="fa-solid fa-caret-left fa-xl"></i></div>
                                         <div className="mtArrow" onClick={() => fillCalendar(1)}><i className="fa-solid fa-caret-right fa-xl"></i></div>
                                         <div></div>
@@ -470,13 +475,13 @@ const scheduleBooking = () => {
                                 </div>
                             <div className='simpleFlex'>
                                 <div className="dayGrid padBottom20">
-                                    <b>Sun.</b>
-                                    <b>Mon.</b>
-                                    <b>Tue.</b>
-                                    <b>Wed.</b>
-                                    <b>Thu.</b>
-                                    <b>Fri.</b>
-                                    <b>Sat.</b>
+                                    <b>Sun</b>
+                                    <b>Mon</b>
+                                    <b>Tue</b>
+                                    <b>Wed</b>
+                                    <b>Thu</b>
+                                    <b>Fri</b>
+                                    <b>Sat</b>
                                 </div>
                             </div>
                                 <div className='simpleFlex'>

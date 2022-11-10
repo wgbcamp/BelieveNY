@@ -1499,7 +1499,7 @@ input[type="email"]::placeholder{
 .mtSwitchGrid{
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 50% 10% 10% 15% 15%;
+    grid-template-columns: 60% 10% 10% 5% 15%;
     width: 630px;
 }
 
@@ -1508,18 +1508,28 @@ input[type="email"]::placeholder{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 5px;
 }
 
 .mtToday{
-    border: 1px solid black;
+    border: 1px solid #b3b3b3;
+    font-weight: 500;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .dayGrid{
     display: grid;
     grid-template-columns: repeat(7, 90px);
+    text-align: right;
 }
 
 .calendar{
@@ -1528,10 +1538,17 @@ input[type="email"]::placeholder{
     grid-template-rows: repeat(6, 60px);
     margin-bottom: 20px;
     color: black;
+    box-shadow: -2px 10px 20px 1px #29292933;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 0.06rem solid #e6e6e6;
 }
 
 .calTile{
-    border: 0.05rem solid gray;
+    border: 0.05rem solid #e6e6e6;
+    text-align: right;
+    padding-right: 5px;
+    font-weight: 500;
 }
 
 .calTile:hover{
@@ -1628,6 +1645,14 @@ input[type="email"]::placeholder{
 .mStyle:hover, .aStyle:hover, .eStyle:hover{
     font-weight: 600;
     border: 0.15rem solid black;
+    animation-name: changeToPurp;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+}
+
+.mStyle:focus{
+    background-color: var(--darkblue);
+
 }
 
 .invalidTime{
@@ -1887,7 +1912,6 @@ input[type="email"]::placeholder{
     .mtSwitchGrid{
         display: grid;
         grid-template-rows: 1fr;
-        grid-template-columns: 50% 10% 10% 15% 15%;
         width: 350px;
     }
 
