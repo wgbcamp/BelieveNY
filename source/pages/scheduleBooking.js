@@ -311,7 +311,7 @@ const scheduleBooking = () => {
     //maps the values to the calendar tiles
     newCalValue(thisMonth.map((value) => (
 
-        <div className={`calTile ${thisMonth.indexOf(value)} ${value.slice(0,3)} ${value.slice(11,15)} ${value.length > 5 ? value.slice(4,7).concat(value.slice(8,10)): "invalid"}`} onClick={() => { toggleSelection(thisMonth.indexOf(value), value.slice(0,15)); updateTC(""); updateST(true);}} key={value.toString()}>{value.length > 5 ? value.slice(8,10) : value.slice(3,5)}</div>
+        <div className={`calTile ${thisMonth.indexOf(value)} ${value.slice(0,3)} ${value.slice(11,15)} ${value.length > 5 ? value.slice(4,7).concat(value.slice(8,10)): "invalid"}`} onClick={() => { toggleSelection(thisMonth.indexOf(value), value.slice(0,15)); updateTC(""); updateST(true); toggleTSselection();}} key={value.toString()}>{value.length > 5 ? value.slice(8,10) : value.slice(3,5)}</div>
     )));  
 }
 
@@ -417,16 +417,29 @@ const scheduleBooking = () => {
 
                     //updates state values
                     updatemTimeslots(morningValues.map((value) => (
-                        <div className={"mStyle"} onClick={(e) => e.target.classList.contains("mStyle") ? updateTC(value) : null} key={value}>{value}</div>
+                        <div className={"mStyle"} id={value} onClick={(e) => toggleTSselection(e)} key={value}>{value}</div>
                     )));
                     updateaTimeslots(afternoonValues.map((value) => (
-                        <div className={"mStyle"} onClick={(e) => e.target.classList.contains("mStyle") ? updateTC(value) : null} key={value}>{value}</div>
+                        <div className={"mStyle"} id={value} onClick={(e) => toggleTSselection(e)} key={value}>{value}</div>
                     )));
                     updateeTimeslots(eveningValues.map((value) => (
-                        <div className={"mStyle"} onClick={(e) => e.target.classList.contains("mStyle") ? updateTC(value) : null} key={value}>{value}</div>
+                        <div className={"mStyle"} id={value} onClick={(e) => toggleTSselection(e)} key={value}>{value}</div>
                     )));
                 }
             }
+        }
+    }
+
+    function toggleTSselection(e){
+        const containsmStyle = Array.from(document.getElementsByClassName("mStyleSelected"));
+        containsmStyle.forEach(element => {
+            element.classList.replace("mStyleSelected", "mStyle");
+        })
+        if (e.target.className === "mStyle"){
+            updateTC(e.target.id);
+            e.target.className="mStyleSelected";
+        }else{
+            updateTC("");
         }
     }
 
