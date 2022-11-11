@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom'
 
 const theOpenSpace = () => {
 
+    function restoreTop(){
+        window.scrollTo(0,0);
+    }
+
     return(
         <div>
             <div className="simpleFlex">
@@ -13,7 +17,7 @@ const theOpenSpace = () => {
                     <div className='simpleFlex padTop40 padBottom40'>
                     {/* <div className='fixIcon'><i class="fa-solid fa-phone fa-2xl"></i>
                                 </div> */}
-                            <Link to="/scheduleBooking" className="submitButton1">
+                            <Link to="/scheduleBooking" className="submitButton1" onClick={() => restoreTop()}>
                               Book an Anonymous Session Here
                             </Link> 
                     </div>
