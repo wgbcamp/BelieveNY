@@ -171,7 +171,13 @@ const scheduleBooking = () => {
             }
             
         }else{
-            alert("Please fill out every field below before booking your appointment.");
+            if (phone.split(/[-\s]/).join("").length !== 10){
+                alert("Please make sure your phone number consists of 10 digits.");
+            }else if (!(email.includes("@") && email.includes("."))){
+                alert("Please make sure to include a valid email address.");
+            }else{
+                alert("Please fill out every field below before booking your appointment.");
+            }
         }
 
     }
@@ -551,7 +557,7 @@ const scheduleBooking = () => {
                         <input className='bCol1' onChange={updateEmail} value={email}></input>
                         <div className='bCol1'>Phone Number</div>
                         <input className='bCol1' onChange={updatePhone} value={phone}></input>
-                        <div className='bCol1'>Add Your Message</div>
+                        <div className='bCol1'>Tell us what's going on...</div>
                         <textarea className='bCol1 borderTopSolid' onChange={updateMessage} value={message}></textarea>
                         <div className="simpleFlex confirmationBox">
                         <div className="infoBoxGrid" id="ibg">
