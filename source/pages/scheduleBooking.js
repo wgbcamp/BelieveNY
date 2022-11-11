@@ -353,6 +353,7 @@ const scheduleBooking = () => {
         if (dPart1 !== "undefined, "){
             console.log(dPart1)
             setSuperDate(dPart1.concat(dPart2.concat(dPart3.concat(dPart4))));
+            var selectedDate = dPart1.concat(dPart2.concat(dPart3.concat(dPart4)));
             var tileTomorrowDate = dPart2.slice(0,3).concat(dPart3.slice(0,2));
 
             for (var i=0;i<schedule.length; i++){
@@ -376,17 +377,17 @@ const scheduleBooking = () => {
                     //removes timeslots that have been reserved by clients
                     for (var b=0; b<blockedTime.length; b++){
                         for (var c=0; c<morningValues.length; c++){
-                            if (blockedTime[b].slice(-8).split(" ").join("") === morningValues[c]){
+                            if (blockedTime[b] === selectedDate.concat(" ").concat(morningValues[c])){
                                 morningValues.splice(c, 1);
                             }
                         }
                         for (var c=0; c<afternoonValues.length; c++){
-                            if (blockedTime[b].slice(-8).split(" ").join("") === afternoonValues[c]){
+                            if (blockedTime[b] === selectedDate.concat(" ").concat(afternoonValues[c])){
                                 afternoonValues.splice(c, 1);
                             }
                         }
                         for (var c=0; c<eveningValues.length; c++){
-                            if (blockedTime[b].slice(-8).split(" ").join("") === eveningValues[c]){
+                            if (blockedTime[b] === selectedDate.concat(" ").concat(eveningValues[c])){
                                 eveningValues.splice(c, 1);
                             }
                         }
