@@ -240,6 +240,7 @@ ul.no-bullets{
     grid-column: 3;
     width: 300px;
     text-decoration: none;
+    border: 0.1rem solid black;
 }
 
 .submitButton2{
@@ -1605,8 +1606,6 @@ input[type="email"]::placeholder{
 .infoBox{
     display: grid;
     grid-template-rows: 20px 40px 40px 80px 40px 20px;
-    
-  
 }
 
 .ibTitle{

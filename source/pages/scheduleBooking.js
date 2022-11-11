@@ -150,7 +150,7 @@ const scheduleBooking = () => {
     }
 
     function submitBooking(){
-        if (name !== "" && email !== "" && phone !== "" && message !== "" && superDate !== "" && timeChosen !== ""){
+        if (name !== "" && email !== "" && email.includes("@") && email.includes(".") && phone !== "" && phone.split(/[-\s]/).join("").length === 10 && message !== "" && superDate !== "" && timeChosen !== ""){
             var xhr = new XMLHttpRequest();
             xhr.open("POST", "/booking", true);
             xhr.setRequestHeader('Content-Type', 'application/json');
