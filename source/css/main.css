@@ -897,6 +897,17 @@ input[type="email"]::placeholder{
       }
 }
 
+@keyframes changeToLightPurp {
+    0% {
+        color: var(--darkblue); 
+        background-color: white;
+      }
+      100% {
+        color: white;
+        background-color: var(--transpurple);
+      }
+}
+
 
 .circleStyleFlex{
     display: flex;
@@ -1479,6 +1490,7 @@ input[type="email"]::placeholder{
     align-items: center;
     border-radius: 5px;
     font-weight: 500;
+    cursor: default;
 }
 
 .borderTopSolid{
@@ -1516,6 +1528,7 @@ input[type="email"]::placeholder{
     margin-top: auto;
     margin-bottom: auto;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .mtToday{
@@ -1528,13 +1541,14 @@ input[type="email"]::placeholder{
     height: 50%;
     margin-top: auto;
     margin-bottom: auto;
-
+    cursor: pointer;
 }
 
 .dayGrid{
     display: grid;
     grid-template-columns: repeat(7, 90px);
     text-align: right;
+    cursor: default;
 }
 
 .calendar{
@@ -1554,6 +1568,7 @@ input[type="email"]::placeholder{
     text-align: right;
     padding-right: 5px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .calTile:hover{
@@ -1578,6 +1593,7 @@ input[type="email"]::placeholder{
 .invalid{
     border: 0.05rem solid rgba(175, 175, 175, 0.33);
     color: rgb(180, 180, 180);
+    cursor: default;
 }
 
 .invalid:hover{
@@ -1639,7 +1655,10 @@ input[type="email"]::placeholder{
     text-align: center;
     padding-bottom: 80px;
     font-weight: 600;
+}
 
+.timeTitle{
+    cursor: default;
 }
 
 .mStyle, .aStyle, .eStyle{
@@ -1655,12 +1674,13 @@ input[type="email"]::placeholder{
     font-size: 17px;
     box-sizing: border-box;
     color: var(--darkblue);
+    cursor: pointer;
 }
 
 .mStyle:hover, .aStyle:hover, .eStyle:hover{
     font-weight: 600;
     border: 0.13rem solid black;
-    animation-name: changeToPurp;
+    animation-name: changeToLightPurp;
     animation-duration: 0.25s;
     animation-fill-mode: forwards;
 }
@@ -1680,7 +1700,7 @@ input[type="email"]::placeholder{
     border-radius: 5px;
     border: 0.13rem solid black;
     box-sizing: border-box;
-
+    cursor: default;
 }
 
 .invalidTime{

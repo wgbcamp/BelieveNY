@@ -512,15 +512,15 @@ const scheduleBooking = () => {
                                 <div className='simpleFlex'>
                                 <div className={`dayPeriodGrid ${slotTitles === true ? "" : "visibleNo"}`}>
                                     <div className={`${morningslots.length > 0 ? "morning": "opacityZero"}`}>
-                                        <div>Morning</div>
+                                        <div className="timeTitle">Morning</div>
                                         {morningslots}
                                     </div>
                                     <div className={`${afternoonslots.length > 0 ? "afternoon": "opacityZero"}`}>
-                                        <div>Afternoon</div>
+                                        <div className="timeTitle">Afternoon</div>
                                         {afternoonslots}
                                     </div>
                                     <div className={`${eveningslots.length > 0 ? "evening": "opacityZero"}`}>
-                                        <div>Evening</div>
+                                        <div className="timeTitle">Evening</div>
                                         {eveningslots}
                                     </div>
                                 </div>
