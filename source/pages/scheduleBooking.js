@@ -376,17 +376,17 @@ const scheduleBooking = () => {
                     //removes timeslots that have been reserved by clients
                     for (var b=0; b<blockedTime.length; b++){
                         for (var c=0; c<morningValues.length; c++){
-                            if (blockedTime[b] === morningValues[c]){
+                            if (blockedTime[b].slice(-8).split(" ").join("") === morningValues[c]){
                                 morningValues.splice(c, 1);
                             }
                         }
                         for (var c=0; c<afternoonValues.length; c++){
-                            if (blockedTime[b] === afternoonValues[c]){
+                            if (blockedTime[b].slice(-8).split(" ").join("") === afternoonValues[c]){
                                 afternoonValues.splice(c, 1);
                             }
                         }
                         for (var c=0; c<eveningValues.length; c++){
-                            if (blockedTime[b] === eveningValues[c]){
+                            if (blockedTime[b].slice(-8).split(" ").join("") === eveningValues[c]){
                                 eveningValues.splice(c, 1);
                             }
                         }
