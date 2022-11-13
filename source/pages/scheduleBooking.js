@@ -1,5 +1,4 @@
-import e from 'cors';
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -43,6 +42,8 @@ if (initialTime < 12){
 
 
 const scheduleBooking = () => {
+
+    const continueRef = useRef();
 
     useEffect(() => {
         
@@ -445,6 +446,7 @@ const scheduleBooking = () => {
         if (e.target.className === "mStyle"){
             updateTC(e.target.id);
             e.target.className="mStyleSelected";
+            continueRef.current.scrollIntoView({ behavior: 'smooth' })
         }else{
             updateTC("");
         }
@@ -523,11 +525,16 @@ const scheduleBooking = () => {
                                         <div className="timeTitle">Evening</div>
                                         {eveningslots}
                                     </div>
+                                    <div className={`contSchedContainer ${timeChosen !== "" ? "" : "opacityZero"}`} onClick={() => checkTime()} ref={continueRef}>
+                                        <div className="contSched">
+                                            Continue Scheduling
+                                            </div>
+                                    </div>
                                 </div>
                                 </div>
                             </div>
                             <div className="appCol2">
-                            <div className="infoBoxGrid">
+                            <div className={`infoBoxGrid ${calendarSwitch === true ? "visibleNo" : ""}`}>
                                 <div></div>
                                     <div className="infoBox">
                                         <div></div>
@@ -536,8 +543,6 @@ const scheduleBooking = () => {
                                         </div>
                                         <div className="timeInfo">45 min</div>
                                         <div className="dateSelected">{superDate} {timeChosen}</div>
-                                        <div className={`${superDate !== "" && timeChosen !== "" ? "nextButton" : "visibleNo"}`} onClick={() => checkTime()}>Next</div>
-                                        <div></div>
                                     </div>
                                     <div></div>
                                 </div>
@@ -580,8 +585,6 @@ const scheduleBooking = () => {
                     </div>
                     </div>
                     }</div>
-
-
                     </div>
                 </div>
             </div>
