@@ -1724,7 +1724,7 @@ input[type="email"]::placeholder{
     display: flex;
     justify-content: center;
     cursor: pointer;
-    scroll-margin: 100px;
+    scroll-margin: 300px;
 }
 
 .contSched{
