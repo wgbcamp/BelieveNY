@@ -302,6 +302,9 @@ const scheduleBooking = () => {
         }
     }
 
+    //invalidates specified holidays
+    var holidays = ["Nov24", "Nov25", "Dec24", "Dec25", "Dec31", "Jan01"];
+
     //removes days that are invalid
     console.log("Here are days that must be greyed out:")
     console.log(invalidDays);
@@ -314,7 +317,7 @@ const scheduleBooking = () => {
     //maps the values to the calendar tiles
     newCalValue(thisMonth.map((value) => (
 
-        <div className={`calTile ${thisMonth.indexOf(value)} ${value.slice(0,3)} ${value.slice(11,15)} ${value.length > 5 ? value.slice(4,7).concat(value.slice(8,10)): "invalid"}`} onClick={() => { toggleSelection(thisMonth.indexOf(value), value.slice(0,15)); updateTC(""); updateST(true); toggleTSselection();}} key={value.toString()}>{value.length > 5 ? value.slice(8,10) : value.slice(3,5)}</div>
+        <div className={`calTile ${thisMonth.indexOf(value)} ${value.slice(0,3)} ${value.slice(11,15)} ${value.length > 5 && !holidays.includes(value.slice(4,10).split(" ").join("")) ? value.slice(4,7).concat(value.slice(8,10)): "invalid"}`} onClick={() => { toggleSelection(thisMonth.indexOf(value), value.slice(0,15)); updateTC(""); updateST(true); toggleTSselection();}} key={value.toString()}>{value.length > 5 ? value.slice(8,10) : value.slice(3,5)}</div>
     )));  
 }
 
