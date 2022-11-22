@@ -43,9 +43,7 @@ if (initialTime < 12){
 
 const scheduleBooking = () => {
 
-    const timeslotRef = useRef();
     const continueRef = useRef();
-
 
     useEffect(() => {
         
@@ -125,6 +123,12 @@ const scheduleBooking = () => {
             swCal(!calendarSwitch);
             window.scrollTo(0,0);
         }
+    }
+    
+     function scrollToIBG(){
+        document.getElementById('ibg').scrollIntoView({
+            behavior: 'smooth' 
+        });
     }
     
     const [name, setName] = useState('');
@@ -431,7 +435,6 @@ const scheduleBooking = () => {
                     )));
                 }
             }
-           timeslotRef.current.scrollIntoView({ behavior: 'smooth' });
         }
     }
 
@@ -504,7 +507,7 @@ const scheduleBooking = () => {
                                 </div>
                             </div>
                                 <div className='simpleFlex'>
-                                <div className="calendar" ref={timeslotRef}>
+                                <div className="calendar">
                                 {calendarValue}
                                 </div>
                                 </div>
