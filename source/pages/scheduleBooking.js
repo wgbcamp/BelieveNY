@@ -560,7 +560,8 @@ const scheduleBooking = () => {
                                             The Open Space
                                         </div>
                                         <div className="timeInfo">45 min</div>
-                                        <div className="dateSelected">{superDate} {timeChosen}</div>
+                                        <div className="dateSelected">{superDate} </div>
+                                        <div className="timeSelected">{timeChosen} EST</div>
                                         <div className="nextButton" onClick={() => submitBooking()}>Request to Book</div>
                                         <div></div>
                                     </div>

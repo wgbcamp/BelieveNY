@@ -1618,7 +1618,7 @@ input[type="email"]::placeholder{
     display: grid;
     grid-template-columns: 10% 1fr 10%;
     width: 260px;
-    height: 240px;
+    height: 260px;
     border-radius: 5px;
     background-color: rgb(248, 248, 248);
     box-shadow: 0px 4px 4px rgb(0 0 0 / 12%);
@@ -1627,7 +1627,7 @@ input[type="email"]::placeholder{
 
 .infoBox{
     display: grid;
-    grid-template-rows: 20px 40px 40px 80px 40px 20px;
+    grid-template-rows: 20px 40px 40px 60px  40px 40px 20px;
 }
 
 .ibTitle{
@@ -1644,6 +1644,10 @@ input[type="email"]::placeholder{
 .dateSelected{
     display: flex;
     align-items: center;
+}
+
+.dateSelected, .timeSelected{
+    font-size: 17px;
 }
 
 .nextButton{
