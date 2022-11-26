@@ -18,7 +18,13 @@ function monthDays(year, month){
     }
     return dates;
 }
+
+//create time offset and convert to EST
+const timeZone = new Date().getTimezoneOffset()/60;
 const now = new Date();
+now.setHours(now.toString().slice(16,18)*1 + timeZone -5);
+
+
 var actualDate = now.toDateString();
 console.log(actualDate);
 var tomorrow = new Date(now);
@@ -28,16 +34,17 @@ var customMonth = month.indexOf(actualDate.slice(4,7));
 var customYear = actualDate.slice(-4);
 
 //set initial time for state function below
-var initialTime = new Date().getHours();
-if (initialTime > 12){
-    initialTime = initialTime-12;
-    initialTime = initialTime.toString() + ":00 PM";
+var actualTime = now.toString().slice(16,18)*1;
+console.log("actual time: " + actualTime);
+if (actualTime > 12){
+    actualTime = actualTime-12;
+    actualTime = actualTime.toString() + ":00 PM";
 }
-if (initialTime === 12){
-    initialTime = initialTime.toString() + ":00 PM";
+if (actualTime === 12){
+    actualTime = actualTime.toString() + ":00 PM";
 }
-if (initialTime < 12){
-    initialTime = initialTime.toString() + ":00 AM";
+if (actualTime < 12){
+    actualTime = actualTime.toString() + ":00 AM";
 }
 
 
@@ -71,30 +78,11 @@ const scheduleBooking = () => {
                 for (var i=0; i<z.length; i++){
                     blockedTime.push(z[i].date);
                 }
-                console.log("#########");
+                console.log("Blocked times: ");
                 console.log(blockedTime);
             }
         }
     }
-
-    //update actual time to prevent submissions within 24 hours
-    var [actualTime, updateAT] = useState(initialTime);
-    // const interval = setInterval(updateTime, 60000);
-    // function updateTime(){
-    //     initialTime = new Date().getHours();
-    //     if (initialTime > 12){
-    //         initialTime = initialTime-12;
-    //         initialTime = initialTime.toString() + ":00 PM";
-    //     }
-    //     if (initialTime === 12){
-    //         initialTime = initialTime.toString() + ":00 PM";
-    //     }
-    //     if (initialTime < 12){
-    //         initialTime = initialTime.toString() + ":00 AM";
-    //     }
-    //     updateAT(initialTime);
-    //     console.log("Let me remember...")
-    // }
 
     var schedule = [
         {"day":"Mon","time":["9:00 AM","10:00 AM","11:00 AM","12:00 PM","1:00 PM","2:00 PM","3:00 PM","4:00 PM","5:00 PM"]},
@@ -259,10 +247,6 @@ const scheduleBooking = () => {
         var aYear = actualDate.slice(11,15);
         var g = false;
 
-        console.log("test")
-        console.log(thisMonth[i].slice(0,15))
-
-
         //invalidates days of previous months
         if ( y < z && (cYear <= aYear)){
             console.log(thisMonth[i].slice(4,7))
@@ -306,12 +290,14 @@ const scheduleBooking = () => {
     var holidays = ["Nov24", "Nov25", "Dec24", "Dec25", "Dec31", "Jan01"];
 
     //removes days that are invalid
-    console.log("Here are days that must be greyed out:")
+    console.log("Invalid days:");
     console.log(invalidDays);
+    console.log("This month:");
     console.log(thisMonth)
     for (var i=0; i<invalidDays.length; i++){
         thisMonth.splice(i, 1, invalidDays[i])
     }
+    console.log("Updated month:");
     console.log(thisMonth);
 
     //maps the values to the calendar tiles
