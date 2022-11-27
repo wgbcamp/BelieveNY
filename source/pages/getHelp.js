@@ -3,7 +3,7 @@ import facebook from '../../images/facebook-square-brands.png'
 import twitter from '../../images/twitter-square-brands.png'
 import instagram from '../../images/instagram-square-brands.png'
 
-const getHelp = () => {
+const getHelp = (props) => {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -38,24 +38,37 @@ const getHelp = () => {
         setSubject("");
         setTime("");
         setText("");
-        alert("Your form has been submitted, thank you.");
     }
 
+    const [confirmation, toggleConfirmation] = useState(false);
 
     function submitEmail(){
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "/", true);
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.send(JSON.stringify({
-            type: "contactForm",
-            name: name,
-            email: email,
-            phone: phone,
-            subject: subject,
-            time: time,
-            text: text
-        }));
-        refreshFields();
+        if(name !== "" && email !== "" && email.includes("@") && phone !== "" && phone.split(/[-\s]/).join("").length === 10 && subject !== "" && time !== "" && text !== ""){
+            // var xhr = new XMLHttpRequest();
+            // xhr.open("POST", "/", true);
+            // xhr.setRequestHeader('Content-Type', 'application/json');
+            // xhr.send(JSON.stringify({
+            //     type: "contactForm",
+            //     name: name,
+            //     email: email,
+            //     phone: phone,
+            //     subject: subject,
+            //     time: time,
+            //     text: text
+            // }));
+            // refreshFields();
+            props.updateDim(true);
+            props.updatePayload({name: name, email: email, phone: phone, subject: subject, time: time, text: text});
+        }else{
+            if (phone.split(/[-\s]/).join("").length !== 10){
+                alert("Please make sure your phone number consists of 10 digits.");
+            }else if (!(email.includes("@") && email.includes("."))){
+                alert("Please make sure to include a valid email address.");
+            }else{
+                alert("Please fill out every field below before booking your appointment.");
+            }
+        }
+
     }
 
     return(
@@ -79,7 +92,7 @@ const getHelp = () => {
                         </div>
                     </div>
                     <div className="emailGrid">
-                        <input placeholder="Name" type="email" className="fName styleEmGrid" onChange={updateName} value={name}/>
+                        <input placeholder="First and last name" type="email" className="fName styleEmGrid" onChange={updateName} value={name}/>
                         <input placeholder="Phone #" className="fPhone styleEmGrid" onChange={updatePhone} value={phone}/>
                         <input placeholder="Email" className="fEmail styleEmGrid" onChange={updateEmail} value={email}/>
                         <input placeholder="Subject" className="fSubject styleEmGrid" onChange={updateSubject} value={subject}/>
