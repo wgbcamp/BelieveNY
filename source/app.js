@@ -21,6 +21,7 @@ import EventSponsors from './pages/eventSponsors';
 import Volunteer from './pages/volunteer';
 import CancelSession from './pages/cancelSession';
 import BottomContact from './components/bottomContact';
+import EmailFormHandle from './components/emailFormHandle';
 
 function App(){
 
@@ -31,49 +32,12 @@ function App(){
         document.body.style.position = "fixed";
         updatePL(data);
         updateDim(true);
-
-    }
-    function submitEmail(){
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "/", true);
-            xhr.setRequestHeader('Content-Type', 'application/json');
-            xhr.send(JSON.stringify({
-                type: "contactForm",
-                name: payload.name,
-                email: payload.email,
-                phone: payload.phone,
-                subject: payload.subject,
-                time: payload.time,
-                text: payload.text
-            }));
-            alert("Your form has been submitted, thank you.");
-            window.location.reload();
-    }
-    function revertFixation(){
-        document.body.style.position = "static";
-        updateDim(false);
     }
 
     return(
 
-        <div>            
-            <div className={`${dim === true ? "areYouSure" : "hideCB"} padLeft30 padRight30 size18Font`}>
-                <div className="centerText padTop20 padBottom20"><b>Is the following information correct?</b></div>
-                <div><b>Name:</b> {payload.name}</div>
-                <div><b>Email:</b> {payload.email}</div>
-                <div><b>Phone #:</b> {payload.phone}</div>
-                <div><b>Subject:</b> {payload.subject}</div>
-                <div><b>Description:</b> {payload.text}</div>
-                <div><b>Best callback time:</b> {payload.time}</div>
-                <div className="aysButtonGrid">
-                    <div className='simpleFlex'>
-                        <div className="submitButton size24Font" onClick={() => submitEmail()}>Confirm</div>
-                    </div>
-                    <div className='simpleFlex'>
-                        <div className="cancelButton size24Font" onClick={() => revertFixation()}>Cancel</div>
-                    </div>
-                </div>
-            </div>
+        <div>
+            <EmailFormHandle payload={{name: payload.name, email: payload.email, phone: payload.phone, subject: payload.subject, text: payload.text, time: payload.time}} dim={dim} updateDim={updateDim}/>
             <div className={`${dim === true ? "dim" : ""}`}>
                 <Construction/>
                 <Header location={location}/>

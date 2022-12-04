@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import facebook from '../../images/facebook-square-brands.png'
 import twitter from '../../images/twitter-square-brands.png'
 import instagram from '../../images/instagram-square-brands.png'
+import emailFormHandle from '../components/emailFormHandle';
 
 const getHelp = (props) => {
 
