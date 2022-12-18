@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import facebook from '../../images/facebook-square-brands.png'
 import twitter from '../../images/twitter-square-brands.png'
 import instagram from '../../images/instagram-square-brands.png'
-import emailFormHandle from '../components/emailFormHandle';
+import emailFormHandle from '../components/formHandler';
 
 const getHelp = (props) => {
 
@@ -59,7 +59,7 @@ const getHelp = (props) => {
             // }));
             // refreshFields();
             props.updateDim(true);
-            props.updatePayload({name: name, email: email, phone: phone, subject: subject, time: time, text: text});
+            props.updatePayload({name: name, email: email, phone: phone, path: "", type: "contactForm", specific0: subject, specific1: text, specific2: time});
         }else{
             if (phone.split(/[-\s]/).join("").length !== 10){
                 alert("Please make sure your phone number consists of 10 digits.");

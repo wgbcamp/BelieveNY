@@ -21,7 +21,7 @@ import EventSponsors from './pages/eventSponsors';
 import Volunteer from './pages/volunteer';
 import CancelSession from './pages/cancelSession';
 import BottomContact from './components/bottomContact';
-import EmailFormHandle from './components/emailFormHandle';
+import FormHandler from './components/formHandler';
 
 function App(){
 
@@ -31,13 +31,14 @@ function App(){
     function updatePayload(data){
         document.body.style.position = "fixed";
         updatePL(data);
+        console.log(data);
         updateDim(true);
     }
 
     return(
 
         <div>
-            <EmailFormHandle payload={{name: payload.name, email: payload.email, phone: payload.phone, subject: payload.subject, text: payload.text, time: payload.time}} dim={dim} updateDim={updateDim}/>
+            <FormHandler payload={{name: payload.name, email: payload.email, phone: payload.phone, path: payload.path, type: payload.type, specific0: payload.specific0, specific1: payload.specific1, specific2: payload.specific2}} dim={dim} updateDim={updateDim}/>
             <div className={`${dim === true ? "dim" : ""}`}>
                 <Construction/>
                 <Header location={location}/>
@@ -50,7 +51,7 @@ function App(){
                         <Route path="/foodFirst" element={<FoodFirst/>}/>
                         <Route path="/theOpenSpace" element={<TheOpenSpace/>}/>
                         <Route path="/environmentalProjects" element={<EnvironmentalProjects/>}/>
-                        <Route path="/scheduleBooking" element={<ScheduleBooking/>}/>
+                        <Route path="/scheduleBooking" element={<ScheduleBooking updateDim={updateDim} updatePayload={updatePayload}/>}/>
                         <Route path="/upcomingEvents" element={<UpcomingEvents/>}/>
                         <Route path="/pastEvents" element={<PastEvents/>}/>
                         <Route path="/eventSponsors" element={<EventSponsors/>}/>
