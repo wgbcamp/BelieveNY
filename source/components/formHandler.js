@@ -7,7 +7,7 @@ const FormHandler = (props) => {
         xhr.open("POST", `/${props.payload.path}`, true);
         xhr.setRequestHeader('Content-Type', 'application/json');
 
-        if(props.payload.path === ""){
+        if(props.payload.type === "contactForm"){
             xhr.send(JSON.stringify({
                 type: props.payload.type,
                 name: props.payload.name,
@@ -18,7 +18,7 @@ const FormHandler = (props) => {
                 text: props.payload.specific2
             }));
         }
-        if(props.payload.path === "booking"){
+        if(props.payload.type === "booking"){
             xhr.send(JSON.stringify({
                 type: props.payload.type,
                 name: props.payload.name,
@@ -27,6 +27,16 @@ const FormHandler = (props) => {
                 text: props.payload.specific0,
                 date: props.payload.specific1,
                 time: props.payload.specific2
+            }));
+        }
+        if(props.payload.type === "eventSponsor"){
+            xhr.send(JSON.stringify({
+                type: props.payload.type,
+                email: props.payload.email,
+                phone: props.payload.phone,
+                contactName: props.payload.specific0,
+                businessName: props.payload.specific1,
+                text: props.payload.specific2
             }));
         }
 
@@ -45,9 +55,9 @@ const FormHandler = (props) => {
         <div><b>Name:</b> {props.payload.name}</div>
         <div><b>Email:</b> {props.payload.email}</div>
         <div><b>Phone #:</b> {props.payload.phone}</div>
-        <div><b>{props.payload.path === "" ? "Subject" : "Description"}:</b> {props.payload.specific0}</div>
-        <div><b>{props.payload.path === "" ? "Description" : "Date"}:</b> {props.payload.specific1}</div>
-        <div><b>{props.payload.path === "" ? "Best callback time" : "Time"}:</b> {props.payload.specific2}</div>
+        <div><b>{props.payload.path === "" ? props.payload.type === "eventSponsor" ? "Description" : "Subject" : "Description"}:</b> {props.payload.specific0}</div>
+        <div><b>{props.payload.path === "" ? props.payload.type === "eventSponsor" ? "Name of Business" : "Description" : "Date"}:</b> {props.payload.specific1}</div>
+        <div><b>{props.payload.path === "" ? props.payload.type === "eventSponsor" ? "" : "Best callback time:" : "Time:"}</b> {props.payload.specific2}</div>
         <div className="aysButtonGrid">
             <div className='simpleFlex'>
                 <div className="submitButton size24Font" onClick={() => submit()}>Confirm</div>

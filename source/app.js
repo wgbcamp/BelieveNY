@@ -54,7 +54,7 @@ function App(){
                         <Route path="/scheduleBooking" element={<ScheduleBooking updateDim={updateDim} updatePayload={updatePayload}/>}/>
                         <Route path="/upcomingEvents" element={<UpcomingEvents/>}/>
                         <Route path="/pastEvents" element={<PastEvents/>}/>
-                        <Route path="/eventSponsors" element={<EventSponsors/>}/>
+                        <Route path="/eventSponsors" element={<EventSponsors updateDim={updateDim} updatePayload={updatePayload}/>}/>
                         <Route path="/SpecialEventsFund" element={<SpecialEventsFund/>}/>
                         <Route path="/volunteer" element={<Volunteer/>}/>
                         <Route path="/donate" element={<Donate/>}/>

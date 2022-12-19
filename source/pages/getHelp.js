@@ -32,32 +32,8 @@ const getHelp = (props) => {
         setText(event.target.value);
     }
 
-    function refreshFields(){
-        setName("");
-        setPhone("");
-        setEmail("");
-        setSubject("");
-        setTime("");
-        setText("");
-    }
-
-    const [confirmation, toggleConfirmation] = useState(false);
-
     function submitEmail(){
-        if(name !== "" && email !== "" && email.includes("@") && phone !== "" && phone.split(/[-\s]/).join("").length === 10 && subject !== "" && time !== "" && text !== ""){
-            // var xhr = new XMLHttpRequest();
-            // xhr.open("POST", "/", true);
-            // xhr.setRequestHeader('Content-Type', 'application/json');
-            // xhr.send(JSON.stringify({
-            //     type: "contactForm",
-            //     name: name,
-            //     email: email,
-            //     phone: phone,
-            //     subject: subject,
-            //     time: time,
-            //     text: text
-            // }));
-            // refreshFields();
+        if(name !== "" && email !== "" && email.includes("@") && email.includes(".") && phone !== "" && phone.split(/[-\s]/).join("").length === 10 && subject !== "" && time !== "" && text !== ""){
             props.updateDim(true);
             props.updatePayload({name: name, email: email, phone: phone, path: "", type: "contactForm", specific0: subject, specific1: text, specific2: time});
         }else{
@@ -69,7 +45,6 @@ const getHelp = (props) => {
                 alert("Please fill out every field below before booking your appointment.");
             }
         }
-
     }
 
     return(

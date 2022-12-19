@@ -6,7 +6,7 @@ import HavanaCentral from '../../images/havana-central-logo-v3.webp'
 import CutlerSalons from '../../images/Cutler-Salons.webp'
 import CutlerLogo from '../../images/cutlerLogo.png'
 
-const eventSponsors = () => {
+const eventSponsors = (props) => {
 
     const [businessName, setBName] = useState('');
     const [contactName, setCName] = useState('');
@@ -30,28 +30,19 @@ const eventSponsors = () => {
         setText(event.target.value);
     }
 
-    function refreshFields(){
-        setBName("");
-        setPhone("");
-        setEmail("");
-        setCName("");
-        setText("");
-        alert("Your form has been submitted, thank you.");
-    }
-
     function submitEmail(){
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "/", true);
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.send(JSON.stringify({
-            type: "eventSponsor",
-            contactName: contactName,
-            businessName: businessName,
-            email: email,
-            phone: phone,
-            text: text
-        }));
-        refreshFields();
+        if(businessName !== "" && email !== "" && email.includes("@") && email.includes(".") && phone !== "" && phone.split(/[-\s]/).join("").length === 10 && text !== "" && contactName !== ""){
+            props.updateDim(true);
+            props.updatePayload({email: email, phone: phone, path: "", type: "eventSponsor", name: contactName, specific0: text, specific1: businessName});
+        }else{
+            if (phone.split(/[-\s]/).join("").length !== 10){
+                alert("Please make sure your phone number consists of 10 digits.");
+            }else if (!(email.includes("@") && email.includes("."))){
+                alert("Please make sure to include a valid email address.");
+            }else{
+                alert("Please fill out every field below before booking your appointment.");
+            }
+        }
     }
 
     return(

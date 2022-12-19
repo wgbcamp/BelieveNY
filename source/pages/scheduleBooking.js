@@ -136,24 +136,6 @@ const scheduleBooking = (props) => {
 
     function submitBooking(){
         if (name !== "" && email !== "" && email.includes("@") && email.includes(".") && phone !== "" && phone.split(/[-\s]/).join("").length === 10 && message !== "" && superDate !== "" && timeChosen !== ""){
-            // var xhr = new XMLHttpRequest();
-            // xhr.open("POST", "/booking", true);
-            // xhr.setRequestHeader('Content-Type', 'application/json');
-            // xhr.send(JSON.stringify({
-            //     type: "booking",
-            //     name: name,
-            //     email: email,
-            //     phone: phone,
-            //     message: message,
-            //     date: superDate,
-            //     time: timeChosen
-            // }));
-            // xhr.onreadystatechange = () => {
-            //     if(xhr.readyState === XMLHttpRequest.DONE){
-            //         alert(xhr.responseText);
-            //         location.reload();
-            //     }
-            // }
             props.updateDim(true);
             props.updatePayload({name: name, email: email, phone: phone, path: "booking", type: "booking", specific0: message, specific1: superDate, specific2: timeChosen});
         }else{
