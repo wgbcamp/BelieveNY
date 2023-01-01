@@ -1,4 +1,3 @@
-import e from 'cors';
 import React, {useState} from 'react'
 
 const slideshowBox = (props) => {
@@ -117,8 +116,54 @@ const slideshowBox = (props) => {
 
     }
 
-    return(
+    function goRight(){
         
+        console.log(activeImage);
+        if (activeImage === true){
+            updateImage2("moveItLeft");
+            updateImage1("returnFromRight");
+        }
+
+        if (activeImage === false){
+            updateI1(5);
+            updateImage1("moveItLeft");
+            updateImage2("returnFromRight");
+            
+        }
+        updateAI(!activeImage);
+        console.log("i1: " + i1);
+        console.log("i2: " + i2);
+        updateCC(clickCount+1);
+        console.log("clickCount: " + clickCount);
+    }
+
+    function goLeft(){
+        console.log(activeImage);
+        if (activeImage === true){
+            updateImage2("moveItRight");
+            updateImage1("returnFromLeft");
+        }
+
+        if (activeImage === false){
+            updateImage1("moveItRight");
+            updateImage2("returnFromLeft");
+        }
+        updateAI(!activeImage);
+    }
+
+    function interval(data){
+            updateCC(clickCount + data);
+    }
+
+    var [activeImage, updateAI] = useState(true);
+    var [image1, updateImage1] = useState("");
+    var [image2, updateImage2] = useState("");
+    var [i1, updateI1] = useState(0);
+    var [i2, updateI2] = useState("");
+    var [clickCount, updateCC] = useState(0);
+    var [initialState, updateIS] = useState(true);
+
+    return(    
             <div className={`ssBoxContainer border${props.content.series}`}>
                 <div className={`textGrid centerText elevateDiv`}>
                     <div className='padText size36Font centerText' id="text1">
@@ -132,21 +177,24 @@ const slideshowBox = (props) => {
                     </div>
                 </div>
                 <div className={`imageGrid`}>
-                        <div className="igFlex">
-                            <div className="igArrowStyle" onClick={() => moveImage("left")}>
-                                <i class="fa-solid fa-arrow-left fa-2xl"></i>
-                            </div>
+                    <div className="igFlex">
+                        <div className="igArrowStyle" onClick={() => {interval(-1); updateIS(false);}}>
+                            <i class="fa-solid fa-arrow-left fa-2xl"></i>
                         </div>
-                        <div></div>
-                        <div className="igFlex">
-                            <div className="igArrowStyle" onClick={() => moveImage("right")}>
-                                <i class="fa-solid fa-arrow-right fa-2xl"></i>
-                            </div>
+                    </div>
+                    <div></div>
+                    <div className="igFlex">
+                        <div className="igArrowStyle" onClick={() => {interval(1); updateIS(false);}}>
+                            <i class="fa-solid fa-arrow-right fa-2xl"></i>
                         </div>
-                        <img src={array[props.content.leftIndex]} className={`imageNumber1 ${props.content.leftCSS}`}></img>
-                        <img src={array[props.content.rightIndex]} className={`imageNumber1 ${props.content.rightCSS}`}></img> 
+                    </div>
+                    <div className="imageSlideContainer delayVisibility opacityZero">
+                        {array.map((value, i) => (
+                            <img src={array[i]} className={`imageNumber1 ${clickCount < i ? "setTransparency" : "removeTransparency"}`}></img>
+                        ))}
+                    </div>
                 </div>
-        </div>
+            </div>
     )
 }
 
