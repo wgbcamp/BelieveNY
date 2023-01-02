@@ -1228,65 +1228,21 @@ input[type="email"]::placeholder{
     z-index: 2;
 }
 
-.setTransparency{
-    animation-name: setOpacity;
-    animation-fill-mode: forwards;
-    animation-duration: 0.5s;
+#slider div {
+    transition: opacity 0.25s ease-in-out 0.05s;
+    
 }
 
-@keyframes setOpacity{
-    0%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
+#slider div.transparent{
+    opacity: 0;
 }
 
-.removeTransparency{
-    animation-name: removeOpacity;
-    animation-fill-mode: forwards;
-    animation-duration: 0.5s;
-}
-
-@keyframes removeOpacity{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-.delayVisibility{
-    animation-name: delayVisibility;
-    animation-fill-mode: forwards;
-    animation-duration: 0.5s;
-    animation-delay: 0.4s;
-}
-
-
-
-@keyframes delayVisibility{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-.opacityOne{
-    opacity: 1;
-}
-
-.imageNumber1{
-    object-fit: cover;
-    width: 100%;
+.program, .preview{
     height: 100%;
+    width: 100%;
     position: absolute;
+    background-size: cover;
 }
-
 
 .imageSlideContainer{
     height: 100%;
