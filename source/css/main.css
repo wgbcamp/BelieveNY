@@ -1237,11 +1237,23 @@ input[type="email"]::placeholder{
     opacity: 0;
 }
 
-.program, .preview{
+.program, .preview, .fadeInDesc{
     height: 100%;
     width: 100%;
     position: absolute;
     background-size: cover;
+}
+
+.fadeInDesc{
+    background-color: #f2f2f2;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerFID{
+    width: 80%;
 }
 
 .imageSlideContainer{
@@ -1881,6 +1893,10 @@ input[type="email"]::placeholder{
     height: 0;
 }
 
+.hide{
+    visibility: hidden;
+}
+
 .autoMargin{
     margin: auto;
 }
@@ -1896,6 +1912,7 @@ input[type="email"]::placeholder{
     display: grid;
     grid-template-rows: 1fr 1fr;
     row-gap: 10px;
+    z-index: 50;
 }
 
 .iconBubble{
@@ -1953,9 +1970,24 @@ input[type="email"]::placeholder{
     width: 50px;
 }
 
+.ssBoxDescription{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
 
+.descriptionText{
+    width: 90%;
+}
 
-/* @keyframes */
+.ssBoxTitle{
+    padding-top: 20px;
+}
+
+.false1, .false2, .false3{
+    visibility: hidden;
+}
 
 @media screen and (min-width: 700px){
 
@@ -2019,11 +2051,27 @@ input[type="email"]::placeholder{
         padding-bottom: 10px;
         color: var(--darkblue);
     }
+
+    .innerFID{
+        font-size: 26px;
+        line-height: 40px;
+    }
 }
 
 
 @media screen and (max-width: 700px){
   
+    .ssBoxContainer{
+        grid-template-rows: 120px 500px;     
+    }
+
+    .hideGetInvolved, .ssBoxDescription{
+        height: 0px;
+        visibility: hidden;
+    }
+
+    
+
     .calendar{
         grid-template-columns: repeat(7, 50px);
         grid-template-rows: repeat(6, 60px);
@@ -2141,7 +2189,17 @@ input[type="email"]::placeholder{
 }
 
 @media screen and (min-width: 700px) and (max-width: 1200px) {
-  
+
+    .ssBoxDescription,
+    .hideGetInvolved{
+        height: 0px;
+        visibility: hidden;
+    }
+
+    .ssBoxContainer{
+        grid-template-rows: 50px 500px;     
+    }
+
     .catBoxContainer{
         padding-top: 10px;
         padding-bottom: 75px;
@@ -2475,6 +2533,19 @@ input[type="email"]::placeholder{
     .idkbro{
         height: 900px;
     }
+
+    .true1, .true2, .true3{
+        visibility: hidden;
+    }
+
+    .mwArrow{
+        background-color: #e6e6e6d7;
+        color: rgb(26, 26, 26);
+        border: solid 1px rgba(0, 0, 0, 0.273);
+        border-radius: 5px;
+        padding: 10px;
+        z-index: 2;
+    }
 }
 
 @media screen and (min-width: 1500px){
@@ -2508,5 +2579,14 @@ input[type="email"]::placeholder{
     }
     .slideTextAlignRight{
         text-align: center;
+    }
+    .revealDesc{
+        background-color: #eae9e9;
+        height: 45px;
+        width: 45px;
+        position: absolute;
+        bottom: 5px;
+        left: 2%;
+        border-radius: 5px;
     }
 }

@@ -42,60 +42,48 @@ const slideshowBox = (props) => {
 
     }
 
-    function compileShaders(){
-        for (var i=0; i<array.length-1; i++){
-            window.setTimeout(function(){
-                document.getElementById(`preview${props.content.v}`).style.backgroundImage = `url(${array[i]})`;
-                document.getElementById(`program${props.content.v}`).classList.add("transparent");
-                document.getElementById(`program${props.content.v}`).style.backgroundImage = `url(${array[i]})`;
-                document.getElementById(`program${props.content.v}`).classList.remove("transparent");
-                console.log("yeehaw");
-                console.log(i);
-            }, 1000)
-        }
-        document.getElementById(`preview${props.content.v}`).style.backgroundImage = `url(${array[0]})`;
-        document.getElementById(`program${props.content.v}`).style.backgroundImage = `url(${array[0]})`;
-    }
-
-    var [activeImage, updateAI] = useState(true);
-    var [image1, updateImage1] = useState("");
-    var [image2, updateImage2] = useState("");
-    var [i1, updateI1] = useState(0);
-    var [i2, updateI2] = useState("");
     var [clickCount, updateCC] = useState(0);
     var [clickBlocker, updateCB] = useState(false);
+    var [infoStatus, updateIS] = useState(false);
 
     return(    
-            <div className={`ssBoxContainer border${props.content.series}`}>
-                <div className={`textGrid centerText elevateDiv`}>
-                    <div className='padText size36Font centerText' id="text1">
-                    {props.content.title} 
+            <div className={`ssBoxContainer verticalAlign simpleFlex border${props.content.series}`}>
+                <div className={` centerText `}>
+                    <div className='size36Font ssBoxTitle' id="text1">
+                    <b>{props.content.title}</b>
                     </div>
-                    <div className='padText size22Font' id="text2">
-                    {props.content.description}
+                    <div className='size22Font ssBoxDescription' id="text2">
+                        <div className="descriptionText">
+                            {props.content.description}
+                        </div>
                     </div>
-                    <div className='verticalAlign simpleFlex height100'>
+                    <div className='verticalAlign simpleFlex height100 hideGetInvolved'>
                         <a href={`mailto:leadership@believeny.org?subject=${props.content.email}`} className='submitButton'>Get Involved</a>
                     </div>
                 </div>
                 <div className={`imageGrid`}>
                     <div className="igFlex">
-                        <div className="igArrowStyle" onClick={() => interval(-1)}>
-                            <i className="fa-solid fa-arrow-left fa-2xl"></i>
+                        <div className={infoStatus ? "mwArrow" : "igArrowStyle"} onClick={() => interval(-1)}>
+                            <i className="fa-solid fa-arrow-left fa-xl"></i>
                         </div>
                     </div>
                     <div></div>
                     <div className="igFlex">
-                        <div className="igArrowStyle" onClick={() => interval(1)}>
-                            <i className="fa-solid fa-arrow-right fa-2xl"></i>
+                        <div className={infoStatus ? "mwArrow" : "igArrowStyle"} onClick={() => interval(1)}>
+                            <i className="fa-solid fa-arrow-right fa-xl"></i>
                         </div>
                     </div>
                     <div className="imageSlideContainer" id="slider">
-                        {/* {array.map((value, i) => (
-                            <img src={array[i]} className={`imageNumber1 ${clickCount < i ? "setTransparency" : "removeTransparency"}`} key={i}></img>
-                        ))} */}
                         <div className="preview" id={`preview${props.content.v}`} style={{backgroundImage: `url(${array[0]})`}}></div>
                         <div className="program" id={`program${props.content.v}`} style={{backgroundImage: `url(${array[0]})`}}></div>
+                        <div className={`fadeInDesc ${infoStatus}${props.content.v}`}>
+                            <div className='innerFID'>
+                                {props.content.description}
+                            </div>
+                        </div>
+                        <div className="revealDesc simpleFlex verticalAlign" onClick={() => updateIS(!infoStatus)}>
+                            <i class={`${infoStatus ? "fa-solid fa-xmark fa-lg" : "fa-solid fa-circle-info fa-md"}`}></i>
+                        </div>
                     </div>
                 </div>
             </div>
