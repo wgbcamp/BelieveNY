@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import facebook from '../../images/facebook-square-brands.png'
-import twitter from '../../images/twitter-square-brands.png'
-import instagram from '../../images/instagram-square-brands.png'
-import emailFormHandle from '../components/formHandler';
+import facebook from '../images/general/facebook-square-brands.png'
+import twitter from '../images/general/twitter-square-brands.png'
+import instagram from '../images/general/instagram-square-brands.png'
 
 const getHelp = (props) => {
 

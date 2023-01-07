@@ -1,8 +1,8 @@
 import React from 'react'
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
-import clothing from "../../images/clothing.webp";
-import BNYLogoFull from "../../images/BNYLogoFull-02.png";
-import paypalLogo from "../../images/paypal-wordmark-color.png";
+import clothing from "../images/general/clothing.webp";
+import BNYLogoFull from "../images/general/BNYLogoFull-02.png";
+import paypalLogo from "../images/general/paypal-wordmark-color.png";
 
 const donate = () => {
 

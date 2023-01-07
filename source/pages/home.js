@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import folksAndFood from "../../images/folksAndFood.webp";
-import VolunteerBox from '../components/volunteerBox';
 import CircleBox from '../components/circleBox';
 import MailingList from '../components/mailingList';
 import { Link } from 'react-router-dom';

@@ -33,7 +33,6 @@ import summer11 from '../images/summerHairCuts/IMG_4354.JPG'
 import summer12 from '../images/summerHairCuts/IMG_4356.JPG'
 import summer13 from '../images/summerHairCuts/IMG_4405.jpeg'
 
-
 const pastEvents = () => {
 
     var [leftIndex, updateLeftIndex] = useState(0);

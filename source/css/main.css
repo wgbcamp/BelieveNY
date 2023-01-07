@@ -624,7 +624,7 @@ textarea[type=text]{
 .resizeImage{
     width: 240px;
     height: 261px;
-    background-image: url("../../images/BNYCitySmall.png");
+    background-image: url("../images/general/BNYCitySmall.png");
 }
 
 .thankYou{
@@ -2353,7 +2353,7 @@ input[type="email"]::placeholder{
     .resizeImage{
         width: 547px;
         height: 710px;
-        background-image: url("../../images/BNYCity.png");
+        background-image: url("../images/general/BNYCity.png");
     }
 
     .emailGrid{

@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import PhotoTextBox from '../components/photoTextBox'
 import PhotoTextBoxNoLogo from '../components/photoTextBoxNoLogo'
-import Lilfrankies from '../../images/LilFrankies.webp'
-import HavanaCentral from '../../images/havana-central-logo-v3.webp'
-import CutlerSalons from '../../images/Cutler-Salons.webp'
-import CutlerLogo from '../../images/cutlerLogo.png'
+import Lilfrankies from '../images/general/LilFrankies.webp'
+import HavanaCentral from '../images/general/havana-central-logo-v3.webp'
+import CutlerSalons from '../images/general/Cutler-Salons.webp'
+import CutlerLogo from '../images/general/cutlerLogo.png'
 
 const eventSponsors = (props) => {
 
