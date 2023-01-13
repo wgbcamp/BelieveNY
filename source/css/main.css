@@ -2076,16 +2076,27 @@ input[type="email"]::placeholder{
         font-size: 22px;
         text-align: center;
     }
+
+    .openSpaceBanner{
+    height: 390px;
+    background-color: black;
+    padding-left: 10%;
+    padding-right: 10%;
+    }
 }
 
 @media screen and (min-width: 500px){
-    .openSpaceBanner{
-        height: 200px;
-        background-color: black;
-        padding-left: 10%;
-        padding-right: 10%;
-    }
 
+}
+
+@media screen and (min-width: 500px) and (max-width: 700px) {
+    .openSpaceBanner{
+    background-color: black;
+    height: 330px;
+    padding-top: 60px;
+    padding-left: 10%;
+    padding-right: 10%;
+    }
 }
 
 @media screen and (min-width: 700px){
@@ -2243,13 +2254,6 @@ input[type="email"]::placeholder{
 
     .flexImageLeft{
         justify-content: center;
-    }
-
-    .openSpaceBanner{
-        height: 320px;
-        background-color: black;
-        padding-left: 10%;
-        padding-right: 10%;
     }
 
 
@@ -2824,5 +2828,12 @@ input[type="email"]::placeholder{
         justify-content: center;
         text-align: right;
         padding-bottom: 10px;
+    }
+    .boldOSTitle{
+        font-weight: bold;
+        font-size: 26px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 40px;
     }
 }
