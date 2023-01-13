@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import calendarPreview from '../images/general/calendarPreview.jpg'
 
 const theOpenSpace = () => {
 
@@ -10,21 +11,74 @@ const theOpenSpace = () => {
     return(
         <div>
             <div className="simpleFlex">
-                <div className="maxWidth width80Per">
-                    <div className="size24Font padTop80 centerText lineHeight30">Are you living with loneliness? Sadness? Anxiety? Are you stressed about school, work or difficult relationships? Are you struggling with addictions, violence, or losses in your life?</div>
-                    <div className="size36Font padTop40 centerText">We are here for you.</div>
-                    <div className="size26Font padTop40 centerText"> We are here to listen and help you through your next steps.</div>
-                    <div className='simpleFlex padTop40 padBottom40'>
-                    {/* <div className='fixIcon'><i class="fa-solid fa-phone fa-2xl"></i>
-                                </div> */}
-                            <Link to="/scheduleBooking" className="submitButton1" onClick={() => restoreTop()}>
-                              Book an Anonymous Session Here
-                            </Link> 
+                <div className="widen">
+                    <div className="simpleFlex">
+                        <div className="hereForYouGrid max1090">
+                            <div className="hereForYouInner">
+                                <b className="size42Font padTop40 center1200 smallText500">We are here for you.</b>
+                                <div className="size18Font padBottom201200 smallerText500">We are here to listen and help you through your next steps.</div>
+                                <div className='simpleFlex alignLeft'>
+                                        <Link to="/scheduleBooking" className="submitButton4" onClick={() => restoreTop()}>
+                                        <b>Book an Anonymous Session Here</b>
+                                        </Link> 
+                                </div>
+                            </div>
+                            <div className="alignRight center1200 verticalAlign padTop201200">
+                            <img src={calendarPreview} height="250"></img>
+                            </div>
+                        </div>
                     </div>
-                    <div className="centerText size24Font">What is The Open Space?</div>
-                    <div className="size18Font centerText lineHeight25 padTop40">The Open Space offers a safe, nonjudgemental, place to talk about what you are going through and remain anonymous. 100% free of charge and confidential. Sessions can be scheduled for up to 45 minutes and take place over the phone or Google Meet, audio only. Regular sessions are welcome and encouraged!</div>
-                    <div className="size18Font centerText lineHeight25 padTop40">Select an available time to schedule a session with one of our trained Counselors. We are trained in active listening, empathy, and compassion and will provide support and resource referrals to help you through during this difficult time. Our active listeners will not question, criticize, interrupt nor judge as you tell us about your situation. We are here and we will get you through it.</div>
-                    <div className="size18Font centerText lineHeight25 padTop40 padBottom40">Any questions about The Open Space, please email our administration at <b>believenewyork@gmail.com</b>.</div>
+                    <div className="openSpaceBanner padBottom70500 padTop80 whiteText centerText">
+                        <b className="size36Font">Your place for active listening and support.</b>
+                        <div className="simpleFlex">
+                            <div className="padTop20 padBottom40 size18Font max850">Are you living with loneliness? Sadness? Anxiety? Are you stressed about school, work or difficult relationships? Are you struggling with addictions, violence, or losses in your life?</div>
+                        </div>
+                        <div className="simpleFlex">
+                            <div>
+                                <Link to="" className="submitButton3" onClick={() => restoreTop()}>
+                                    <b>Read Our Success Stories</b>
+                                </Link> 
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div className='openSpaceDesc padBottom80'>
+                        <div className="centerText size42Font padTop40 padBottom40">
+                            <b>What is The Open Space?</b>
+                        </div>
+                            <div className="simpleFlex">
+                                <div className="openSpaceWhatIsGrid">
+                                    <div className='boldOSTitle alignLeft color1 padTop20'>
+                                        Safe place to talk   
+                                    </div>
+                                    <div className="size18Font OSExplanation lineHeight25 textAlignRight color1 padTop20">
+                                        <div>
+                                        100% free of charge and confidential, the Open Space offers a safe and nonjudgemental place to talk about what you are going through while remaining anonymous.
+                                        <div className="padTop20"></div>
+                                        Sessions can be scheduled for up to 45 minutes and take place over the phone or Google Meet, audio only. Regular sessions are welcome and encouraged!
+                                        </div>
+                                    </div>
+                                    <div className='boldOSTitle alignLeft color2 padTop20'>
+                                        Schedule a session with a counselor
+                                    </div>
+                                    <div className="size18Font OSExplanation lineHeight25 textAlignRight padTop20 color2">
+                                        <div>
+                                        Select an available time to schedule a session with one of our trained counselors. We are trained in active listening, empathy, and compassion and will provide support and resource referrals to help you through during this difficult time.
+                                        <div className="padTop20"></div>
+                                        Our active listeners will not question, criticize, interrupt, nor judge as you tell us about your situation. We are here to help get you through it.
+                                        </div>
+                                    </div>
+                                    <div className='boldOSTitle alignLeft color1 padTop20'>
+                                        Ask us questions
+                                    </div>
+                                    <div className="size18Font OSExplanation lineHeight25  padBottom40 textAlignRight color1 padTop20">
+                                        <div className="">
+                                        Any questions about The Open Space, please email our administration at <b>believenewyork@gmail.com</b>.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
                     
 
                 </div>

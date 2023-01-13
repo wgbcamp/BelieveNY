@@ -3,6 +3,7 @@
 :root{
     --purple: white;
     --darkblue: #6F52AD;
+    --darkpurple: #674ca1;
     --transpurple: #6f52adca;
     --lightblue: #998CEC;
     --gray: #474747;
@@ -107,8 +108,16 @@ body{
     font-size: 30px;
 }
 
+.size32Font{
+    font-size: 30px;
+}
+
 .size36Font{
     font-size: 36px;
+}
+
+.size42Font{
+    font-size: 42px;
 }
 
 .lineHeight35{
@@ -262,6 +271,38 @@ ul.no-bullets{
     padding-left: 10px;
     padding-right: 10px;
     cursor: pointer;
+}
+
+.submitButton3{
+    text-decoration: none;
+    background-color: var(--darkblue);
+    color: white;
+    height: 55px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3;
+    width: 275px;
+    text-decoration: none;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 12%);
+}
+
+.submitButton4{
+    text-decoration: none;
+    background-color: var(--darkblue);
+    color: white;
+    height: 55px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3;
+    width: 285px;
+    text-decoration: none;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 12%);
 }
 
 .cancelButton{
@@ -577,9 +618,9 @@ textarea[type=text]{
     border-right: solid 1px;
 }
 
-/* .whiten{
+.whiteText{
     color: white;
-} */
+}
 
 .blacken{
     color: black;
@@ -1916,7 +1957,7 @@ input[type="email"]::placeholder{
 }
 
 .iconBubble{
-    background-color: var(--darkblue);
+    background-color: var(--darkpurple);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1993,6 +2034,60 @@ input[type="email"]::placeholder{
     background-color: #f8f8f8;
 }
 
+.openSpaceDesc{
+    background-color: #f8f8f8;
+    width: 100%;
+}
+
+.openSpaceWhatIsGrid{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.boldOSTitle{
+    font-weight: bold;
+    font-size: 26px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.OSExplanation{
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.color1{
+    background-color: #ececec;
+}
+
+.color2{
+    background-color: #e0e0e0;
+}
+
+
+
+@media screen and (max-width: 500px){
+    .smallText500{
+        font-size: 35px;
+    }
+    
+    .smallerText500{
+        font-size: 22px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 500px){
+    .openSpaceBanner{
+        height: 200px;
+        background-color: black;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+}
+
 @media screen and (min-width: 700px){
 
     .contentWrapper{
@@ -2060,6 +2155,7 @@ input[type="email"]::placeholder{
         font-size: 26px;
         line-height: 40px;
     }
+
 }
 
 
@@ -2073,8 +2169,6 @@ input[type="email"]::placeholder{
         height: 0px;
         visibility: hidden;
     }
-
-    
 
     .calendar{
         grid-template-columns: repeat(7, 50px);
@@ -2150,6 +2244,15 @@ input[type="email"]::placeholder{
     .flexImageLeft{
         justify-content: center;
     }
+
+    .openSpaceBanner{
+        height: 320px;
+        background-color: black;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+
 }
 
 @media screen and (min-width: 900px){
@@ -2252,9 +2355,111 @@ input[type="email"]::placeholder{
     .tbText, .tbText2{
         font-size: 26px;
     }
+
+    .openSpaceBanner{
+        background-color: black;
+        height: 230px;
+        padding-top: 60px;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .padBottom70500{
+        padding-bottom: 70px;
+    }
 }
 
 @media screen and (min-width: 1200px){
+
+    .widen{
+        width: 100%;
+    }
+
+    .max850{
+        width: 850px;
+    }
+
+    .max1090{
+        width: 1090px;
+    }
+
+    .openSpaceBanner{
+        background-color: black;
+        height: 250px;
+    }
+
+    .hereForYouGrid{
+        display: grid;
+        grid-template-columns: 25% 75%;
+    }
+
+    .hereForYouInner{
+        display: grid;
+        grid-template-rows: 155px 60px 100px
+    }
+
+    .color1{
+        background-color: #ececec;
+    }
+
+    .color2{
+        background-color: #e0e0e0;
+    }
+
+    .textAlignRight{
+        text-align: right;
+        padding-left: 80px;
+        padding-right: 20px;
+    }
+
+    .textAlignLeft{
+        text-align: left;
+        padding-right: 80px;
+        padding-left: 20px;
+    }
+
+    .alignRight{
+        display: flex;
+        justify-content: right;
+        text-align: right;
+    }
+
+    .alignLeft{
+        display: flex;
+        justify-content: left;
+    }
+
+    .squeeze{
+        width: 50%;
+    }
+
+    .OSExplanation{
+        display: flex;
+        justify-content: center;
+    }
+
+    .boldOSTitle{
+        font-size: 36px;
+        font-weight: bold;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .openSpaceWhatIsGrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 260px);
+        width: 1050px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        row-gap: 40px;
+    }
+
+    .openSpaceDesc{
+        background-color: #f8f8f8;
+        width: 100%;
+    }
     
     .catBoxContainer{
         padding-top: 10px;
@@ -2603,5 +2808,21 @@ input[type="email"]::placeholder{
     }
     .relief1200{
         padding-bottom: 40px;
+    }
+    .padBottom201200{
+        padding-bottom: 15px;
+    }
+    .padTop201200{
+        padding-top: 15px;
+    }
+    .hereForYouInner{
+        display: flex;
+        flex-direction: column;
+    }
+    .center1200{
+        display: flex;
+        justify-content: center;
+        text-align: right;
+        padding-bottom: 10px;
     }
 }
