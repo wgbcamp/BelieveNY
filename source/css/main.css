@@ -305,6 +305,24 @@ ul.no-bullets{
     box-shadow: 0px 4px 4px rgb(0 0 0 / 12%);
 }
 
+.submitButton5{
+    text-decoration: none;
+    background-color: var(--darkblue);
+    color: white;
+    height: 85px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3;
+    width: 80%;
+    text-decoration: none;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 12%);
+}
+
 .cancelButton{
     text-decoration: none;
     background-color: #ff4040;
@@ -2065,7 +2083,32 @@ input[type="email"]::placeholder{
     background-color: #e0e0e0;
 }
 
+.eventBanner{
+    background-color: black;
+    color: white;
+    height: 350px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.ebGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ebTitle{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.ebDescription{
+    padding-left: 15px;
+    display: grid;
+    grid-template-rows: 1fr 40px 40px;
+    grid-template-columns: 1fr;
+}
 
 @media screen and (max-width: 500px){
     .smallText500{
@@ -2256,7 +2299,28 @@ input[type="email"]::placeholder{
         justify-content: center;
     }
 
+    .eventBanner{
+        height: 440px;
+        justify-content: flex-start;
+    }
 
+    .ebGrid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .ebTitle{
+        font-size: 30px;
+    }
+
+    .ebDescription{
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        width: unset;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+    }
 }
 
 @media screen and (min-width: 900px){

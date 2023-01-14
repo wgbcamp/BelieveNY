@@ -2,9 +2,24 @@ import React from 'react'
 
 const volunteer = () => {
     return(
+        <div>
+        <div className='size36Font simpleFlex padTop40  centerText'>
+            <div className="maxWidth width80Per">We all have skills that contribute to Believe New York's helpful and efficient service for all New Yorkers!</div>
+        </div>
         <div className='simpleFlex padTop80'>
-            <div className='maxWidth width80Per'>
-                <div className='size36Font simpleFlex padBottom80 padTop40 centerText'>We all have skills that contribute to Believe New York's helpful and efficient service for all New Yorkers!</div>
+                <div className='maxWidth width80Per'>
+                <div className="eventBanner">
+                    <div className="ebGrid">
+                        <div className="ebDescription">
+                            <div className="ebTitle">Believe New York Advocate & Counselor</div>
+                            <div>Apply for Advocate/Counselor position for Spring & Summer 2022.</div>
+                            <b>Application due by Feb. 8th, 11:59PM EST</b>
+                        </div>
+                        <div className="simpleFlex verticalAlign">
+                        <a href="https://forms.gle/4hjg3bdX6VfT8YY46" className="submitButton5">Apply Here</a>
+                        </div>
+                    </div>
+                </div>
 
                 <div className="padTop20"></div>
                 <div className='simpleFlex verticalAlign sT size36Font marginTop40 lightPurple'>Open Volunteer Positions
@@ -59,8 +74,8 @@ const volunteer = () => {
                             <li className="volPosBullet">Open to any type of recruitment strategies.</li>
                         </div>
                         
-                        
-                    </div>
+                    </div>  
+                </div>
             </div>
         </div>
     )
