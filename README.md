@@ -5,6 +5,6 @@ Rebuild of nonprofit BelieveNY website with React, including calendar session bo
 [Believeny.org](https://www.believeny.org/)
 <br>
 
-![Preview image](/images/previewSite.png)
-![Preview image](/images/previewSite2.png)
+![Preview image](source/images/general/previewSite.png)
+![Preview image](source/images/general/previewSite2.png)
 
