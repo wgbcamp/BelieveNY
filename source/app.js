@@ -40,7 +40,6 @@ function App(){
         <div>
             <FormHandler payload={{name: payload.name, email: payload.email, phone: payload.phone, path: payload.path, type: payload.type, specific0: payload.specific0, specific1: payload.specific1, specific2: payload.specific2}} dim={dim} updateDim={updateDim}/>
             <div className={`${dim === true ? "dim" : ""}`}>
-                <Construction/>
                 <Header location={location}/>
                     <Routes>
                         <Route path="/" element={<Home/>}/>
