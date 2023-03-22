@@ -19,7 +19,7 @@
 
 .stickyContainer{
     position: sticky;
-    top: 20px;
+    top: 0px;
     z-index: 10;
 
 }
