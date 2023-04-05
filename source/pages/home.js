@@ -53,6 +53,7 @@ const Home = () => {
                         <div className='bigStatement'>     
                             <span className='bold'>Believe New York </span>is on a mission—to improve the <span className="bold">lives of all individuals and families in New York City.</span>
                         </div>
+
                     </div>
                     <div id="titleBackground">
                                 <div className="third"></div>
@@ -61,6 +62,27 @@ const Home = () => {
                     </div>  
                 </div>
             </div>
+            {/* <div className="homeBanner">
+                    <div className="bannerImageContainer">
+                                <div className="third"></div>
+                                <div className="second"></div>
+                                <div className="first"></div> 
+                    </div>
+                
+                <div className="statementGrid">
+                    <div className="largeStatement">NOW IS THE TIME TO ADVANCE OUR CITY
+                        AND THE LIVES OF NEW YORKERS.</div>
+                        <div className="smallStatement">
+                        <span className='bold'>Believe New York </span>is on a mission—to improve the <span className="bold">lives of all individuals and families in New York City.</span>
+                    </div>
+                    <div className="statementButtonCenter">
+                        <div className='submitButton2'>
+                        Learn more
+                        </div>
+                        </div>
+                </div>
+                
+            </div> */}
                 <div className="">
                     <div className='subStatement'>
                         <p className="bold">

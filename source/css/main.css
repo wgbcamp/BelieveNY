@@ -975,7 +975,6 @@ input[type="email"]::placeholder{
       }
 }
 
-
 .circleStyleFlex{
     display: flex;
     align-items: center;
@@ -1124,7 +1123,6 @@ input[type="email"]::placeholder{
     background-color: #fafafa;
     height: 350px;
     width: 100%;
-    border: 1px solid #c5cbd5;
     border-radius: 15px;
     /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25); */
     font-weight: 700;
@@ -2111,6 +2109,83 @@ input[type="email"]::placeholder{
     grid-template-columns: 1fr;
 }
 
+.bannerImageContainer{
+    height: 100%;
+    background-color: white;
+
+}
+
+.bannerImageContainer div{
+    animation-name: fadeImages;
+    animation-iteration-count: infinite;
+    animation-duration: 21s;
+    background-color: #bbbbbb;
+}
+
+.bannerImageContainer div{
+    position: absolute;
+    width: 100%;
+}
+
+.bannerImageContainer div.first {
+    background-image: url("https://i.imgur.com/DuTbJYr.jpeg");
+    background-size: cover;  
+}
+
+.bannerImageContainer div.second {
+    background-image: url("https://i.imgur.com/h0N8Pap.jpeg");
+    background-size: cover;
+}
+
+.bannerImageContainer div.third {
+    background-image: url("https://i.imgur.com/DVdcHmg.jpeg");
+    background-size: cover;
+}
+
+.bannerImageGrid{
+    display: grid;
+    grid-template-columns: 8% 92%;
+}
+
+    .homeBanner{
+        height: 750px;
+        color: white;
+        display: grid;
+        grid-template-rows: 50% 50%;
+    }
+
+    .bannerImageContainer{
+        height: 350px;
+    }
+
+    .bannerImageContainer div{
+        height: 350px;
+    }
+
+    .statementGrid{
+        padding: 20px;
+        display: grid;
+        grid-template-rows: 150px 80px 50px;
+        background-color: black;
+    }
+
+    .statementButtonCenter{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .largeStatement{
+        font-weight: 700;
+        font-size: 28px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    .smallStatement{
+        text-align: center;
+    }
+
 @media screen and (max-width: 500px){
     .smallText500{
         font-size: 35px;
@@ -2216,6 +2291,46 @@ input[type="email"]::placeholder{
 
 @media screen and (max-width: 700px){
   
+    .homeBanner{
+        height: 750px;
+        background-color: black;
+        color: white;
+        display: grid;
+        grid-template-rows: 50% 50%;
+    }
+
+    .bannerImageContainer{
+        border-bottom-left-radius: 50px;
+        height: 350px;
+    }
+
+    .bannerImageContainer div{
+        height: 350px;
+    }
+
+    .statementGrid{
+        padding: 20px;
+        display: grid;
+        grid-template-rows: 150px 80px 50px;
+    }
+
+    .statementButtonCenter{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .largeStatement{
+        font-weight: 700;
+        font-size: 28px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    .smallStatement{
+        text-align: center;
+    }
+
     .ssBoxContainer{
         grid-template-rows: 120px 500px;     
     }
@@ -2856,6 +2971,47 @@ input[type="email"]::placeholder{
 
     .colorBackground{
         height: 950px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .homeBanner{
+        height: 750px;
+        color: white;
+        display: grid;
+        grid-template-rows: 55% 45%;
+    }
+
+    .bannerImageContainer{
+        height: 100%;
+    }
+
+    .bannerImageContainer div{
+        height: 415px;
+
+    }
+    
+    .statementGrid{
+        padding: 20px;
+        display: grid;
+        grid-template-rows: 110px 70px 50px;
+    }
+
+    .statementButtonCenter{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .largeStatement{
+        font-weight: 700;
+        font-size: 28px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    .smallStatement{
+        text-align: center;
     }
 }
 
