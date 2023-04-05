@@ -484,7 +484,7 @@ function sendMail(data){
                         </tr>
                         <tr>
                             <th></th>
-                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">${data.message}</th>
+                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">${data.text}</th>
                         </tr>
                         <tr>
                             <th></th>
