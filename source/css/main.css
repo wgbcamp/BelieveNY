@@ -1409,15 +1409,13 @@ input[type="email"]::placeholder{
 .cardContainer{
     height: 500px;
     width: 385px;
-    border-radius: 10px;
-    box-shadow: 0px 6px 80px -42px black;
+    text-align: center;
 }
 
 .person{
     height: 60%;
-    width: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    width: 300px;
+    border-radius: 150px;
     object-fit: cover;
     object-position: 0% 28%;
     grid-row: 1;
@@ -1439,8 +1437,7 @@ input[type="email"]::placeholder{
 }
 
 .title{
-    display: flex;
-    align-items: flex-start;
+
     grid-row: 4;
     grid-column: 2;
     font-size: 17px;
@@ -2477,6 +2474,10 @@ input[type="email"]::placeholder{
     .idkbro{
         height: 700px;
     }
+
+    .cardGrid{
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media screen and (min-width: 700px) and (max-width: 1200px) {
@@ -2504,9 +2505,7 @@ input[type="email"]::placeholder{
         height: 275px;
     }
 
-    .cardGrid{
-        grid-template-columns: 1fr 1fr;
-    }
+   
 
     .sT{
         height: unset;
@@ -2533,7 +2532,7 @@ input[type="email"]::placeholder{
     }
 
     .cardContainer{
-        width: 270px;
+        width: 320px;
     }
 
     .tbText, .tbText2{
