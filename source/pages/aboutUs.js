@@ -4,7 +4,7 @@ import PersonCard from '../components/personCard';
 import BNYLogoFull from '../images/general/BNYLogoFull-02.png';
 import BelieveNyBylaws from "../documents/BelieveNyBylaws.pdf";
 import CC from "../documents/CC_BELIEVE NEW YORK PHILANTHROPIES.pdf";
-import Nicole from "../images/general/nicole.webp";
+import Nicole from "../images/general/nicole1.webp";
 import Sonny from "../images/general/sonny.webp";
 import Zach from "../images/general/zach.webp";
 import Chiara from "../images/general/chiara.webp";
