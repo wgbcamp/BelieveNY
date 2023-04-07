@@ -1437,7 +1437,6 @@ input[type="email"]::placeholder{
 }
 
 .title{
-
     grid-row: 4;
     grid-column: 2;
     font-size: 17px;
@@ -2198,6 +2197,12 @@ input[type="email"]::placeholder{
     background-color: black;
     padding-left: 10%;
     padding-right: 10%;
+    }
+
+    .cardContainer{
+        height: 500px;
+        width: 300px;
+        text-align: center;
     }
 }
 
