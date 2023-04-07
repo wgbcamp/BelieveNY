@@ -2182,6 +2182,30 @@ input[type="email"]::placeholder{
         text-align: center;
     }
 
+    .majorQuoteFlex{
+        display: flex;
+        justify-content: center;
+    }
+
+    .majorQuote{
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        padding-bottom: 40px;
+        width: 350px;
+    }
+
+    .dividerFlex{
+        display: flex;
+        justify-content: center;
+    }
+
+    .divider{
+        border-bottom: solid black 1px;
+        margin-bottom: 40px;
+        width: 300px;
+    }
+
 @media screen and (max-width: 500px){
     .smallText500{
         font-size: 35px;
@@ -2221,6 +2245,13 @@ input[type="email"]::placeholder{
 }
 
 @media screen and (min-width: 700px){
+
+    .majorQuote{
+        text-align: center;
+        font-size: 28px;
+        padding-bottom: 40px;
+        width: 600px;
+    }    
 
     .contentWrapper{
         height: 850px;
