@@ -1058,17 +1058,17 @@ input[type="email"]::placeholder{
 }
 
 #titleBackground div.first {
-    background-image: url("https://i.imgur.com/DuTbJYr.jpeg");
+    background-image: url("../images/clothesMealHandOuts/handout1.jpeg");
     background-size: cover;  
 }
 
 #titleBackground div.second {
-    background-image: url("https://i.imgur.com/h0N8Pap.jpeg");
+    background-image: url("../images/clothesMealHandOuts/handout2.jpeg");
     background-size: cover;
 }
 
 #titleBackground div.third {
-    background-image: url("https://i.imgur.com/DVdcHmg.jpeg");
+    background-image: url("../images/clothesMealHandOuts/handout3.jpeg");
     background-size: cover;
 }
 
