@@ -82,7 +82,7 @@ const slideshowBox = (props) => {
                             </div>
                         </div>
                         <div className="revealDesc simpleFlex verticalAlign" onClick={() => updateIS(!infoStatus)}>
-                            <i class={`${infoStatus ? "fa-solid fa-xmark fa-lg" : "fa-solid fa-circle-info fa-md"}`}></i>
+                            {/* <i class={`${infoStatus ? "fa-solid fa-xmark fa-lg" : "fa-solid fa-circle-info fa-md"}`}></i> */}
                         </div>
                     </div>
                 </div>

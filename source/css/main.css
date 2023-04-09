@@ -2124,17 +2124,17 @@ input[type="email"]::placeholder{
 }
 
 .bannerImageContainer div.first {
-    background-image: url("../images/clothesMealHandOuts/handout1.jpeg");
+    background-image: url("../images/clothesMealHandOuts/communityEvents.jpeg");
     background-size: cover;  
 }
 
 .bannerImageContainer div.second {
-    background-image: url("../images/clothesMealHandOuts/handout2.jpeg");
+    background-image: url("../images/clothesMealHandOuts/volunteer.jpeg");
     background-size: cover;
 }
 
 .bannerImageContainer div.third {
-    background-image: url("../images/clothesMealHandOuts/handout3.jpeg");
+    background-image: url("../images/clothesMealHandOuts/donate.jpeg");
     background-size: cover;
 }
 
