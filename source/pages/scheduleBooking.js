@@ -322,6 +322,10 @@ const scheduleBooking = (props) => {
             setSuperDate(dPart1.concat(dPart2.concat(dPart3.concat(dPart4))));
             var selectedDate = dPart1.concat(dPart2.concat(dPart3.concat(dPart4)));
             var tileTomorrowDate = dPart2.slice(0,3).concat(dPart3.slice(0,2));
+            
+            
+            console.log("LOOK HERE");
+            console.log(selectedDate);
 
             for (var i=0;i<schedule.length; i++){
                 console.log("ugh");
