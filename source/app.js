@@ -25,6 +25,10 @@ import FormHandler from './components/formHandler';
 
 function App(){
 
+    if(!localStorage.getItem("userID")){
+        localStorage.setItem("userID", Math.random().toString(36).substring(2, 10) + Math.random().toString(36).substring(2, 10))
+    }
+
     var [dim, updateDim] = useState(false);
     var [payload, updatePL] = useState({});
     

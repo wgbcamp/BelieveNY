@@ -85,13 +85,13 @@ const scheduleBooking = (props) => {
     }
 
     var schedule = [
-        {"day":"Mon","time":["10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "5:00 PM", "6:00 PM", "7:00 PM"]},
-        {"day":"Tue","time":["9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "6:00 PM", "7:00 PM", "8:00 PM"]},
-        {"day":"Wed","time":["9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM", "6:00 PM", "8:00 PM", "9:00 PM"]},
-        {"day":"Thu","time":["9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "6:00 PM", "7:00 PM", "8:00 PM"]},
-        {"day":"Fri","time":["9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM"]},
-        {"day":"Sat","time":["9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "5:00 PM", "6:00 PM","7:00 PM"]},
-        {"day":"Sun","time":["10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM", "6:00 PM"]}];  
+        {"day":"Mon","time":["9:00 AM", "10:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "5:00 PM", "6:00 PM", "7:00 PM"]},
+        {"day":"Tue","time":["10:00 AM", "11:00 AM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM", "6:00 PM", "7:00 PM"]},
+        {"day":"Wed","time":["9:00 AM", "10:00 AM", "11:00 AM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM", "6:00 PM", "7:00 PM"]},
+        {"day":"Thu","time":["10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM", "6:00 PM"]},
+        {"day":"Fri","time":["9:00 AM", "10:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM", "6:00 PM"]},
+        {"day":"Sat","time":["10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM"]},
+        {"day":"Sun","time":["10:00 AM", "11:00 AM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM"]}];  
     
     var [morningslots, updatemTimeslots] = useState("");
     var [afternoonslots, updateaTimeslots] = useState("");
