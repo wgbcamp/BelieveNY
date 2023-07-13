@@ -30,7 +30,7 @@ const Footer = () => {
                         <div className="innerCol1">
                             <b>Who We Are</b>
                             <Link to="/aboutUs" className='fixLinkColor' onClick={() => restoreTop()}>About Us</Link>
-                            <div>Finances</div>
+                            {/* <div>Finances</div> */}
                             <Link to="/foundingSupporters" className='fixLinkColor' onClick={() => restoreTop()}>Founding Supporters</Link>
                         </div>
                         <div className="innerCol2">
@@ -43,7 +43,7 @@ const Footer = () => {
                         <div className="innerCol3">
                             <b>Ways to Help</b>
                             <Link to="/donate" className="fixLinkColor" onClick={() => restoreTop()}>Donate to our programs</Link>
-                            <Link to="/specialEventsFund" className="fixLinkColor" onClick={() => restoreTop()}>Donate to our Events Fund</Link>
+                            <Link to="/eventSponsors" className="fixLinkColor" onClick={() => restoreTop()}>Become an event sponsor</Link>
                             <Link to="/volunteer" className="fixLinkColor" onClick={() => restoreTop()}>Join Us</Link>
                             <div className="blank"></div>
                         </div>
