@@ -1,4 +1,4 @@
-import React, {useState, createRef} from 'react'
+import React, {useState, useEffect, createRef} from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import './css/main.css';
 import Header from './components/header';
@@ -25,19 +25,29 @@ import FormHandler from './components/formHandler';
 
 function App(){
 
+    //user identification
     if(!localStorage.getItem("userID")){
         localStorage.setItem("userID", Math.random().toString(36).substring(2, 10) + Math.random().toString(36).substring(2, 10))
     }
 
+    //overlay for capturing form payload
     var [dim, updateDim] = useState(false);
     var [payload, updatePL] = useState({});
     
+    //dimming value is passed down to child components, payload information is fed upwards into formHandler
     function updatePayload(data){
         document.body.style.position = "fixed";
         updatePL(data);
         console.log(data);
         updateDim(true);
     }
+
+    //tracking path changes
+    const location = useLocation();
+
+    useEffect(() => {
+        console.log("new location", location.pathname);
+    }, [location]);
 
     return(
 

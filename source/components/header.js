@@ -81,8 +81,9 @@ const Header = (props) => {
     // })
 
     //track path of site for slider
-    var [path, updatePath] = useState(props.location.pathname);
-    
+    // var [path, updatePath] = useState(props.location.pathname);
+    var path = props.location.pathname;
+
     return(
         <div className="stickyContainer">
         <div className='headerContainer'> 
@@ -96,14 +97,14 @@ const Header = (props) => {
                     <div></div>
                     <div className="categoryGrid">
                     <div className={`category1`} onMouseEnter={() => toggleASP(true)} onMouseLeave={() => toggleASP(false)} onClick={() => toggleASP(false)}>About
-                        <div className={`aboutSpan ${aboutSpanPres ? "showSpanGrid" : ""}`} onClick={() => restoreTop("/aboutUs")}>
+                        <div className={`aboutSpan ${aboutSpanPres ? "showSpanGrid" : ""}`} onClick={() => restoreTop()}>
                             <Link to="/aboutUs" className="sCat1">About Us</Link>
                             <Link to="/diversityAndInclusion" className="sCat2">Diversity and Inclusion</Link>
                             <Link to="/foundingSupporters" className="sCat3">Founding Supporters</Link>
                         </div>
                     </div>
                     <div className={`category2`} onMouseEnter={() => toggleSSP(true)} onMouseLeave={() => toggleSSP(false)} onClick={() => toggleSSP(false)}>Our Services
-                        <div className={`servicesSpan ${servicesSpanPres ? "showSpanGrid" : ""}`} onClick={() => restoreTop("/getHelp")}>
+                        <div className={`servicesSpan ${servicesSpanPres ? "showSpanGrid" : ""}`} onClick={() => restoreTop()}>
                             <Link to="/getHelp" className="sCat1">Get Help</Link>
                             <Link to="/foodFirst" className="sCat2">Food First</Link>
                             <Link to="/theOpenSpace" className="sCat3">The Open Space</Link>
@@ -111,15 +112,15 @@ const Header = (props) => {
                         </div>
                     </div>
                     <div className={`category3`} onMouseEnter={() => toggleESP(true)} onMouseLeave={() => toggleESP(false)} onClick={() => toggleESP(false)}>Events
-                        <div className={`eventsSpan ${eventsSpanPres ? "showSpanGrid" : ""}`} onClick={() => restoreTop("/upcomingEvents")}>
+                        <div className={`eventsSpan ${eventsSpanPres ? "showSpanGrid" : ""}`} onClick={() => restoreTop()}>
                             <Link to="/upcomingEvents" className="sCat1">Upcoming Events</Link>
                             <Link to="/pastEvents" className="sCat2">Past Events</Link>
                             <Link to="/eventSponsors" className="sCat3">Event Sponsors</Link>
                             <Link to="/specialEventsFund" className="sCat4">Donate to Special Events Fund</Link>
                         </div>
                     </div>
-                    <Link to="/volunteer" className={`category4`} onClick={() => restoreTop("/volunteer")}>Volunteer</Link>
-                    <Link to="/donate" className="category5" onClick={() => restoreTop("/donate")}>
+                    <Link to="/volunteer" className={`category4`} onClick={() => restoreTop()}>Volunteer</Link>
+                    <Link to="/donate" className="category5" onClick={() => restoreTop()}>
                         <div className='category5a'>Donate</div>
                         </Link>
                     </div>
@@ -152,27 +153,27 @@ const Header = (props) => {
                 <div className="cat1" onClick={() => dropDown("about")}>About</div>
                 <div className="cat2" onClick={() => dropDown("services")}>Our Services</div>
                 <div className="cat3" onClick={() => dropDown("events")}>Events</div>
-                <Link to="/volunteer" className="cat4" onClick={() => {dropDown("main"); restoreTop("/volunteer");}}>Volunteer</Link>
-                <Link to="/donate" className="cat5" onClick={() => {dropDown("main"); restoreTop("/donate");}}>Donate</Link>
+                <Link to="/volunteer" className="cat4" onClick={() => {dropDown("main"); restoreTop();}}>Volunteer</Link>
+                <Link to="/donate" className="cat5" onClick={() => {dropDown("main"); restoreTop();}}>Donate</Link>
                 <div className='aArrow' onClick={() => dropDown("about")}><i className='fa-solid fa-chevron-right'></i></div>
                 <div className='bArrow' onClick={() => dropDown("services")}><i className='fa-solid fa-chevron-right'></i></div>
                 <div className='cArrow' onClick={() => dropDown("events")}><i className='fa-solid fa-chevron-right'></i></div>
             </div>
 
-            <div className={`aboutMenu ${aboutPresence ? "menuIn" : aboutPresence === 0 ? "" : "menuOut"}`} onClick={() => restoreTop("/aboutUs")}>
+            <div className={`aboutMenu ${aboutPresence ? "menuIn" : aboutPresence === 0 ? "" : "menuOut"}`} onClick={() => restoreTop()}>
                 <Link to="/aboutUs" className="cat1" onClick={() => {dropDown("about"); dropDown("main");} }>About Us</Link>
                 <Link to="/diversityAndInclusion" className="cat2" onClick={() => {dropDown("about"); dropDown("main");} }>Diversity and Inclusion</Link>
                 <Link to="/foundingSupporters" className="cat3" onClick={() => {dropDown("about"); dropDown("main");} }>Founding Supporters</Link>
             </div>
 
-            <div className={`servicesMenu ${servicesPresence ? "menuIn" : servicesPresence === 0 ? "" : "menuOut"}`} onClick={() => restoreTop("/getHelp")}>
+            <div className={`servicesMenu ${servicesPresence ? "menuIn" : servicesPresence === 0 ? "" : "menuOut"}`} onClick={() => restoreTop()}>
                 <Link to="/getHelp" className="cat1" onClick={() => {dropDown("services"); dropDown("main");} }>Get Help</Link>
                 <Link to="/foodFirst" className="cat2" onClick={() => {dropDown("services"); dropDown("main");} }>Food First</Link>
                 <Link to="/theOpenSpace" className="cat3" onClick={() => {dropDown("services"); dropDown("main");} }>The Open Space</Link>
                 <Link to="/environmentalProjects" className="cat4" onClick={() => {dropDown("services"); dropDown("main");} }>Environmental Projects</Link>
             </div>
 
-            <div className={`eventsMenu ${eventsPresence ? "menuIn" : eventsPresence === 0 ? "" : "menuOut"}`} onClick={() => restoreTop("/upcomingEvents")}>
+            <div className={`eventsMenu ${eventsPresence ? "menuIn" : eventsPresence === 0 ? "" : "menuOut"}`} onClick={() => restoreTop()}>
                 <Link to="/upcomingEvents" className="cat1" onClick={() => {dropDown("events"); dropDown("main");} }>Upcoming Events</Link>
                 <Link to="/pastEvents" className="cat2" onClick={() => {dropDown("events"); dropDown("main");} }>Past Events</Link>
                 <Link to="/eventSponsors" className="cat3" onClick={() => {dropDown("events"); dropDown("main");} }>Event Sponsors</Link>
