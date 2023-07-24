@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&family=Raleway:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&family=Raleway:wght@300;400;500;700;800;900&family=Roboto:wght@300;400;500;700&display=swap');
 
 :root{
     --purple: white;
@@ -513,12 +513,24 @@ ul.no-bullets{
 
 .dText{
     background-color: #f2f2f2;
-    text-align: center;
+    text-align: left;
     font-size: 18px;
     max-width: 85%;
     border-radius: 15px;
     line-height: 30px;
     padding: 10px;
+    overflow: hidden;
+}
+
+.dTextInitial{
+    background-color: #f2f2f2;
+    text-align: left;
+    font-size: 18px;
+    max-width: 85%;
+    border-radius: 15px;
+    line-height: 30px;
+    padding: 10px;
+    overflow: hidden;
 }
 
 .eDflex{
@@ -1186,8 +1198,12 @@ input[type="email"]::placeholder{
     font-size: 18px;
     padding-top: 25px;
     font-weight: 400;
-    color: white;
+    color: black;
+}
+
+.linkColor{
     color: var(--darkblue);
+    font-weight: 900;
 }
 
 .subStatement{
@@ -1440,6 +1456,12 @@ input[type="email"]::placeholder{
     grid-row: 4;
     grid-column: 2;
     font-size: 17px;
+}
+
+.pEmail{
+    grid-row: 6;
+    grid-column: 2;
+    font-size: 15px;
 }
 
 .moreAbout, .moreAbout2{
@@ -2206,6 +2228,32 @@ input[type="email"]::placeholder{
         width: 300px;
     }
 
+    .introTitle{
+        font-size: 72px;
+        font-weight: 700;
+    }
+
+    .introTitleContainer{
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 50px;
+        padding-bottom: 40px;
+        padding-left: 5%;
+        width: 92%;
+    }
+
+    .hideArrow{
+        visibility: hidden;
+    }
+
+    .arrowDownPad{
+        visibility: hidden;
+    }
+
+    .pEmail{
+
+    }
+
 @media screen and (max-width: 500px){
     .smallText500{
         font-size: 35px;
@@ -2324,6 +2372,41 @@ input[type="email"]::placeholder{
 
 @media screen and (max-width: 700px){
   
+    .dContainer{
+        padding-bottom: 0px; 
+        
+    }
+
+    .introTitle{
+        font-size: 50px;
+    }
+
+    .dText{
+        height: 500px;
+        -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    }
+
+    .dTextInitial{
+        background-color: #f2f2f2;
+        text-align: left;
+        font-size: 18px;
+        max-width: 85%;
+        border-radius: 15px;
+        line-height: 30px;
+        padding: 10px;
+        overflow: hidden;
+    }
+
+    .arrowDownPad{
+        margin-bottom: 40px;
+        margin-top: 30px;
+        padding: 10px;
+        background-color: #f2f2f2;
+        border-radius: 50px;
+        visibility: visible;
+    }
+
     .homeBanner{
         height: 750px;
         background-color: black;

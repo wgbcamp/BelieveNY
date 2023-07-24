@@ -299,8 +299,8 @@
 
     .sliderGrid{
         display: grid;
-        grid-template-columns: 230px 1fr 110px 110px 110px 110px 110px;
-        column-gap: 20px;
+        grid-template-columns: 230px 1fr 121px 121px 121px 121px 121px;
+        column-gap: 12px;
     }
 
     .slider{
@@ -320,15 +320,15 @@
 
     .spannedMenu{
         display: grid;
-        grid-template-columns: 230px 1fr 630px;
+        grid-template-columns: 230px 1fr 655px;
         /* grid-template-columns: 230px 1fr repeat(4, 110px) 200px; */
         grid-column: 1;
     }
 
     .categoryGrid{
         display: grid;
-        grid-template-columns: repeat(5, 110px);
-        column-gap: 20px;
+        grid-template-columns: repeat(5, 121px);
+        column-gap: 12px;
     }
 
     .category1, .category2, .category3, .category4, .category5{
@@ -365,11 +365,10 @@
     }
     .category5{   
         grid-column: 5;
-        padding-right: 7px;
     }
 
     .category5a{
-        background-color: #7260E5;
+        background-color: var(--darkblue);
         color: white;
         height: 100%;
         width: 100%;

@@ -52,7 +52,7 @@ const getHelp = (props) => {
             <div className="simpleFlex down whiten">
                 <div className="maxWidth width80Per">
                     <div className="simpleTitle centerText">NEED HELP?</div>
-                    <div className="size18Font lineHeight30">We are here for you. Email us below and we will respond back via e-mail or phone ASAP or within 24-48 hours for next steps and resources that will help you and your family. Stay close to your phone and check e-mails often. Call for immediate assistance. If it's an emergency please call 911 first.</div>
+                    <div className="size18Font lineHeight30">We are here for you. Send us a message below and we will respond back via e-mail, text, or phone within 24-48 hours for next steps and resources that will help you and your family. Stay close to your phone and check e-mails often after you submit your request. If it's an emergency, please call 911.</div>
 
                     <div className="padding50"></div>
                     <div className="contactGrid">
