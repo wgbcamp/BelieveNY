@@ -7,6 +7,7 @@
     --transpurple: #6f52adca;
     --lightblue: #998CEC;
     --gray: #474747;
+    --brightblue: #5900ffec;
 }
 
 .fade-enter {
@@ -84,6 +85,10 @@ body{
     align-items: center;
 }
 
+.size16Font{
+    font-size: 16px;
+}
+
 .size18Font{
     font-size: 18px;
 }
@@ -132,6 +137,10 @@ body{
     line-height: 25px;
 }
 
+.lineHeight20{
+    line-height: 20px;
+}
+
 .padding50{
     padding: 50px;
 }
@@ -150,6 +159,30 @@ body{
 
 .width60Per{
     width: 60%;
+}
+
+.width40Per{
+    width: 40%;
+}
+
+.topBorder{
+    border-top: solid 5px black;
+}
+
+.marginTop20{
+    margin-top: 20px;
+}
+
+.marginTop40{
+    margin-top: 40px;
+}
+
+.marginBottom20{
+    margin-bottom: 10px;
+}
+
+.padBottom30{
+    padding-bottom: 30px;
 }
 
 .padBottom40{
@@ -678,18 +711,27 @@ textarea[type=text]{
     width: unset;
 }
 
+.ffMaxWidth{
+    max-width: 728px;
+}
+
 .ffBig{
     padding-top: 40px;
     font-size: 36px;
 }
 
 .ffMedium{
-    padding-top: 40px;
     font-size: 28px;
+    font-weight: 900;
 }
 
 .ffSmall{
     font-size: 20px;
+}
+
+.ffDynamicText{
+    font-size: 18px;
+    line-height: 26px;
 }
 
 .resizeImage{
@@ -1204,6 +1246,7 @@ input[type="email"]::placeholder{
 .linkColor{
     color: var(--darkblue);
     font-weight: 900;
+    text-decoration: underline;
 }
 
 .subStatement{
@@ -2276,6 +2319,10 @@ input[type="email"]::placeholder{
         width: 300px;
         text-align: center;
     }
+
+    .ffDynamicText{
+        line-height: 22px;
+    }
 }
 
 @media screen and (min-width: 500px){
@@ -2344,7 +2391,7 @@ input[type="email"]::placeholder{
     }
 
     .bigStatement{
-        width: 250px;
+        width: 300px;
         font-size: 22px;
     }
 
@@ -2575,7 +2622,7 @@ input[type="email"]::placeholder{
     }
 
     .bigStatement{
-        width: 350px;
+        width: 410px;
         font-size: 28px;
         padding-top: 50px;
     }
@@ -3047,6 +3094,7 @@ input[type="email"]::placeholder{
     .bigStatement{
         font-size: 36px;
         padding-top: 30px;
+        width: 500px;
     }
 
     .idkbro{
@@ -3083,7 +3131,7 @@ input[type="email"]::placeholder{
 
     .bigStatement{
         font-size: 42px;
-        width: 500px;
+        width: 640px;
         margin-top: 40px;
     }
 

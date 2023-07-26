@@ -51,7 +51,7 @@ const Home = () => {
                             <div className="">AND THE LIVES OF NEW YORKERS.</div>
                         </div>
                         <div className='bigStatement'>     
-                            <span className='bold'>Believe New York </span>is on a mission—to improve the <span className="bold">lives of all individuals and families in New York City, but we need your help, <Link to="/donate"><span className='linkColor'>Donate Now to support our mission!</span></Link>
+                            <span className='bold'>Believe New York </span>is on a mission—to improve the <span className="bold">lives of all individuals and families in New York City, but we need your help, <Link to="/donate" className='linkColor'><span>Donate Now to support our mission!</span></Link>
                             </span>
                         </div>
 

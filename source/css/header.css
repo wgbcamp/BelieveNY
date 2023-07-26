@@ -9,7 +9,8 @@
 
 .header{
     display: grid;
-    height: 45px;
+    grid-template-rows: 4px 66px 4px;
+    height:74px;
     font-size: 18px;
     width: 100%;
     max-width: 1620px;
@@ -21,6 +22,7 @@
     position: sticky;
     top: 0px;
     z-index: 10;
+    border-bottom: solid #ddd 1px;
 
 }
 
@@ -53,6 +55,7 @@
 .spannedMenu{
     display: none;
     z-index: 1;
+    grid-row: 2;
 }
 
 .mobileMenu, .aboutMenu, .servicesMenu, .eventsMenu{
@@ -210,7 +213,7 @@
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     position: absolute;
-    top: 41px;
+    top: 66px;
     box-shadow:  5px 10px 40px -2px rgba(0, 0, 0, 0.25);
 }
 
@@ -301,6 +304,7 @@
         display: grid;
         grid-template-columns: 230px 1fr 121px 121px 121px 121px 121px;
         column-gap: 12px;
+        grid-row: 3;
     }
 
     .slider{
@@ -368,7 +372,7 @@
     }
 
     .category5a{
-        background-color: var(--darkblue);
+        background-color: var(--brightblue);
         color: white;
         height: 100%;
         width: 100%;

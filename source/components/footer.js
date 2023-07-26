@@ -65,7 +65,7 @@ const Footer = () => {
                 <a href="https://www.instagram.com/believeny" className='linkToWhite'><i className="fa-brands fa-square-instagram fa-2xl iconPad"></i></a>
                 <a href="https://www.youtube.com/channel/UCbz9owENALBUb8O6NrFv7oQ" className='linkToWhite'><i className="fa-brands fa-square-youtube fa-2xl iconPad"></i></a>
             </div>
-            <div className="copyright">©2021 by Believe New York Philanthropies, Inc.</div>
+            <div className="copyright">©2023 by Believe New York Philanthropies, Inc.</div>
             <div className='centerText'>Email: GetHelp@BelieveNY.org</div>
             <div className='centerText'>Text: (347) NYC-0011</div>
             </div>
