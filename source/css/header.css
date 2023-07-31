@@ -10,7 +10,7 @@
 .header{
     display: grid;
     grid-template-rows: 4px 66px 4px;
-    height:74px;
+    height: 74px;
     font-size: 18px;
     width: 100%;
     max-width: 1620px;
@@ -27,7 +27,6 @@
 }
 
 .logo, .logoMobile{
-    grid-column: 1;
     padding-left: 7px;
     display: flex;
     justify-content: flex-start;
@@ -44,12 +43,14 @@
 }
 
 .hamburger{
-    grid-column: 7;
+    grid-column: 1;
+    grid-row: 2;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
-    padding-right: 20px;
+    padding-left: 20px;
     color: black;
+    height: 100%;
 }
 
 .spannedMenu{
@@ -61,7 +62,7 @@
 .mobileMenu, .aboutMenu, .servicesMenu, .eventsMenu{
     background-color: white;
     color: black;
-    height: calc(100vh - 51px);
+    height: calc(100vh - 41px);
     width: 100%;
     position: absolute;
     top: 45px;
@@ -74,13 +75,14 @@
 
 .cancelMenu{
     color: white;
-    height: 42px;
+    height: 81px;
     width: 100%;
     position: absolute;
     transform: translateX(-100%);
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    z-index: 50;
 }
 
 .menuIn{
@@ -302,7 +304,7 @@
 
     .sliderGrid{
         display: grid;
-        grid-template-columns: 230px 1fr 121px 121px 121px 121px 121px;
+        grid-template-columns: 230px 1fr 121px 121px 121px 121px 185px;
         column-gap: 12px;
         grid-row: 3;
     }
@@ -315,7 +317,6 @@
 
     .header{
         font-size: 18px;
-        width: 100%;
     }
 
     .hamburger, .cancelMenu, .logoMobile{
@@ -324,14 +325,14 @@
 
     .spannedMenu{
         display: grid;
-        grid-template-columns: 230px 1fr 655px;
+        grid-template-columns: 230px 1fr 1fr;
         /* grid-template-columns: 230px 1fr repeat(4, 110px) 200px; */
         grid-column: 1;
     }
 
     .categoryGrid{
         display: grid;
-        grid-template-columns: repeat(5, 121px);
+        grid-template-columns: repeat(4, 121px) 185px;
         column-gap: 12px;
     }
 
@@ -367,20 +368,32 @@
     .category4{
         grid-column: 4;
     }
+    .category4Inner{
+        text-decoration: none;
+        color: var(--gray);
+    }
     .category5{   
         grid-column: 5;
     }
 
     .category5a{
-        background-color: var(--brightblue);
+        background-color: var(--turquoise);
         color: white;
         height: 100%;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 12px;
+        border-radius: 160px;
         cursor: pointer;
+        font-size: 25px;
+        font-weight: 800;
+        text-decoration: none;
+        
+    }
+
+    .mobileDonate{
+        visibility: hidden;
     }
 
     .mobileMenu, .aboutMenu, .servicesMenu, .eventsMenu{
@@ -392,4 +405,55 @@
 
 @media only screen and (min-width: 300px) and (max-width: 550px) {
 
+}
+
+@media screen and (max-width: 1000px){
+
+    .logoColFix{
+        grid-row: 2;
+        grid-column: 2;
+    }
+
+    .hamburgerColFix{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .header{
+        grid-template-columns: 50px 1fr 150px;
+    }
+
+    .category5{   
+        grid-column: 3;
+        grid-row: 2;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: var(--turquoise);
+        color: white;
+        height: 100%;
+        width: 60%;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 800;
+        text-decoration: none;
+    }
+
+    .category5a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .mobileDonate{
+        grid-column: 3;
+        grid-row: 2;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        background-color: var(--turquoise);
+        border-radius: 160px;
+    }
 }

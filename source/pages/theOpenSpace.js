@@ -26,6 +26,18 @@ const theOpenSpace = () => {
                         </div>
                         
                     </div>
+                    <div className="simpleFlex">
+                        <div className="hereForYouGrid max1090">
+                            <div className="simpleFlex hereForYouInner centerText">
+                                <b className="size42Font padTop40 center1200 smallText500">We are here for you.</b>
+                                <div className="size18Font padBottom201200 smallerText500">We are here to listen and help you through your next steps.</div>
+
+                            </div>
+                            <div className="simpleFlex center1200 verticalAlign padTop201200">
+                                <img src={calendarPreview} height="250"></img>
+                            </div>
+                        </div>
+                    </div>
                     <div className='openSpaceDesc padBottom80'>
                         <div className="centerText size42Font padTop40 padBottom40">
                             <b>What is The Open Space?</b>
@@ -63,22 +75,6 @@ const theOpenSpace = () => {
                                 </div>
                             </div>      
                     </div>   
-                    <div className="simpleFlex">
-                        <div className="hereForYouGrid max1090">
-                            <div className="hereForYouInner">
-                                <b className="size42Font padTop40 center1200 smallText500">We are here for you.</b>
-                                <div className="size18Font padBottom201200 smallerText500">We are here to listen and help you through your next steps.</div>
-                                <div className='simpleFlex alignLeft'>
-                                        <Link to="/scheduleBooking" className="submitButton4" onClick={() => restoreTop()}>
-                                        <b>Book a session here</b>
-                                        </Link> 
-                                </div>
-                            </div>
-                            <div className="alignRight center1200 verticalAlign padTop201200">
-                                <img src={calendarPreview} height="250"></img>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

@@ -91,9 +91,8 @@ const Header = (props) => {
             <div className={`header`}>
                 {/* Spanned menu */}
                 <div className="spannedMenu">
-                    <Link to="/" className={`logo`} onClick={() => restoreTop("/")}><img src={BNYLogoCircle} className="logoInner"/>Believe New York</Link>
-                    
-
+ 
+                        <Link to="/" className={`logo`} onClick={() => restoreTop("/")}><img src={BNYLogoCircle} className="logoInner"/>Believe New York</Link>
                     <div></div>
                     <div className="categoryGrid">
                     <div className={`category1`} onMouseEnter={() => toggleASP(true)} onMouseLeave={() => toggleASP(false)} onClick={() => toggleASP(false)}>About Us
@@ -119,10 +118,16 @@ const Header = (props) => {
                             <Link to="/specialEventsFund" className="sCat4">Donate to Special Events Fund</Link>
                         </div>
                     </div>
-                    <Link to="/volunteer" className={`category4`} onClick={() => restoreTop()}>Volunteer</Link>
-                    <Link to="/donate" className="category5" onClick={() => restoreTop()}>
-                        <div className='category5a'>Donate Now!</div>
+                    <div className={`category4`} onClick={() => restoreTop()}>
+                        <Link to="/volunteer" className="category4Inner">Volunteer</Link>
+                    </div>
+                    <div className={`category5`} onClick={() => restoreTop()}>
+                        <Link to="/donate" className="category5a" >
+                            <div className="">DONATE NOW</div>
                         </Link>
+                    </div>
+                    
+
                     </div>
                 </div>
 
@@ -139,11 +144,20 @@ const Header = (props) => {
                     </div>
 
                 {/* Mobile menu */}
-                <Link to="/" className="logoMobile" onClick={() => {dropDown("killAll"); restoreTop("/");}}><img src={BNYLogoCircle} className="logoInner"/>Believe New York</Link>
-                <div className={`hamburger ${dropdownPresence ? "fadeOut" : dropdownPresence === 0 ? "" : "fadeIn"}`} onClick={() => {dropDown("main");}}>
-                    <div className="fa-solid fa-bars fa-2xl">
+                <div className="simpleFlex verticalAlign logoColFix">
+                    <Link to="/" className="logoMobile" onClick={() => {dropDown("killAll"); restoreTop("/");}}><img src={BNYLogoCircle} className="logoInner"/>Believe New York</Link>
+                </div>
+                <div className="hamburgerColFix">
+                    <div className={`hamburger ${dropdownPresence ? "fadeOut" : dropdownPresence === 0 ? "" : "fadeIn"}`} onClick={() => {dropDown("main");}}>
+                        <div className="fa-solid fa-bars fa-2xl">
+                        </div>
                     </div>
                 </div>
+                <div className={`mobileDonate`} onClick={() => restoreTop()}>
+                        <Link to="/donate" className="category5a" >
+                            <div className="">DONATE NOW</div>
+                        </Link>
+                    </div>
             
             </div>
             

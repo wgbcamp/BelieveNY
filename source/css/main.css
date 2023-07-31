@@ -8,6 +8,8 @@
     --lightblue: #998CEC;
     --gray: #474747;
     --brightblue: #5900ffec;
+    --turquoise: #30D5C8;
+    --teal: #008080;
 }
 
 .fade-enter {
@@ -2739,12 +2741,12 @@ input[type="email"]::placeholder{
 
     .hereForYouGrid{
         display: grid;
-        grid-template-columns: 25% 75%;
+        grid-template-rows: 30% 1fr;
     }
 
     .hereForYouInner{
         display: grid;
-        grid-template-rows: 155px 60px 100px
+        grid-template-rows: 105px 60px;
     }
 
     .color1{
