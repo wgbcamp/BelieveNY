@@ -65,12 +65,13 @@
     height: calc(100vh - 41px);
     width: 100%;
     position: absolute;
-    top: 45px;
+    top: 0px;
     transform: translateX(-100%);
     display: grid;
     grid-template-rows: 51px repeat(5, 70px);
     grid-template-columns: 5% 1fr 55px;
     font-size: 24px;
+    z-index: 49;
 }
 
 .cancelMenu{

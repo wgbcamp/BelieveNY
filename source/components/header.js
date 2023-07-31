@@ -144,14 +144,14 @@ const Header = (props) => {
                     </div>
 
                 {/* Mobile menu */}
-                <div className="simpleFlex verticalAlign logoColFix">
-                    <Link to="/" className="logoMobile" onClick={() => {dropDown("killAll"); restoreTop("/");}}><img src={BNYLogoCircle} className="logoInner"/>Believe New York</Link>
-                </div>
                 <div className="hamburgerColFix">
                     <div className={`hamburger ${dropdownPresence ? "fadeOut" : dropdownPresence === 0 ? "" : "fadeIn"}`} onClick={() => {dropDown("main");}}>
                         <div className="fa-solid fa-bars fa-2xl">
                         </div>
                     </div>
+                </div>
+                <div className="simpleFlex verticalAlign logoColFix">
+                    <Link to="/" className="logoMobile" onClick={() => { restoreTop("/");}}><img src={BNYLogoCircle} className="logoInner"/>Believe New York</Link>
                 </div>
                 <div className={`mobileDonate`} onClick={() => restoreTop()}>
                         <Link to="/donate" className="category5a" >
