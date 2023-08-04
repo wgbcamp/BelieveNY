@@ -171,6 +171,10 @@ body{
     border-top: solid 5px black;
 }
 
+.bottomBorder{
+    border-bottom: solid 5px black;
+}
+
 .marginTop20{
     margin-top: 20px;
 }
@@ -774,8 +778,9 @@ textarea[type=text]{
 
 .contactGrid{
     display: grid;
-    grid-template-rows: repeat(3, 50px);
+    grid-template-rows: repeat(3, 30px);
     grid-template-columns: repeat(3, 1fr);
+    font-weight: 600;
 }
 
 .cgColumnGrid{
@@ -996,6 +1001,30 @@ input[type="email"]::placeholder{
     animation-name: changeToWhite;
     animation-duration: 0.25s;
     animation-fill-mode: forwards;
+}
+
+.weight300{
+    font-weight: 300;
+}
+
+.weight400{
+    font-weight: 400;
+}
+
+.weight500{
+    font-weight: 500;
+}
+
+.weight700{
+    font-weight: 700;
+}
+
+.weight800{
+    font-weight: 800;
+}
+
+.weight900{
+    font-weight: 900;
 }
 
 @keyframes changeToPurp {
@@ -2299,6 +2328,70 @@ input[type="email"]::placeholder{
 
     }
 
+    .faqElement{
+        background-color: #e6e6e6;
+        font-weight: 700;
+        margin-top: 25px;
+        padding: 10px;
+        line-height: 20px;
+    }
+
+    .faqGrid{
+        display: grid;
+        grid-template-columns: 95% 5%;
+        grid-template-rows: 30px 1fr;
+    }
+
+    .faqGrid:hover{
+        color: #6F52AD;
+        transition-duration: 250ms;
+    }
+
+    .faqAnswer{
+        padding-top: 10px;
+        font-weight: 500;
+    }
+
+    .faqAnswer2{
+        padding-bottom: 5px;
+    }
+
+    .faqAnswer2, .faqAnswer3{
+        padding-top: 5px;
+    }
+
+    .faqOrderedList{
+
+    }
+
+    .faqOLelement{
+        padding-bottom: 10px;
+    }
+
+    .killElement{
+        visibility: hidden;
+        padding-top: 0;
+        height: 0;
+    }
+
+    .hideList{
+        visibility: hidden;
+        padding-top: 0;
+        height: 0;
+    }
+
+    .unHideList{
+        visibility: visible;
+        height: unset;
+    }
+
+    .faqEndingStatement{
+        font-weight: 800;
+        font-size: 34px;
+        padding-top: 100px;
+        padding-bottom: 30px;
+    }
+
 @media screen and (max-width: 500px){
     .smallText500{
         font-size: 35px;
@@ -2421,6 +2514,16 @@ input[type="email"]::placeholder{
 
 @media screen and (max-width: 700px){
   
+    .faqEndingStatement{
+        font-size: 24px;
+    }
+
+    .faqGrid{
+        display: grid;
+        grid-template-columns: 95% 5%;
+        grid-template-rows: 70px 1fr;
+    }
+
     .dContainer{
         padding-bottom: 0px; 
         

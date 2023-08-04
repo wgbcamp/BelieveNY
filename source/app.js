@@ -22,6 +22,7 @@ import Volunteer from './pages/volunteer';
 import CancelSession from './pages/cancelSession';
 import BottomContact from './components/bottomContact';
 import FormHandler from './components/formHandler';
+import Faq from './pages/faq';
 
 function App(){
 
@@ -57,6 +58,7 @@ function App(){
                 <Header location={location}/>
                     <Routes>
                         <Route path="/" element={<Home/>}/>
+                        <Route path="/faq" element={<Faq/>}/>
                         <Route path="/aboutUs/" element={<AboutUs/>}/>
                         <Route path="/diversityAndInclusion/" element={<DiversityInclusion/>}/>
                         <Route path="/foundingSupporters/" element={<FoundingSupporters/>}/>
