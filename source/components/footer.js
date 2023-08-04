@@ -30,19 +30,19 @@ const Footer = () => {
                         <div className="innerCol1">
                             <b>Who We Are</b>
                             <Link to="/aboutUs" className='fixLinkColor' onClick={() => restoreTop()}>About Us</Link>
-                            {/* <div>Finances</div> */}
+                            <Link to="/diversityAndInclusion" className='fixLinkColor' onClick={() => restoreTop()}>Diversity and Inclusion</Link>
                             <Link to="/foundingSupporters" className='fixLinkColor' onClick={() => restoreTop()}>Founding Supporters</Link>
                         </div>
                         <div className="innerCol2">
                             <b>What We Do</b>
-                            <Link to="/getHelp" className='fixLinkColor' onClick={() => restoreTop()}>Get Help</Link>
+                            <Link to="/getHelp" className='fixLinkColor' onClick={() => restoreTop()}>Need help?</Link>
                             <Link to="theOpenSpace" className='fixLinkColor' onClick={() => restoreTop()}>The Open Space</Link>
-                            <Link to="foodFirst" className="fixLinkColor" onClick={() => restoreTop()}>Food First Program</Link>
+                            <Link to="foodFirst" className="fixLinkColor" onClick={() => restoreTop()}>Food First</Link>
                             <Link to="pastEvents" className="fixLinkColor" onClick={() => restoreTop()}>Community Events</Link>
                         </div>
                         <div className="innerCol3">
                             <b>Ways to Help</b>
-                            <Link to="/donate" className="fixLinkColor" onClick={() => restoreTop()}>Donate to our programs</Link>
+                            <Link to="/donate" className="fixLinkColor" onClick={() => restoreTop()}>Donate to our events</Link>
                             <Link to="/eventSponsors" className="fixLinkColor" onClick={() => restoreTop()}>Become an event sponsor</Link>
                             <Link to="/volunteer" className="fixLinkColor" onClick={() => restoreTop()}>Join Us</Link>
                             <div className="blank"></div>

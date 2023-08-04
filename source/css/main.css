@@ -417,9 +417,20 @@ ul.no-bullets{
     padding-bottom: 20px;
 }
 
+.volPosText{
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 500;
+}
+
 .volPosBullet{
     padding-top: 5px;
     padding-bottom: 10px;
+    font-weight: 500;
+}
+
+li{
+    text-indent: -1.35em;  
 }
 
 #fontawesomeIconStorage{
@@ -1880,6 +1891,7 @@ input[type="email"]::placeholder{
     max-height: 600px;
     width: 100%;
     overflow: hidden;
+    transform: scaleX(-1);
 }
 
 .flexImageLeft{
@@ -2390,6 +2402,13 @@ input[type="email"]::placeholder{
         font-size: 34px;
         padding-top: 100px;
         padding-bottom: 30px;
+    }
+
+    .upcomingEventsTBAitem{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-weight: 500;
+        text-indent: unset;  
     }
 
 @media screen and (max-width: 500px){

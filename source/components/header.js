@@ -115,11 +115,11 @@ const Header = (props) => {
                             <Link to="/upcomingEvents" className="sCat1">Upcoming Events</Link>
                             <Link to="/pastEvents" className="sCat2">Past Events</Link>
                             <Link to="/eventSponsors" className="sCat3">Event Sponsors</Link>
-                            <Link to="/specialEventsFund" className="sCat4">Donate to Special Events Fund</Link>
+                            <Link to="/specialEventsFund" className="sCat4">Donate to our Events</Link>
                         </div>
                     </div>
                     <div className={`category4`} onClick={() => restoreTop()}>
-                        <Link to="/volunteer" className="category4Inner">Volunteer</Link>
+                        <Link to="/volunteer" className="category4Inner">Join Us</Link>
                     </div>
                     <div className={`category5`} onClick={() => restoreTop()}>
                         <Link to="/donate" className="category5a" >
@@ -167,7 +167,7 @@ const Header = (props) => {
                 <div className="cat1" onClick={() => dropDown("about")}>About Us</div>
                 <div className="cat2" onClick={() => dropDown("services")}>Our Work</div>
                 <div className="cat3" onClick={() => dropDown("events")}>Events</div>
-                <Link to="/volunteer" className="cat4" onClick={() => {dropDown("main"); restoreTop();}}>Volunteer</Link>
+                <Link to="/volunteer" className="cat4" onClick={() => {dropDown("main"); restoreTop();}}>Join Us</Link>
                 <Link to="/donate" className="cat5" onClick={() => {dropDown("main"); restoreTop();}}>Donate</Link>
                 <div className='aArrow' onClick={() => dropDown("about")}><i className='fa-solid fa-chevron-right'></i></div>
                 <div className='bArrow' onClick={() => dropDown("services")}><i className='fa-solid fa-chevron-right'></i></div>
@@ -191,7 +191,7 @@ const Header = (props) => {
                 <Link to="/upcomingEvents" className="cat1" onClick={() => {dropDown("events"); dropDown("main");} }>Upcoming Events</Link>
                 <Link to="/pastEvents" className="cat2" onClick={() => {dropDown("events"); dropDown("main");} }>Past Events</Link>
                 <Link to="/eventSponsors" className="cat3" onClick={() => {dropDown("events"); dropDown("main");} }>Event Sponsors</Link>
-                <Link to="/specialEventsFund" className="cat4" onClick={() => {dropDown("events"); dropDown("main");} }>Donate to Special Events Fund</Link>
+                <Link to="/specialEventsFund" className="cat4" onClick={() => {dropDown("events"); dropDown("main");} }>Donate to our Events</Link>
             </div>
         </div>
         </div>
