@@ -98,8 +98,9 @@ const Header = (props) => {
                     <div className={`category1`} onMouseEnter={() => toggleASP(true)} onMouseLeave={() => toggleASP(false)} onClick={() => toggleASP(false)}>About Us
                         <div className={`aboutSpan ${aboutSpanPres ? "showSpanGrid" : ""}`} onClick={() => restoreTop()}>
                             <Link to="/aboutUs" className="sCat1">Who We Are</Link>
-                            <Link to="/diversityAndInclusion" className="sCat2">Diversity and Inclusion</Link>
-                            <Link to="/foundingSupporters" className="sCat3">Founding Supporters</Link>
+                            <Link to="/impactReport" className="sCat2">Our Impact</Link>
+                            <Link to="/diversityAndInclusion" className="sCat3">Diversity and Inclusion</Link>
+                            <Link to="/foundingSupporters" className="sCat4">Founding Supporters</Link>
                         </div>
                     </div>
                     <div className={`category2`} onMouseEnter={() => toggleSSP(true)} onMouseLeave={() => toggleSSP(false)} onClick={() => toggleSSP(false)}>Our Work
@@ -176,8 +177,9 @@ const Header = (props) => {
 
             <div className={`aboutMenu ${aboutPresence ? "menuIn" : aboutPresence === 0 ? "" : "menuOut"}`} onClick={() => restoreTop()}>
                 <Link to="/aboutUs" className="cat1" onClick={() => {dropDown("about"); dropDown("main");} }>Who We Are</Link>
-                <Link to="/diversityAndInclusion" className="cat2" onClick={() => {dropDown("about"); dropDown("main");} }>Diversity and Inclusion</Link>
-                <Link to="/foundingSupporters" className="cat3" onClick={() => {dropDown("about"); dropDown("main");} }>Founding Supporters</Link>
+                <Link to="/impactReport" className="cat2" onClick={() => {dropDown("about"); dropDown("main");} }>Our Impact</Link>
+                <Link to="/diversityAndInclusion" className="cat3" onClick={() => {dropDown("about"); dropDown("main");} }>Diversity and Inclusion</Link>
+                <Link to="/foundingSupporters" className="cat4" onClick={() => {dropDown("about"); dropDown("main");} }>Founding Supporters</Link>
             </div>
 
             <div className={`servicesMenu ${servicesPresence ? "menuIn" : servicesPresence === 0 ? "" : "menuOut"}`} onClick={() => restoreTop()}>

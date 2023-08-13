@@ -2411,6 +2411,14 @@ input[type="email"]::placeholder{
         text-indent: unset;  
     }
 
+    .pdfViewer{
+        height: 100vh;
+    }
+
+    .pdfWidth{
+        width: 80%;
+    }
+
 @media screen and (max-width: 500px){
     .smallText500{
         font-size: 35px;
@@ -3265,6 +3273,11 @@ input[type="email"]::placeholder{
 }
 
 @media screen and (max-width: 1000px){
+
+    .pdfWidth{
+        width: 100%;
+    }
+
     .homeBanner{
         height: 750px;
         color: white;

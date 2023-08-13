@@ -30,6 +30,7 @@ const Footer = () => {
                         <div className="innerCol1">
                             <b>Who We Are</b>
                             <Link to="/aboutUs" className='fixLinkColor' onClick={() => restoreTop()}>About Us</Link>
+                            <Link to="/impactReport" className='fixLinkColor' onClick={() => restoreTop()}>Our Impact</Link>
                             <Link to="/diversityAndInclusion" className='fixLinkColor' onClick={() => restoreTop()}>Diversity and Inclusion</Link>
                             <Link to="/foundingSupporters" className='fixLinkColor' onClick={() => restoreTop()}>Founding Supporters</Link>
                         </div>

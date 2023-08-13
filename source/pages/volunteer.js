@@ -15,8 +15,6 @@ const volunteer = () => {
                 <div className="simpleFlex">
                     <div className="centerText width80Per padTop20 weight500">Do you want to apply to any of these positions? Send your resume to <span className='bold'>believenewyork@gmail.com</span>! All welcome to apply.</div>
                 </div>   
-                <div className='simpleFlex verticalAlign size42Font weight900 padBottom20 padTop40'>Open Volunteer Positions
-                </div>
                             <div className="volPosTitle weight700 size26Font">Professional Community Fundraiser & Advocate</div>
                             <div className="volPosText padBottom20">Are you a passionate and outgoing individual who wants to make a tangible difference in the lives of others? Do you want to work directly for a nonprofit organization? Believe New York is seeking dedicated individuals like you to join our team as a Professional Community Fundraiser and Advocate. To apply, please email your resume and cover letter to our Director of Development, Sonny Curtin at <span className="bold">sonny@believeny.org</span>.
                             </div>
@@ -58,7 +56,9 @@ const volunteer = () => {
                             <li className="volPosBullet">Reliable and punctual, with strong time management skills.</li>
                             <li className="volPosBullet">Comfortable working outdoors and standing for extended periods.</li>
                             <li className="volPosBullet">Access to own transportation.</li>
-                    <div className='volPosGrid padTop80'>
+                            <div className='simpleFlex verticalAlign size42Font weight900 padBottom40 padTop80'>Open Volunteer Positions
+                            </div>
+                    <div className='volPosGrid '>
                         <div>
                             <i className="fa-regular fa-newspaper fa-2xl padTop40"></i>
                             <div className="volPosTitle">COUNSELOR</div>

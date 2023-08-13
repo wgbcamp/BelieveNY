@@ -23,6 +23,7 @@ import CancelSession from './pages/cancelSession';
 import BottomContact from './components/bottomContact';
 import FormHandler from './components/formHandler';
 import Faq from './pages/faq';
+import ImpactReport from './pages/impactReport'
 
 function App(){
 
@@ -60,6 +61,7 @@ function App(){
                         <Route path="/" element={<Home/>}/>
                         <Route path="/faq" element={<Faq/>}/>
                         <Route path="/aboutUs/" element={<AboutUs/>}/>
+                        <Route path="/impactReport" element={<ImpactReport/>}/>
                         <Route path="/diversityAndInclusion/" element={<DiversityInclusion/>}/>
                         <Route path="/foundingSupporters/" element={<FoundingSupporters/>}/>
                         <Route path="/getHelp" element={<GetHelp updateDim={updateDim} updatePayload={updatePayload}/>}/>
