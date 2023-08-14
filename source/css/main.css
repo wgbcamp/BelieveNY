@@ -1936,10 +1936,6 @@ input[type="email"]::placeholder{
     grid-template-rows: 100px 150px 1fr 140px;
 }
 
-.donateButtonWidth{
-    line-height: 120px;
-}
-
 .innerAlphaGrid{
     display: grid;
     grid-template-rows: 50px 50px;
@@ -1978,8 +1974,9 @@ input[type="email"]::placeholder{
 }
 
 .donateGrid{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+        display: grid;
+        grid-template-columns: 500px;
+        grid-template-rows: 1fr 1fr; 
 }
 
 .flexColEnd{
@@ -2005,6 +2002,11 @@ input[type="email"]::placeholder{
     font-weight: 600;
     text-align: center;
     font-size: 26px;
+}
+
+.fpLink{
+    display: flex;
+    justify-content: center;
 }
 
 .fpText{
@@ -2681,7 +2683,7 @@ input[type="email"]::placeholder{
 
     .donateGrid{
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 250px;
         grid-template-rows: 1fr 1fr;
     }
 
@@ -2695,11 +2697,6 @@ input[type="email"]::placeholder{
 
     .fpText{
         text-align: center;
-    }
-
-    .fpLink{
-        display: flex;
-        justify-content: center;
     }
 
     .donateFont, .supportFont{
