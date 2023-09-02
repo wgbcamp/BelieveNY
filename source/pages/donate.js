@@ -14,23 +14,23 @@ const donate = () => {
                     <div className="simpleFlex">
                         <img src={BNYLogoFull} className="downsizeLogo"></img>
                     </div>
-                    <div className="donateFont centerText">Your support goes a long way </div>
-                    <div className="supportFont centerText">Donate today to support New Yorkers in Need</div>
-                    <div className="simpleFlex">
-                        <div className="donateGrid padBottom20">
-                            <div className="flexColCenter">
-                                <a href="https://account.venmo.com/u/believeny" className="venmoButton">
-                                    <img src={venmoLogo}>
-                                    </img>
-                                </a>
-                            </div>
-
+                    <div className="supportGrid">
+                        <div className="donateFont centerText">Your support goes a long way </div>
+                        <div className="supportFont centerText">Donate today to support New Yorkers in Need</div>
+                        <div className="simpleFlex donateElement">
+                            <div className="donateGrid padBottom20">
                                 <div className=" fixed paypalHeight">
                                     <a href="https://www.paypal.com/donate/?hosted_button_id=GJ7HV5PUBAMQS" className="fixed2">
                                     <img src={paypalLogo} height="26px"></img>
                                     </a>
                                 </div>
-
+                                <div className="flexColCenter">
+                                    <a href="https://account.venmo.com/u/believeny" className="venmoButton">
+                                        <img src={venmoLogo}>
+                                        </img>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className='fpText padTop40'>We cannot explain in words how much we appreciate every single one of you. Thank you so much for taking the time to read this page and donate to our organization. 
