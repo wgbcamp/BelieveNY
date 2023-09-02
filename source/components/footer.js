@@ -45,7 +45,7 @@ const Footer = () => {
                             <b>Ways to Help</b>
                             <Link to="/donate" className="fixLinkColor" onClick={() => restoreTop()}>Donate to our events</Link>
                             <Link to="/eventSponsors" className="fixLinkColor" onClick={() => restoreTop()}>Become an event sponsor</Link>
-                            <Link to="/volunteer" className="fixLinkColor" onClick={() => restoreTop()}>Join Us</Link>
+                            <Link to="/joinus" className="fixLinkColor" onClick={() => restoreTop()}>Join Us</Link>
                             <div className="blank"></div>
                         </div>
                     </div>

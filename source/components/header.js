@@ -120,7 +120,7 @@ const Header = (props) => {
                         </div>
                     </div>
                     <div className={`category4`} onClick={() => restoreTop()}>
-                        <Link to="/volunteer" className="category4Inner">Join Us</Link>
+                        <Link to="/joinus" className="category4Inner">Join Us</Link>
                     </div>
                     <div className={`category5`} onClick={() => restoreTop()}>
                         <Link to="/donate" className="category5a" >
@@ -140,7 +140,7 @@ const Header = (props) => {
                         <div className={`${path === "/aboutUs" || path === "/diversityAndInclusion" || path === "/foundingSupporters" ? "slider" : ""}`}></div>
                         <div className={`${path === "/getHelp" || path === "/foodFirst" || path ===  "/theOpenSpace" || path === "/environmentalProjects" || path === "/scheduleBooking" ? "slider" : ""}`}></div>
                         <div className={`${path === "/upcomingEvents" || path === "/pastEvents" || path === "/eventSponsors" || path === "/specialEventsFund" ? "slider" : ""}`}></div>
-                        <div className={`${path === "/volunteer" ? "slider" : ""}`}></div>
+                        <div className={`${path === "/joinus" ? "slider" : ""}`}></div>
                         <div className={`${path === "/donate" ? "sliderFake" : ""}`}></div>
                     </div>
 
@@ -168,7 +168,7 @@ const Header = (props) => {
                 <div className="cat1" onClick={() => dropDown("about")}>About Us</div>
                 <div className="cat2" onClick={() => dropDown("services")}>Our Work</div>
                 <div className="cat3" onClick={() => dropDown("events")}>Events</div>
-                <Link to="/volunteer" className="cat4" onClick={() => {dropDown("main"); restoreTop();}}>Join Us</Link>
+                <Link to="/joinus" className="cat4" onClick={() => {dropDown("main"); restoreTop();}}>Join Us</Link>
                 <Link to="/donate" className="cat5" onClick={() => {dropDown("main"); restoreTop();}}>Donate</Link>
                 <div className='aArrow' onClick={() => dropDown("about")}><i className='fa-solid fa-chevron-right'></i></div>
                 <div className='bArrow' onClick={() => dropDown("services")}><i className='fa-solid fa-chevron-right'></i></div>

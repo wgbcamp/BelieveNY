@@ -55,11 +55,11 @@ const theOpenSpace = () => {
                                         </div>
                                     </div>
                                     <div className='boldOSTitle alignLeft color2 padTop20'>
-                                        Schedule a session with a counselor
+                                        Schedule a session with a client advocate
                                     </div>
                                     <div className="size18Font OSExplanation lineHeight25 textAlignRight padTop20 color2">
                                         <div>
-                                        Select an available time to schedule a session with one of our trained counselors. We are trained in active listening, empathy, and compassion and will provide support and resource referrals to help you through during this difficult time.
+                                        Select an available time to schedule a session with one of our trained client advocates. We are trained in active listening, empathy, and compassion and will provide support and resource referrals to help you through during this difficult time.
                                         <div className="padTop20"></div>
                                         Our active listeners will not question, criticize, interrupt, nor judge as you tell us about your situation. We are here to help get you through it.
                                         </div>

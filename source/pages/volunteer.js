@@ -4,19 +4,24 @@ import VolunteerAppWidget from '../components/volunteerAppWidget';
 const volunteer = () => {
     return(
         <div>
-        <div className='size36Font'>
-        </div>
+            <div className="simpleFlex">
+                <iframe className="pdfViewer maxWidth"
+                    src="https://drive.google.com/file/d/15UofE2JbZ8Z2xpUGbpD1QSbRaljYsvNt/preview"
+                    height="100%"
+                    width="100%"
+                ></iframe>
+            </div>
         <div className='simpleFlex padTop40'>
                 <div className='maxWidth width80Per'>
                 <div className="padTop20"></div>
                 <div className="simpleFlex">
-                    <div className="centerText width80Per weight500">We all have skills that contribute to Believe New York's helpful and efficient service for all New Yorkers!</div>
+                    <div className="centerText width80Per weight500 marginTop20">We all have skills that contribute to Believe New York's helpful and efficient service for all New Yorkers!</div>
                 </div>
                 <div className="simpleFlex">
                     <div className="centerText width80Per padTop20 weight500">Do you want to apply to any of these positions? Send your resume to <span className='bold'>believenewyork@gmail.com</span>! All welcome to apply.</div>
                 </div>   
                             <div className="volPosTitle weight700 size26Font">Professional Community Fundraiser & Advocate</div>
-                            <div className="volPosText padBottom20">Are you a passionate and outgoing individual who wants to make a tangible difference in the lives of others? Do you want to work directly for a nonprofit organization? Believe New York is seeking dedicated individuals like you to join our team as a Professional Community Fundraiser and Advocate. To apply, please email your resume and cover letter to our Director of Development, Sonny Curtin at <span className="bold">sonny@believeny.org</span>.
+                            <div className="volPosText padBottom20">Are you a passionate and outgoing individual who wants to make a tangible difference in the lives of others? Do you want to work directly for a nonprofit organization? Believe New York is seeking dedicated individuals like you to join our team as a Professional Community Fundraiser and Community Advocate. To apply, please email your resume and cover letter to our Director of Development, Sonny Curtin at <span className="bold">sonny@believeny.org</span>.
                             </div>
                             <div className="volPosText padBottom20">
                             In this role, you will have a unique opportunity to engage directly with the community, build meaningful connections, and raise vital funds to support our mission of improving the lives of New Yorkers facing adversity. By joining us, you will become an ambassador for positive change, inspiring individuals to contribute to our cause and create lasting impact. With comprehensive training, ongoing support, and a collaborative team environment, this position offers personal growth, professional development, and the satisfaction of knowing that your efforts directly contribute to transforming lives and expanding Believe New York's impact! 
@@ -61,7 +66,7 @@ const volunteer = () => {
                     <div className='volPosGrid '>
                         <div>
                             <i className="fa-regular fa-newspaper fa-2xl padTop40"></i>
-                            <div className="volPosTitle">COUNSELOR</div>
+                            <div className="volPosTitle">CLIENT ADVOCATE</div>
                             <li className="volPosBullet">First line of communication with client on Get Help e-mail, Support Line and/or chat.</li>
                             <li className="volPosBullet">Take Open Space Sessions with clients and provide active listening and a compassionate ear.</li>
                             <li className="volPosBullet">Listen, empathize and familiarize yourself with their unique situation.</li>
@@ -72,7 +77,7 @@ const volunteer = () => {
                         </div>
                         <div>
                             <i className="fa-regular fa-newspaper fa-2xl padTop80"></i>
-                            <div className="volPosTitle">ADVOCATE</div>
+                            <div className="volPosTitle">COMMUNITY ADVOCATE</div>
                             <li className="volPosBullet">Approach and promote our services through outreach and flyer distribution in the community.</li>
                             <li className="volPosBullet">Encourage our services to individuals and families who may need help. </li>
                             <li className="volPosBullet">Advocate for their future, their well being and their success.</li>

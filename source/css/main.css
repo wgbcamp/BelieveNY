@@ -192,7 +192,19 @@ body{
     margin-top: 40px;
 }
 
+.marginTop80{
+    margin-top: 80px;
+}
+
 .marginBottom20{
+    margin-bottom: 10px;
+}
+
+.marginBottom40{
+    margin-bottom: 10px;
+}
+
+.marginBottom80{
     margin-bottom: 10px;
 }
 
@@ -2423,7 +2435,7 @@ input[type="email"]::placeholder{
     }
 
     .pdfViewer{
-        height: 100vh;
+        height: calc(100vh);
     }
 
     .pdfWidth{
