@@ -23,7 +23,8 @@ import CancelSession from './pages/cancelSession';
 import BottomContact from './components/bottomContact';
 import FormHandler from './components/formHandler';
 import Faq from './pages/faq';
-import ImpactReport from './pages/impactReport'
+import ImpactReport from './pages/impactReport';
+import Jotform from './pages/jotform';
 
 function App(){
 
@@ -76,6 +77,7 @@ function App(){
                         <Route path="/joinus" element={<Volunteer/>}/>
                         <Route path="/donate" element={<Donate/>}/>
                         <Route path="/cancelSession/*" element={<CancelSession/>}/>
+                        <Route path="/jotform" element={<Jotform/>}/>
                         <Route path="*" element={<Home/>}/>
                     </Routes>                        
                 <Footer/>
