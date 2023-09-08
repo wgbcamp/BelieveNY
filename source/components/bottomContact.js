@@ -9,7 +9,7 @@ const bottomContact = (props) => {
         }, [])
 
     function simplifyUI(){
-        if(window.location.pathname === "/jotform"){
+        if(window.location.pathname === "/donateform"){
             document.getElementById("grid").style.visibility = "hidden";
         }
     }
