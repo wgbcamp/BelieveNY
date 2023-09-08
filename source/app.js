@@ -77,7 +77,7 @@ function App(){
                         <Route path="/joinus" element={<Volunteer/>}/>
                         <Route path="/donate" element={<Donate/>}/>
                         <Route path="/cancelSession/*" element={<CancelSession/>}/>
-                        <Route path="/jotform" element={<Jotform/>}/>
+                        <Route path="/donateForm" element={<Jotform/>}/>
                         <Route path="*" element={<Home/>}/>
                     </Routes>                        
                 <Footer/>
