@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom'
 import "../css/footer.css"
 import BNYLogoFull from "../../source/images/general/BNYLogoFull-02.png"

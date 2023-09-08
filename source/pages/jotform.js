@@ -90,11 +90,10 @@ function jotformScript (){
     }
 }
 
-
     return(
         <div>
-            <div className="simpleFlex">
-                <div className="maxWidth width80Per">
+            <div className="">
+                <div className="">
                     <iframe
                         id="JotFormIFrame-232474410222040"
                         title="Donation Form"
@@ -104,7 +103,7 @@ function jotformScript (){
                         allow="geolocation; microphone; camera"
                         src="https://form.jotform.com/232474410222040"
                         frameBorder="0"
-                        style={{minWidth: '100%', maxWidth: '100%', height: '539px', border: "none"}}
+                        style={{minWidth: '100%', maxWidth: '100%', height: '80vh', border: "none"}}
                         scrolling="no"
                         >
                     </iframe>

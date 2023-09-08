@@ -4,8 +4,14 @@ import "../css/header.css";
 
 const bottomContact = (props) => {
 
-    function openSMS(){
+    useEffect(() => {
+        simplifyUI();
+        }, [])
 
+    function simplifyUI(){
+        if(window.location.pathname === "/jotform"){
+            document.getElementById("grid").style.visibility = "hidden";
+        }
     }
 
 
@@ -24,7 +30,7 @@ const bottomContact = (props) => {
         //         </div>
         //     </div>
         // </div>
-        <div className="bottomIconGrid">
+        <div className="bottomIconGrid" id="grid">
             <a href="sms:+13476920011?&body=Send a text message to Believe New York" className="iconBubble">
                 <i className="fa-solid fa-message fa-2xl"></i>
             </a>
