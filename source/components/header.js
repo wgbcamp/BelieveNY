@@ -18,6 +18,19 @@ const Header = (props) => {
         });
     });
 
+    //removes the donate button when viewing the jotform iframe
+    useEffect(() => {
+        simplifyUI();
+        }, [])
+
+    function simplifyUI(){
+        if(window.location.pathname === "/donateform"){
+            document.getElementById("simplifyUI1").style.visibility = "hidden";
+            document.getElementById("simplifyUI2").style.visibility = "hidden";
+            document.getElementById("header").style.gridTemplateColumns = "50px 1fr 50px";
+        }
+    }
+
     //scroll to top on link click, additional function for updating path for slider
     function restoreTop(value){
         window.scrollTo(0,0);
@@ -88,7 +101,7 @@ const Header = (props) => {
         <div className="stickyContainer">
         <div className='headerContainer'> 
       
-            <div className={`header`}>
+            <div className={`header`} id="header">
                 {/* Spanned menu */}
                 <div className="spannedMenu">
  
@@ -122,8 +135,8 @@ const Header = (props) => {
                     <div className={`category4`} onClick={() => restoreTop()}>
                         <Link to="/joinus" className="category4Inner">Join Us</Link>
                     </div>
-                    <div className={`category5`} onClick={() => restoreTop()}>
-                        <Link to="/donate" className="category5a" >
+                    <div className={`category5`} onClick={() => restoreTop()} id="simplifyUI1">
+                        <Link to="/donate" className="category5a">
                             <div className="">DONATE NOW</div>
                         </Link>
                     </div>
@@ -154,8 +167,8 @@ const Header = (props) => {
                 <div className="simpleFlex verticalAlign logoColFix">
                     <Link to="/" className="logoMobile" onClick={() => { restoreTop("/");}}><img src={BNYLogoCircle} className="logoInner"/>Believe New York</Link>
                 </div>
-                <div className={`mobileDonate`} onClick={() => restoreTop()}>
-                        <Link to="/donate" className="category5a" >
+                <div className={`mobileDonate`} onClick={() => restoreTop()} id="simplifyUI2">
+                        <Link to="/donate" className="category5a">
                             <div className="">DONATE NOW</div>
                         </Link>
                     </div>
