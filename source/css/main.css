@@ -2497,6 +2497,119 @@ input[type="email"]::placeholder{
         visibility: hidden;
     }
 
+    .donationFormGrid{
+        padding-top: 50px;
+        display: grid;
+        grid-template-rows: 75px 130px;
+        row-gap: 20px;
+    }
+
+    .donationParametersGrid{
+        padding-top: 50px;
+        display: grid;
+        grid-template-rows: 75px 20px 50px 20px 50px;
+        row-gap: 20px;
+    }
+
+    .dFtitle{
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .dFbigTitle{
+        font-weight: 700;
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .dFbutton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        border-radius: 3px;
+        border: solid 1px #674ca1;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.212);
+        margin-bottom: 10px;
+    }
+
+    .dFbutton:hover{
+        background-color: #e9e9e9;
+    }
+
+    .dFbuttonGrid{
+        display: grid;
+        grid-template-columns: 100px 100px;
+        column-gap: 15px;
+    }
+
+    .dFbuttonGridNumbers{
+        display: grid;
+        grid-template-columns: 50px 50px 50px 50px 50px;
+        column-gap: 15px;
+    }
+
+    .dFbuttonPayMethodGrid{
+        display: grid;
+        grid-template-columns: 170px 170px;
+        column-gap: 15px;
+    }
+
+    .dFbuttonPayMethod{
+        display: grid;
+        grid-template-rows: 70% 30%;
+        font-weight: 700;
+        border-radius: 3px;
+        border: solid 1px #674ca1;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.212);
+        margin-bottom: 10px;
+        height: 140px;
+    }
+
+    .dFbuttonPayMethodDesc{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid #674ca1;
+    }
+
+    .logoResize2{
+        width: 100px;
+        align-self: center;
+    }
+
+    .logoResize3{
+        width: 50px;
+        align-self: center;
+    }
+
+    .logoResize4{
+        width: 70px;
+    }
+
+    .logoFit{
+        display: flex;
+        justify-content: center;
+    }
+
+    .ccGrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .ccFlex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ccAndStripeGrid{
+        display: grid;
+        grid-template-rows: 60% 40%;
+        row-gap: 5px;
+    }
+
 @media screen and (max-width: 500px){
     .smallText500{
         font-size: 35px;
