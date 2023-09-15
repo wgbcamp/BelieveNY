@@ -2539,13 +2539,13 @@ input[type="email"]::placeholder{
 
     .dFbuttonGrid{
         display: grid;
-        grid-template-columns: 100px 100px;
+        grid-template-columns: 110px;
         column-gap: 15px;
     }
 
     .dFbuttonGridNumbers{
         display: grid;
-        grid-template-columns: 50px 50px 50px 50px 50px;
+        grid-template-columns: 65px 65px 65px 65px;
         column-gap: 15px;
     }
 

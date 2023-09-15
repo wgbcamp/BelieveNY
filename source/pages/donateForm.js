@@ -12,21 +12,21 @@ const donateForm = () => {
   var [amount, updateAmnt] = useState(0);
 
     function activeButton(param){
-      var x = "one";
+      var x = "annual";
       var y = "monthly";
       if(param === "monthly"){
         x = "monthly";
-        y = "one";
+        y = "annual";
       }
       document.getElementById(x).style.backgroundColor = "#674ca1";
       document.getElementById(x).style.color = "white";
-      document.getElementById(y).style.backgroundColor = "white";
-      document.getElementById(y).style.color = "black";
+      // document.getElementById(y).style.backgroundColor = "white";
+      // document.getElementById(y).style.color = "black";
       updateFreq(param);
     }
 
     function activeNumber(param){
-      var values = ["5", "10", "20", "50", "100"];
+      var values = ["19", "30", "50", "100"];
       for(var i=0; i<values.length; i++){
         if(param === values[i]){
           document.getElementById(values[i]).style.backgroundColor = "#674ca1";
@@ -38,11 +38,6 @@ const donateForm = () => {
         }
         
       }
-    }
-
-
-    var stripeLinks = {
-      link5: "https://donate.stripe.com/8wM3fS9m26Oaau48ww"
     }
 
     //stripe + custom code
@@ -57,39 +52,36 @@ const donateForm = () => {
         //   xhr.setRequestHeader('Content-Type', 'application/json');
         //   xhr.send(data);
         // }
-      if(frequency === "one"){
-        if(amount === "5"){
-          location.href = "https://donate.stripe.com/8wM3fS9m26Oaau48ww";
-        }
-        if(amount === "10"){
-          location.href = "https://buy.stripe.com/cN28AcgOub4q6dO8wx";
-        }
-        if(amount === "20"){
-          location.href = "https://buy.stripe.com/bIYcQsdCiegCcCcfZ0";
-        }
-        if(amount === "50"){
-          location.href = "https://buy.stripe.com/14kaIk7dU6OadGg7sv";
-        }
-        if(amount === "100"){
-          location.href = "https://buy.stripe.com/fZe17K0Pw7Se45G8wA";
-        }
-      }
+      // if(frequency === "one"){
+      //   if(amount === "5"){
+      //     location.href = "https://donate.stripe.com/8wM3fS9m26Oaau48ww";
+      //   }
+      //   if(amount === "10"){
+      //     location.href = "https://buy.stripe.com/cN28AcgOub4q6dO8wx";
+      //   }
+      //   if(amount === "20"){
+      //     location.href = "https://buy.stripe.com/bIYcQsdCiegCcCcfZ0";
+      //   }
+      //   if(amount === "50"){
+      //     location.href = "https://buy.stripe.com/14kaIk7dU6OadGg7sv";
+      //   }
+      //   if(amount === "100"){
+      //     location.href = "https://buy.stripe.com/fZe17K0Pw7Se45G8wA";
+      //   }
+      // }
 
       if(frequency === "monthly"){
-        if(amount === "5"){
-          location.href = "https://buy.stripe.com/fZeaIk41Idcyau48wB";
+        if(amount === "19"){
+          location.href = "https://buy.stripe.com/eVa7w869Qdcyau44gt";
         }
-        if(amount === "10"){
-          location.href = "https://buy.stripe.com/5kA6s4gOub4qau49AG";
-        }
-        if(amount === "20"){
-          location.href = "https://buy.stripe.com/cN26s4dCifkGcCc7sz";
+        if(amount === "30"){
+          location.href = "https://buy.stripe.com/9AQ03GfKq6OafOo7sE";
         }
         if(amount === "50"){
-          location.href = "https://buy.stripe.com/7sIcQsdCigoKdGg4go";
+          location.href = "https://buy.stripe.com/7sI9Eg1TAb4qau47sD";
         }
         if(amount === "100"){
-          location.href = "https://buy.stripe.com/fZe5o07dUfkG59KeV3";
+          location.href = "https://buy.stripe.com/fZe6s4aq6a0meKk00a";
         }
       }
 
@@ -106,16 +98,15 @@ const donateForm = () => {
                   <div className="dFtitle">Frequency</div>
                   <div className="simpleFlex">
                     <div className="dFbuttonGrid">
-                      <div className="dFbutton" id="one" onClick={() => activeButton("one")}>One Time</div>
+                      {/* <div className="dFbutton" id="one" onClick={() => activeButton("one")}>One Time</div> */}
                       <div className="dFbutton" id="monthly" onClick={() => activeButton("monthly")}>Monthly</div>
                     </div>
                   </div>
                   <div className="dFtitle">Amount</div>
                   <div className="simpleFlex">
                     <div className="dFbuttonGridNumbers">
-                      <div className="dFbutton" id="5" onClick={() => activeNumber("5")}>$5</div>
-                      <div className="dFbutton" id="10" onClick={() => activeNumber("10")}>$10</div>
-                      <div className="dFbutton" id="20" onClick={() => activeNumber("20")}>$20</div>
+                      <div className="dFbutton" id="19" onClick={() => activeNumber("19")}>$19</div>
+                      <div className="dFbutton" id="30" onClick={() => activeNumber("30")}>$30</div>
                       <div className="dFbutton" id="50" onClick={() => activeNumber("50")}>$50</div>
                       <div className="dFbutton" id="100" onClick={() => activeNumber("100")}>$100</div>
                     </div>
