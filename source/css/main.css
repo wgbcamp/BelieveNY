@@ -2551,7 +2551,7 @@ input[type="email"]::placeholder{
 
     .dFbuttonPayMethodGrid{
         display: grid;
-        grid-template-columns: 170px 170px;
+        grid-template-columns: 170px;
         column-gap: 15px;
     }
 

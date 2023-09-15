@@ -94,7 +94,7 @@ const Header = (props) => {
     // })
 
     //track path of site for slider
-    // var [path, updatePath] = useState(props.location.pathname);
+    var [path, updatePath] = useState(props.location.pathname);
     var path = props.location.pathname;
 
     return(
