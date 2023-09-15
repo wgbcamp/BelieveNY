@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import StripeLogo from "../images/general/poweredByStripe.svg";
-import PaypalLogo from "../images/general/paypalLogo.jpg";
 import VisaLogo from "../images/general/visaLogo.png";
-import MastercardLogo from "../images/general/MastercardLogo.png";
+import MastercardLogo from "../images/general/mastercardLogo.png";
 import AMEXLogo from "../images/general/amexLogo.svg";
 import DiscoverLogo from "../images/general/discoverLogo.png";
 
