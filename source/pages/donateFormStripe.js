@@ -6,7 +6,7 @@ import AMEXLogo from "../images/general/amexLogo.svg";
 import DiscoverLogo from "../images/general/discoverLogo.png";
 
 
-const donateForm = () => {
+const donateFormStripe = () => {
 
   var [frequency, updateFreq] = useState(0);
   var [amount, updateAmnt] = useState(0);
@@ -152,4 +152,4 @@ const donateForm = () => {
     )
 }
 
-export default donateForm;
+export default donateFormStripe;

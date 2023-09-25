@@ -24,7 +24,9 @@ import BottomContact from './components/bottomContact';
 import FormHandler from './components/formHandler';
 import Faq from './pages/faq';
 import ImpactReport from './pages/impactReport';
-import DonateForm from './pages/donateForm';
+import DonateForm1 from './pages/donateFormZeffy';
+import DonateForm2 from './pages/donateFormStripe';
+
 
 function App(){
 
@@ -77,7 +79,8 @@ function App(){
                         <Route path="/joinus" element={<Volunteer/>}/>
                         <Route path="/donate" element={<Donate/>}/>
                         <Route path="/cancelSession/*" element={<CancelSession/>}/>
-                        <Route path="/donateForm" element={<DonateForm/>}/>
+                        <Route path="/donationform" element={<DonateForm1/>}/>
+                        <Route path="/donationform2" element={<DonateForm2/>}/>
                         <Route path="*" element={<Home/>}/>
                     </Routes>                        
                 <Footer/>
