@@ -24,7 +24,7 @@ const Header = (props) => {
         }, [])
 
     function simplifyUI(){
-        if(window.location.pathname === "/donateform"){
+        if(window.location.pathname === "/donationform2"){
             document.getElementById("simplifyUI1").style.visibility = "hidden";
             document.getElementById("simplifyUI2").style.visibility = "hidden";
             document.getElementById("header").style.gridTemplateColumns = "50px 1fr 50px";
