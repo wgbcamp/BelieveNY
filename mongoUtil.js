@@ -1,6 +1,6 @@
+require('dotenv').config();
 const e = require("express");
 const { MongoClient } = require("mongodb");
-// const client = new MongoClient('mongodb://localhost:27017');
 const client = new MongoClient(process.env.MONGODB_URI);
 const database = client.db('believenyLocal');
 const schedule = database.collection('schedule');
