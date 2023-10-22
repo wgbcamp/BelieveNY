@@ -26,6 +26,8 @@ import Faq from './pages/faq';
 import ImpactReport from './pages/impactReport';
 import DonateForm1 from './pages/donateFormZeffy';
 import DonateForm2 from './pages/donateFormStripe';
+import DonationFormQR from './pages/donationFormQR';
+
 
 
 function App(){
@@ -81,6 +83,7 @@ function App(){
                         <Route path="/cancelSession/*" element={<CancelSession/>}/>
                         <Route path="/donationform" element={<DonateForm1/>}/>
                         <Route path="/donationform2" element={<DonateForm2/>}/>
+                        <Route path="/donationformQR" element={<DonationFormQR/>}/>
                         <Route path="*" element={<Home/>}/>
                     </Routes>                        
                 <Footer/>

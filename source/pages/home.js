@@ -78,7 +78,7 @@ const Home = () => {
                                     <div className="gridTitle">
                                         <div>The Open Space</div>
                                     </div>
-                                    <div className="catText"> A safe place to speak anonymously.
+                                    <div className="catText"> A safe place to vent anonymously about any stress or mental health concerns you have.
                                     </div>
                                     </div>
                                 </Link>
@@ -98,7 +98,7 @@ const Home = () => {
                                 <div className="gridTitle">
                                         <div>Food First</div>
                                 </div>
-                                    <div className="catText">Donate your essential items on your own schedule.</div>
+                                    <div className="catText">Donate and receive essential items and groceries.</div>
                                 </div>
                             </Link>
                             <Link to="upcomingEvents" className='catBox styleLink' onClick={() => restoreTop()}>
@@ -107,7 +107,7 @@ const Home = () => {
                                 <div className="gridTitle">
                                         <div>Get Involved</div>
                                 </div>
-                                    <div className="catText">Join community clean-up events and build sustainable solutions.</div>
+                                    <div className="catText">Join our efforts to end the cycle of poverty and violence in NYC.</div>
                                 </div>
                             </Link>  
                     </div>

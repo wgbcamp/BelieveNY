@@ -5,11 +5,14 @@ const volunteer = () => {
     return(
         <div>
             <div className="simpleFlex">
-                <iframe className="pdfViewer maxWidth"
+                {/* 
+                iframe for pdf documents
+                    */}
+                {/* <iframe className="pdfViewer maxWidth"
                     src="https://drive.google.com/file/d/15UofE2JbZ8Z2xpUGbpD1QSbRaljYsvNt/preview"
                     height="100%"
                     width="100%"
-                ></iframe>
+                ></iframe> */}
             </div>
         <div className='simpleFlex padTop40'>
                 <div className='maxWidth width80Per'>
