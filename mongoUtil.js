@@ -50,9 +50,33 @@ module.exports = {
 
     postBooking: async function (data, cb){
         var validate;
+        
+        //validate that submitted request fits within 24 hours limit
+        const clientDate = data.date.concat(" ", data.time);
+        const trimmedClientDate = clientDate.slice(clientDate.indexOf(",")+2, clientDate.indexOf(":")-2).trim();
+        const monthArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        const monthName = trimmedClientDate.slice(0, trimmedClientDate.indexOf(" "));
+        const month = monthArray.indexOf(monthName)+1;
+        const day = trimmedClientDate.slice(trimmedClientDate.indexOf(" "), trimmedClientDate.indexOf(",")).trim();
+        const year = trimmedClientDate.slice(-4);
+        const trueClientDate = month + "/" + day + "/" + year;
+        const trueClientHour = clientDate.slice(clientDate.indexOf(":")-2, clientDate.indexOf(":")).trim();
+        const trueClientMeridiem = clientDate.slice(-2);
+        // var trueClient24Hour;
+        // if (trueClientMeridiem === "PM"){
+        //     trueClient24Hour = parseInt(trueClientHour)+12;
+        // }
+
+        var d = new Date();
+        //invalidate if server day is the same day as request day
+        if(d.toLocaleString().slice(0, d.toLocaleString().indexOf(",")) === trueClientDate){
+            validate = false;
+          }
+
+        //find duplicate entries
         const findDuplicate = await schedule.findOne({date: data.date.concat(" ", data.time)});
 
-        if (findDuplicate === null){
+        if (findDuplicate === null && validate !== false){
             var uniqueID = Math.random().toString(36).substring(2).concat(Math.random().toString(36).substring(2));
             const post = await schedule.insertOne({_id: uniqueID, date: data.date.concat(" ", data.time), name: data.name});
             console.log(`Logged booking for ${data.date.concat(" ", data.time)}`);

@@ -54,7 +54,7 @@ app.post("/booking", function (req, res){
             mailer.sendMail(data);
             res.send("booking successful");
         }else{
-            res.send("We're sorry but your booking could not be completed. Please contact us by phone or email for further assistance.")
+            res.send("We're sorry but your booking could not be completed at this time. Please try again or contact us by phone or email to schedule your appointment.")
         }
 
     }
