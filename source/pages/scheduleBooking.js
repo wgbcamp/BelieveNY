@@ -269,7 +269,7 @@ const scheduleBooking = (props) => {
     }
 
     //invalidates specified holidays
-    var holidays = ["Nov24", "Nov25", "Dec24", "Dec25", "Dec31", "Jan01"];
+    var holidays = ["Nov23", "Nov24", "Dec24", "Dec25", "Dec31", "Jan01"];
 
     //removes days that are invalid
     console.log("Invalid days:");
