@@ -27,6 +27,8 @@ import ImpactReport from './pages/impactReport';
 import DonateForm1 from './pages/donateFormZeffy';
 import DonateForm2 from './pages/donateFormStripe';
 import DonationFormQR from './pages/donationFormQR';
+import Survey from './pages/survey.js';
+
 
 
 
@@ -84,6 +86,7 @@ function App(){
                         <Route path="/donationform" element={<DonateForm1/>}/>
                         <Route path="/donationform2" element={<DonateForm2/>}/>
                         <Route path="/donationformQR" element={<DonationFormQR/>}/>
+                        <Route path="/survey" element={<Survey/>}/>
                         <Route path="*" element={<Home/>}/>
                     </Routes>                        
                 <Footer/>
