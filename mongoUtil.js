@@ -2,10 +2,8 @@ require('dotenv').config();
 const e = require("express");
 const { MongoClient } = require("mongodb");
 const client = new MongoClient(process.env.MONGODB_URI);
-const database = client.db('believenyLocal');
+const database = client.db(process.env.MONGODB_DATABASE);
 const schedule = database.collection('schedule');
-const bookings = database.collection('bookings');
-
 
 module.exports = {
 

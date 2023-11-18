@@ -65,7 +65,7 @@ const scheduleBooking = (props) => {
 
     function getBookings(){
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "/getBookings", true);
+        xhr.open("POST", "http://localhost:3000/getBookings", true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify({
             date: "Thu 2022 Sep22", 
@@ -285,7 +285,7 @@ const scheduleBooking = (props) => {
     //maps the values to the calendar tiles
     newCalValue(thisMonth.map((value) => (
 
-        <div className={`calTile ${thisMonth.indexOf(value)} ${value.slice(0,3)} ${value.slice(11,15)} ${value.length > 5 && !holidays.includes(value.slice(4,10).split(" ").join("")) ? value.slice(4,7).concat(value.slice(8,10)): "invalid"}`} onClick={() => { toggleSelection(thisMonth.indexOf(value), value.slice(0,15)); updateTC(""); updateST(true); toggleTSselection();}} key={value.toString()}>{value.length > 5 ? value.slice(8,10) : value.slice(3,5)}</div>
+        <div className={`calTile ${thisMonth.indexOf(value)} ${value.slice(0,3)} ${value.slice(11,15)} ${value.length > 5 && !holidays.includes(value.slice(4,10).split(" ").join("")) ? value.slice(4,7).concat(value.slice(8,10)): "invalid"}`} onClick={() => { toggleSelection(thisMonth.indexOf(value), value.slice(0,15)); updateTC(""); updateST(true); toggleTSselection("blank");}} key={value.toString()}>{value.length > 5 ? value.slice(8,10) : value.slice(3,5)}</div>
     )));  
 }
 
@@ -415,12 +415,14 @@ const scheduleBooking = (props) => {
         containsmStyle.forEach(element => {
             element.classList.replace("mStyleSelected", "mStyle");
         })
-        if (e.target.className === "mStyle"){
-            updateTC(e.target.id);
-            e.target.className="mStyleSelected";
-            continueRef.current.scrollIntoView({ behavior: 'smooth' })
-        }else{
-            updateTC("");
+        if(e !== "blank"){
+            if (e.target.className === "mStyle"){
+                updateTC(e.target.id);
+                e.target.className="mStyleSelected";
+                continueRef.current.scrollIntoView({ behavior: 'smooth' })
+            }else{
+                updateTC("");
+            }
         }
     }
 

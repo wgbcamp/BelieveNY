@@ -4,7 +4,7 @@ const FormHandler = (props) => {
 
     function submit(){
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", `/${props.payload.path}`, true);
+        xhr.open("POST", `http://localhost:3000/${props.payload.path}`, true);
         xhr.setRequestHeader('Content-Type', 'application/json');
 
         if(props.payload.type === "contactForm"){
@@ -40,6 +40,11 @@ const FormHandler = (props) => {
             }));
         }
 
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === XMLHttpRequest.DONE){
+                console.log(xhr.status)
+            }
+        }
         alert("Your request has been submitted, thank you.");
         window.location.reload();
     }
