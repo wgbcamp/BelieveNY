@@ -2610,7 +2610,122 @@ input[type="email"]::placeholder{
         row-gap: 5px;
     }
 
+    .giveGrid{
+        display: grid;
+        grid-template-rows: 40px 70px 70px 30px 70px 40px 30px;
+        background-color: #191a2b;
+        color: white;
+        padding: 25px;
+        border-radius: 11px;
+    }
+
+    .giveBig{
+        font-size: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    .giveNote{
+        padding-top: 50px;
+    }
+
+    .giveBig:hover .moveArrow{
+        animation-name: moveArrow;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes moveArrow {
+        0% {
+            padding-left: 0px;
+        }
+        100% {
+            padding-left: 30px;
+        }
+    }
+
+    .enlargeGiveBig:hover{
+        animation-name: enlargeGiveBig;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes enlargeGiveBig {
+        0% {
+            font-size: 50px;
+        }
+        100% {
+            font-size: 53px;
+        }
+    }
+
+    .giveOnceButton{
+        
+    }
+
+    .dChoicesGrid{
+        border-radius: 5px;
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        height: 300px;
+        width: 300px;
+        z-index: 50;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 50px 50px;
+        row-gap: 50px;
+        padding: 10px;
+        padding-top: 25px;
+        padding-bottom: 0px;
+    }
+
+    .dChoicesWidth{
+        width: 240px;
+    }
+
+    .venmoButton{
+        background-color: #009CDE;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 28px;
+    }
+
+    .cashappButton{
+        background-color: black;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 28px;
+    }
+
 @media screen and (max-width: 500px){
+
+    .giveGrid{
+        display: grid;
+        grid-template-rows: 10px 100px 70px 30px 150px 40px 50px;
+        background-color: #191a2b;
+        color: white;
+        padding: 25px;
+        border-radius: 11px;
+    }
+
+    .giveBig{
+        font-size: 38px;
+        font-weight: 600;
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+    }
+
     .smallText500{
         font-size: 35px;
     }
@@ -2647,6 +2762,24 @@ input[type="email"]::placeholder{
 }
 
 @media screen and (min-width: 500px) and (max-width: 700px) {
+
+    .giveGrid{
+        display: grid;
+        grid-template-rows: 40px 90px 70px 30px 90px 40px 30px;
+        background-color: #191a2b;
+        color: white;
+        padding: 25px;
+        border-radius: 11px;
+    }
+
+    .giveBig{
+        font-size: 38px;
+        font-weight: 600;
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+    }
+
     .openSpaceBanner{
     background-color: black;
     height: 330px;

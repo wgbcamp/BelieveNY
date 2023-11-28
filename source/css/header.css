@@ -293,16 +293,6 @@
     top: 0px;
 }
 
-.venmoButton{
-    background-color: #009CDE;
-    width: 610px;
-    height: 55px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 28px;
-}
-
 /*above 1000*/
 @media only screen and (min-width: 1000px) {
 

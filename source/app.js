@@ -28,6 +28,7 @@ import DonateForm1 from './pages/donateFormZeffy';
 import DonateForm2 from './pages/donateFormStripe';
 import DonationFormQR from './pages/donationFormQR';
 import Survey from './pages/survey.js';
+import DonateChoices from './components/donateChoices.js';
 
 
 
@@ -41,6 +42,7 @@ function App(){
 
     //overlay for capturing form payload
     var [dim, updateDim] = useState(false);
+    var [dim2, updateDim2] = useState(false);
     var [payload, updatePL] = useState({});
     
     //dimming value is passed down to child components, payload information is fed upwards into formHandler
@@ -49,6 +51,11 @@ function App(){
         updatePL(data);
         console.log(data);
         updateDim(true);
+    }
+
+    function showDonateChoices(){
+        document.body.style.position = "fixed";
+        updateDim2(true);
     }
 
     //tracking path changes
@@ -62,7 +69,8 @@ function App(){
 
         <div>
             <FormHandler payload={{name: payload.name, email: payload.email, phone: payload.phone, path: payload.path, type: payload.type, specific0: payload.specific0, specific1: payload.specific1, specific2: payload.specific2}} dim={dim} updateDim={updateDim}/>
-            <div className={`${dim === true ? "dim" : ""}`}>
+            <DonateChoices dim2={dim2}/>
+            <div className={`${dim === true || dim2 === true ? "dim" : ""}`}>
                 <Header location={location}/>
                     <Routes>
                         <Route path="/" element={<Home/>}/>
@@ -81,7 +89,7 @@ function App(){
                         <Route path="/eventSponsors" element={<EventSponsors updateDim={updateDim} updatePayload={updatePayload}/>}/>
                         <Route path="/SpecialEventsFund" element={<SpecialEventsFund/>}/>
                         <Route path="/joinus" element={<Volunteer/>}/>
-                        <Route path="/donate" element={<Donate/>}/>
+                        <Route path="/donate" element={<Donate showDonateChoices={showDonateChoices}/>}/>
                         <Route path="/cancelSession/*" element={<CancelSession/>}/>
                         <Route path="/donationform" element={<DonateForm1/>}/>
                         <Route path="/donationform2" element={<DonateForm2/>}/>
