@@ -13,6 +13,10 @@ const donate = (props) => {
                     <div className="simpleFlex">
                         <img src={BNYLogoFull} className="downsizeLogo"></img>
                     </div>
+                    <div className="supportGrid padTop20">
+                        <div className="donateFont centerText">Your support goes a long way </div>
+                        <div className="supportFont centerText">Donate today to support New Yorkers in Need</div>
+                    </div>
                     <div className="giveGrid">
                         <div></div>
                         <div className='giveBig enlargeGiveBig' onClick={() => props.showDonateChoices()}>Give Once <i class="fa-solid fa-arrow-right moveArrow"></i></div>  

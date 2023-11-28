@@ -3027,6 +3027,7 @@ input[type="email"]::placeholder{
 
     .donateFont, .supportFont{
         text-align: center;
+        font-size: 22px;
     }
 
     .flexImageLeft{
