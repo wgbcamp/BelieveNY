@@ -5,14 +5,17 @@ import cashapp from "../images/general/cashapp.png"
 
 const donateChoices = (props) => {
 
-    function revertFixation(){
-        document.body.style.position = "static";
-        props.updateDim(false);
+    const revertFixation = e => {
+        const isID = e.target.id === 'clickOut';
+        if(isID){
+            document.body.style.position = "static";
+            props.updateDim2(false); 
+        }
     }
 
     return(
-        <div>
-            <div className={`${props.dim2 === true ? "dChoicesGrid" : "hideCB"}`}>
+            <div id="clickOut" className={`${props.dim2 === true ? "fullSize" : "hideCB"}`} onClick={(e) => revertFixation(e)}>
+                <div className={`${props.dim2 === true ? "dChoicesGrid" : "hideCB"}`}>
                     <div className='simpleFlex'>
                         <div className="dChoicesWidth fixed paypalHeight">
                             <a href="https://www.paypal.com/donate/?hosted_button_id=GJ7HV5PUBAMQS" className="fixed2">
@@ -34,8 +37,8 @@ const donateChoices = (props) => {
                             </a>
                         </div>
                     </div>
+                </div>
             </div>
-        </div>
     )
 }
 

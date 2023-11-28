@@ -6,12 +6,12 @@ import venmoLogo from "../images/general/venmo.svg";
 
 const donate = (props) => {
     return(
-        <div className="simpleFlex padTop80">
-            <div className='maxWidth width80Per simpleFlex'>
+        <div className="simpleFlex padTop40">
+            <div className='maxWidth donateBox  simpleFlex'>
                 <div className="financialPlan">
                 <div className="padLeft30 padRight30">
                     <div className="simpleFlex">
-                        <img src={BNYLogoFull} className="downsizeLogo"></img>
+                        <img src={BNYLogoFull} className="downsizeLogo padTop20"></img>
                     </div>
                     <div className="supportGrid padTop20">
                         <div className="donateFont centerText">Your support goes a long way </div>
@@ -19,10 +19,10 @@ const donate = (props) => {
                     </div>
                     <div className="giveGrid">
                         <div></div>
-                        <div className='giveBig enlargeGiveBig' onClick={() => props.showDonateChoices()}>Give Once <i class="fa-solid fa-arrow-right moveArrow"></i></div>  
+                        <div className='giveBig' onClick={() => props.showDonateChoices()}>Give Once <i class="fa-solid fa-arrow-right moveArrow"></i></div>  
                         <div>End the cycle of poverty, violence, and injustice, in NYC with Believe New York!</div>
                         <div></div>
-                        <a href="/donationform" className='giveBig enlargeGiveBig'>Give Ongoing <i class="fa-solid fa-arrow-right moveArrow"></i></a>
+                        <a href="/donationform" className='giveBig'>Give Ongoing <i class="fa-solid fa-arrow-right moveArrow"></i></a>
                         <div>Your going support will ensure our small organization can grow and save more lives. Give ongoing today!</div>
 
                     </div>
