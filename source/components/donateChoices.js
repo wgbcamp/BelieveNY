@@ -8,7 +8,7 @@ const donateChoices = (props) => {
     const revertFixation = e => {
         const isID = e.target.id === 'clickOut';
         if(isID){
-            document.body.style.position = "static";
+            document.body.style.overflow = "auto"
             props.updateDim2(false); 
         }
     }

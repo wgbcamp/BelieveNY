@@ -54,7 +54,7 @@ function App(){
     }
 
     function showDonateChoices(){
-        document.body.style.position = "fixed";
+        document.body.style.overflow = "hidden"
         updateDim2(true);
     }
 

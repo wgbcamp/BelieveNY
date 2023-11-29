@@ -9,7 +9,7 @@ const cancelSession = () => {
 
     function getBookings(){
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost:3000/findOneBooking", true);
+        xhr.open("POST", "http://localhost:8080/findOneBooking", true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         var start = window.location.pathname.lastIndexOf("/") + 1;
         xhr.send(JSON.stringify({

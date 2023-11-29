@@ -6,7 +6,7 @@ var mongoUtil = require('./mongoUtil');
 mongoUtil.connectServer();
 
 var buildDirectory = path.join(__dirname, "build");
-var PORT = 3000;
+var PORT = 8080;
 var app = express();
 
 app.use(cors());
