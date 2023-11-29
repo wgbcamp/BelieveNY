@@ -26,7 +26,7 @@ const cancelSession = () => {
 
     function deleteBooking(){
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "/deleteOneBooking", true);
+        xhr.open("POST", "http://localhost:8080/deleteOneBooking", true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         var start = window.location.pathname.lastIndexOf("/") + 1;
         xhr.send(JSON.stringify({
@@ -35,7 +35,7 @@ const cancelSession = () => {
         xhr.onreadystatechange = () => {
             if (xhr.readyState === XMLHttpRequest.DONE){
                 alert(xhr.responseText);
-                location.reload();
+                location.href = "/";
             }
         }
     }
