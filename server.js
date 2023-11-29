@@ -56,7 +56,7 @@ app.post("/booking", function (req, res){
         console.log(JSON.stringify(data));
         if (validate === true){
             mailer.sendMail(data);
-            res.send("booking successful");
+            res.send("Your request has been submitted, thank you.");
         }else{
             res.send("We're sorry but your booking could not be completed at this time. Please try again or contact us by phone or email to schedule your appointment.")
         }

@@ -42,11 +42,17 @@ const FormHandler = (props) => {
 
         xhr.onreadystatechange = () => {
             if (xhr.readyState === XMLHttpRequest.DONE){
-                console.log(xhr.status)
+                console.log(xhr.status);
+                if(props.payload.type === "eventSponsor" || props.payload.type === "contactForm"){
+                    alert("Your request has been submitted, thank you.");
+                    }else{
+                        alert(xhr.responseText);
+                    }
+                    window.location.reload();
             }
         }
-        alert("Your request has been submitted, thank you.");
-        window.location.reload();
+
+
     }
 
     function revertFixation(){
