@@ -15,6 +15,13 @@ app.options('*', cors());
 app.use(express.static(buildDirectory));
 app.use(express.json());
 
+app.get("/getDates", function (req, res){
+    mongoUtil.getDates(req, response);
+    function response(result){
+        res.json(result);
+    }
+})
+
 app.get("*", function (req, res){
     res.sendFile(path.join(buildDirectory, "index.html"));
 });
@@ -50,7 +57,6 @@ app.post("/deleteOneBooking", function (req, res){
 })
 
 app.post("/booking", function (req, res){
-
     mongoUtil.postBooking(req.body, response);
     function response(validate, data){
         console.log(JSON.stringify(data));
@@ -60,9 +66,15 @@ app.post("/booking", function (req, res){
         }else{
             res.send("We're sorry but your booking could not be completed at this time. Please try again or contact us by phone or email to schedule your appointment.")
         }
-
     }
+})
 
+app.post("/postDates", function (req, res){
+    mongoUtil.postDates(req.body, response);
+    function response(data){
+        console.log(JSON.stringify(data));
+        res.send("done");
+    }
 })
 
 app.post('/', function (req, res){

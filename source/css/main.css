@@ -1603,13 +1603,27 @@ input[type="email"]::placeholder{
 
 .bookingInfoGrid{
     display: grid;
-    grid-template-rows: 10px 40px 10px 20px 40px 20px 40px 20px 40px 20px 200px 200px;
+    grid-template-rows: 10px 40px 10px 20px 40px 20px 40px 20px 40px 20px 200px 100px;
     grid-template-columns: minmax(300px, 700px);
     row-gap: 25px;
 }
 
 .bCol1{
     grid-column: 1;
+}
+
+.bookingDropdownGrid{
+    display: grid;
+    row-gap: 16px;
+}
+
+.bookingDropdownWidth{
+    width: 195px;
+    height: 22px;
+}
+
+.padLabelText{
+    padding-bottom: 5px;
 }
 
 .borderBlack{
@@ -1632,7 +1646,7 @@ input[type="email"]::placeholder{
 
 .confirmationBox{
     grid-column: 1;
-    grid-row: 12;
+    grid-row: 18;
 }
 
 .appCol1{
@@ -2062,7 +2076,8 @@ input[type="email"]::placeholder{
     z-index: 20;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     display: grid;
-    grid-template-rows: repeat(7, 1fr) 140px;
+    grid-template-rows: repeat(10, 1fr) 140px;
+    grid-auto-rows: min-content;
     row-gap: 10px;
     overflow: auto;
 }
@@ -2720,6 +2735,63 @@ input[type="email"]::placeholder{
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+
+    .updateTimeGrid{
+        padding-top: 50px;
+        display: grid;
+        grid-template-rows: 50px 50px;
+        font-size: 12px;
+    }
+
+    .updateTimeTitle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px black;
+        font-size: 24px;
+        font-weight: 800;
+    }
+
+    .updateTimeWeekCol{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: 50px;
+        border-left: solid 1px black;
+        border-bottom: solid 1px black;
+        font-size: 18px;
+        font-weight: 900;
+    }
+
+    .updateTimeDayCol{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        border-left: solid 1px black;
+        border-bottom: solid 1px black;
+    }
+
+    .updateTimeDays{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: solid 1px black;
+    }
+
+    .updateTimeHours{
+        display: grid;
+        grid-auto-rows: min-content;
+        row-gap: 20px;
+        font-size: 16px;
+        font-weight: 600;
+        border-right: solid 1px black;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+
+    .updateTimeHoursMiniGrid{
+        display: grid;
+        grid-template-columns: 15% 70% 15%;
+        text-align: center;
     }
 
 @media screen and (max-width: 500px){
@@ -3551,7 +3623,7 @@ input[type="email"]::placeholder{
 
     .bookingInfoGrid{
         display: grid;
-        grid-template-rows: 10px 40px 10px 20px 40px 20px 40px 20px 40px 20px 100px 1fr;
+        grid-template-rows: 10px 40px 10px 20px 40px 20px 40px 20px 40px 20px 100px 1fr 1fr 0px 1fr;
         grid-template-columns: minmax(300px, 1200px) 100px 1fr;
         row-gap: 25px;
     }    

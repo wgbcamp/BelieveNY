@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 const FormHandler = (props) => {
-
+    
     function submit(){
         var xhr = new XMLHttpRequest();
         xhr.open("POST", `http://localhost:8080/${props.payload.path}`, true);
@@ -26,7 +26,10 @@ const FormHandler = (props) => {
                 phone: props.payload.phone,
                 text: props.payload.specific0,
                 date: props.payload.specific1,
-                time: props.payload.specific2
+                time: props.payload.specific2,
+                clientStatus: props.payload.specific3,
+                ongoingSupport: props.payload.specific4,
+                howYouHeard: props.payload.specific5,
             }));
         }
         if(props.payload.type === "eventSponsor"){
@@ -69,6 +72,9 @@ const FormHandler = (props) => {
         <div><b>{props.payload.path === "" ? props.payload.type === "eventSponsor" ? "Description" : "Subject" : "Description"}:</b> {props.payload.specific0}</div>
         <div><b>{props.payload.path === "" ? props.payload.type === "eventSponsor" ? "Name of Business" : "Description" : "Date"}:</b> {props.payload.specific1}</div>
         <div><b>{props.payload.path === "" ? props.payload.type === "eventSponsor" ? "" : "Best callback time:" : "Time:"}</b> {props.payload.specific2}</div>
+        <div className={`${props.payload.type === "booking" ? "" : "hideCB"}`}><b>{props.payload.type === "booking" ? "New or current client?" : ""}</b> {props.payload.specific3}</div>
+        <div className={`${props.payload.type === "booking" ? "" : "hideCB"}`}><b>{props.payload.type === "booking" ? "Interested in ongoing support?" : ""}</b> {props.payload.specific4}</div>
+        <div className={`${props.payload.type === "booking" ? "" : "hideCB"}`}><b>{props.payload.type === "booking" ? "How did you hear about Believe NY?" : ""}</b> {props.payload.specific5}</div>
         <div className="aysButtonGrid">
             <div className='simpleFlex'>
                 <div className="submitButton size24Font" onClick={() => submit()}>Confirm</div>

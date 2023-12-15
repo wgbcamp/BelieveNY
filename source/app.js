@@ -29,6 +29,7 @@ import DonateForm2 from './pages/donateFormStripe';
 import DonationFormQR from './pages/donationFormQR';
 import Survey from './pages/survey.js';
 import DonateChoices from './components/donateChoices.js';
+import UpdateContent from './pages/updateContent.js';
 
 
 
@@ -68,7 +69,7 @@ function App(){
     return(
 
         <div>
-            <FormHandler payload={{name: payload.name, email: payload.email, phone: payload.phone, path: payload.path, type: payload.type, specific0: payload.specific0, specific1: payload.specific1, specific2: payload.specific2}} dim={dim} updateDim={updateDim}/>
+            <FormHandler payload={{name: payload.name, email: payload.email, phone: payload.phone, path: payload.path, type: payload.type, specific0: payload.specific0, specific1: payload.specific1, specific2: payload.specific2, specific3: payload.specific3, specific4: payload.specific4, specific5: payload.specific5,}} dim={dim} updateDim={updateDim}/>
             <DonateChoices dim2={dim2} updateDim2={updateDim2}/>
             <div className={`${dim === true || dim2 === true ? "dim" : ""}`}>
                 <Header location={location}/>
@@ -95,6 +96,7 @@ function App(){
                         <Route path="/donationform2" element={<DonateForm2/>}/>
                         <Route path="/donationformQR" element={<DonationFormQR/>}/>
                         <Route path="/survey" element={<Survey/>}/>
+                        <Route path="/updateContent" element={<UpdateContent/>}/>
                         <Route path="*" element={<Home/>}/>
                     </Routes>                        
                 <Footer/>

@@ -118,6 +118,9 @@ const scheduleBooking = (props) => {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [message, setMessage] = useState('');
+    const [clientStatus, setCS] = useState('');
+    const [ongoingSupport, setOS] = useState('');
+    const [howYouHeard, setHYH] = useState('');
     //superdate and time chosen as well
 
     const updateName = event => {
@@ -132,18 +135,27 @@ const scheduleBooking = (props) => {
     const updateMessage = event => {
         setMessage(event.target.value);
     }
+    const updateCS = event => {
+        setCS(event.target.value);
+    }
+    const updateOS = event => {
+        setOS(event.target.value);
+    }
+    const updateHYH = event => {
+        setHYH(event.target.value);
+    }
 
     function submitBooking(){
-        if (name !== "" && email !== "" && email.includes("@") && email.includes(".") && phone !== "" && phone.split(/[-\s]/).join("").length === 10 && message !== "" && superDate !== "" && timeChosen !== ""){
+        if (name !== "" && email !== "" && email.includes("@") && email.includes(".") && phone !== "" && phone.split(/[-\s]/).join("").length === 10 && message !== "" && clientStatus !== "" && ongoingSupport !== "" && howYouHeard !== "" && superDate !== "" && timeChosen !== ""){
             props.updateDim(true);
-            props.updatePayload({name: name, email: email, phone: phone, path: "booking", type: "booking", specific0: message, specific1: superDate, specific2: timeChosen});
+            props.updatePayload({name: name, email: email, phone: phone, path: "booking", type: "booking", specific0: message, specific1: superDate, specific2: timeChosen, specific3: clientStatus, specific4: ongoingSupport, specific5: howYouHeard});
         }else{
             if (phone.split(/[-\s]/).join("").length !== 10){
                 alert("Please make sure your phone number consists of 10 digits.");
             }else if (!(email.includes("@") && email.includes("."))){
                 alert("Please make sure to include a valid email address.");
             }else{
-                alert("Please fill out every field below before booking your appointment.");
+                alert("Please fill out every field below before scheduling your session.");
             }
         }
 
@@ -539,6 +551,28 @@ const scheduleBooking = (props) => {
                         <input className='bCol1' onChange={updatePhone} value={phone}></input>
                         <div className='bCol1'>Tell us what's going on...</div>
                         <textarea className='bCol1 borderTopSolid' onChange={updateMessage} value={message}></textarea>
+                        <div className="bCol1">
+                            <div className="bookingDropdownGrid">
+                                <label for="client-status" className=''>Are you a new or current client?</label>
+                                <select name="clientStatus" id="client-status" className='bookingDropdownWidth' onChange={updateCS}>
+                                    <option value="">--Please choose an option--</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div className="bCol1">
+                            <div className="bookingDropdownGrid">
+                                <label for="ongoing-status" className=''>Are you interested in receiving ongoing support from our Client Advocates?</label>
+                                <select name="ongoingStatus" id="ongoing-status" className='bookingDropdownWidth' onChange={updateOS}>
+                                    <option value="">--Please choose an option--</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div className='bCol1'>How did you hear about Believe NY?</div>
+                        <textarea className='bCol1 borderTopSolid' onChange={updateHYH} value={howYouHeard}></textarea>
                         <div className="simpleFlex confirmationBox">
                         <div className="infoBoxGrid" id="ibg">
                                 <div></div>

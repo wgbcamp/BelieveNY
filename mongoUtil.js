@@ -4,6 +4,7 @@ const { MongoClient } = require("mongodb");
 const client = new MongoClient(process.env.MONGODB_URI);
 const database = client.db(process.env.MONGODB_DATABASE);
 const schedule = database.collection('schedule');
+const availableDates = database.collection('availableDates');
 
 module.exports = {
 
@@ -85,5 +86,21 @@ module.exports = {
         }
         
         cb(validate, data);
+    },
+
+    getDates: async function (data, cb){
+        const result = await availableDates.findOne({ schedule: {$exists: true}});
+        console.log(`Schedule document matched the filter`);
+        cb(result);
+    },
+
+    postDates: async function (data, cb){
+        console.log(data);
+        const filter = { schedule: {$exists: true} };
+        const options = { upsert: true };
+        const updateDoc = { $set: {schedule: data}, }
+        const newDates = await availableDates.updateOne(filter, updateDoc, options);
+        console.log(`${newDates.matchedCount} document(s) matched the filter, updated ${newDates.modifiedCount} document(s)`);
+        cb(data);
     }
 };

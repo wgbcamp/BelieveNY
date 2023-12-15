@@ -509,7 +509,47 @@ function sendMail(data){
                         <tr>
                             <th></th>
                             <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">${data.time}</th>
-                        </tr>    
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="pad40 white " style="height: 40px;background-color: white;"></th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">New or current client?: </th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">${data.clientStatus}</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="pad40 white " style="height: 40px;background-color: white;"></th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">Interested in receiving ongoing support from our Client Advocates?: </th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">${data.ongoingSupport}</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="pad40 white " style="height: 40px;background-color: white;"></th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">How did you hear about Believe NY?: </th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="white textSize2" style="font-weight: 500;background-color: white;font-size: 22px;">${data.howYouHeard}</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="pad40 white " style="height: 40px;background-color: white;"></th>
+                        </tr>   
                         <tr>
                             <th></th>
                             <th class="pad40 white borderBottom" style="height: 40px;background-color: white;border-bottom-left-radius: 8px;border-bottom-right-radius: 8px;"></th>
