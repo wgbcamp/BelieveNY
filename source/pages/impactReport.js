@@ -33,46 +33,37 @@ const impactReport = () => {
                 </div>
                 <QuoteSlider/>
                 <div className="impactSubtitle size24Font" id="successStats">
-                    <u>BNY Success Stats</u>
+                    <u>Other Successes</u>
                     <div className={`size18Font ${collapseStatus}`}>
-                        <p>Successfully registered over 200 people in underserved areas of Brooklyn, Queens, Manhattan, and the Bronx to vote in the 2020 Presidential Election. Most of the individuals we registered were first-time voters and people of color.
-                        </p>
-                        <p>
-                        Cooked and served over 750 hot meals to underserved individuals and families through our events, often partnering with local restaurants to serve. Restaurants include Lil’Frankies and Havana Central).
-                        </p>
-                        <p>
-                        Partnered with a local hair salon, Cutler Salon, and provided free haircuts to over two dozen people experiencing homelessness at Washington Square Park.
-                        </p>
-                        <p>
-                        Gave out thousands of articles of clothing, especially winter clothing items to individuals and families experiencing homelessness through our events. 
-                        </p>
-                        <p>
-                        As of December 2022, Collected, donated, and delivered over $12,000 worth of nonperishable foods, groceries, essential products, and new and gently used clothing and shoes directly to individuals and families who seek these items and have no other methods of them through our Food First Program.
-                        </p>
-                        <p>
-                        Collected, wrapped, and delivered gifts for 30 children and their single mothers experiencing extreme poverty during the 2021 holiday season and 34 children in 2022, totaling over 100 gifts during these years. 
-                        </p>
-                        <p>
-                        Through our GetHelp service, we have had over 50 active Counselors available 24/7 to support your needs and connect you to the resources and programs that will improve your situation. 
-                        </p>
-                        <p>
-                        Served dozens of individuals and families in extreme poverty or hardship by connecting them with safe housing, nutritional programs, legal services, therapy, medical services, and other resources in their area. 
-                        </p>
-                        <p>
-                        There are over 60 appointments available in any given week for anyone who needs to talk to someone and needs mental health support through The Open Space.
-                        </p>
-                        <p>
-                        Regularly hosting community cleanups in underserved areas of NYC including in Brooklyn, Queens, and The Bronx, partnering with the Department of Sanitation (DSNY) to obtain safe equipment. 
-                        </p>
-                        <p>
-                        Cleaned up over 2,000 lbs of trash during community clean ups.
-                        </p>
-                        <p>
-                        During all in-person events, we provide free PPE including masks (reusable and surgical) and hand sanitizer to our volunteers and recipients to ensure wellness safety. 
-                        </p>
-                        <p>
-                        Collected dozens of first aid kits and Narcan kits for the East Village and Washington Sq Park mutual aid to distribute to people experiencing homelessness and substance use disorder in downtown Manhattan. 
-                        </p>
+                       <div>2022</div>
+                            <ul>
+                                <li>Fed and clothed over 100 people experiencing homelessness in Tompkins Sq Park at our Valentine’s Day spread the love event</li>
+                                <li>Hosted a community clean up by Maria Hernandez Park, Brooklyn on April 24th</li>
+                                <li>Hosted a summer clothing and supplies drive for children in shelters and transitional homes, collecting hundreds of items (school supplies, art supplies, and summer clothing) for children in two different shelters and one community center in Manhattan</li>
+                                <li>Hosted a community clean up by Arthur S. Somers Park, Brooklyn on August 6th </li>
+                                <li>Delivered 34 children and their single mothers living in shelters, or transitional homes, holiday homes holiday gifts, totally 61 gifts </li>
+                                <li>Collected 4 dozen first aid kits and Narcan kits for the East Village and Washington Sq Park mutual aid to distribute to almost 50 people experiencing homelessness and substance use disorder in downtown Manhattan </li>
+                            </ul>
+                       <div>2021</div>
+                        <ul>
+                            <li>Fed over 100 people at our “Spread the Love” Valentine’s Day event in Tompkins Sq Park
+                                <ul>
+                                    <li>
+                                    During this same event, we handed out dozens of items of PPE, hand sanitizer, and hand warmers to event attendees
+                                    </li>
+                                </ul>
+                            </li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                       <div>2020</div>
+                       <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
                     </div>
                 </div>
                 <div className="expansionButtonContainer">

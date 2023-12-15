@@ -60,15 +60,15 @@ const eventSponsors = (props) => {
                     <div className='perks verticalAlign'>
                         <div className="size18Font">Perks:
                             <div className="padTop20"></div>
-                            <li>Tax Deductions for All Donations</li>
+                            <li className="textIndent">Tax Deductions for All Donations</li>
                             <ul></ul>
-                            <li>Increase in Foot Traffic for Your Business</li>
+                            <li className="textIndent">Increase in Foot Traffic for Your Business</li>
                             <ul></ul>
-                            <li>Increase in Social Media Engagement</li>
+                            <li className="textIndent">Increase in Social Media Engagement</li>
                             <ul></ul>
-                            <li>Build Relationships in Your Community</li>
+                            <li className="textIndent">Build Relationships in Your Community</li>
                             <ul></ul>
-                            <li>Your Neighborhood Will See You Care</li>
+                            <li className="textIndent">Your Neighborhood Will See You Care</li>
                         </div>
                     </div>
                     <div className="padTop20 size18Font lineHeight25 instructions">

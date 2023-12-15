@@ -450,8 +450,12 @@ ul.no-bullets{
     font-weight: 500;
 }
 
-li{
+.textIndent{
     text-indent: -1.35em;  
+}
+
+.textJustify{
+    text-align: justify;
 }
 
 #fontawesomeIconStorage{
