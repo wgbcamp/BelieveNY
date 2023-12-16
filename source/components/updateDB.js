@@ -40,7 +40,7 @@ const updateDB = () => {
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "http://localhost:8080/getDates", true);
         xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.send();
+        xhr.send("");
         xhr.onreadystatechange = () => {
             if (xhr.readyState === XMLHttpRequest.DONE){
                 console.log(xhr.status);
