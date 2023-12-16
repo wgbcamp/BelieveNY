@@ -28,7 +28,7 @@ const unused = () => {
                     <div className="alignTop justifyCenter">
                         <i className="fa-solid fa-arrow-left fa-2xl" onClick={() => alterQC(-1)}></i>
                     </div>
-                    <div className="quoteFont">{quotes[quoteCount]}</div>
+                    <div className="quoteFont purpleQuote">{quotes[quoteCount]}</div>
                     <div className="alignTop justifyCenter">
                         <i className="fa-solid fa-arrow-right fa-2xl" onClick={() => alterQC(1)}></i>
                     </div>
