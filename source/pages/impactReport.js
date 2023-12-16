@@ -34,9 +34,9 @@ const impactReport = () => {
                 <QuoteSlider/>
                 <div className="impactSubtitle size24Font" id="successStats">
                     <u>Other Successes</u>
-                    <div className={`size18Font ${collapseStatus}`}>
-                       <div>2022</div>
-                            <ul>
+                    <div className={`${collapseStatus}`}>
+                       <div className="purpleDate">2022</div>
+                            <ul className="size18Font">
                                 <li>Fed and clothed over 100 people experiencing homelessness in Tompkins Sq Park at our Valentine’s Day spread the love event</li>
                                 <li>Hosted a community clean up by Maria Hernandez Park, Brooklyn on April 24th</li>
                                 <li>Hosted a summer clothing and supplies drive for children in shelters and transitional homes, collecting hundreds of items (school supplies, art supplies, and summer clothing) for children in two different shelters and one community center in Manhattan</li>
@@ -44,8 +44,8 @@ const impactReport = () => {
                                 <li>Delivered 34 children and their single mothers living in shelters, or transitional homes, holiday homes holiday gifts, totally 61 gifts </li>
                                 <li>Collected 4 dozen first aid kits and Narcan kits for the East Village and Washington Sq Park mutual aid to distribute to almost 50 people experiencing homelessness and substance use disorder in downtown Manhattan </li>
                             </ul>
-                       <div>2021</div>
-                        <ul>
+                       <div className="purpleDate">2021</div>
+                        <ul className="size18Font">
                             <li>Fed over 100 people at our “Spread the Love” Valentine’s Day event in Tompkins Sq Park
                                 <ul>
                                     <li>During this same event, we handed out dozens of items of PPE, hand sanitizer, and hand warmers to event attendees</li>
@@ -77,8 +77,8 @@ const impactReport = () => {
                             </li>
                             <li>Delivered 30 children and their single mothers living in shelters, or transitional homes, holiday homes holiday gifts, totaling 42 gifts</li>
                         </ul>
-                       <div>2020</div>
-                       <ul>
+                       <div className="purpleDate">2020</div>
+                       <ul className="size18Font">
                             <li>Fed over 75 people experiencing homelessness at Herbert Von King Park in Brooklyn at our Thanksgiving Day meal hand out</li>
                             <li>
                                 <ul>
