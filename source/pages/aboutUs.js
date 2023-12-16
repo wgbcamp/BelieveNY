@@ -11,7 +11,7 @@ import Chiara from "../images/general/chiara.webp";
 import Melanie from "../images/general/melanie.webp";
 import Rebecca from "../images/general/rebecca.webp";
 import Tristan from "../images/general/tristan.png";
-import Cameron from "../images/general/cameron.png";
+import Cameron from "../images/general/Cameron.png";
 import Shyanne from "../images/general/shyanne.jpg";
 import Kathryn from "../images/general/kathryn.png";
 import Warren from "../images/general/warren.jpg";
