@@ -2798,6 +2798,15 @@ input[type="email"]::placeholder{
         text-align: center;
     }
 
+    .purpleQuote{
+        color: #674ca1;
+    }
+
+    .purpleDate{
+        color: #674ca1;
+        font-size: 30px;
+    }
+
 @media screen and (max-width: 500px){
 
     .donateBox{
