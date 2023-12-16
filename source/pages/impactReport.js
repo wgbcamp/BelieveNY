@@ -51,8 +51,7 @@ const impactReport = () => {
                                     <li>During this same event, we handed out dozens of items of PPE, hand sanitizer, and hand warmers to event attendees</li>
                                 </ul>
                             </li>
-                            <li>In early March, partnered with The Ellen Macguire Foundation to serve approximately 30 people experiencing homelessness in Midtown Manhattan food and warm clothing</li>
-                            <li>
+                            <li>In early March, partnered with The Ellen Macguire Foundation to serve approximately 30 people experiencing homelessness in Midtown Manhattan food and warm clothing
                                 <ul>
                                     <li>During this same event, we handed out dozens of items of PPE, hand sanitizer, and hand warmers to event attendees</li>
                                 </ul>
@@ -62,15 +61,13 @@ const impactReport = () => {
                             <li>Executive Director, Assistant Director, and several volunteers participated in the week long Global Mental Health Summer Institute Training at Columbia University</li>
                             <li>Fed and clothed over 100 people experiencing homelessness in Washington Sq Park at our June 13th event</li>
                             <li>At this same event, we partnered with a local hair salon and gave out over 2 dozen haircuts to people experiencing homelessness</li>
-                            <li>Fed over 75 people at a meal hand out in Lincoln Center on Sept 21. The traffic was a bit slow at Lincoln Center, so several of our volunteers packed up the food and gave it out to people experiencing homelessness at Penn Station and Bryant Park</li>
-                            <li>
+                            <li>Fed over 75 people at a meal hand out in Lincoln Center on Sept 21. The traffic was a bit slow at Lincoln Center, so several of our volunteers packed up the food and gave it out to people experiencing homelessness at Penn Station and Bryant Park
                                 <ul>
                                     <li>During this same event, we handed out dozens of items of PPE, hand sanitizer, and hand warmers to event attendees</li>
                                 </ul>
                             </li>
                             <li>Hosted a community clean up in Hylan Park, The Bronx on Oct 3rd</li>
-                            <li>Served over 80 hot meals and hundreds of warm clothing items to people experiencing homelessness during our Thanksgiving meal and clothing hand out on November 28 in Tompkins Sq Park</li>
-                            <li>
+                            <li>Served over 80 hot meals and hundreds of warm clothing items to people experiencing homelessness during our Thanksgiving meal and clothing hand out on November 28 in Tompkins Sq Park
                                 <ul>
                                     <li>During this same event, we handed out dozens of items of PPE, hand sanitizer, and hand warmers to event attendees</li>
                                 </ul>
@@ -79,8 +76,7 @@ const impactReport = () => {
                         </ul>
                        <div className="purpleDate">2020</div>
                        <ul className="size18Font">
-                            <li>Fed over 75 people experiencing homelessness at Herbert Von King Park in Brooklyn at our Thanksgiving Day meal hand out</li>
-                            <li>
+                            <li>Fed over 75 people experiencing homelessness at Herbert Von King Park in Brooklyn at our Thanksgiving Day meal hand out
                                 <ul>
                                     <li>During this same event, we handed out dozens of items of PPE, hand sanitizer, and hand warmers to event attendees</li>
                                 </ul>
