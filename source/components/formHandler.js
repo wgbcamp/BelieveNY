@@ -4,7 +4,7 @@ const FormHandler = (props) => {
     
     function submit(){
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", `http://localhost:8080/${props.payload.path}`, true);
+        xhr.open("POST", `https://whale-app-e9it4.ondigitalocean.app/${props.payload.path}`, true);
         xhr.setRequestHeader('Content-Type', 'application/json');
 
         if(props.payload.type === "contactForm"){

@@ -9,7 +9,7 @@ const cancelSession = () => {
 
     function getBookings(){
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost:8080/findOneBooking", true);
+        xhr.open("POST", "https://whale-app-e9it4.ondigitalocean.app/findOneBooking", true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         var start = window.location.pathname.lastIndexOf("/") + 1;
         xhr.send(JSON.stringify({
@@ -26,7 +26,7 @@ const cancelSession = () => {
 
     function deleteBooking(){
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost:8080/deleteOneBooking", true);
+        xhr.open("POST", "https://whale-app-e9it4.ondigitalocean.app/deleteOneBooking", true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         var start = window.location.pathname.lastIndexOf("/") + 1;
         xhr.send(JSON.stringify({

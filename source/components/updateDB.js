@@ -38,7 +38,7 @@ const updateDB = () => {
 
     function getDates(){
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "http://localhost:8080/getDates", true);
+        xhr.open("GET", "https://whale-app-e9it4.ondigitalocean.app/getDates", true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send("");
         xhr.onreadystatechange = () => {
@@ -65,7 +65,7 @@ const updateDB = () => {
     // postDates();
     function postDates(){
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost:8080/postDates", true);
+        xhr.open("POST", "https://whale-app-e9it4.ondigitalocean.app/postDates", true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         console.log(dateArray);
         xhr.send(JSON.stringify(dateArray));

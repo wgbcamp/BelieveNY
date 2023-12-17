@@ -65,7 +65,7 @@ const scheduleBooking = (props) => {
 
     function getBookings(){
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost:8080/getBookings", true);
+        xhr.open("POST", "https://whale-app-e9it4.ondigitalocean.app/getBookings", true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify({
             date: "Thu 2022 Sep22", 
