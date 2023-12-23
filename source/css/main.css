@@ -3722,6 +3722,10 @@ input[type="email"]::placeholder{
 
 @media screen and (max-width: 1000px){
 
+    .upcomingImgResize{
+        width: 110%;
+    }
+
     .pdfWidth{
         width: 100%;
     }

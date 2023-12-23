@@ -10,7 +10,7 @@ const upcomingEvents = () => {
             <div className="size36Font padTop80 padBottom40 centerText">Clothing and Food Handout Events on Temporary Hiatus</div>
             <div className="centerText size32Font weight700 padBottom20">Upcoming Events TBA</div>
             <div className="simpleFlex padBottom40 padTop20">
-                <img src={holidayGiftDrive}></img>
+                <img src={holidayGiftDrive} className="upcomingImgResize"></img>
             </div>
             <p className='size18Font lineHeight30'>We love doing our events. The opportunity to address immediate needs in NYC communities is an extremely rewarding experience for our volunteers and leadership. At our events we generally find at least a few new clients, increased social media presence, and make new connections with local organizations.
             </p>
