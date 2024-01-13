@@ -208,6 +208,7 @@ const Header = (props) => {
                 <Link to="/theOpenSpace" className="cat2" onClick={() => {dropDown("services"); dropDown("main");} }>The Open Space</Link>
                 <Link to="/foodFirst" className="cat3" onClick={() => {dropDown("services"); dropDown("main");} }>Food First</Link>
                 <Link to="/environmentalProjects" className="cat4" onClick={() => {dropDown("services"); dropDown("main");} }>Environmental Projects</Link>
+                <Link to="/pathways" className="cat5" onClick={() => {dropDown("services"); dropDown("main");} }>Pathways for Emerging Leaders</Link>
             </div>
 
             <div className={`eventsMenu ${eventsPresence ? "menuIn" : eventsPresence === 0 ? "" : "menuOut"}`} onClick={() => restoreTop()}>
