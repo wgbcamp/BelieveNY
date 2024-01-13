@@ -11,7 +11,7 @@ const pathways = () => {
                 <img src={PathwaysImage} className="upcomingImgResize"></img>
             </div>
             <div className='weight500'>
-                <p className='size18Font lineHeight30 weight700 padBottom40'>RSVP here by March 18: <a href="https://docs.google.com/forms/d/e/1FAIpQLScDroZeOcnUM_9TY2x-Cf8hTOmdAIPJf0Bg8kLLBhtgGA9iwg/viewform" className='breakWord'>https://docs.google.com/forms/d/e/1FAIpQLScDroZeOcnUM_9TY2x-Cf8hTOmdAIPJf0Bg8kLLBhtgGA9iwg/viewform</a> </p>
+                <p className='size18Font lineHeight30 weight700 padBottom40 centerText'>RSVP here by March 18: <a href="https://docs.google.com/forms/d/e/1FAIpQLScDroZeOcnUM_9TY2x-Cf8hTOmdAIPJf0Bg8kLLBhtgGA9iwg/viewform" className='breakWord'>https://docs.google.com/forms/d/e/1FAIpQLScDroZeOcnUM_9TY2x-Cf8hTOmdAIPJf0Bg8kLLBhtgGA9iwg/viewform</a> </p>
                 <p className='size18Font lineHeight30'>Pathways for Emerging Leaders stems from the collaborative efforts of Believe New York (BNY) and Young Women Emerge (YWE), building upon the success of YWE's mentorship program designed for high school women. 
                 </p>
                 <p className='size18Font lineHeight30'>
