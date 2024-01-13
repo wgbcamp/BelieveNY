@@ -122,6 +122,7 @@ const Header = (props) => {
                             <Link to="/theOpenSpace" className="sCat2">The Open Space</Link>
                             <Link to="/foodFirst" className="sCat3">Food First</Link>
                             <Link to="/environmentalProjects" className="sCat4">Environmental Projects</Link>
+                            <Link to="/pathways" className="sCat5">Pathways for Emerging Leaders</Link>
                         </div>
                     </div>
                     <div className={`category3`} onMouseEnter={() => toggleESP(true)} onMouseLeave={() => toggleESP(false)} onClick={() => toggleESP(false)}>Events
@@ -135,9 +136,14 @@ const Header = (props) => {
                     <div className={`category4`} onClick={() => restoreTop()}>
                         <Link to="/joinus" className="category4Inner">Join Us</Link>
                     </div>
+                    <div className={'category6'} onClick={() => restoreTop()}>
+                        <Link to="/survey" className="category6a">
+                            <div>Take a Survey & Improve NYC!</div>
+                        </Link>
+                    </div>
                     <div className={`category5`} onClick={() => restoreTop()} id="simplifyUI1">
                         <Link to="/donate" className="category5a">
-                            <div className="">DONATE NOW</div>
+                            <div className="">DONATE</div>
                         </Link>
                     </div>
                     
@@ -160,19 +166,20 @@ const Header = (props) => {
                 {/* Mobile menu */}
                 <div className="hamburgerColFix">
                     <div className={`hamburger ${dropdownPresence ? "fadeOut" : dropdownPresence === 0 ? "" : "fadeIn"}`} onClick={() => {dropDown("main");}}>
-                        <div className="fa-solid fa-bars fa-2xl">
+                        <div className="fa-solid fa-ellipsis fa-lg">
                         </div>
                     </div>
                 </div>
                 <div className="simpleFlex verticalAlign logoColFix">
                     <Link to="/" className="logoMobile" onClick={() => { restoreTop("/");}}><img src={BNYLogoCircle} className="logoInner"/>Believe New York</Link>
                 </div>
-                <div className={`mobileDonate`} onClick={() => restoreTop()} id="simplifyUI2">
-                        <Link to="/donate" className="category5a">
-                            <div className="">DONATE NOW</div>
-                        </Link>
-                    </div>
-            
+                <div className="mobileDonateColFix">
+                    <div className={`mobileDonate`} onClick={() => restoreTop()} id="simplifyUI2">
+                            <Link to="/donate" className="category5a">
+                                <div className="">DONATE</div>
+                            </Link>
+                        </div>
+                </div>
             </div>
             
             <div className={`cancelMenu ${dropdownPresence ? "menuIn" : dropdownPresence === 0 ? maxCheck ? "menuOut" : "" : ""}`}><i className='fa-solid fa-xmark fa-2xl xCancel' onClick={() => {dropDown(lastMenu);}}></i></div>
@@ -181,6 +188,7 @@ const Header = (props) => {
                 <div className="cat1" onClick={() => dropDown("about")}>About Us</div>
                 <div className="cat2" onClick={() => dropDown("services")}>Our Work</div>
                 <div className="cat3" onClick={() => dropDown("events")}>Events</div>
+                <Link to="/survey" className="cat6" onClick={() => restoreTop()}>Take a Survey & Improve NYC!</Link>
                 <Link to="/joinus" className="cat4" onClick={() => {dropDown("main"); restoreTop();}}>Join Us</Link>
                 <Link to="/donate" className="cat5" onClick={() => {dropDown("main"); restoreTop();}}>Donate</Link>
                 <div className='aArrow' onClick={() => dropDown("about")}><i className='fa-solid fa-chevron-right'></i></div>

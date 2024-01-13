@@ -38,7 +38,7 @@ const updateDB = () => {
 
     function getDates(){
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://whale-app-e9it4.ondigitalocean.app/getDates", true);
+        xhr.open("GET", `https://whale-app-e9it4.ondigitalocean.app/getDates`, true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send("");
         xhr.onreadystatechange = () => {
@@ -61,6 +61,26 @@ const updateDB = () => {
         {"day":"Sat","time":["10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM"]},
         {"day":"Sun","time":["10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM"]}
     ];
+
+    //array options for time selection
+    var hours = ["12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
+    var minutes = ["00", "15", "30", "45"];
+    var meridiem = ["AM", "PM"];
+
+    const updateTD = event => {
+        setTD(event.target.value);
+    }
+
+    const updateSD = event => {
+        setSD({"day": tempDay, "time": event.target.value});
+    }
+
+    var [tempDay, setTD] = useState("");
+    var [selectedDate, setSD] = useState([]);
+    var [queuedAdditions, setQA] = useState();
+    var [queuedDeletions, setQD] = useState();
+
+    // const moveToQueue
 
     // postDates();
     function postDates(){
@@ -95,6 +115,42 @@ const updateDB = () => {
                         <div className="updateTimeDayCol">
                             {fullTimeSlots}
                         </div>
+                    </div>
+                    <div className="configureTimeGrid">
+                        <div className="configureTimeTitle addTime">Add time</div>
+                        <div className="dayLabel1">
+                            <label for="day-select">Choose a day:</label>
+                            <select name="days" id="day-select" onChange={updateTD}>
+                            <option value="">--</option>
+                            <option value="Sun">Sunday</option>
+                            <option value="Mon">Monday</option>
+                            <option value="Tue">Tuesday</option>
+                            <option value="Wed">Wednesday</option>
+                            <option value="Thu">Thursday</option>
+                            <option value="Fri">Friday</option>
+                            <option value="Sat">Saturday</option>
+                            </select>
+                        </div>
+                        <div className="dayLabel2">
+                            <label for="day-select">Choose a time:</label>
+                            <select name="days" id="day-select" onChange={updateSD}>
+                            <option value="">--</option>
+                            {meridiem.map((meridiem) => (
+                                hours.map((hours) => (
+                                    minutes.map((minutes) => (
+                                        <option key={hours.concat(":", minutes).concat(" ", meridiem)} value={hours.concat(":", minutes).concat(" ", meridiem)}> {hours.concat(":", minutes).concat(" ", meridiem)}</option>
+                                    ))
+                                ))      
+                            ))} 
+                                
+                            </select>
+                        </div>
+                        <div className="addButton" >ADD</div>
+                        <div className="configureTimeTitle removeTime">Remove time</div>
+                        <div className="timeslotChanges">Timeslot updates</div>
+                        <div className="queuedAdditions">Added: {queuedAdditions}</div>
+                        <div className="queuedDeletions">Removed: {queuedDeletions}</div>
+
                     </div>
                     
                 </div>

@@ -30,6 +30,8 @@ import DonationFormQR from './pages/donationFormQR';
 import Survey from './pages/survey.js';
 import DonateChoices from './components/donateChoices.js';
 import UpdateContent from './pages/updateContent.js';
+import Home2 from './pages/home2.js';
+import Pathways from './pages/pathways.js';
 
 
 
@@ -84,6 +86,7 @@ function App(){
                         <Route path="/foodFirst" element={<FoodFirst/>}/>
                         <Route path="/theOpenSpace" element={<TheOpenSpace/>}/>
                         <Route path="/environmentalProjects" element={<EnvironmentalProjects/>}/>
+                        <Route path="/pathways" element={<Pathways/>}/>
                         <Route path="/scheduleBooking" element={<ScheduleBooking updateDim={updateDim} updatePayload={updatePayload}/>}/>
                         <Route path="/upcomingEvents" element={<UpcomingEvents/>}/>
                         <Route path="/pastEvents" element={<PastEvents/>}/>
@@ -98,6 +101,7 @@ function App(){
                         <Route path="/survey" element={<Survey/>}/>
                         <Route path="/updateContent" element={<UpdateContent/>}/>
                         <Route path="*" element={<Home/>}/>
+                        <Route path="/home2" element={<Home2/>}/>
                     </Routes>                        
                 <Footer/>
                 <BottomContact/>
