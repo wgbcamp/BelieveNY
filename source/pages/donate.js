@@ -23,7 +23,7 @@ const donate = (props) => {
                         <div>End the cycle of poverty, violence, and injustice, in NYC with Believe New York!</div>
                         <div></div>
                         <a href="/donationform" className='giveBig'>Give Ongoing <i class="fa-solid fa-arrow-right moveArrow"></i></a>
-                        <div>Your going support will ensure our small organization can grow and save more lives. Give ongoing today!</div>
+                        <div>Your ongoing support will ensure our small organization can grow and save more lives. Give ongoing today!</div>
 
                     </div>
                     <div className="giveNote">

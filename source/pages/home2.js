@@ -63,7 +63,6 @@ const Home2 = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="featherBottom"></div>
                 </div>
                 <div className="">
                     <div className='subStatement'>

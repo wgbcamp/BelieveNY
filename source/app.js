@@ -32,7 +32,7 @@ import DonateChoices from './components/donateChoices.js';
 import UpdateContent from './pages/updateContent.js';
 import Home2 from './pages/home2.js';
 import Pathways from './pages/pathways.js';
-
+import ComponentTest from './pages/componentTest.js';
 
 
 
@@ -74,7 +74,7 @@ function App(){
             <FormHandler payload={{name: payload.name, email: payload.email, phone: payload.phone, path: payload.path, type: payload.type, specific0: payload.specific0, specific1: payload.specific1, specific2: payload.specific2, specific3: payload.specific3, specific4: payload.specific4, specific5: payload.specific5,}} dim={dim} updateDim={updateDim}/>
             <DonateChoices dim2={dim2} updateDim2={updateDim2}/>
             <div className={`${dim === true || dim2 === true ? "dim" : ""}`}>
-                <Header location={location}/>
+                {/* <Header location={location}/> */}
                     <Routes>
                         <Route path="/" element={<Home/>}/>
                         <Route path="/faq" element={<Faq/>}/>
@@ -102,9 +102,10 @@ function App(){
                         <Route path="/updateContent" element={<UpdateContent/>}/>
                         <Route path="*" element={<Home/>}/>
                         <Route path="/home2" element={<Home2/>}/>
+                        <Route path="/componentTest" element={<ComponentTest/>}/>
                     </Routes>                        
-                <Footer/>
-                <BottomContact/>
+                {/* <Footer/>
+                <BottomContact/> */}
             </div>
         </div>
     )
