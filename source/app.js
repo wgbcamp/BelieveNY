@@ -33,6 +33,7 @@ import UpdateContent from './pages/updateContent.js';
 import Home2 from './pages/home2.js';
 import Pathways from './pages/pathways.js';
 import ComponentTest from './pages/componentTest.js';
+import CollegeResources from './pages/collegeresources.js';
 
 
 
@@ -103,6 +104,7 @@ function App(){
                         <Route path="*" element={<Home/>}/>
                         <Route path="/home2" element={<Home2/>}/>
                         <Route path="/componentTest" element={<ComponentTest/>}/>
+                        <Route path="/collegeresources" element={<CollegeResources/>}/>
                     </Routes>                        
                 <Footer/>
                 <BottomContact/>

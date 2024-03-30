@@ -227,7 +227,9 @@ body{
 .padBottom20{
     padding-bottom: 20px;
 }
-
+.padBottom10{
+    padding-bottom: 10px;
+}
 .padTop40{
     padding-top: 40px;
 }
@@ -2958,6 +2960,21 @@ input[type="email"]::placeholder{
         font-size: 30px;
     }
 
+    .purpleTextCollege{
+        color: #822ad4;
+    }
+
+    .blueTextCollege{
+        color: #0609f0;
+    }
+
+    .pinkTextCollege{
+        color:#ee0aee;
+    }
+
+    .maxWidthCollege{
+        max-width: 1025px;
+    }
 @media screen and (max-width: 500px){
 
     .donateBox{
