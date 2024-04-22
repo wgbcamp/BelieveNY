@@ -21,8 +21,25 @@ module.exports = {
             {
                 test:/\.css$/,
                 exclude: /node_modules/,
-                use: ["style-loader", "css-loader"]
+                use: [
+                    "style-loader",
+                    {
+                        loader: "css-loader",
+                        options: {
+                            importLoaders: 1,
+                            modules: {
+                                localIdentName:'[name]__[local]--[hash:base64:5]'
+                            },
+                        }
+                    },
+                ],
+                include: /\.module\.css$/,
             },
+            {
+                test: /\.css$/,
+                use: ["style-loader", "css-loader"],
+                exclude: /\.module\.css$/,
+              },
             {
                 test:/\.(png|jpg|jpeg|webp)$/i,
                 type: 'asset/resource'

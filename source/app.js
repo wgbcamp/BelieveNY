@@ -1,7 +1,7 @@
 import React, {useState, useEffect, createRef} from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import './css/main.css';
-import Header from './components/header';
+import Header from './components/header.js';
 import Footer from './components/footer';
 import Home from './pages/home.js';
 import AboutUs from './pages/aboutUs';
@@ -32,9 +32,8 @@ import DonateChoices from './components/donateChoices.js';
 import UpdateContent from './pages/updateContent.js';
 import Home2 from './pages/home2.js';
 import Pathways from './pages/pathways.js';
-import ComponentTest from './pages/componentTest.js';
 import CollegeResources from './pages/collegeresources.js';
-
+import MentalHealthFair from './pages/mentalhealthfair.js';
 
 
 function App(){
@@ -103,8 +102,8 @@ function App(){
                         <Route path="/updateContent" element={<UpdateContent/>}/>
                         <Route path="*" element={<Home/>}/>
                         <Route path="/home2" element={<Home2/>}/>
-                        <Route path="/componentTest" element={<ComponentTest/>}/>
                         <Route path="/collegeresources" element={<CollegeResources/>}/>
+                        <Route path="/mentalhealthfair" element={<MentalHealthFair/>}/>
                     </Routes>                        
                 <Footer/>
                 <BottomContact/>

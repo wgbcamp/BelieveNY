@@ -1,0 +1,322 @@
+.headerGrid{
+    color: black;
+    height: 69px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 250px auto auto auto 1fr auto auto auto;
+    max-width: 1620px
+}
+.flexboxJustifyCenter{
+    display: flex;
+    justify-content: center
+}
+
+.flexboxJustStartAlignCent{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flexboxAllCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center 
+}
+.flexRightJustifyCenterAlign{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.pillButton{
+    background-color: rgb(231, 231, 231);
+    font-weight: 600;
+    border-radius: 25px;
+    height: 25px;
+    padding: 3px;
+    padding-left: 3px;
+    padding-right: 15px;
+    margin-right: 15px;
+    display: grid;
+    grid-template-columns: 25px auto;
+    column-gap: 20px;
+}
+.pillIcon{
+    background-color: white;
+    border-radius: 50%;
+    height: 100%
+}
+.pillLinkOutlined{
+    border-radius: 25px;
+    height: 25px;
+    border: 2px solid rgb(180, 180, 180);
+    padding: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 600;
+    color: rgb(50, 50, 50);
+}
+.pillLinkFilled{
+    border-radius: 25px;
+    height: 25px;
+    padding: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 600;
+    color: whiteblack;
+    background-color: #fd9f95;
+}
+.cursorPointer{
+    cursor: pointer
+}
+.floatingDropdown{
+    background-color: white;
+    box-shadow: 2px 7px 20px 2px rgb(210, 210, 210);
+    height: 300px;
+    border-radius: 20px;
+    padding-bottom: 35px;
+    padding-top: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+    width: 1000px;
+    margin-left: 50%;
+    margin-bottom: 500px;
+    display: grid;
+    grid-template-columns: 55% 45%
+}
+.quadItem{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 12px;
+    row-gap: 15px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 10px
+}
+.dropdownBackground{
+    background-color: white;
+    border-radius: 9px;
+    color: black;
+    font-weight: 600;
+}
+.dropdownBackgroundSelect{
+    animation: 1s ease-in-out colorChange;
+    background-color: rgb(247 245 255);
+    border-radius: 9px;
+    font-weight: 600;
+}
+.dropdownItemParentGrid{
+    display: grid;
+    grid-template-columns: 7% 86% 7%;
+    grid-template-rows: 100%;
+    height: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    column-gap: 12px
+}
+.dropdownItemChildGrid{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 45% 55%;
+    row-gap: 4px;
+}
+.elementTitle{
+    font-size: 20px;
+    display: flex;
+    align-items: center
+}
+.elementDesc{
+    font-size: 13px;
+    display: flex;
+    align-items: flex-start
+}
+.elementIcon{
+    margin-top: 110%;
+}
+.pictureGridParent{
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.pictureGridChild{
+    grid-row: 2;
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 12px;
+    grid-template-rows: 1fr;
+    background-color: #282828;
+    border-radius: 9px;
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    box-shadow: 2px 5px 15px 2px rgb(180, 180, 180);
+    height: 240px
+}
+.pictureText{
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+}
+.pictureContainer{
+    overflow: hidden;
+    border-radius: 9px;
+    border-radius: 9px;
+}
+.pictureStyling{
+    object-fit: cover;
+    object-position: -130px -50px;
+    width: 400px;
+    height: 240px;
+}
+
+.burger{
+    visibility: hidden;
+}
+
+
+
+
+@media only screen and (min-width: 1001px){
+    .largeWidthGrid{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .smallWidthGrid{
+    visibility: hidden;
+    height: 0;
+}
+
+}
+
+
+/*below 500px*/
+
+@media only screen and (max-width: 1000px){
+
+.headerGrid{
+    color: black;
+    height: 69px;
+    width: 100%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 200px 1fr minmax(60px, 100px);
+    padding-left: 10px;
+}
+
+.linkButton{
+    visibility: hidden;
+}
+
+.hideUnder500{
+    visibility: hidden;
+}
+
+.invisible{
+    visibility: hidden;
+    height: 0px;
+}
+
+.burger{
+    visibility: visible;
+    grid-column: 3;
+    grid-row: 1;
+    composes: flexboxAllCenter;
+}
+
+.coverSmallScreen{
+    height: calc(100vh-20px);
+    position: absolute;
+    top: 69px;
+    left: 0;
+}
+
+.smallWidthGrid{
+    composes: coverSmallScreen;
+    background-color: white;
+    padding-top: 20px;
+    display: grid;
+    grid-template-rows: repeat(6, 75px);
+    font-size: 18px;
+    width: 100vw;
+}
+
+.expand{
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.2s ease, opacity 0.1s linear 0.1s;
+}
+
+.condense{
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 3s linear, opacity 0.2s linear;
+}
+
+.swTitle{
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    padding-left: 15px;
+}
+
+.swTitleGrid{
+    display: grid;
+    grid-template-columns: 200px 1fr minmax(60px, 100px);
+    border-bottom: solid #e2e2e2;
+    cursor: pointer;
+}
+
+.subLinksGrid{
+    transform: translate(100%);
+    z-index: 1;
+    background-color: white;
+    padding-top: 20px;
+    display: grid;
+    grid-template-rows: repeat(6, 75px);
+    font-size: 18px;
+    width: 100vw;
+}
+
+.subLinkTitle{
+    font-size: 30px;
+    font-weight: 900;
+    grid-column: 2;
+}
+
+.subLinkTitleGrid{
+    display: grid;
+    grid-template-columns: 60px 1fr;
+}
+
+
+.slideIn{
+    composes: subLinksGrid;
+    transform: translate(0%);
+    transition: all .2s linear;
+}
+
+.slideOut{
+    composes: subLinksGrid;
+    transition: all .2s linear;
+}
+
+.zap{
+    composes: subLinksGrid;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.arrow{
+    grid-column: 3;
+}
+
+.hide{
+    overflow: hidden;
+    position:relative;
+}
+}

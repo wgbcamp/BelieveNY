@@ -7,6 +7,10 @@ const upcomingEvents = () => {
     return(
         <div className="simpleFlex">
             <div className="maxWidth width80Per">
+            <div className="padTop80 centerText size32Font weight700 ">Mental Health Resource Fair</div>
+            <p className='size18Font lineHeight30 padTop40'>Come join us at the <b>30th Street Studios on Sat, July 27</b> for a day filled with valuable resources and support for your mental well-being. Our event will feature various organizations and professionals offering information on free or low-cost mental health services, affordable therapy options, and self-care practices. There will also be representatives from the NYS Dept of Health to support applications for healthcare insurance. Whether you're looking for guidance, resources, or just want to connect with others, this fair is the perfect place to start. Let's break the stigma together and prioritize our mental health!
+            </p>
+            <b className="size16Font"><a href="https://www.eventbrite.com/e/mental-health-resource-fair-hosted-by-believe-new-york-tickets-882643539587?aff=oddtdtcreator">See more info about the Mental Health Resource Fair</a></b>
             <div className="size36Font padTop80 padBottom40 centerText">Clothing and Food Handout Events on Temporary Hiatus</div>
             {/* <div className="centerText size32Font weight700 padBottom20">Upcoming Events TBA</div> */}
             {/* <div className="simpleFlex padBottom40 padTop20">
