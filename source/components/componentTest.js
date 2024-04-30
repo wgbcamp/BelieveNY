@@ -14,12 +14,17 @@ const linkContent = [["Join us", styles.pillLinkOutlined], ["Take a survey & imp
 
 const smallWidthGridContent = [["ABOUT US", "fa-solid fa-arrow-right", aboutUsContent], ["OUR WORK", "fa-solid fa-arrow-right", ourWorkContent], ["EVENTS", "fa-solid fa-arrow-right", eventsContent], ["JOIN US", "", [""]], ["DONATE", "", [""]], ["TAKE A SURVEY & IMPROVE NYC", "", [""]]];
 
+const largeWidthGridContent = [["ABOUT US", "fa-solid fa-arrow-right", aboutUsContent], ["OUR WORK", "fa-solid fa-arrow-right", ourWorkContent], ["EVENTS", "fa-solid fa-arrow-right", eventsContent], ["JOIN US", "", [""]], ["TAKE A SURVEY & IMPROVE NYC", "", [""]]];
+
 const newHeader = () => {
     var [widthState, updateWS] = useState(false);
+    var [open2ndDropdown, update02D] = useState(false);
     var [zapMenu, updateZM] = useState(false);
     var [subLinks, updateSL] = useState([""]);
     var [subLinkTitles, updateSLT] = useState([""]);
-    var [open2ndDropdown, update02D] = useState(false);    
+
+
+    var [blockScrolling, updateBS] = useState(false);
 
     function changeState(){
                updateWS(!widthState);
@@ -27,41 +32,64 @@ const newHeader = () => {
                if(widthState === false){
                     updateZM(false);
                }
+            //    if (document.body.style.overflow === ''){
+            //     document.body.style.paddingRight = `${window.innerWidth - document.body.clientWidth}px`;
+            //     document.body.style.overflow = 'hidden';
+            //    }else{
+            //     document.body.style.overflow = '';
+            //     document.body.style.paddingRight = "0px";
+            //    }
+
     }
 
     return(
         <div className={styles.hide}>
+            <div>
             {/*grid for header bar */}
-            <div className={styles.headerGrid} id="headerGrid">
-                <img src={SiteLogo} width="150" className={styles.cursorPointer}></img>
-                {/*above 1000px, these options appear */}
-                {/* <div className={styles.largeWidthGrid}></div> */}
-                {/*below 1000px, this button opens small width menu */}
-                <i className={`fa-solid fa-bars fa-xl ${styles.burger}`} onClick={() => changeState()}></i>
-                </div>
-            {/*small width menu*/}
-            <div className={styles.flexboxJustifyCenter}>
-                <div className={`${styles.smallWidthGrid} ${widthState ? styles.expand : zapMenu ? styles.zap : styles.condense}`} id="smallgrid">
-                    {smallWidthGridContent.map((value, index) => (
-                        <div className={styles.swTitleGrid} key={index} onClick={() => {updateSL(value[2]); updateSLT(value[0]); update02D(true); updateZM(true)}} id="gridRow">
-                            <div className={styles.swTitle}>{value[0]}</div>
-                            <div className={`${value[1]} ${styles.flexboxAllCenter} ${styles.arrow}`}></div>
-                        </div>
-                    ))}
-                </div>
-                {/*menu appears after clicking a link with extra options */}
-                <div className={`${open2ndDropdown ? styles.slideIn : styles.slideOut}`}> 
-                    <div className={styles.subLinkTitleGrid}>
-                    {/*arrow button returns to previous menu */}
-                    <i className={`fa-solid fa-arrow-left fa-2xl ${styles.flexboxAllCenter}`} onClick={() => {update02D(false); updateZM(false)}}></i>
-                        <div className={`${styles.subLinkTitle} ${styles.flexboxJustStartAlignCent}`}>{subLinkTitles}</div>
+                <div className={styles.headerGrid} id="headerGrid">
+                    <img src={SiteLogo} width="145" className={styles.cursorPointer}></img>
+                    {/*above 1000px, these options appear */}
+                    <div className={styles.largeWidthGrid}>
+                        {largeWidthGridContent.map((value, index) => (
+                                <div className={styles.flexboxAllCenter} key={index} id="gridRow">
+                                    <div className={styles.lwTitle}>{value[0]}</div>
+                                </div>
+                            ))}
                     </div>
-                    {subLinks.map((value, index) => (
-                            <div className={styles.swTitleGrid} key={index} onClick={() => updateSL(value[2])} id="gridRow">
+                    {/*below 1000px, this button opens small width menu */}
+                    
+                    <i className={`fa-solid fa-bars fa-xl ${styles.burger}`} onClick={() => changeState()}></i>
+                    <div className={styles.donateOuterGrid}>
+                        <div className={styles.donateButton}>
+                            <div className={styles.donate}>DONATE</div>
+                        </div>
+                    </div>
+                    </div>
+                {/*small width menu*/}
+                <div className={styles.test}>
+                    <div className={`${styles.smallWidthGrid} ${widthState ? styles.expand : zapMenu ? styles.zap : styles.condense} ${styles.hideOver1000}`} id="smallgrid">
+                        {smallWidthGridContent.map((value, index) => (
+                            <div className={styles.swTitleGrid} key={index} onClick={() => {updateSL(value[2]); updateSLT(value[0]); update02D(true); updateZM(true)}} id="gridRow">
                                 <div className={styles.swTitle}>{value[0]}</div>
-                                <div className={`${value[1]} ${styles.flexboxJustifyCenter} ${styles.arrow}`}></div>
+                                <div className={`${value[1]} ${styles.flexboxAllCenter} ${styles.arrow}`}></div>
                             </div>
-                        ))}    
+                        ))}
+                    </div>
+                    {/*menu appears after clicking a link with extra options */}
+                    <div className={`${open2ndDropdown ? styles.slideIn : styles.slideOut} ${styles.hideOver1000}`}> 
+                        <div className={styles.subLinkTitleGrid}>
+                        {/*arrow button returns to previous menu */}
+                            <div className={styles.flexboxAllCenter}>
+                                <div className={`${styles.arrowLeft} fa-solid fa-arrow-left fa-xl`} onClick={() => {update02D(false); updateZM(false);}}></div>
+                            </div>
+                            <div className={`${styles.subLinkTitle} ${styles.flexboxJustStartAlignCent}`}>{subLinkTitles}</div>
+                        </div>
+                        {subLinks.map((value, index) => (
+                                <div className={styles.swTitleGrid} key={index} onClick={() => updateSL(value[2])} id="gridRow">
+                                    <div className={styles.swTitle}>{value[0]}</div>
+                                </div>
+                            ))}    
+                    </div>
                 </div>
             </div>
         </div>

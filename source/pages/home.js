@@ -42,7 +42,7 @@ const Home = () => {
         
         <div>
             <div className="simpleFlex">  
-            <div className='maxWidth' onTouchStart={() => removeMenu()}>
+            <div className='maxWidth'>
             <div className="colorBackground">
                 <div className="idkbro">
                     <div className="statementContainer">

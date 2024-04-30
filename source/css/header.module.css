@@ -3,8 +3,9 @@
     height: 69px;
     background-color: white;
     display: grid;
-    grid-template-columns: 250px auto auto auto 1fr auto auto auto;
-    max-width: 1620px
+    grid-template-columns: 210px 1fr 50px 100px 5px;
+    max-width: 1620px;
+    border-bottom: 2px solid black;
 }
 .flexboxJustifyCenter{
     display: flex;
@@ -121,74 +122,64 @@
     grid-template-rows: 45% 55%;
     row-gap: 4px;
 }
-.elementTitle{
-    font-size: 20px;
-    display: flex;
-    align-items: center
-}
-.elementDesc{
-    font-size: 13px;
-    display: flex;
-    align-items: flex-start
-}
-.elementIcon{
-    margin-top: 110%;
-}
-.pictureGridParent{
-    display: grid;
-    grid-template-columns: 5% 90% 5%;
-    margin-top: 12px;
-    margin-bottom: 12px;
-}
-.pictureGridChild{
-    grid-row: 2;
-    grid-column: 2;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    column-gap: 12px;
-    grid-template-rows: 1fr;
-    background-color: #282828;
-    border-radius: 9px;
-    padding-left: 20px;
-    padding-right: 30px;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    box-shadow: 2px 5px 15px 2px rgb(180, 180, 180);
-    height: 240px
-}
-.pictureText{
-    font-size: 24px;
-    color: white;
-    font-weight: 700;
-}
-.pictureContainer{
-    overflow: hidden;
-    border-radius: 9px;
-    border-radius: 9px;
-}
-.pictureStyling{
-    object-fit: cover;
-    object-position: -130px -50px;
-    width: 400px;
-    height: 240px;
-}
+
+
 
 .burger{
     visibility: hidden;
 }
 
+.donateOuterGrid{
+    composes: flexboxAllCenter;
+}
 
+.donateButton{
+    background-color: #30d5c723;
+    height: 50%;
+    width: 100%;
+    composes: flexboxAllCenter;
+    border: 1px solid #30D5C8;
+    border-radius: 5px;
+}
 
+.donate{
+    color: #30D5C8;
+    font-weight: 900;
+    font-size: 16px;
+}
 
-@media only screen and (min-width: 1001px){
-    .largeWidthGrid{
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    }
-
-    .smallWidthGrid{
+.largeWidthGrid{
     visibility: hidden;
     height: 0;
+}
+
+.hide{
+    position: sticky;
+    height: 0px;
+    top: 0;
+    z-index: 10;
+}
+
+@media only screen and (min-width: 1001px){
+
+.hideOver1000{
+    height: 0;
+    visibility: hidden;
+}
+
+.largeWidthGrid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    visibility: unset;
+    height: unset;
+}
+
+.lwTitle{
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    padding-left: 15px;
+    cursor: pointer;
 }
 
 }
@@ -204,8 +195,7 @@
     width: 100%;
     background-color: white;
     display: grid;
-    grid-template-columns: 200px 1fr minmax(60px, 100px);
-    padding-left: 10px;
+    grid-template-columns: 200px minmax(20px, 1fr) minmax(20px, 100px) minmax(60px, 100px) 5px;
 }
 
 .linkButton{
@@ -228,6 +218,11 @@
     composes: flexboxAllCenter;
 }
 
+.swFullHeight{
+    height: 100vh;
+    background-color: white;
+}
+
 .coverSmallScreen{
     height: calc(100vh-20px);
     position: absolute;
@@ -239,10 +234,15 @@
     composes: coverSmallScreen;
     background-color: white;
     padding-top: 20px;
+    margin-top: 2px;
     display: grid;
     grid-template-rows: repeat(6, 75px);
     font-size: 18px;
     width: 100vw;
+    height: 100vh;
+    top: -2px;
+    /* overflow: scroll; */
+
 }
 
 .expand{
@@ -262,6 +262,7 @@
     align-items: center;
     font-weight: 900;
     padding-left: 15px;
+    cursor: pointer;
 }
 
 .swTitleGrid{
@@ -272,14 +273,20 @@
 }
 
 .subLinksGrid{
-    transform: translate(100%);
-    z-index: 1;
+    position: absolute;
     background-color: white;
     padding-top: 20px;
     display: grid;
     grid-template-rows: repeat(6, 75px);
     font-size: 18px;
+    top: 0px;
     width: 100vw;
+    height: 100vh;
+}
+
+.test{
+    width: 100vw;
+    position: relative;
 }
 
 .subLinkTitle{
@@ -297,11 +304,13 @@
 .slideIn{
     composes: subLinksGrid;
     transform: translate(0%);
+    width: 100vw;
     transition: all .2s linear;
 }
 
 .slideOut{
     composes: subLinksGrid;
+    transform: translate(200%);
     transition: all .2s linear;
 }
 
@@ -315,8 +324,8 @@
     grid-column: 3;
 }
 
-.hide{
-    overflow: hidden;
-    position:relative;
+.arrowLeft{
+    grid-column: 1;
 }
+
 }

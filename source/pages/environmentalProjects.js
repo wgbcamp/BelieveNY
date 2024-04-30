@@ -10,7 +10,7 @@ const environmentalProjects = () => {
                 <div className="maxWidth width80Per">           
                 <div className="size36Font centerText padTop40 padBottom40"><b>Environmental Projects</b></div>
                     <div className="treeGrid size18Font lineHeight30 ">
-                        <div className="simpleFlex"><img src={Tree} className="item4"></img></div>
+                       
                         <div className="simpleFlex">
                             <div className="innerTreeGrid padTop40">
                                 <div><b>Environmental factors affect us all</b></div>

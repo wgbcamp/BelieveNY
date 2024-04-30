@@ -76,7 +76,7 @@ function App(){
             <div className={`${dim === true || dim2 === true ? "dim" : ""}`}>
                 <Header location={location}/>
                     <Routes>
-                        <Route path="/" element={<Home/>}/>
+                        <Route path="*" element={<Home/>}/>
                         <Route path="/faq" element={<Faq/>}/>
                         <Route path="/aboutUs/" element={<AboutUs/>}/>
                         <Route path="/impactReport" element={<ImpactReport/>}/>
@@ -100,7 +100,6 @@ function App(){
                         <Route path="/donationformQR" element={<DonationFormQR/>}/>
                         <Route path="/survey" element={<Survey/>}/>
                         <Route path="/updateContent" element={<UpdateContent/>}/>
-                        <Route path="*" element={<Home/>}/>
                         <Route path="/home2" element={<Home2/>}/>
                         <Route path="/collegeresources" element={<CollegeResources/>}/>
                         <Route path="/mentalhealthfair" element={<MentalHealthFair/>}/>
