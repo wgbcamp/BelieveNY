@@ -67,6 +67,10 @@ body{
     background-color: var(--purple);
 }
 
+.accomodateHeader{
+    margin-top: 71px;
+}
+
 .contentWrapper{
     height: 1200px;
 }

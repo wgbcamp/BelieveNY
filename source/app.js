@@ -1,7 +1,7 @@
 import React, {useState, useEffect, createRef} from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import './css/main.css';
-import Header from './components/header.js';
+import Header from './components/newHeader.js';
 import Footer from './components/footer';
 import Home from './pages/home.js';
 import AboutUs from './pages/aboutUs';
@@ -75,13 +75,14 @@ function App(){
             <DonateChoices dim2={dim2} updateDim2={updateDim2}/>
             <div className={`${dim === true || dim2 === true ? "dim" : ""}`}>
                 <Header location={location}/>
+                <div className='accomodateHeader'>
                     <Routes>
                         <Route path="*" element={<Home/>}/>
                         <Route path="/faq" element={<Faq/>}/>
                         <Route path="/aboutUs/" element={<AboutUs/>}/>
                         <Route path="/impactReport" element={<ImpactReport/>}/>
-                        <Route path="/diversityAndInclusion/" element={<DiversityInclusion/>}/>
-                        <Route path="/foundingSupporters/" element={<FoundingSupporters/>}/>
+                        <Route path="/diversityAndInclusion" element={<DiversityInclusion/>}/>
+                        <Route path="/foundingSupporters" element={<FoundingSupporters/>}/>
                         <Route path="/getHelp" element={<GetHelp updateDim={updateDim} updatePayload={updatePayload}/>}/>
                         <Route path="/foodFirst" element={<FoodFirst/>}/>
                         <Route path="/theOpenSpace" element={<TheOpenSpace/>}/>
@@ -103,7 +104,8 @@ function App(){
                         <Route path="/home2" element={<Home2/>}/>
                         <Route path="/collegeresources" element={<CollegeResources/>}/>
                         <Route path="/mentalhealthfair" element={<MentalHealthFair/>}/>
-                    </Routes>                        
+                    </Routes>  
+                </div>                      
                 <Footer/>
                 <BottomContact/>
             </div>

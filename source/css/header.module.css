@@ -3,9 +3,7 @@
     height: 69px;
     background-color: white;
     display: grid;
-    grid-template-columns: 210px 1fr 50px 100px 5px;
-    max-width: 1620px;
-    border-bottom: 2px solid black;
+    grid-template-columns: 185px 1fr minmax(100px, 180px) 5px;
 }
 .flexboxJustifyCenter{
     display: flex;
@@ -131,6 +129,9 @@
 
 .donateOuterGrid{
     composes: flexboxAllCenter;
+    height: 69px;
+    grid-column: 3;
+    grid-row: 1;
 }
 
 .donateButton{
@@ -140,9 +141,11 @@
     composes: flexboxAllCenter;
     border: 1px solid #30D5C8;
     border-radius: 5px;
+    grid-row: 1;
 }
 
 .donate{
+    cursor: pointer;
     color: #30D5C8;
     font-weight: 900;
     font-size: 16px;
@@ -160,6 +163,7 @@
     z-index: 10;
 }
 
+/*above 1000px*/
 @media only screen and (min-width: 1001px){
 
 .hideOver1000{
@@ -169,33 +173,111 @@
 
 .largeWidthGrid{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, minmax(120px, 250px));
+    grid-template-rows: 69px auto;
     visibility: unset;
     height: unset;
 }
 
 .lwTitle{
-    display: flex;
-    align-items: center;
     font-weight: 900;
-    padding-left: 15px;
+    cursor: default;
+}
+
+.lwLink{
+    font-weight: 900;
     cursor: pointer;
 }
 
+.centerLargeGrid{
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid black;
 }
 
+.relativeBlock{
+    position: unset;
+    width: 0;
+}
 
-/*below 500px*/
+.animatePopup[id="ABOUT US"]:hover ~ .popupRowsSeparator[id="ABOUT US"]{
+    transform: scale(1);
+    transition: transform 0.3s;
+}
 
+.animatePopup[id="OUR WORK"]:hover ~ .popupRowsSeparator[id="OUR WORK"]{
+    transform: scale(1);
+    transition: transform 0.3s;
+}
+
+.animatePopup[id="EVENTS"]:hover ~ .popupRowsSeparator[id="EVENTS"]{
+    transform: scale(1);
+    transition: transform 0.3s;
+}
+
+.popupGrowthInsurance:hover{
+    
+}
+
+.popupRowsSeparator:hover{
+    transform: scale(1);
+    transition: transform 0.3s;
+}
+
+.popupRowsSeparator{
+    transform: scale(0);
+    display: grid;
+    grid-template-rows: 10px auto;
+    transition: transform 0.3s;
+}
+
+.popupRows{
+    grid-row: 2;
+    background-color: white;
+    display: grid;    
+    grid-auto-rows: 75px;
+    margin-left: -70px;
+    margin-right: -70px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 3px 0px;
+}
+
+.popupPointer{
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.3s;
+}
+
+.popupPointer:hover{
+    transform: scale(1.4);
+    transition: transform 0.3s;
+}
+
+.popupStyle{
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.hidePopupRows{
+    visibility: hidden;
+}
+}
+
+/*below 1000px*/
 @media only screen and (max-width: 1000px){
 
 .headerGrid{
     color: black;
+    border-bottom: 2px solid black;
     height: 69px;
     width: 100%;
     background-color: white;
     display: grid;
-    grid-template-columns: 200px minmax(20px, 1fr) minmax(20px, 100px) minmax(60px, 100px) 5px;
+    grid-template-columns: 200px minmax(20px, 1fr) minmax(60px, 100px) minmax(10px, 100px);
+}
+
+.donateOuterGrid{
+    grid-column: 3;
 }
 
 .linkButton{
@@ -213,7 +295,7 @@
 
 .burger{
     visibility: visible;
-    grid-column: 3;
+    grid-column: 4;
     grid-row: 1;
     composes: flexboxAllCenter;
 }
@@ -284,12 +366,13 @@
     height: 100vh;
 }
 
-.test{
-    width: 100vw;
-    position: relative;
+.relativeBlock{
+    position: fixed;
+    width: 100%;
 }
 
 .subLinkTitle{
+    cursor: default;
     font-size: 30px;
     font-weight: 900;
     grid-column: 2;
@@ -327,5 +410,4 @@
 .arrowLeft{
     grid-column: 1;
 }
-
 }
