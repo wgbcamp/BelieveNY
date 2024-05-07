@@ -345,6 +345,9 @@
     font-weight: 900;
     padding-left: 15px;
     cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    color: unset;
 }
 
 .swTitleGrid{
@@ -352,6 +355,8 @@
     grid-template-columns: 200px 1fr minmax(60px, 100px);
     border-bottom: solid #e2e2e2;
     cursor: pointer;
+    text-decoration: none;
+    color: unset;
 }
 
 .subLinksGrid{

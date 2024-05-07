@@ -28,9 +28,9 @@ const newHeader = () => {
     ["ABOUT US", "fa-solid fa-arrow-right", aboutUsContent, () => {updateSL(aboutUsContent); updateSLT("ABOUT US"); update02D(true); updateZM(true)}], 
     ["OUR WORK", "fa-solid fa-arrow-right", ourWorkContent, () => {updateSL(ourWorkContent); updateSLT("OUR WORK"); update02D(true); updateZM(true)}],
     ["EVENTS", "fa-solid fa-arrow-right", eventsContent, () => {updateSL(eventsContent); updateSLT("EVENTS"); update02D(true); updateZM(true)}],
-    ["JOIN US", "", [""], () => redirect("/joinus")], 
-    ["DONATE", "", [""], () => redirect("/donate")],
-    ["TAKE A SURVEY", "", [""], () => redirect("/survey")]];
+    ["JOIN US", "", [""], "/joinus"], 
+    ["DONATE", "", [""], "/donate"],
+    ["TAKE A SURVEY", "", [""],"/survey"]];
 
     //manipulates state values for present dropdown menus on smaller viewports
     function changeState(){
@@ -93,8 +93,8 @@ const newHeader = () => {
                 <div className={styles.relativeBlock}>
                     <div className={`${styles.smallWidthGrid} ${widthState ? styles.expand : zapMenu ? styles.zap : styles.condense} ${styles.hideOver1000}`} id="smallgrid">
                         {smallWidthGridContent.map((value, index) => (
-                            <div className={styles.swTitleGrid} key={index} onClick={value[3]} id="gridRow">
-                                <div className={styles.swTitle}>{value[0]}</div>
+                            <div className={styles.swTitleGrid} key={index} onClick={typeof value[3] === 'string' ? () => redirect(value[3]) : value[3]} id="gridRow">
+                                <a href={value[3]} className={styles.swTitle}>{value[0]}</a>
                                 <div className={`${value[1]} ${styles.flexboxAllCenter} ${styles.arrow}`}></div>
                             </div>
                         ))}
@@ -110,10 +110,10 @@ const newHeader = () => {
                         </div>
                         {/*These menus appear after clicking a non-link button */}
                         {subLinks.map((value, index) => (
-                                <div className={styles.swTitleGrid} key={index} onClick={() => redirect(`/${value[1]}`)} id="gridRow">
+                                <a href={value[1]} className={styles.swTitleGrid} key={index} id="gridRow">
                                     <div className={styles.swTitle}>{value[0]}</div>
-                                </div>
-                            ))}    
+                                </a>
+                        ))}    
                     </div>
                 </div>
             </div>
