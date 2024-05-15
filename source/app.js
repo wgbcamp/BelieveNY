@@ -7,7 +7,7 @@ import Home from './pages/home.js';
 import AboutUs from './pages/aboutUs';
 import DiversityInclusion from './pages/diversityInclusion';
 import FoundingSupporters from './pages/foundingSupporters';
-import GetHelp from './pages/getHelp';
+// import GetHelp from './pages/getHelp';
 import FoodFirst from './pages/foodFirst';
 import TheOpenSpace from './pages/theOpenSpace';
 import EnvironmentalProjects from './pages/environmentalProjects';
@@ -83,7 +83,7 @@ function App(){
                         <Route path="/impactReport" element={<ImpactReport/>}/>
                         <Route path="/diversityAndInclusion" element={<DiversityInclusion/>}/>
                         <Route path="/foundingSupporters" element={<FoundingSupporters/>}/>
-                        <Route path="/getHelp" element={<GetHelp updateDim={updateDim} updatePayload={updatePayload}/>}/>
+                        {/* <Route path="/getHelp" element={<GetHelp updateDim={updateDim} updatePayload={updatePayload}/>}/> */}
                         <Route path="/foodFirst" element={<FoodFirst/>}/>
                         <Route path="/theOpenSpace" element={<TheOpenSpace/>}/>
                         <Route path="/environmentalProjects" element={<EnvironmentalProjects/>}/>
