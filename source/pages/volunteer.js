@@ -21,7 +21,7 @@ const volunteer = () => {
                     <div className="centerText width80Per weight500 marginTop20">We all have skills that contribute to Believe New York's helpful and efficient service for all New Yorkers!</div>
                 </div>
                 <div className="simpleFlex">
-                    <div className="centerText width80Per padTop20 weight500">Do you want to apply to any of these positions? Send your resume to <span className='bold'>believenewyork@gmail.com</span>! All welcome to apply.</div>
+                    <div className="centerText width80Per padTop20 weight500">Do you want to apply to any of these positions? Send your resume to <span className='bold'>admin@believeny.org</span>! All welcome to apply.</div>
                 </div>   
                             <div className="volPosTitle weight700 size26Font">Professional Community Fundraiser & Advocate</div>
                             <div className="volPosText padBottom20">Are you a passionate and outgoing individual who wants to make a tangible difference in the lives of others? Do you want to work directly for a nonprofit organization? Believe New York is seeking dedicated individuals like you to join our team as a Professional Community Fundraiser and Community Advocate. To apply, please email your resume and cover letter to our Director of Development, Sonny Curtin at <span className="bold">sonny@believeny.org</span>.

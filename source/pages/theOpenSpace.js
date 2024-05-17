@@ -69,7 +69,7 @@ const theOpenSpace = () => {
                                     </div>
                                     <div className="size18Font OSExplanation lineHeight25  padBottom40 textAlignRight color1 padTop20">
                                         <div className="">
-                                        Any questions about The Open Space, please email our administration at <b>believenewyork@gmail.com</b>.
+                                        Any questions about The Open Space, please email our administration at <b>admin@believeny.org</b>.
                                         </div>
                                     </div>
                                 </div>

@@ -16,7 +16,7 @@ const foodFirst = () => {
                         </div>
                         <div className="padTop20">Due to concerns with COVID-19 all pick ups must be done outside, with any person(s) being met wearing a mask.
                         </div>
-                        <div className="padTop20 padBottom20"><b>For pick-ups and deliveries email believenewyork@gmail.com</b>
+                        <div className="padTop20 padBottom20"><b>For pick-ups and deliveries email admin@believeny.org.</b>
                         </div>
                    </div>
                    <div className="ffMedium marginTop20 topBorder padBottom30">Accepted items</div>
