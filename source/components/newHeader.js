@@ -12,7 +12,7 @@ const newHeader = () => {
     //arrays for header category content and paths for links
     const aboutUsContent = [["Who We Are", "aboutUs"],["Our Impact", "impactReport"],["Diversity and Inclusion", "diversityAndInclusion"],["Founding Supporters", "foundingSupporters"]];
 
-    const ourWorkContent = [["The Open Space", "theOpenSpace"],["Food First", "foodFirst"],["Environmental projects", "environmentalProjects"],["Pathways for Emerging Leaders", "pathways"]];
+    const ourWorkContent = [["Need Help?", "getHelp"],["The Open Space", "theOpenSpace"],["Food First", "foodFirst"],["Environmental projects", "environmentalProjects"],["Pathways for Emerging Leaders", "pathways"]];
 
     const eventsContent = [["Upcoming Events", "upcomingEvents"],["Past Events", "pastEvents"],["Event Sponsors", "eventSponsors"],["Donate to Our Events", "donate"]];
 

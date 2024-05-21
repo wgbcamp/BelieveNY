@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import calendarPreview from '../images/general/calendarPreview.jpg'
 
-const theOpenSpace = () => {
+const theOpenSpace = (props) => {
 
     function restoreTop(){
         window.scrollTo(0,0);
@@ -19,7 +19,7 @@ const theOpenSpace = () => {
                         </div>
                         <div className="simpleFlex">
                             <div>
-                                <Link to="/scheduleBooking" className="submitButton3" onClick={() => restoreTop()}>
+                                <Link to="/scheduleBooking" className="submitButton3" onClick={() => {restoreTop(); props.updateBC("The Open Space");}}>
                                     <b>Book a session here</b>
                                 </Link> 
                             </div>

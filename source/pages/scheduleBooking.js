@@ -148,7 +148,7 @@ const scheduleBooking = (props) => {
     function submitBooking(){
         if (name !== "" && email !== "" && email.includes("@") && email.includes(".") && phone !== "" && phone.split(/[-\s]/).join("").length === 10 && message !== "" && clientStatus !== "" && ongoingSupport !== "" && howYouHeard !== "" && superDate !== "" && timeChosen !== ""){
             props.updateDim(true);
-            props.updatePayload({name: name, email: email, phone: phone, path: "booking", type: "booking", specific0: message, specific1: superDate, specific2: timeChosen, specific3: clientStatus, specific4: ongoingSupport, specific5: howYouHeard});
+            props.updatePayload({name: name, email: email, phone: phone, path: "booking", type: "booking", specific0: message, specific1: superDate, specific2: timeChosen, specific3: clientStatus, specific4: ongoingSupport, specific5: howYouHeard, label: props.bookingCategory});
         }else{
             if (phone.split(/[-\s]/).join("").length !== 10){
                 alert("Please make sure your phone number consists of 10 digits.");
@@ -461,7 +461,7 @@ const scheduleBooking = (props) => {
             <div className="simpleFlex">
                 <div className="maxWidth width80Per">
                     <div className='padTop80'></div>
-                    <div className='weight500 lineHeight25'>Important Disclaimer: The Open Space is not a substitute for clinical mental health treatment and/or a cure for any mental health issues and/or disorders. Although our Counselors are comprehensively trained, they are not certified nor licensed mental health specialists. They are trained in active listening techniques, empathy, and compassion and will provide support and resource referrals as needed.</div>
+                    <div className='weight500 lineHeight25'>Important Disclaimer: {props.bookingCategory} is not a substitute for clinical mental health treatment and/or a cure for any mental health issues and/or disorders. Although our Counselors are comprehensively trained, they are not certified nor licensed mental health specialists. They are trained in active listening techniques, empathy, and compassion and will provide support and resource referrals as needed.</div>
                     <div className="padTop80"></div>
                     
                     
@@ -556,8 +556,8 @@ const scheduleBooking = (props) => {
                                 <label for="client-status" className=''>Are you a new or current client?</label>
                                 <select name="clientStatus" id="client-status" className='bookingDropdownWidth' onChange={updateCS}>
                                     <option value="">--Please choose an option--</option>
-                                    <option value="yes">Yes</option>
-                                    <option value="no">No</option>
+                                    <option value="yes">New</option>
+                                    <option value="no">Current</option>
                                 </select>
                             </div>
                         </div>

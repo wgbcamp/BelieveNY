@@ -30,6 +30,7 @@ const FormHandler = (props) => {
                 clientStatus: props.payload.specific3,
                 ongoingSupport: props.payload.specific4,
                 howYouHeard: props.payload.specific5,
+                label: props.payload.label
             }));
         }
         if(props.payload.type === "eventSponsor"){

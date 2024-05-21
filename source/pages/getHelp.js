@@ -1,103 +1,67 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
-import facebook from '../images/general/facebook-square-brands.png'
-import twitter from '../images/general/twitter-square-brands.png'
-import instagram from '../images/general/instagram-square-brands.png'
+import calendarPreview from '../images/general/calendarPreview.jpg'
 
 const getHelp = (props) => {
-
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
-    const [subject, setSubject] = useState('');
-    const [time, setTime] = useState('');
-    const [text, setText] = useState('');
-
-    const updateName = event => {
-        setName(event.target.value);
+    function restoreTop(){
+        window.scrollTo(0,0);
     }
-    const updatePhone = event => {
-        setPhone(event.target.value);
-    }
-    const updateEmail = event => {
-        setEmail(event.target.value);
-    }
-    const updateSubject = event => {
-        setSubject(event.target.value);
-    }
-    const updateTime = event => {
-        setTime(event.target.value);
-    }
-    const updateText = event => {
-        setText(event.target.value);
-    }
-
-    function submitEmail(){
-        if(name !== "" && email !== "" && email.includes("@") && email.includes(".") && phone !== "" && phone.split(/[-\s]/).join("").length === 10 && subject !== "" && time !== "" && text !== ""){
-            props.updateDim(true);
-            props.updatePayload({name: name, email: email, phone: phone, path: "", type: "contactForm", specific0: subject, specific1: text, specific2: time});
-        }else{
-            if (phone.split(/[-\s]/).join("").length !== 10){
-                alert("Please make sure your phone number consists of 10 digits.");
-            }else if (!(email.includes("@") && email.includes("."))){
-                alert("Please make sure to include a valid email address.");
-            }else{
-                alert("Please fill out every field below before booking your appointment.");
-            }
-        }
-    }
-
     return(
         
         <div>
-            <div className="simpleFlex down whiten">
-                <div className="maxWidth width80Per">
-                    <div className="simpleTitle centerText">NEED HELP?</div>
-                    <div className="size18Font weight800 lineHeight30">We are here for you. Send us a message below and we will respond back via e-mail, text, or phone within 24-48 hours for next steps and resources that will help you and your family. Stay close to your phone and check e-mails often after you submit your request. If it's an emergency, please call 911.
-                    <br></br>
-                    <br></br>
-                    <Link to="/faq" className="">Questions on how our process works? Please visit our FAQ.</Link>
-                    </div>
-
-                    <div className="padding50"></div>
-                    <div className="contactGrid">
-                        <div className="ghEmail centerText">gethelp@believeny.org</div>
-                        <div className='ghPhone centerText'>347-NYC-0011 (call or text)</div>
-                        <div className="flexFix">
-                            <div className="cgColumnGrid">
-                                <a href="https://www.twitter.com/Believe_NewYork" className="linkToBlack"><i className="fa-brands fa-square-twitter fa-2xl iconPad"></i></a>
-                                <a href="https://www.instagram.com/believeny" className="linkToBlack"><i className="fa-brands fa-square-instagram fa-2xl iconPad"></i></a>
-                                <a href="https://www.youtube.com/channel/UCbz9owENALBUb8O6NrFv7oQ" className="linkToBlack"><i className="fa-brands fa-square-youtube fa-2xl iconPad"></i></a>
+            <div className="simpleFlex">
+                <div className="widen">
+                    <div className="openSpaceBanner padBottom70500 padTop80 whiteText centerText">
+                        <b className="size36Font">Get Help Initial Intake</b>
+                        <div className="simpleFlex">
+                            <div className="padTop20 padBottom40 size18Font max850">Speak with one of our trained Client Advocates that will help your situation by connecting you to referrals and ensuring you achieve your goals in any area of need!</div>
+                        </div>
+                        <div className="simpleFlex">
+                            <div>
+                                <Link to="/scheduleBooking" className="submitButton3" onClick={() => {restoreTop(); props.updateBC("Get Help");}}>
+                                    <b>Book a session here</b>
+                                </Link> 
                             </div>
                         </div>
-                    </div>
-                    <div className="emailGrid">
-                        <input placeholder="First and last name" type="email" className="fName styleEmGrid" onChange={updateName} value={name}/>
-                        <input placeholder="Phone #" className="fPhone styleEmGrid" onChange={updatePhone} value={phone}/>
-                        <input placeholder="Email" className="fEmail styleEmGrid" onChange={updateEmail} value={email}/>
-                        <input placeholder="Subject" className="fSubject styleEmGrid" onChange={updateSubject} value={subject}/>
-                        <input placeholder="Best callback time" className="callback styleEmGrid" onChange={updateTime} value={time}/>
-                        <textarea placeholder="Tell us what's going on..." type="big" className="bigTextArea" onChange={updateText} value={text}/>
                         
-                        {/* <div className="placeholderCaptcha">PLACEHOLDER CAPTCHA</div> */}
-                        <div className="simpleFlex getHelpButton">
-                            <div className="submitButton2" onClick={() => submitEmail()}>Get Help</div>
+                    </div>
+                    <div className='openSpaceDesc padBottom80'>
+                        <div className="centerText size42Font padTop40 padBottom40">
+                            <b>Learn about Get Help</b>
                         </div>
-                        
-                    </div>
-                    <div id="fontawesomeIconStorage">
-                        <img src={facebook}></img>
-                        <img src={twitter}></img>
-                        <img src={instagram}></img>
-                    </div>
-                        {/* <form method="POST" action="form.php" id="contact-form">
-                        <h2>Contact us</h2>
-                        <p><label>First Name:</label> <input name="name" type="text" /></p>
-                        <p><label>Email Address:</label> <input name="email" type="text" /></p>
-                        <p><label>Message:</label>  <textarea name="message"></textarea> </p>
-                        <p><input type="submit" value="Send"/></p>
-                    </form> */}
-
+                            <div className="simpleFlex">
+                                <div className="openSpaceWhatIsGrid">
+                                    <div className='boldOSTitle alignLeft color1 padTop20'>
+                                        Safe place to talk   
+                                    </div>
+                                    <div className="size18Font OSExplanation lineHeight25 textAlignRight color1 padTop20">
+                                        <div>
+                                        Ongoing individualized support and resource referrals for housing,  food, medical and mental healthcare, domestic violence safety, legal services, and more
+                                        <div className="padTop20"></div>
+                                        Sessions can be scheduled for up to 45 minutes and take place over the phone or Google Meet, audio only. Regular sessions are welcome and encouraged!
+                                        </div>
+                                    </div>
+                                    <div className='boldOSTitle alignLeft color2 padTop20'>
+                                        Schedule a session with a client advocate
+                                    </div>
+                                    <div className="size18Font OSExplanation lineHeight25 textAlignRight padTop20 color2">
+                                        <div>
+                                        Select an available time to schedule a session with one of our trained client advocates. We are trained in active listening, empathy, and compassion and will provide support and resource referrals to help you through during this difficult time.
+                                        <div className="padTop20"></div>
+                                        Regular check ins with Client Advocates to ensure progress
+                                        </div>
+                                    </div>
+                                    <div className='boldOSTitle alignLeft color1 padTop20'>
+                                        Ask us questions
+                                    </div>
+                                    <div className="size18Font OSExplanation lineHeight25  padBottom40 textAlignRight color1 padTop20">
+                                        <div className="">
+                                        Any questions about Get Help, please email our administration at <b>admin@believeny.org</b>.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>      
+                    </div>   
                 </div>
             </div>
         </div>
