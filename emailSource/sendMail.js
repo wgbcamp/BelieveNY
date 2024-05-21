@@ -417,7 +417,7 @@ function sendMail(data){
     if (data.type === 'booking'){
         sgMail.setApiKey(process.env.SENDGRID_API_KEY)
         const msg = {
-            to: data.email, // Change to your recipient
+            to: process.env.FROM_EMAIL, // Change to your recipient
             from: process.env.FROM_EMAIL, // Change to your verified sender
             subject: `${data.name} booked a ${data.label} session for ${data.date} at ${data.time}`,
             text: 'Test email',
