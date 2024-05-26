@@ -16,9 +16,9 @@ const unused = () => {
                                         <img src={SiteLogo} className={styles.logoStyle}></img>
                                     </div>
                                     <div className={styles.copyright}>
-                                        <div className={styles.copyrightText}>© 2023 by Believe New York Philanthropies, Inc.</div>
-                                        <div className={styles.email}><i class="fa-solid fa-envelope"></i> GetHelp@BelieveNY.org</div>
-                                        <div><i class="fa-solid fa-comment-dots"></i> (347) NYC-0011</div>
+                                        <div className={styles.copyrightText}>© 2024 by Believe New York Philanthropies, Inc.</div>
+                                        <div className={styles.email}> GetHelp@BelieveNY.org</div>
+                                        <div> (347) 692-0011</div>
                                     </div>
                                 </div>
                                 <div className={styles.chuck}>
@@ -27,17 +27,17 @@ const unused = () => {
                                         <div className={styles.categoriesFlex}>
                                             <div className={styles.categoriesGrid}>
                                                 <div className={styles.categoriesTitle}>Who We Are</div>
-                                                <div className={styles.categoriesLinks}><a>About Us</a></div>
-                                                <div className={styles.categoriesLinks}>Our Impact</div>
-                                                <div className={styles.categoriesLinks}>Diversity and Inclusion</div>
-                                                <div className={styles.categoriesLinks}>Founding Supporters</div>
+                                                <div className={styles.categoriesLinks}><a href="/aboutUs">About Us</a></div>
+                                                <div className={styles.categoriesLinks}><a href="/impactReport">Our Impact</a></div>
+                                                <div className={styles.categoriesLinks}><a href="/diversityAndInclusion">Diversity and Inclusion</a></div>
+                                                <div className={styles.categoriesLinks}><a href="/foundingSupporters">Founding Supporters</a></div>
                                             </div>
                                             <div className={styles.categoriesGrid}>
                                                 <div className={styles.categoriesTitle}>What We Do</div>
-                                                <div className={styles.categoriesLinks}>Get Help</div>
-                                                <div className={styles.categoriesLinks}>The Open Space</div>
-                                                <div className={styles.categoriesLinks}>Food First</div>
-                                                <div className={styles.categoriesLinks}>Community Events</div>
+                                                <div className={styles.categoriesLinks}><a href="/getHelp">Get Help</a></div>
+                                                <div className={styles.categoriesLinks}><a href="/theOpenSpace">The Open Space</a></div>
+                                                <div className={styles.categoriesLinks}><a href="/foodFirst">Food First</a></div>
+                                                <div className={styles.categoriesLinks}><a href="/pastEvents">Community Events</a></div>
                                             </div>
                                         </div>
                                         {/* Social media links flexbox */}

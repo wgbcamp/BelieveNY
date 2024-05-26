@@ -81,7 +81,11 @@
     cursor: pointer;
     text-decoration: none !important;
     color: white;
+}
 
+a{
+    text-decoration: none !important;
+    color: white;
 }
 
 .socialMediaOuterFlex{
@@ -248,7 +252,7 @@ input:focus{
     }
 
     .footerGrid{
-        height: 620px;
+        height: 635px;
     }
 
 }
@@ -285,7 +289,7 @@ input:focus{
     }   
 
     .footerGrid{
-        height: 452px;
+        height: 467px;
     }
 }
 
@@ -322,8 +326,9 @@ input:focus{
     .footerGrid{
         display: grid;
         grid-template-columns: 220px 1fr;
+        grid-template-rows: 275px 1fr;
         column-gap: 25px;
-        height: 400px;
+        height: 385px;
     }
 
     .chuckGrid{
