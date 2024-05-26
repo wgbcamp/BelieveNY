@@ -2,7 +2,7 @@ import React, {useState, useEffect, createRef} from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import './css/main.css';
 import Header from './components/newHeader.js';
-import Footer from './components/footer';
+import Footer from './components/newFooter.js';
 import Home from './pages/home.js';
 import AboutUs from './pages/aboutUs';
 import DiversityInclusion from './pages/diversityInclusion';
@@ -113,7 +113,7 @@ function App(){
                     </Routes>  
                 </div>                      
                 <Footer/>
-                <BottomContact/>
+                {/* <BottomContact/> */}
             </div>
         </div>
     )

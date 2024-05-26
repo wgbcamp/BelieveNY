@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import CircleBox from '../components/circleBox';
-import MailingList from '../components/mailingList';
 import { Link } from 'react-router-dom';
 import background1 from "../images/general/clothing.webp";
 import background2 from "../images/general/IMG_1938.JPG";

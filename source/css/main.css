@@ -172,6 +172,10 @@ body{
     max-width: 1620px;
 }
 
+.width100Per{
+    width: 100%;
+}
+
 .width80Per{
     width: 80%;
 }

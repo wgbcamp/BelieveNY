@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import CircleBox from '../components/circleBox';
-import MailingList from '../components/mailingList';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -116,7 +115,6 @@ const Home = () => {
                 <CircleBox info={{photo: "photo2", title: "Volunteer", description: "Work directly with people in need, creative social media posts, and help with new fundraising efforts. If you think you'd be a great fit don't hesitate to apply!", buttonText: "Become a Volunteer", link: "/joinus"}}/>
                 <CircleBox info={{photo: "photo3", title: "Donate", description: "Your support allows our organization to continue and assisting as many people as possible.", buttonText: "Place a Donation", link: "/donate"}}/>
                 </div>
-                <MailingList/>
             </div>
             </div>
             </div>
