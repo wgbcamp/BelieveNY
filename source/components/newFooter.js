@@ -7,14 +7,14 @@ const unused = () => {
     return(
         <div>
             <div className="simpleFlex">
-                <div className="maxWidth width100Per">
+                <div className={styles.footerBackground}>
                         <div className={styles.test}>
                             <div className={styles.footerGrid}>
                                 {/* Logo and copyright flexbox */}
                                 <div className={styles.logoCopyrightFlex}>
-                                    <div className={styles.logoGrid}>
+                                    <a href="/" className={styles.logoGrid}>
                                         <img src={SiteLogo} className={styles.logoStyle}></img>
-                                    </div>
+                                    </a>
                                     <div className={styles.copyright}>
                                         <div className={styles.copyrightText}>© 2024 by Believe New York Philanthropies, Inc.</div>
                                         <div className={styles.email}> GetHelp@BelieveNY.org</div>
@@ -68,7 +68,7 @@ const unused = () => {
                                     </div>
                                 </div>
                                 {/* Donation flexbox */}
-                                <div className={styles.donateFlexboxRow}>
+                                <a href="/donate" className={styles.donateFlexboxRow}>
                                     <div className={styles.donateFlexboxCol}>
                                         <div className={styles.donateTitle}>Support Believe New York</div>
                                         <div className={styles.donateText}>Give a donation to support New Yorkers in need.</div>
@@ -76,7 +76,7 @@ const unused = () => {
                                     <div className={styles.donateFlexCenter}>
                                         <i className="fa-solid fa-2xl fa-right-long"></i>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                 </div>
