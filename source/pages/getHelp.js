@@ -6,6 +6,9 @@ const getHelp = (props) => {
     function restoreTop(){
         window.scrollTo(0,0);
     }
+
+alert("Availability for intakes and open space sessions is closed until September as we move to a new scheduling system.");
+
     return(
         
         <div>
@@ -18,9 +21,9 @@ const getHelp = (props) => {
                         </div>
                         <div className="simpleFlex">
                             <div>
-                                <Link to="/scheduleBooking" className="submitButton3" onClick={() => {restoreTop(); props.updateBC("Get Help");}}>
+                                {/* <Link to="/scheduleBooking" className="submitButton3" onClick={() => {restoreTop(); props.updateBC("Get Help");}}>
                                     <b>Book a session here</b>
-                                </Link> 
+                                </Link>  */}
                             </div>
                         </div>
                         

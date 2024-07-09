@@ -8,6 +8,9 @@ const theOpenSpace = (props) => {
         window.scrollTo(0,0);
     }
 
+    alert("Availability for intakes and open space sessions is closed until September as we move to a new scheduling system.");
+
+
     return(
         <div>
             <div className="simpleFlex">
@@ -19,9 +22,9 @@ const theOpenSpace = (props) => {
                         </div>
                         <div className="simpleFlex">
                             <div>
-                                <Link to="/scheduleBooking" className="submitButton3" onClick={() => {restoreTop(); props.updateBC("The Open Space");}}>
+                                {/* <Link to="/scheduleBooking" className="submitButton3" onClick={() => {restoreTop(); props.updateBC("The Open Space");}}>
                                     <b>Book a session here</b>
-                                </Link> 
+                                </Link>  */}
                             </div>
                         </div>
                         
