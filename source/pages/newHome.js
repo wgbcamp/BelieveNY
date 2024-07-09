@@ -7,19 +7,22 @@ import currentEvent from '../images/events/mentalHealth.png'
 const newHome = () => {
     return(
         <div>
-            <div className={`${styles.currentEventBG} ${styles.flexColumn} ${styles.borderSeparator}`}>             
-                <img src={currentEvent} className={styles.rotatingImage}></img>
-                <div className={styles.flexColumnAlignCenter}>
-                    <div className={styles.eventTitle}>Mental Health Resource Fair</div>
+            <div className={`${styles.currentEventBG} ${styles.borderSeparator}`}>             
+                <div className={styles.rotatingImage}>
                 </div>
-                <div className={styles.flexCenterX}>
-                    <div className={styles.eventDescription}>Whether you're looking for guidance, resources, or just want to connect with others, this fair is the perfect place to start.</div>
+                <div className={styles.flexColumn}>
+                    <div className={styles.flexColumnAlignCenter}>
+                        <div className={styles.eventTitle}>Mental Health Resource Fair</div>
+                    </div>
+                    <div className={styles.flexCenterX}>
+                        <div className={styles.eventDescription}>Whether you're looking for guidance, resources, or just want to connect with others, this fair is the perfect place to start.</div>
+                    </div>
+                    <a href="https://www.eventbrite.com/e/mental-health-support-fair-hosted-by-believe-new-york-tickets-882643539587?aff=oddtdtcreator" className={styles.eventLinkOuter}>
+                            <div className={styles.eventLinkText}>FIND OUT MORE</div>
+                    </a>
+                    <a href="/joinUs" ><div className={styles.miscLink}>JOIN OUR MOVEMENT</div></a>
+                    <a href="/impactReport"><div className={styles.miscLink}>SEE OUR IMPACT REPORT</div></a>
                 </div>
-                <a href="https://www.eventbrite.com/e/mental-health-support-fair-hosted-by-believe-new-york-tickets-882643539587?aff=oddtdtcreator" className={styles.eventLinkOuter}>
-                        <div className={styles.eventLinkText}>FIND OUT MORE</div>
-                </a>
-                <a href="/joinUs" ><div className={styles.miscLink}>JOIN OUR MOVEMENT</div></a>
-                <a href="/impactReport"><div className={styles.miscLink}>SEE OUR IMPACT REPORT</div></a>
             </div>
             <div className={styles.flexColumnAlignCenter}>
                 <div className={`${styles.width90}`}> 
