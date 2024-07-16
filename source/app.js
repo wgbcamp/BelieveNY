@@ -34,6 +34,9 @@ import Home2 from './pages/home2.js';
 import Pathways from './pages/pathways.js';
 import CollegeResources from './pages/collegeresources.js';
 import MentalHealthFair from './pages/mentalhealthfair.js';
+import CrudAssets from './pages/crudAssets.js';
+import NewHome from './pages/newHome2.js';
+import NewHomeOld from './pages/newHome.js';
 
 
 function App(){
@@ -110,6 +113,9 @@ function App(){
                         <Route path="/home2" element={<Home2/>}/>
                         <Route path="/collegeresources" element={<CollegeResources/>}/>
                         <Route path="/mentalhealthfair" element={<MentalHealthFair/>}/>
+                        <Route path="/crudAssets" element={<CrudAssets/>}/>
+                        <Route path="/newHome" element={<NewHome/>}/>
+                        <Route path="/newHomeOld" element={<NewHomeOld/>}/>
                     </Routes>  
                 </div>                      
                 <Footer/>

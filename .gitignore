@@ -2,3 +2,4 @@
 /build
 sendgrid.env
 .env
+.DS_Store

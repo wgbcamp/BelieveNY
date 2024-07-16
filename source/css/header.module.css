@@ -268,7 +268,7 @@
 
 .headerGrid{
     color: black;
-    border-bottom: 2px solid black;
+    /* border-bottom: 2px solid black; */
     height: 69px;
     width: 100%;
     background-color: white;
