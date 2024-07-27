@@ -23,47 +23,6 @@ const volunteer = () => {
                 <div className="simpleFlex">
                     <div className="centerText width80Per padTop20 weight500">Do you want to apply to any of these positions? Send your resume to <span className='bold'>admin@believeny.org</span>! All welcome to apply.</div>
                 </div>   
-                            <div className="volPosTitle weight700 size26Font">Professional Community Fundraiser & Advocate</div>
-                            <div className="volPosText padBottom20">Are you a passionate and outgoing individual who wants to make a tangible difference in the lives of others? Do you want to work directly for a nonprofit organization? Believe New York is seeking dedicated individuals like you to join our team as a Professional Community Fundraiser and Community Advocate. To apply, please email your resume and cover letter to our Director of Development, Sonny Curtin at <span className="bold">admin@believeny.org</span>.
-                            </div>
-                            <div className="volPosText padBottom20">
-                            In this role, you will have a unique opportunity to engage directly with the community, build meaningful connections, and raise vital funds to support our mission of improving the lives of New Yorkers facing adversity. By joining us, you will become an ambassador for positive change, inspiring individuals to contribute to our cause and create lasting impact. With comprehensive training, ongoing support, and a collaborative team environment, this position offers personal growth, professional development, and the satisfaction of knowing that your efforts directly contribute to transforming lives and expanding Believe New York's impact! 
-                            </div>
-                            <div className="volPosText weight700 padBottom20 padTop20">
-                            Benefits and Hours:
-                            </div>
-                            <li className="volPosBullet">Part time only; Thurs-Sat (12:00PM-6:00PM EST)</li>
-                            <li className="volPosBullet">$20/hour</li>
-                            <li className="volPosBullet">Opportunity to network and make connections in the nonprofit sector</li>
-                            <li className="volPosBullet">Personalized letter of recommendation after 1 year of service</li>
-                            <li className="volPosBullet">Leadership and professional growth</li>
-                            <li className="volPosBullet">Make a strong impact on your community and vulnerable populations</li>
-                            <li className="volPosBullet">Ability to travel to different locations in NYC and communicate with diverse populations</li>
-                            <li className="volPosBullet">Receive ongoing support and guidance from our leadership team, including our Executive Director and Director of Development</li>
-                            <div className="volPosText weight700 padBottom20 padTop20">
-                            Responsibilities:
-                            </div>
-                            <li className="volPosBullet">Engage with the public in a friendly and persuasive manner to inspire support and donations for Believe New York's mission.</li>
-                            <li className="volPosBullet">Effectively communicate the organization's goals, programs, and impact to potential donors.</li>
-                            <li className="volPosBullet">Develop and maintain a deep understanding of Believe New York's initiatives to engage in meaningful conversations with potential supporters.</li>
-                            <li className="volPosBullet">Utilize effective storytelling techniques to connect emotionally with individuals and convey the importance of their contributions.</li>
-                            <li className="volPosBullet">Meet assigned fundraising targets and goals while maintaining a positive and enthusiastic attitude.</li>
-                            <li className="volPosBullet">Represent Believe New York in a professional manner at various public locations and events.</li>
-                            <li className="volPosBullet">Document and maintain accurate records of donor interactions and contributions.</li>
-                            <li className="volPosBullet">Collaborate with team members and participate in regular meetings and training sessions.</li>
-                            <div className="volPosText weight700 padBottom20 padTop20">
-                            Required Qualifications:
-                            </div>
-                            <li className="volPosBullet">Strong interpersonal and communication skills with the ability to connect with people from diverse backgrounds.</li>
-                            <li className="volPosBullet">Sales experience and/or experience in face2face fundraising.</li>
-                            <li className="volPosBullet">Outgoing personality and enthusiasm for engaging with the public.</li>
-                            <li className="volPosBullet">Excellent verbal communication and active listening skills.</li>
-                            <li className="volPosBullet">Passionate about Believe New York's mission and able to articulate it effectively to others.</li>
-                            <li className="volPosBullet">Ability to work independently and as part of a team.</li>
-                            <li className="volPosBullet">Results-oriented with a drive to meet fundraising targets.</li>
-                            <li className="volPosBullet">Reliable and punctual, with strong time management skills.</li>
-                            <li className="volPosBullet">Comfortable working outdoors and standing for extended periods.</li>
-                            <li className="volPosBullet">Access to own transportation.</li>
                             <div className='simpleFlex verticalAlign size42Font weight900 padBottom40 padTop80'>Open Volunteer Positions
                             </div>
                     <div className='volPosGrid '>

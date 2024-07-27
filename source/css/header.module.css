@@ -345,6 +345,7 @@
     font-weight: 900;
     padding-left: 15px;
     cursor: pointer;
+    -webkit-user-select: none;
     user-select: none;
     text-decoration: none;
     color: unset;

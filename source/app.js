@@ -31,7 +31,6 @@ import Survey from './pages/survey.js';
 import DonateChoices from './components/donateChoices.js';
 import UpdateContent from './pages/updateContent.js';
 import Home2 from './pages/home2.js';
-import Pathways from './pages/pathways.js';
 import CollegeResources from './pages/collegeresources.js';
 import MentalHealthFair from './pages/mentalhealthfair.js';
 import CrudAssets from './pages/crudAssets.js';
@@ -96,7 +95,6 @@ function App(){
                         <Route path="/foodFirst" element={<FoodFirst/>}/>
                         <Route path="/theOpenSpace" element={<TheOpenSpace updateBC={updateBC}/>}/>
                         <Route path="/environmentalProjects" element={<EnvironmentalProjects/>}/>
-                        <Route path="/pathways" element={<Pathways/>}/>
                         <Route path="/scheduleBooking" element={<ScheduleBooking updateDim={updateDim} updatePayload={updatePayload} bookingCategory={bookingCategory}/>}/>
                         <Route path="/upcomingEvents" element={<UpcomingEvents/>}/>
                         <Route path="/pastEvents" element={<PastEvents/>}/>

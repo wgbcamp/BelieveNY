@@ -17,8 +17,12 @@ const unused = () => {
                                     </a>
                                     <div className={styles.copyright}>
                                         <div className={styles.copyrightText}>© 2024 by Believe New York Philanthropies, Inc.</div>
-                                        <div className={styles.email}> GetHelp@BelieveNY.org</div>
-                                        <div> (347) 692-0011</div>
+                                        <div className="padBottom5">For prospective clients:</div>
+                                        <div className={styles.email}> gethelp@believeny.org</div>
+                                        <div className={styles.phone}> (347) 692-0011</div>
+                                        <div className='padBottom8'></div>
+                                        <div className="padBottom5">General inquiries:</div>
+                                        <div className={styles.email}>admin@believeny.org</div>
                                     </div>
                                 </div>
                                 <div className={styles.chuck}>
@@ -48,9 +52,8 @@ const unused = () => {
                                                 </div>
                                                 <div className={styles.socialMediaLinksFlex}>
                                                     <a href="https://www.facebook.com/believeny" className={styles.linkToWhiteLeftmost}><i className="fa-brands fa-facebook-f fa-xl"></i></a>
-                                                    <a href="https://www.twitter.com/Believe_NewYork" className={styles.linkToWhite}><i className="fa-brands fa-twitter fa-xl iconPad"></i></a>
                                                     <a href="https://www.instagram.com/believeny" className={styles.linkToWhite}><i className="fa-brands fa-instagram fa-xl iconPad"></i></a>
-                                                    <a href="https://www.youtube.com/channel/UCbz9owENALBUb8O6NrFv7oQ" className={styles.linkToWhite}><i className="fa-brands fa-youtube fa-xl iconPad"></i></a>
+                                                    <a href="https://www.linkedin.com/company/believeny" className={styles.linkToWhite}><i className="fa-brands fa-linkedin fa-xl iconPad"></i></a>
                                                 </div>
                                             </div>
                                         </div>

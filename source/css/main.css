@@ -238,9 +238,23 @@ body{
 .padBottom10{
     padding-bottom: 10px;
 }
+
+.padBottom8 {
+    padding-bottom: 8px;
+}
+
+.padBottom5 {
+    padding-bottom: 5px;
+}
+
 .padTop40{
     padding-top: 40px;
 }
+
+.padTop60 {
+    padding-top: 60px;
+}
+
 .padTop80{
     padding-top: 80px;
 }
@@ -1331,6 +1345,12 @@ input[type="email"]::placeholder{
 .linkColor{
     color: var(--darkblue);
     font-weight: 900;
+    text-decoration: underline;
+}
+
+.linkColorThinner {
+    color: var(--darkblue);
+    font-weight: 700;
     text-decoration: underline;
 }
 
@@ -2596,7 +2616,7 @@ input[type="email"]::placeholder{
     .quoteGrid{
         display: grid;
         grid-template-columns: 15% 1fr 15%;
-        padding-bottom: 75px;
+        padding-bottom: 45px;
     }
 
     .quoteFont{
@@ -2988,6 +3008,15 @@ input[type="email"]::placeholder{
     .maxWidthCollege{
         max-width: 1025px;
     }
+
+    .linkDecorationRestore {
+        text-decoration: unset;
+    }
+
+    .ulLineHeight {
+        line-height: 28px;
+    }
+
 @media screen and (max-width: 500px){
 
     .donateBox{

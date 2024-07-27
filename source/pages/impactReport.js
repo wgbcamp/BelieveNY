@@ -32,7 +32,7 @@ const impactReport = () => {
                     <div className="">Note: These are quotes direct from clients with permission to share, the identity of these individuals has been hidden to protect their privacy</div>
                 </div>
                 <QuoteSlider/>
-                <div className="impactSubtitle size24Font" id="successStats">
+                {/* <div className="impactSubtitle size24Font" id="successStats">
                     <u>Other Successes</u>
                     <div className={`${collapseStatus}`}>
                        <div className="purpleDate">2022</div>
@@ -85,7 +85,7 @@ const impactReport = () => {
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div> */}
                 <div className="expansionButtonContainer">
                     <div className="expandAbove900px" onClick={() => swapText()}>{textValue}</div>
                 </div>
