@@ -19,7 +19,7 @@ const categoryBox = (props) => {
         <div className={styles.background}>
           {/* <img src={clothingHandout}/> */}
           <div className={styles.backgroundImage} style={image}>
-            <div className={styles.gridGradient} style={gradient}>
+            <div className={styles.gridGradient} >
               <div className={styles.backgroundGrid}>
                 <div className={styles.categoryTitle}>{props.title}</div>
                 <div></div>

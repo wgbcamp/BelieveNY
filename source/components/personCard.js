@@ -11,6 +11,7 @@ const personCard = (props) => {
                 <div className="infoGrid">
                 <div className="name">{props.aboutUs.name}</div>
                 <div className="title">{props.aboutUs.title}</div>
+                <div className="pronoun">{props.aboutUs.pronoun}</div>
                 <div className="pEmail">{props.aboutUs.email}</div>
                 </div>
             </div>

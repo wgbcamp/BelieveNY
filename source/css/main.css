@@ -598,7 +598,7 @@ ul.no-bullets{
 }
 
 .dText{
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     text-align: left;
     font-size: 18px;
     max-width: 85%;
@@ -1584,6 +1584,11 @@ input[type="email"]::placeholder{
     grid-row: 4;
     grid-column: 2;
     font-size: 17px;
+}
+
+.pronoun {
+    grid-row: 5;
+    grid-column: 2;
 }
 
 .pEmail{

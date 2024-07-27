@@ -97,7 +97,7 @@ function App(){
                         <Route path="/theOpenSpace" element={<TheOpenSpace updateBC={updateBC}/>}/>
                         <Route path="/environmentalProjects" element={<EnvironmentalProjects/>}/>
                         <Route path="/pathways" element={<Pathways/>}/>
-                        {/* <Route path="/scheduleBooking" element={<ScheduleBooking updateDim={updateDim} updatePayload={updatePayload} bookingCategory={bookingCategory}/>}/> */}
+                        <Route path="/scheduleBooking" element={<ScheduleBooking updateDim={updateDim} updatePayload={updatePayload} bookingCategory={bookingCategory}/>}/>
                         <Route path="/upcomingEvents" element={<UpcomingEvents/>}/>
                         <Route path="/pastEvents" element={<PastEvents/>}/>
                         <Route path="/eventSponsors" element={<EventSponsors updateDim={updateDim} updatePayload={updatePayload}/>}/>

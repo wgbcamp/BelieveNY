@@ -164,6 +164,10 @@ const scheduleBooking = (props) => {
     var [currMonth, changeMonth] = useState(0);
     var [currYear, changeYear] = useState(0);
     var [superDate, setSuperDate] = useState(actualDate);
+    
+    //mark specific dates as invalid for showing times or being selectable
+    var tempDateBlock = ["Nov23", "Nov24", "Dec24", "Dec25", "Dec31", "Jan01","Jul28","Jul29","Jul30","Jul31","Aug01","Aug02","Aug03","Aug04","Aug05","Aug06","Aug07","Aug08","Aug09","Aug10","Aug11","Aug12","Aug13","Aug14","Aug15","Aug16","Aug17","Aug18","Aug19","Aug20","Aug21","Aug22","Aug23","Aug24","Aug25","Aug26","Aug27","Aug28","Aug29","Aug30","Aug31","Sep01","Sep02"];
+
 
     function fillCalendar(data){
         if(data === 1){
@@ -280,9 +284,6 @@ const scheduleBooking = (props) => {
         }
     }
 
-    //invalidates specified holidays
-    var holidays = ["Nov23", "Nov24", "Dec24", "Dec25", "Dec31", "Jan01"];
-
     //removes days that are invalid
     console.log("Invalid days:");
     console.log(invalidDays);
@@ -297,7 +298,7 @@ const scheduleBooking = (props) => {
     //maps the values to the calendar tiles
     newCalValue(thisMonth.map((value) => (
 
-        <div className={`calTile ${thisMonth.indexOf(value)} ${value.slice(0,3)} ${value.slice(11,15)} ${value.length > 5 && !holidays.includes(value.slice(4,10).split(" ").join("")) ? value.slice(4,7).concat(value.slice(8,10)): "invalid"}`} onClick={() => { toggleSelection(thisMonth.indexOf(value), value.slice(0,15)); updateTC(""); updateST(true); toggleTSselection("blank");}} key={value.toString()}>{value.length > 5 ? value.slice(8,10) : value.slice(3,5)}</div>
+        <div className={`calTile ${thisMonth.indexOf(value)} ${value.slice(0,3)} ${value.slice(11,15)} ${value.length > 5 && !tempDateBlock.includes(value.slice(4,10).split(" ").join("")) ? value.slice(4,7).concat(value.slice(8,10)): "invalid"}`} onClick={() => { toggleSelection(thisMonth.indexOf(value), value.slice(0,15)); updateTC(""); updateST(true); toggleTSselection("blank");}} key={value.toString()}>{value.length > 5 ? value.slice(8,10) : value.slice(3,5)}</div>
     )));  
 }
 
@@ -321,6 +322,11 @@ const scheduleBooking = (props) => {
             element.classList.remove("calTileSelected");
         })
         
+        //sanitize data2 value if its got a length longer than 5 to accomodate for tempDateBlock rule
+        if (data2.length > 5 && tempDateBlock.includes(data2.slice(4,7).concat(data2.slice(8,10)))) {
+            data2 = "";
+        }
+
         var dPart1 = longWeek[week.indexOf(data2.slice(0,3))] + ", ";
         var dPart2 = longMonth[month.indexOf(data2.slice(4,7))] + " ";
         var dPart3 = data2.slice(8,10) + ", ";
@@ -331,6 +337,8 @@ const scheduleBooking = (props) => {
         var eveningValues = [];
 
         if (dPart1 !== "undefined, "){
+            console.log("warren!")
+            console.log(data2);
             console.log(dPart1)
             setSuperDate(dPart1.concat(dPart2.concat(dPart3.concat(dPart4))));
             var selectedDate = dPart1.concat(dPart2.concat(dPart3.concat(dPart4)));
@@ -419,6 +427,10 @@ const scheduleBooking = (props) => {
                 }
             }
            timeslotRef.current.scrollIntoView({ behavior: 'smooth' });
+        }else{
+            updatemTimeslots("");
+            updateaTimeslots("");
+            updateeTimeslots("");
         }
     }
 
