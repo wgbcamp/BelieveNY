@@ -1,9 +1,34 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import styles from '../css/footer.module.css'
 import SiteLogo from '../images/general/BNYLogoFull-02.png'
 import '../css/main.css';
 
-const unused = () => {
+const newFooter = (props) => {
+
+    const [email, setEmail] = useState("");
+
+    const updateEmail = event => {
+        setEmail(event.target.value);
+    }
+    
+    function signup(emailAddress){
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", `https://whale-app-e9it4.ondigitalocean.app/newsletter`, true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        console.log(emailAddress);
+        xhr.send(JSON.stringify({
+            first: "", 
+            last: "",
+            email: emailAddress
+        }));
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === XMLHttpRequest.DONE){
+                console.log(xhr.status)
+                alert(xhr.responseText);
+            }
+        }
+    }
+
     return(
         <div>
             <div className="simpleFlex">
@@ -62,8 +87,8 @@ const unused = () => {
                                                 <div className={styles.newsletterTitle}>Become a Believer and keep in touch with our progress</div>
                                                 <div className={styles.newsletterBox}>
                                                     <div className={styles.newsletterBoxFlex}>
-                                                        <input className={styles.newsletterText} placeholder="Email address"></input>
-                                                        <div className={styles.newsletterSubmitBox}>Subscribe</div>        
+                                                        <input className={styles.newsletterText} placeholder="Email address" value={email} onChange={updateEmail}></input>
+                                                        <input type="submit" value="Subscribe" className={styles.newsletterSubmitBox} onClick={() => signup(email)}></input>        
                                                     </div>
                                                     <div className={styles.newsletterLineBorder}></div>
                                                 </div>
@@ -88,4 +113,4 @@ const unused = () => {
     )
 }
 
-export default unused;
+export default newFooter;

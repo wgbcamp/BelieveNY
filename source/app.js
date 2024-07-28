@@ -116,7 +116,7 @@ function App(){
                         <Route path="/newHomeOld" element={<NewHomeOld/>}/>
                     </Routes>  
                 </div>                      
-                <Footer/>
+                <Footer updateDim={updateDim} updatePayload={updatePayload}/>
                 {/* <BottomContact/> */}
             </div>
         </div>

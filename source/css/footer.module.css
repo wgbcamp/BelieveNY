@@ -175,13 +175,14 @@ input:focus{
 }
 
 .newsletterSubmitBox{
-    display: flex;
-    align-items: flex-end;
+    all: unset;
     margin-right: 25px;
+    margin-top: 8px;
     font-size: 14px;
     cursor: pointer;
     color: inherit;
     transition: all .2s ease-in-out;
+
 }
 
 .newsletterSubmitBox:hover{
