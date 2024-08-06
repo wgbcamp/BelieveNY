@@ -19,7 +19,7 @@ const descriptionBox = () => {
 
                 <br></br>
                 <br></br>
-                As for our structure, BNY has an Executive Board that helps oversee strategic planning and resources, a Leadership team that supports day-to-day operations, and a fantastic team of volunteers (our Client and Community Advocates) and who offer their time to support people who need us the most. Check out our wonderful Board and Leaders below!
+                As for our structure, BNY has an Executive Board that helps oversee strategic planning and resources, a Leadership team that supports day-to-day operations, and a fantastic team of volunteers (our Client and Community Advocates) who offer their time to support people who need us the most. Check out our wonderful Board and Leaders below!
                 </div>
             </div>
             <div className="centerFlex">

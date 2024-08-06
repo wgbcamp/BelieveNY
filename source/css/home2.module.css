@@ -28,7 +28,10 @@ body {
     height: 350px;
     background-image: url("../images/events/MentalHealthFair_Events.jpg");
     background-size: cover;
+    background-position: bottom 100px left -350px;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+
 }
 
 .titleBlock {
