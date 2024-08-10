@@ -58,8 +58,8 @@ const newHeader = () => {
                     {/*above 1000px, large width menu appears */}
                     <div className={styles.largeWidthGrid}>
                         {largeWidthGridContent.map((value, index) => ( 
-                            <div id={value[0]} className={`${styles.flexboxAllCenter} ${styles.animatePopup}`} onMouseEnter={() => updateCP(value[0])}>
-                                <div key={index} id="gridRow">
+                            <div key={index} id={value[0]} className={`${styles.flexboxAllCenter} ${styles.animatePopup}`} onMouseEnter={() => updateCP(value[0])}>
+                                <div  id="gridRow">
                                     <div className={value[2].length > 1 ? styles.lwTitle : styles.lwLink} onClick={value[3] ? value[3] : () => null}>{value[0]}</div> 
                                 </div>
                             </div>
@@ -68,10 +68,10 @@ const newHeader = () => {
                         {/*links, and dropdowns for larger displays */}
                         {largeWidthGridContent.map((value, index) => (
                             
-                                <div id={value[0]} className={styles.popupRowsSeparator} onMouseEnter={() => updateCP(value[0])}>
+                                <div key={index} id={value[0]} className={styles.popupRowsSeparator} onMouseEnter={() => updateCP(value[0])}>
                                     <div className={currentPopup === value[0] && value[2].length > 1 ? styles.popupRows : styles.hidePopupRows}>
                                         {value[2].map((innerValue, innerIndex) => (
-                                            <div className={`${styles.flexboxAllCenter} ${styles.popupPointer}`} onClick={() => redirect(innerValue[1])}>
+                                            <div key={innerIndex} className={`${styles.flexboxAllCenter} ${styles.popupPointer}`} onClick={() => redirect(innerValue[1])}>
                                                 <div className={styles.popupStyle}>{innerValue[0]}</div>
                                             </div>
                                         ))}
@@ -94,7 +94,7 @@ const newHeader = () => {
                     <div className={`${styles.smallWidthGrid} ${widthState ? styles.expand : zapMenu ? styles.zap : styles.condense} ${styles.hideOver1000}`} id="smallgrid">
                         {smallWidthGridContent.map((value, index) => (
                             <div className={styles.swTitleGrid} key={index} onClick={typeof value[3] === 'string' ? () => redirect(value[3]) : value[3]} id="gridRow">
-                                <a href={value[3]} className={styles.swTitle}>{value[0]}</a>
+                                <a href={typeof value[3] === 'string' ? value[3] : null} className={styles.swTitle}>{value[0]}</a>
                                 <div className={`${value[1]} ${styles.flexboxAllCenter} ${styles.arrow}`}></div>
                             </div>
                         ))}

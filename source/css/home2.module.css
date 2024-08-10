@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-body {
-    background-color: EEEEEE;
-}
-
 .columnFlex {
     display: flex;
     justify-content: center;
@@ -28,26 +24,27 @@ body {
     height: 350px;
     background-image: url("../images/events/MentalHealthFair_Events.jpg");
     background-size: cover;
-    background-position: bottom 100px left -350px;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
 
 }
 
 .titleBlock {
     padding-top: 80px;
-    padding-left: 50px;
-    padding-right: 75px;
 }
 
 .tinyTitle {
     font-size: 14px;
     padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 45px;
 }
 
 .title {
     font-size: 42px;
     font-weight: 800;
+    padding-left: 50px;
+    padding-right: 45px;
 }
 
 .barrier {
@@ -55,6 +52,8 @@ body {
     align-items: center;
     padding-top: 35px;
     padding-bottom: 35px;
+    padding-left: 50px;
+    padding-right: 45px;
 }
 
 .barrierLineFlex {
@@ -82,11 +81,22 @@ body {
     background-color: #444;
 }
 
+.missionStatement {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 45px;
+}
+
 .phraseBlock {
     font-size: 18px;
     line-height: 27px;
     font-weight: 400px;
     padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 45px;
 }
 
 .linkButtonFlex {
@@ -99,6 +109,21 @@ body {
     border: 1px solid;
     margin-top: 35px;
     font-weight: 400;
+    margin-left: 50px;
+    margin-right: 45px;
+    transition: all 0.2s;
+    &:hover {
+        background-color: #444;
+        color: white;
+    }
+}
+
+.linkButtonFlexReverse {
+    composes: linkButtonFlex;
+    &:hover {
+        background-color: white;
+        color: #444;
+    }
 }
 
 .linkButtonFlexWide {
@@ -115,12 +140,91 @@ body {
     height: 1px;
     background-color: #444;
     margin-top: 85px;
-    margin-bottom: 35px;
 }
 
 .subBlock {
-    padding-left: 50px;
-    padding-right: 45px;
+   
+}
+
+.openSpaceBlock {
+    background-color: #444;
+    color: white;
+    padding-bottom: 85px;
+}
+
+.calendarContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.calendar {
+    background-color: white;
+    width: 290px;
+    transform:
+      rotateX(50deg);
+    transform-style: preserve-3d;
+    border-radius: 15px;
+    padding-top: 8px;
+    padding-bottom: 3px;
+    padding-left: 0px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    box-shadow:
+      1px 1px 0 1px #f9f9fb,
+      -1px 0 28px 0 rgba(34, 33, 0, 0.01),
+      10px 28px 28px 0 rgba(0, 0, 0, 0.4);
+      transition:
+      0.6s ease-in-out transform,
+      0.6s ease-in-out box-shadow;
+}
+
+.restingCalendar {
+    animation-name: resetFloating;
+    animation-duration: 0.5s;
+}
+
+@keyframes resetFloating {
+    from {
+        transform: translate3d(0px, -16px, 0px)
+        scale(1.05, 1.05)
+        rotateX(15deg);
+    }
+
+    to {
+        transform: translate3d(0px, 0px, 0px)
+        scale(1, 1)
+        rotateX(50deg);
+    }
+}
+
+.floatingCalendar {
+      transform:
+        translate3d(0px, -16px, 0px)
+        rotateX(15deg)
+        scale(1.05, 1.05);
+        box-shadow:
+        1px 1px 0 1px #f9f9fb,
+        -1px 0 28px 0 rgba(34, 33, 0, 0.01),
+        55px 30px 28px -10px rgba(0, 0, 0, 0.27);
+        animation-name: floating;
+        animation-delay: 600ms;
+        animation-duration: 1.7s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+@keyframes floating {
+    from {
+        transform: translate3d(0px, -16px, 0px)
+        scale(1.05, 1.05)
+        rotateX(15deg);
+    }   
+    
+    to {
+        transform: translate3d(0px, -8px, 0px)
+        scale(1.05, 1.05)
+        rotateX(15deg);
+    }
 }
 
 .smallTitle {
@@ -128,15 +232,17 @@ body {
     font-size: 34px;
     font-weight: 700;
     padding-bottom: 35px;
+    padding-left: 50px;
+    padding-right: 45px;
 }
 
 .phraseBlockMinor {
     composes: phraseBlock;
-    color: #7f7f7f;
 }
 
 .groupPhoto {
-    height: 350px;
+    height: 100vw;
+    width: 100%;
     background-image: url("../images/general/IMG_5998.jpg");
     background-size: cover;
     background-position: -110px;
@@ -147,38 +253,116 @@ body {
     padding-top: 50px;
     display: flex;
     flex-direction: column;
+    padding-left: 50px;
+    padding-right: 45px;
 }
 
-.listElementFlex{
+.listElementFlex {
     display: flex;
     flex-direction: row;
     padding-bottom: 15px;
     font-size: 18px;
 }
 
-.fontawesomeFlex{
+.fontawesomeFlex {
     display: flex;
     align-items: flex-start;
     padding-top: 10px;
     margin-right: 5px;
 }
 
-/* .dots {
-    background-image: url('../images/background/dot.png');
-    background-size: 50px 50px;
-    opacity: 15%;
-    filter: sepia(100%);
-    height:100%;
-    width: 100vw;
+.carouselBlock {
+    padding-top: 85px;
+    height: 500px;
+    display:flex;  
+    align-items:center;  
+    justify-content:center;  
+    position: relative;
+}
 
-} */
-
-
-/* .background {
+.imageResize {
     height: 100%;
-    width: 100vw;
+    width: 100%;
     position: absolute;
-    top: 0;
-    background-color: rgba(250, 235, 215, 0.247);
-    z-index: -2;
-} */
+}
+
+.fadeOut {
+    animation-name: fadeOut;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+  }
+
+.carouselContainer {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+
+.arrowContainer {
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftArrow {
+    left: 20px;
+}
+
+.rightArrow {
+    right: 20px;
+}
+
+.arrowButton {
+    padding: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000;
+    cursor: pointer;
+    background: rgb(255, 255, 255, 0.8);
+    width: 36px;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    -webkit-box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.5);
+}
+
+.carouselElementsFlex {
+    display: flex;
+    flex-direction: column;
+
+}
