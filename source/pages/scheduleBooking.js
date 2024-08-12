@@ -166,7 +166,7 @@ const scheduleBooking = (props) => {
     var [superDate, setSuperDate] = useState(actualDate);
     
     //mark specific dates as invalid for showing times or being selectable
-    var tempDateBlock = ["Nov23", "Nov24", "Dec24", "Dec25", "Dec31", "Jan01","Jul28","Jul29","Jul30","Jul31","Aug01","Aug02","Aug03","Aug04","Aug05","Aug06","Aug07","Aug08","Aug09","Aug10","Aug11","Aug12","Aug13","Aug14","Aug15","Aug16","Aug17","Aug18","Aug19","Aug20","Aug21","Aug22","Aug23","Aug24","Aug25","Aug26","Aug27","Aug28","Aug29","Aug30","Aug31","Sep01","Sep02"];
+    var tempDateBlock = ["Nov23", "Nov24", "Dec24", "Dec25", "Dec31", "Jan01","Jul28","Jul29","Jul30","Jul31","Aug01","Aug02","Aug03","Aug04","Aug05","Aug06","Aug07","Aug08","Aug09","Aug10","Aug11","Aug12","Aug13","Aug14","Aug15","Aug16","Aug17","Aug18","Aug19","Aug20","Aug21","Aug22","Aug23","Aug24","Aug25","Aug26","Aug27","Aug28","Aug29","Aug30","Aug31","Sep01","Sep02", "Sep03", "Sep04", "Sep05", "Sep06", "Sep07", "Sep08", "Sep09", "Sep10", "Sep11", "Sep12", "Sep13", "Sep14", "Sep15", "Sep16"];
 
 
     function fillCalendar(data){
@@ -474,9 +474,13 @@ const scheduleBooking = (props) => {
                 <div className="maxWidth width80Per">
                     <div className='padTop80'></div>
                     <div className='weight500 lineHeight25'>Important Disclaimer: {props.bookingCategory} is not a substitute for clinical mental health treatment and/or a cure for any mental health issues and/or disorders. Although our Counselors are comprehensively trained, they are not certified nor licensed mental health specialists. They are trained in active listening techniques, empathy, and compassion and will provide support and resource referrals as needed.</div>
-                    <div className="padTop80"></div>
-                    
-                    
+                    <div className="padTop40"></div>
+                    <div className='weight500 lineHeight25 padBottom80'>Important Update for New Clients: At this time, we do not have any openings for new clients until September 16th. 
+                        We are currently transitioning to a new operations system and training model designed to enhance our services and support our continued growth. 
+                        This temporary pause allows us to ensure that all our staff and volunteers are fully equipped to provide the highest level of care and support to our clients. We appreciate your understanding and patience during this period. Please check back with us after September 16th for updates on availability. 
+                        We look forward to continuing to serve our community with improved resources and services. 
+                        Thank you for your support!
+                    </div>                    
                     <div className='simpleFlex'>
                         
                     <div>{calendarSwitch ?
