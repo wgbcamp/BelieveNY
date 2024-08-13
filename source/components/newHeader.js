@@ -25,12 +25,12 @@ const newHeader = () => {
 
     //arrays holding titles and functions for redirects on link clicks and state values for categories that contain subcategories on smaller viewports
     const smallWidthGridContent = [
-    ["ABOUT US", "fa-solid fa-arrow-right", aboutUsContent, () => {updateSL(aboutUsContent); updateSLT("ABOUT US"); update02D(true); updateZM(true)}], 
-    ["OUR WORK", "fa-solid fa-arrow-right", ourWorkContent, () => {updateSL(ourWorkContent); updateSLT("OUR WORK"); update02D(true); updateZM(true)}],
-    ["EVENTS", "fa-solid fa-arrow-right", eventsContent, () => {updateSL(eventsContent); updateSLT("EVENTS"); update02D(true); updateZM(true)}],
-    ["JOIN US", "", [""], "/joinus"], 
-    ["DONATE", "", [""], "/donate"],
-    ["TAKE A SURVEY", "", [""],"/survey"]];
+    ["About Us", "fa-solid fa-arrow-right", aboutUsContent, () => {updateSL(aboutUsContent); updateSLT("ABOUT US"); update02D(true); updateZM(true)}], 
+    ["Our Work", "fa-solid fa-arrow-right", ourWorkContent, () => {updateSL(ourWorkContent); updateSLT("OUR WORK"); update02D(true); updateZM(true)}],
+    ["Events", "fa-solid fa-arrow-right", eventsContent, () => {updateSL(eventsContent); updateSLT("EVENTS"); update02D(true); updateZM(true)}],
+    ["Join Us", "", [""], "/joinus"], 
+    ["Donate", "", [""], "/donate"],
+    ["Take a Survey", "", [""],"/survey"]];
 
     //manipulates state values for present dropdown menus on smaller viewports
     function changeState(){
@@ -42,19 +42,17 @@ const newHeader = () => {
     }
 
     //arrays holding titles, links, and values for categories on larger displays (title, arrow, array content, redirect)
-    const largeWidthGridContent = [["ABOUT US", "fa-solid fa-arrow-right", aboutUsContent], ["OUR WORK", "fa-solid fa-arrow-right", ourWorkContent], ["EVENTS", "fa-solid fa-arrow-right", eventsContent], ["JOIN US", "", [""], () => redirect("/joinus")], ["TAKE A SURVEY", "", [""], () => redirect("/survey")]];
+    const largeWidthGridContent = [["About Us", "fa-solid fa-arrow-right", aboutUsContent], ["Our Work", "fa-solid fa-arrow-right", ourWorkContent], ["Events", "fa-solid fa-arrow-right", eventsContent], ["Join Us", "", [""], () => redirect("/joinus")], ["Take a Survey", "", [""], () => redirect("/survey")]];
 
     //popup state values for larger displays
     var [currentPopup, updateCP] = useState("");
 
-    var [blockScrolling, updateBS] = useState(false);
-
     return(
         <div className={styles.hide}>
-            <div className={styles.centerLargeGrid}>
+            <div className={styles.centerAllGrid}>
             {/*grid for header bar */}
                 <div className={styles.headerGrid} id="headerGrid">
-                    <img src={SiteLogo} width="145" className={styles.cursorPointer} onClick={() => redirect("/")}></img>
+                    <img src={SiteLogo} width="145" className={`${styles.cursorPointer} ${styles.siteLogo}`} onClick={() => redirect("/")}></img>
                     {/*above 1000px, large width menu appears */}
                     <div className={styles.largeWidthGrid}>
                         {largeWidthGridContent.map((value, index) => ( 

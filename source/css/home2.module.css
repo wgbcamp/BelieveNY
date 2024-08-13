@@ -30,7 +30,7 @@
 }
 
 .titleBlock {
-    padding-top: 80px;
+    padding-top: 200px;
 }
 
 .tinyTitle {
@@ -41,10 +41,11 @@
 }
 
 .title {
-    font-size: 42px;
+    font-size: 52px;
     font-weight: 800;
     padding-left: 50px;
     padding-right: 45px;
+    line-height: 60px;
 }
 
 .barrier {
@@ -103,27 +104,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 12px;
+    border-radius: 20px;
     width: 150px;
     height: 40px;
     border: 1px solid;
     margin-top: 35px;
-    font-weight: 400;
+    font-weight: 700;
     margin-left: 50px;
     margin-right: 45px;
     transition: all 0.2s;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
     &:hover {
-        background-color: #444;
-        color: white;
+        transform: scale(1.1);
     }
 }
 
 .linkButtonFlexReverse {
     composes: linkButtonFlex;
-    &:hover {
-        background-color: white;
-        color: #444;
-    }
+    background-color: white;
+    color: #444;
 }
 
 .linkButtonFlexWide {

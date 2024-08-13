@@ -116,12 +116,6 @@ const [isInView, setIsInView] = useState(false);
 
     return(
         <div className={styles.parentFont}>
-          <ParallaxBanner
-              layers={[
-                { image: crowd, speed: 0 },
-              ]}
-              className="aspect-[2/1]" style={{height: 300}}
-            />
           <div className={styles.titleBlock}>
             <div className={styles.tinyTitle}>Believe New York Philanthropies</div>
             <div className={styles.title}>Advancing our city & the lives of new yorkers</div>

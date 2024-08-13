@@ -60,7 +60,7 @@ html{
 }
 
 body{
-    font-family: 'Raleway', sans-serif;
+    font-family: "Carlito", sans-serif;
     margin: 0;
     overflow-x: hidden;
     /* background-color: #7226D9;  */
@@ -887,7 +887,7 @@ textarea[type="big"]::placeholder{
     transform: translateY(650%);
     text-align: left;
     font-size: 16px;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Carlito", sans-serif;
 }
 
 .styleEmGrid{

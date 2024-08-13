@@ -1,9 +1,16 @@
+.centerAllGrid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 99px;
+    background-color: white;
+}
+
 .headerGrid{
     color: black;
     height: 69px;
-    background-color: white;
     display: grid;
-    grid-template-columns: 185px 1fr minmax(100px, 180px) 5px;
+    grid-template-columns: 20px 185px 1fr minmax(100px, 180px) 20px;
 }
 .flexboxJustifyCenter{
     display: flex;
@@ -130,7 +137,7 @@
 .donateOuterGrid{
     composes: flexboxAllCenter;
     height: 69px;
-    grid-column: 3;
+    grid-column: 4;
     grid-row: 1;
 }
 
@@ -140,7 +147,7 @@
     width: 100%;
     composes: flexboxAllCenter;
     border: 1px solid #30D5C8;
-    border-radius: 5px;
+    border-radius: 20px;
     grid-row: 1;
 }
 
@@ -154,6 +161,11 @@
 .largeWidthGrid{
     visibility: hidden;
     height: 0;
+    grid-column: 3;
+}
+
+.siteLogo {
+    grid-column: 2;
 }
 
 .hide{
@@ -189,28 +201,22 @@
     cursor: pointer;
 }
 
-.centerLargeGrid{
-    display: flex;
-    justify-content: center;
-    border-bottom: 2px solid black;
-}
-
 .relativeBlock{
     position: unset;
     width: 0;
 }
 
-.animatePopup[id="ABOUT US"]:hover ~ .popupRowsSeparator[id="ABOUT US"]{
+.animatePopup[id="About Us"]:hover ~ .popupRowsSeparator[id="About Us"]{
     transform: scale(1);
     transition: transform 0.3s;
 }
 
-.animatePopup[id="OUR WORK"]:hover ~ .popupRowsSeparator[id="OUR WORK"]{
+.animatePopup[id="Our Work"]:hover ~ .popupRowsSeparator[id="Our Work"]{
     transform: scale(1);
     transition: transform 0.3s;
 }
 
-.animatePopup[id="EVENTS"]:hover ~ .popupRowsSeparator[id="EVENTS"]{
+.animatePopup[id="Events"]:hover ~ .popupRowsSeparator[id="Events"]{
     transform: scale(1);
     transition: transform 0.3s;
 }
@@ -269,15 +275,17 @@
 .headerGrid{
     color: black;
     /* border-bottom: 2px solid black; */
-    height: 69px;
     width: 100%;
-    background-color: white;
     display: grid;
-    grid-template-columns: 200px minmax(20px, 1fr) minmax(60px, 100px) minmax(10px, 100px);
+    grid-template-columns: 20px 200px minmax(20px, 1fr) minmax(60px, 100px) minmax(10px, 100px) ;
+}
+
+.siteLogo {
+    grid-column: 2;
 }
 
 .donateOuterGrid{
-    grid-column: 3;
+    grid-column: 4;
 }
 
 .linkButton{
@@ -295,7 +303,7 @@
 
 .burger{
     visibility: visible;
-    grid-column: 4;
+    grid-column: 5;
     grid-row: 1;
     composes: flexboxAllCenter;
 }
@@ -322,7 +330,7 @@
     font-size: 18px;
     width: 100vw;
     height: 100vh;
-    top: -2px;
+    top: 47px;
     /* overflow: scroll; */
 
 }
