@@ -10,6 +10,7 @@
     color: black;
     height: 69px;
     display: grid;
+    width: 100%;
     grid-template-columns: 20px 185px 1fr minmax(100px, 180px) 20px;
 }
 .flexboxJustifyCenter{
@@ -183,9 +184,16 @@
     visibility: hidden;
 }
 
+.centerLargeGrid {
+    display: flex;
+    justify-content: center;
+}
+
 .largeWidthGrid{
+    font-size: 16px;
+    font-weight: 400;
     display: grid;
-    grid-template-columns: repeat(5, minmax(120px, 250px));
+    grid-template-columns: repeat(5, minmax(70px, 100px));
     grid-template-rows: 69px auto;
     visibility: unset;
     height: unset;

@@ -614,7 +614,7 @@ ul.no-bullets{
 .dText{
     background-color: #ffffff;
     text-align: left;
-    font-size: 18px;
+    font-size: 22px;
     max-width: 85%;
     border-radius: 15px;
     line-height: 30px;
@@ -625,10 +625,10 @@ ul.no-bullets{
 .dTextInitial{
     background-color: #f2f2f2;
     text-align: left;
-    font-size: 18px;
+    font-size: 20px;
     max-width: 85%;
     border-radius: 15px;
-    line-height: 30px;
+    line-height: 34px;
     padding: 10px;
     overflow: hidden;
 }
@@ -1597,13 +1597,13 @@ input[type="email"]::placeholder{
     grid-row: 2;
     grid-column: 2;
     font-weight: 700;
-    font-size: 21px;
+    font-size: 25px;
 }
 
 .title{
     grid-row: 4;
     grid-column: 2;
-    font-size: 17px;
+    font-size: 18px;
 }
 
 .pronoun {
@@ -3249,10 +3249,8 @@ input[type="email"]::placeholder{
     .dTextInitial{
         background-color: #f2f2f2;
         text-align: left;
-        font-size: 18px;
         max-width: 85%;
         border-radius: 15px;
-        line-height: 30px;
         padding: 10px;
         overflow: hidden;
     }

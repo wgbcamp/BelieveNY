@@ -53,30 +53,32 @@ const newHeader = () => {
             {/*grid for header bar */}
                 <div className={styles.headerGrid} id="headerGrid">
                     <img src={SiteLogo} width="145" className={`${styles.cursorPointer} ${styles.siteLogo}`} onClick={() => redirect("/")}></img>
-                    {/*above 1000px, large width menu appears */}
-                    <div className={styles.largeWidthGrid}>
-                        {largeWidthGridContent.map((value, index) => ( 
-                            <div key={index} id={value[0]} className={`${styles.flexboxAllCenter} ${styles.animatePopup}`} onMouseEnter={() => updateCP(value[0])}>
-                                <div  id="gridRow">
-                                    <div className={value[2].length > 1 ? styles.lwTitle : styles.lwLink} onClick={value[3] ? value[3] : () => null}>{value[0]}</div> 
-                                </div>
-                            </div>
-                            
-                        ))}
-                        {/*links, and dropdowns for larger displays */}
-                        {largeWidthGridContent.map((value, index) => (
-                            
-                                <div key={index} id={value[0]} className={styles.popupRowsSeparator} onMouseEnter={() => updateCP(value[0])}>
-                                    <div className={currentPopup === value[0] && value[2].length > 1 ? styles.popupRows : styles.hidePopupRows}>
-                                        {value[2].map((innerValue, innerIndex) => (
-                                            <div key={innerIndex} className={`${styles.flexboxAllCenter} ${styles.popupPointer}`} onClick={() => redirect(innerValue[1])}>
-                                                <div className={styles.popupStyle}>{innerValue[0]}</div>
-                                            </div>
-                                        ))}
+                    <div className={styles.centerLargeGrid}>
+                        {/*above 1000px, large width menu appears */}
+                        <div className={styles.largeWidthGrid}>
+                            {largeWidthGridContent.map((value, index) => ( 
+                                <div key={index} id={value[0]} className={`${styles.flexboxAllCenter} ${styles.animatePopup}`} onMouseEnter={() => updateCP(value[0])}>
+                                    <div  id="gridRow">
+                                        <div className={value[2].length > 1 ? styles.lwTitle : styles.lwLink} onClick={value[3] ? value[3] : () => null}>{value[0]}</div> 
                                     </div>
                                 </div>
+                                
+                            ))}
+                            {/*links, and dropdowns for larger displays */}
+                            {largeWidthGridContent.map((value, index) => (
+                                
+                                    <div key={index} id={value[0]} className={styles.popupRowsSeparator} onMouseEnter={() => updateCP(value[0])}>
+                                        <div className={currentPopup === value[0] && value[2].length > 1 ? styles.popupRows : styles.hidePopupRows}>
+                                            {value[2].map((innerValue, innerIndex) => (
+                                                <div key={innerIndex} className={`${styles.flexboxAllCenter} ${styles.popupPointer}`} onClick={() => redirect(innerValue[1])}>
+                                                    <div className={styles.popupStyle}>{innerValue[0]}</div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
 
-                        ))}
+                            ))}
+                        </div>
                     </div>
                     {/*this button opens small width menu, 1000px and below*/}
                     <i className={`fa-solid fa-bars fa-xl ${styles.burger}`} onClick={() => changeState()}></i>
