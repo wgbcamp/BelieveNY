@@ -157,7 +157,7 @@
     cursor: pointer;
     color: #30D5C8;
     font-weight: 900;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .largeWidthGrid{
@@ -191,7 +191,7 @@
 }
 
 .largeWidthGrid{
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     display: grid;
     grid-template-columns: repeat(5, minmax(70px, 100px));
@@ -201,12 +201,12 @@
 }
 
 .lwTitle{
-    font-weight: 900;
+    font-weight: 600;
     cursor: default;
 }
 
 .lwLink{
-    font-weight: 900;
+    font-weight: 600;
     cursor: pointer;
 }
 
@@ -269,8 +269,8 @@
 }
 
 .popupStyle{
-    font-weight: 900;
-    font-size: 15px;
+    font-weight: 500;
+    font-size: 14px;
 }
 
 .hidePopupRows{
@@ -359,7 +359,7 @@
 .swTitle{
     display: flex;
     align-items: center;
-    font-weight: 900;
+    font-weight: 600;
     padding-left: 15px;
     cursor: pointer;
     -webkit-user-select: none;

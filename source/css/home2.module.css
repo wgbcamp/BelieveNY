@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 
 .columnFlex {
     display: flex;
@@ -8,7 +8,8 @@
 }
 
 .parentFont {
-    font-family: "Carlito", sans-serif;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
     font-size: 42px;
     color:#444;
 }
@@ -42,7 +43,7 @@
 
 .title {
     font-size: 52px;
-    font-weight: 800;
+    font-weight: 700;
     padding-left: 50px;
     padding-right: 45px;
     line-height: 60px;
@@ -85,7 +86,7 @@
 .missionStatement {
     font-size: 18px;
     line-height: 27px;
-    font-weight: 400px;
+    font-weight: 100px;
     padding-bottom: 10px;
     padding-left: 50px;
     padding-right: 45px;
@@ -95,7 +96,7 @@
     font-size: 18px;
     line-height: 27px;
     font-weight: 400px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     padding-left: 50px;
     padding-right: 45px;
 }
@@ -105,7 +106,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    width: 150px;
+    width: 190px;
     height: 40px;
     border: 1px solid;
     margin-top: 35px;
@@ -121,15 +122,20 @@
     }
 }
 
+.linkButtonFlexLearn {
+    composes: linkButtonFlex;
+    width: 135px;
+}
+
 .linkButtonFlexReverse {
     composes: linkButtonFlex;
     background-color: white;
     color: #444;
 }
 
-.linkButtonFlexWide {
+.linkButtonFlexImpact {
     composes: linkButtonFlex;
-    width: 240px;
+    width: 320px;
 }
 
 .linkButton {
@@ -151,6 +157,7 @@
     background-color: #444;
     color: white;
     padding-bottom: 85px;
+    padding-top: 60px;
 }
 
 .calendarContainer {
@@ -229,10 +236,10 @@
 }
 
 .smallTitle {
-    padding-top: 90px;
+    padding-top: 10px;
     font-size: 34px;
     font-weight: 700;
-    padding-bottom: 35px;
+    padding-bottom: 25px;
     padding-left: 50px;
     padding-right: 45px;
 }
@@ -241,17 +248,16 @@
     composes: phraseBlock;
 }
 
-.groupPhoto {
+.homepagePhoto {
     height: 100vw;
     width: 100%;
-    background-image: url("../images/general/IMG_5998.jpg");
-    background-size: cover;
+    background-size: contain;
     background-position: -110px;
     background-repeat: no-repeat;
+    padding-bottom: 30px;
 }
 
 .listFlex {
-    padding-top: 50px;
     display: flex;
     flex-direction: column;
     padding-left: 50px;
@@ -272,6 +278,20 @@
     margin-right: 5px;
 }
 
+.carouselButtonPosition {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.carouselButtonInnerFlex {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .carouselBlock {
     padding-top: 85px;
     height: 500px;
@@ -285,6 +305,11 @@
     height: 100%;
     width: 100%;
     position: absolute;
+}
+
+.linkButtonFlexEvents {
+    composes: linkButtonFlex;
+    
 }
 
 .fadeOut {
@@ -360,6 +385,12 @@
     -webkit-box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.5);
     box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.5);
+}
+
+.carouselButton {
+    position: absolute;
+    bottom: 10%;
+    right: 60%;
 }
 
 .carouselElementsFlex {

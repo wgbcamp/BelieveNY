@@ -12,10 +12,10 @@ import communityAdvocates from '../images/events/CommunityAdvocates.jpeg'
 import foodDelivery from '../images/events/foodDelivery.jpeg'
 import donuts from '../images/events/donuts.jpeg'
 import calendar from '../images/general/calendarNoShadow.png'
+import servingFood from '../images/general/ServingFood.jpg'
 
 
 var accomplishments = ["Connected 23 clients to shelters, transitional homes, and long-term housing solutions",
-  "Secured food assistance for 18 clients through local food pantries and governmental programs.",
   "Supported 14 clients experiencing domestic abuse by connecting them to mental health care, legal services, and safe housing solutions.",
   "Secured affordable mental health care for 22 clients and aided in obtaining affordable health insurance.",
   "Delivered greater than 7,000 hours of supportive mental health talk session, primarily reoccurring sessions with our active clients."];
@@ -129,17 +129,17 @@ const [isInView, setIsInView] = useState(false);
             </div>
             <div className={styles.missionStatement}>Believe New York is on a mission—to improve the lives of all individuals and families in New York City, but we need your help, Donate Now to support our mission!
             </div>
-            <div className={styles.linkButtonFlex}>
+            <div className={styles.linkButtonFlexLearn}>
               <div className={styles.linkButton}>Learn more</div>
             </div>
           </div> 
           <div className={styles.separator}></div>
           
             <div className={styles.openSpaceBlock}>
-              <div className={styles.smallTitle}>The Open Space</div>
               <div className={styles.calendarContainer} ref={visibleElement}>
                 <img src={calendar} className={`${styles.calendar} ${isInView ? styles.floatingCalendar : resetAnimation ? styles.restingCalendar : ""}`} onAnimationIteration={() => trackIteration()}></img>
               </div>
+              <div className={styles.smallTitle}>The Open Space</div>
               <div className={styles.phraseBlock}>A safe place to vent anonymously about any stress or mental health concerns you have.</div>
               <div className={styles.phraseBlockMinor}>100% free of charge and confidential, the Open Space offers a safe and nonjudgemental place to talk about what you are going through while remaining anonymous.
               </div>
@@ -148,8 +148,8 @@ const [isInView, setIsInView] = useState(false);
               </div>
             </div>
             <div className={styles.subBlock}>
+              <img src={servingFood} className={styles.homepagePhoto}></img>
             <div className={styles.smallTitle}>A year of progress</div>
-            <div className={styles.groupPhoto}></div>
             <div className={styles.listFlex}>
                 {accomplishments.map((value) => (
                   <div className={styles.listElementFlex} key={value}>
@@ -160,21 +160,28 @@ const [isInView, setIsInView] = useState(false);
                   </div>
                 ))}  
             </div>
-            <div className={styles.linkButtonFlexWide}>
+            <div className={styles.linkButtonFlexImpact}>
               <div className={styles.linkButton}>See how we're making a difference</div>
             </div>
           </div>
-          <div className={styles.carouselBlock}>
-            <div className={styles.arrowContainer}>
-              <button className={`${styles.arrowButton} ${styles.leftArrow}`} onClick={() => move("left")}><span>&#8249;</span></button>
-              <button className={`${styles.arrowButton} ${styles.rightArrow}`} onClick={() => move("right")}><span>&#8250;</span></button>
-            </div>
-            <div ref={parentRef} className={styles.carouselContainer}>
-              <img src={donuts} className={styles.imageResize}></img>
-              <img src={foodDelivery} className={styles.imageResize}></img>
-              <img src={communityAdvocates} className={styles.imageResize}></img>           
-            </div>
-          </div>         
+            <div className={styles.carouselBlock}>
+              <div className={styles.arrowContainer}>
+                <button className={`${styles.arrowButton} ${styles.leftArrow}`} onClick={() => move("left")}><span>&#8249;</span></button>
+                <button className={`${styles.arrowButton} ${styles.rightArrow}`} onClick={() => move("right")}><span>&#8250;</span></button>
+              </div>
+              <div ref={parentRef} className={styles.carouselContainer}>
+                <img src={donuts} className={styles.imageResize}></img>
+                <img src={foodDelivery} className={styles.imageResize}></img>
+                <img src={communityAdvocates} className={styles.imageResize}></img>           
+              </div>
+              <div className={styles.carouselButtonPosition}>
+                <div className={styles.carouselButtonInnerFlex}>
+                  <div className={`${styles.linkButtonFlexEvents} ${styles.carouselButton}`}>
+                    <div className={styles.linkButton}>See how we're making a difference</div>
+                  </div>
+                </div>
+              </div>
+            </div>  
         </div>
     )
 }
