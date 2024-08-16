@@ -175,12 +175,34 @@ const [isInView, setIsInView] = useState(false);
                 <img src={communityAdvocates} className={styles.imageResize}></img>           
               </div>
               <div className={styles.carouselButtonPosition}>
-                <div className={styles.carouselButtonInnerFlex}>
-                  <div className={`${styles.linkButtonFlexEvents} ${styles.carouselButton}`}>
-                    <div className={styles.linkButton}>See how we're making a difference</div>
+                  <div className={`${styles.linkButtonFlexEvents}`}>
+                    <div className={styles.linkButton}>View our upcoming events</div>
                   </div>
+              </div>
+            </div>
+            <div className={styles.carouselDescriptionBlock}>
+              <div className={styles.carouselDescriptionContainer}>
+                <div className={styles.carouselTitle}>Sponsorships</div>
+                <div className={styles.carouselTitle2}>Believe New York was founded by a native New Yorker who has seen hardship, struggle and loss around every corner of the five boroughs.</div>
+                <div className={styles.carouselTitle3}>We're looking to partner with more locally run businesses to help ensure every New Yorker is getting the help they need.
+                </div>
+                <div className={styles.linkButtonFlexSponsor}>
+                      <div className={styles.linkButton}>Sponsor an event</div>
                 </div>
               </div>
+            </div>
+            <div className={styles.donationBlock}>
+                <div className={styles.donationBackgroundImage}></div>
+                <div className={styles.donationInfo}>
+                  <div className={styles.donationInfoContainer}>
+                    <div className={styles.donationTitle}>Support Needed</div>
+                    <div className={styles.donationTitle2}>New Yorkers in Need</div>
+                    <div className={styles.donationDescription}>Your support allows our organization to continue assisting as many people as possible.</div>
+                    <div className={styles.linkButtonFlexDonate}>
+                      <div className={styles.linkButton}>DONATE</div>
+                    </div>
+                  </div>
+                </div>
             </div>  
         </div>
     )

@@ -136,6 +136,8 @@
 .linkButtonFlexImpact {
     composes: linkButtonFlex;
     width: 320px;
+    border: 0;
+    background-color: rgb(29, 14, 43);
 }
 
 .linkButton {
@@ -150,13 +152,15 @@
 }
 
 .subBlock {
-   
+    background-color: #20a2b1;
+    color: white;
 }
 
 .openSpaceBlock {
     background-color: #444;
     color: white;
     padding-bottom: 85px;
+    margin-bottom: 100px;
     padding-top: 60px;
 }
 
@@ -282,22 +286,19 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-bottom: 200px;
 }
 
-.carouselButtonInnerFlex {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .carouselBlock {
     padding-top: 85px;
     height: 500px;
-    display:flex;  
-    align-items:center;  
-    justify-content:center;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
     position: relative;
 }
 
@@ -309,7 +310,8 @@
 
 .linkButtonFlexEvents {
     composes: linkButtonFlex;
-    
+    background-color: rgba(0, 0, 0, 0.644);
+    width: 250px;
 }
 
 .fadeOut {
@@ -361,11 +363,11 @@
 }
 
 .leftArrow {
-    left: 20px;
+    margin-left: 10px;
 }
 
 .rightArrow {
-    right: 20px;
+    margin-right: 10px;
 }
 
 .arrowButton {
@@ -387,14 +389,100 @@
     box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.5);
 }
 
-.carouselButton {
-    position: absolute;
-    bottom: 10%;
-    right: 60%;
-}
-
 .carouselElementsFlex {
     display: flex;
     flex-direction: column;
+}
 
+.carouselDescriptionBlock {
+    width: 100%;
+    background-color: rgb(29, 14, 43);
+    color: white;
+    margin-bottom: 100px;
+}
+
+.carouselDescriptionContainer {
+    width: 90%;
+    padding-left: 25px;
+    padding-bottom: 30px;
+}
+
+.carouselTitle {
+    color: rgb(77, 253, 180);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 17px;
+    padding-top: 25px;
+    padding-bottom: 18px;
+}
+
+.carouselTitle2 {
+    font-size: 16px;
+    padding-bottom: 30px;
+    font-weight: 500;
+}
+
+.carouselTitle3 {
+    font-size: 16px;
+    padding-bottom: 30px;
+    font-weight: 500;
+}
+
+.linkButtonFlexSponsor {
+    composes: linkButtonFlex;
+    width: 180px;
+    margin: unset;
+    border: 0;
+    background-color: rgb(77, 253, 180);
+    color: black;
+}
+
+.donationBackgroundImage {
+    width: 100%;
+    height: 500px;
+    background-image: url("../images/general/Homepage.PNG");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.donationInfo {
+    width: 100%;
+    background-color: rgb(29, 14, 43);
+    color: white;
+}
+
+.donationInfoContainer {
+    width: 90%;
+    padding-left: 25px;
+    padding-bottom: 30px;
+}
+
+.donationTitle {
+    color: rgb(77, 253, 180);;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 17px;
+    padding-top: 25px;
+    padding-bottom: 9px;
+}
+
+.donationTitle2 {
+    font-weight: 700;
+    font-size: 22px;
+    padding-bottom: 36px;
+}
+
+.donationDescription {
+    font-size: 16px;
+    padding-bottom: 30px;
+    font-weight: 500;
+}
+
+.linkButtonFlexDonate {
+    composes: linkButtonFlex;
+    width: 135px;
+    margin: unset;
+    border: 0;
+    background-color: rgb(77, 253, 180);;
+    color: black;
 }

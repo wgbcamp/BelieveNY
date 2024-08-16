@@ -144,18 +144,17 @@
 }
 
 .donateButton{
-    background-color: #30d5c723;
+    background-color: var(--color4);
     height: 50%;
     width: 100%;
     composes: flexboxAllCenter;
-    border: 1px solid #30D5C8;
     border-radius: 20px;
     grid-row: 1;
 }
 
 .donate{
     cursor: pointer;
-    color: #30D5C8;
+    color: var(--color2);
     font-weight: 900;
     font-size: 14px;
 }

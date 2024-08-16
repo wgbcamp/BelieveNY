@@ -37,9 +37,6 @@ const newFooter = (props) => {
                             <div className={styles.footerGrid}>
                                 {/* Logo and copyright flexbox */}
                                 <div className={styles.logoCopyrightFlex}>
-                                    <a href="/" className={styles.logoGrid}>
-                                        <img src={SiteLogo} className={styles.logoStyle}></img>
-                                    </a>
                                     <div className={styles.copyright}>
                                         <div className={styles.copyrightText}>© 2024 by Believe New York Philanthropies, Inc.</div>
                                         <div className="padBottom5">For prospective clients:</div>

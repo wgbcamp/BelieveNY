@@ -1,3 +1,11 @@
+:root {
+    --color1: #021526;
+    --color4: #03346E;
+    --color3: #6EACDA;
+    --color2: #EEEEEE;
+    --color5: #E2E2B6;
+}
+
 .footerBackground{
     width: 100%;
     margin-top: 100px;
@@ -7,7 +15,7 @@
 .test{
     padding-right: 20px;
     padding-left: 20px;
-    background-color: rgb(29, 14, 43);
+    background-color: var(--color1);
     display: flex;
     justify-content: center;
 }
@@ -16,7 +24,7 @@
     font-size: 14px;
     height: 720px;
     width: 100%;
-    color: rgb(172, 146, 196);
+    color: var(--color3);
     font-weight: 600;
     max-width: 1620px;
 
@@ -33,13 +41,13 @@
 
 .logoCopyrightFlex{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
-    padding-bottom: 21px;
+    padding-bottom: 26px;
 }
 
 .logoGrid{
-    background-color: rgb(150, 108, 189);
+    background-color: white;
     width: 175px;
     height: 80px;
     position: relative;
@@ -57,12 +65,11 @@
 
 .copyright{
     width: 250px;
-    text-align: right;
-    padding-top: 15px;
     font-size: 13px;
 }
 
 .copyrightText{
+    padding-top: 15px;
     padding-bottom: 8px;
 }
 
@@ -82,7 +89,7 @@
 .categoriesTitle{
     padding-bottom: 4px;
     margin-bottom: 20px;
-    border-bottom: 1px solid rgb(112, 94, 128);
+    border-bottom: 1px solid var(--color3);
     width: 100%;
 }
 
@@ -115,16 +122,16 @@
 .socialMediaLinksFlex{
     display: flex;
     flex-direction: row;
-    border-top: 1px solid rgb(112, 94, 128);
-    border-bottom: 1px solid rgb(112, 94, 128);
+    border-top: 1px solid var(--color3);
+    border-bottom: 1px solid var(--color3);
 }
 
 .linkToWhite{
     color: white;
     text-decoration: none;
     padding: 14px;
-    border-left: 1px solid rgb(112, 94, 128);
-    border-right: 1px solid rgb(112, 94, 128);
+    border-left: 1px solid var(--color3);
+    border-right: 1px solid var(--color3);
 }
 
 .linkToWhiteLeftmost{
@@ -145,8 +152,9 @@
 }
 
 .newsletterBox{
+    margin-top: 10px;
     padding-bottom: 5px;
-    background-color: rgb(89, 74, 102);
+    background-color: var(--color3);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -154,10 +162,10 @@
 }
 
 .newsletterText{
-    background-color: rgb(89, 74, 102);
+    background-color: rgba(136, 0, 255, 0);
     border-bottom: 0px;
     font-style: normal;
-    color: rgb(172, 146, 196);
+    color: var(--color1);
     width: 100%;
     margin-left: 25px;
     margin-top: 10px;
@@ -166,7 +174,7 @@
 }
 
 input::placeholder{
-    color: rgb(172, 146, 196);
+    color: var(--color4);
     font-size: 14px;
 }
 
@@ -180,7 +188,7 @@ input:focus{
     margin-top: 8px;
     font-size: 14px;
     cursor: pointer;
-    color: inherit;
+    color: var(--color4);
     transition: all .2s ease-in-out;
 
 }
@@ -204,7 +212,7 @@ input:focus{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: #2ecec0;
+    background-color:  var(--color2);
     height: 80px;
     width: 100%;
     transition: all .2s ease-in-out;
@@ -213,11 +221,7 @@ input:focus{
 
 .donateFlexboxRow:hover{
     background-color: rgb(89, 74, 102);
-    color: rgb(172, 146, 196);
-}
-
-.donateFlexboxCol:hover .donateText{
-    color: rgb(172, 146, 196);
+    color: var(--color3);
 }
 
 .donateFlexboxRow:hover .donateFlexCenter{
@@ -225,11 +229,13 @@ input:focus{
 }
 
 .donateFlexboxCol{
+    background-color: var(--color4);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 80px;
+    height: 100%;
     width: 100%;
+    padding-right: 10px;
 }
 
 .donateTitle{
@@ -240,12 +246,14 @@ input:focus{
 }
 
 .donateText{
+    color: var(--color2);
     padding-left: 20px;
-    color: rgb(29, 14, 43);
     transition: all .2s ease-in-out;
 }
 
 .donateFlexCenter{
+    border: solid 4px var(--color4);
+    background-color: var(--color4);
     display: flex;
     align-items: center;
     padding-right: 30px;
@@ -254,7 +262,7 @@ input:focus{
 }
 
 .email, .phone {
-    color:#2ecec0
+    color: var(--color2)
 }
 
 @media only screen and (max-width: 600px){
@@ -306,6 +314,11 @@ input:focus{
 
 @media only screen and (min-width: 768px) and (max-width: 1200px){
 
+    .copyrightText{
+        padding-top: 25px;
+        padding-bottom: 8px;
+    }
+
     .logoCopyrightFlex{
         display: flex;
         justify-content: flex-start;
@@ -318,7 +331,6 @@ input:focus{
     }
 
     .logoGrid{
-        background-color: rgb(150, 108, 189);
         width: 210px;
         height: 100px;
         position: relative;
@@ -366,6 +378,12 @@ input:focus{
 }
 
 @media only screen and (min-width: 1200px){
+
+    .copyrightText{
+        padding-top: 25px;
+        padding-bottom: 8px;
+    }
+
     .logoCopyrightFlex{
         display: flex;
         justify-content: flex-start;
@@ -378,7 +396,6 @@ input:focus{
     }
 
     .logoGrid{
-        background-color: rgb(150, 108, 189);
         width: 210px;
         height: 100px;
         position: relative;
@@ -427,8 +444,8 @@ input:focus{
     .donateFlexboxCol{
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        height: 80px;
+        justify-content: center;
+        
         width: 100%;
     }
 
