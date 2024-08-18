@@ -1,13 +1,9 @@
-body {
-}
-
 .huge {
     font-size: 64px;
     font-weight: 900;
     line-height: 70px;
     margin-top: 50px;
 }
-
 
 .color2 {
     color: var(--color2);
@@ -20,3 +16,5 @@ body {
 .backgroundColor2 {
     background-color: var(--color2);
 }
+
+
