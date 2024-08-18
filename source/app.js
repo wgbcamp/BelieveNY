@@ -1,3 +1,5 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import React, {useState, useEffect, createRef} from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { ParallaxProvider } from 'react-scroll-parallax';
@@ -35,7 +37,7 @@ import Home2 from './pages/home2.js';
 import CollegeResources from './pages/collegeresources.js';
 import MentalHealthFair from './pages/mentalhealthfair.js';
 import CrudAssets from './pages/crudAssets.js';
-import NewHome from './pages/newHome2.js';
+import NewHome from './pages/newHome3.js';
 import NewHomeOld from './pages/newHome.js';
 
 
@@ -73,9 +75,7 @@ function App(){
     //tracking path changes
     const location = useLocation();
 
-    useEffect(() => {
-        console.log("new location", location.pathname);
-    }, [location]);
+
 
     return(
 

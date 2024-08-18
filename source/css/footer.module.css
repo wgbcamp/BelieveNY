@@ -1,10 +1,16 @@
 :root {
+    --color1: #080B38;
+    --color2: #6D74F7;
+    --color3: #AFB0C7;
+}
+
+/* :root {
     --color1: #021526;
-    --color4: #03346E;
+    --color2: #03346E;
     --color3: #6EACDA;
     --color2: #EEEEEE;
     --color5: #E2E2B6;
-}
+} */
 
 .footerBackground{
     width: 100%;
@@ -18,13 +24,14 @@
     background-color: var(--color1);
     display: flex;
     justify-content: center;
+    color: white;
 }
 
 .footerGrid{
     font-size: 14px;
     height: 720px;
     width: 100%;
-    color: var(--color3);
+    color: var(--color6);
     font-weight: 600;
     max-width: 1620px;
 
@@ -174,7 +181,7 @@
 }
 
 input::placeholder{
-    color: var(--color4);
+    color: var(--color1);
     font-size: 14px;
 }
 
@@ -188,7 +195,7 @@ input:focus{
     margin-top: 8px;
     font-size: 14px;
     cursor: pointer;
-    color: var(--color4);
+    color: var(--color1);
     transition: all .2s ease-in-out;
 
 }
@@ -229,7 +236,7 @@ input:focus{
 }
 
 .donateFlexboxCol{
-    background-color: var(--color4);
+    background-color: var(--color2);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -246,14 +253,14 @@ input:focus{
 }
 
 .donateText{
-    color: var(--color2);
+    color: var(--color1);
     padding-left: 20px;
     transition: all .2s ease-in-out;
 }
 
 .donateFlexCenter{
-    border: solid 4px var(--color4);
-    background-color: var(--color4);
+    border: solid 4px var(--color2);
+    background-color: var(--color2);
     display: flex;
     align-items: center;
     padding-right: 30px;

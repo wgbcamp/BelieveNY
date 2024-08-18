@@ -1,4 +1,23 @@
 
+.centerDiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flexAlignItems {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+
+}
+
+.titleBlockFlex {
+    display: flex;
+    flex-direction: column;
+    max-width: 1620px;
+}
 
 .columnFlex {
     display: flex;
@@ -11,7 +30,7 @@
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-size: 42px;
-    color:#444;
+    flex-direction: column;
 }
 
 .subTitle {
@@ -43,7 +62,7 @@
 
 .title {
     font-size: 52px;
-    font-weight: 700;
+    font-weight: 900;
     padding-left: 50px;
     padding-right: 45px;
     line-height: 60px;
@@ -86,7 +105,7 @@
 .missionStatement {
     font-size: 18px;
     line-height: 27px;
-    font-weight: 100px;
+    font-weight: 500;
     padding-bottom: 10px;
     padding-left: 50px;
     padding-right: 45px;
@@ -137,7 +156,8 @@
     composes: linkButtonFlex;
     width: 320px;
     border: 0;
-    background-color: rgb(29, 14, 43);
+    background-color: var(--color4);
+    color: black;
 }
 
 .linkButton {
@@ -152,8 +172,9 @@
 }
 
 .subBlock {
-    background-color: #20a2b1;
+    background-color: var(--color2);
     color: white;
+    padding-bottom: 30px;
 }
 
 .openSpaceBlock {
@@ -197,13 +218,13 @@
 
 @keyframes resetFloating {
     from {
-        transform: translate3d(0px, -16px, 0px)
+        transform: translateY(-16px)
         scale(1.05, 1.05)
         rotateX(15deg);
     }
 
     to {
-        transform: translate3d(0px, 0px, 0px)
+        transform: translateY(0px)
         scale(1, 1)
         rotateX(50deg);
     }
@@ -211,7 +232,7 @@
 
 .floatingCalendar {
       transform:
-        translate3d(0px, -16px, 0px)
+        translateY(-16px)
         rotateX(15deg)
         scale(1.05, 1.05);
         box-shadow:
@@ -221,19 +242,19 @@
         animation-name: floating;
         animation-delay: 600ms;
         animation-duration: 1.7s;
-        animation-iteration-count: infinite;
+        animation-iteration-count: 5;
         animation-direction: alternate;
       }
 
 @keyframes floating {
     from {
-        transform: translate3d(0px, -16px, 0px)
+        transform: translateY(-16px)
         scale(1.05, 1.05)
         rotateX(15deg);
     }   
     
     to {
-        transform: translate3d(0px, -8px, 0px)
+        transform: translateY(-8px)
         scale(1.05, 1.05)
         rotateX(15deg);
     }
@@ -252,11 +273,11 @@
     composes: phraseBlock;
 }
 
-.homepagePhoto {
-    height: 100vw;
+.servingFood {
     width: 100%;
-    background-size: contain;
-    background-position: -110px;
+    height: 100%;
+    background-size: cover;
+    background-image: url("../images/general/ServingFood.jpg");
     background-repeat: no-repeat;
     padding-bottom: 30px;
 }
@@ -284,18 +305,18 @@
 
 .carouselButtonPosition {
     position: absolute;
-    height: 100%;
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    margin-bottom: 200px;
+    top: 450px;
 }
 
 
 .carouselBlock {
     padding-top: 85px;
     height: 500px;
+    width: 100%;
     display: flex;  
     align-items: center;  
     justify-content: center;  
@@ -396,7 +417,7 @@
 
 .carouselDescriptionBlock {
     width: 100%;
-    background-color: rgb(29, 14, 43);
+    background-color: var(--color2);
     color: white;
     margin-bottom: 100px;
 }
@@ -408,7 +429,7 @@
 }
 
 .carouselTitle {
-    color: rgb(77, 253, 180);
+    color: var(--color4);
     font-weight: 800;
     text-transform: uppercase;
     font-size: 17px;
@@ -433,7 +454,7 @@
     width: 180px;
     margin: unset;
     border: 0;
-    background-color: rgb(77, 253, 180);
+    background-color: var(--color4);
     color: black;
 }
 
@@ -447,7 +468,7 @@
 
 .donationInfo {
     width: 100%;
-    background-color: rgb(29, 14, 43);
+    background-color: var(--color2);
     color: white;
 }
 
@@ -458,7 +479,7 @@
 }
 
 .donationTitle {
-    color: rgb(77, 253, 180);;
+    color: var(--color4);
     font-weight: 800;
     text-transform: uppercase;
     font-size: 17px;
@@ -483,6 +504,88 @@
     width: 135px;
     margin: unset;
     border: 0;
-    background-color: rgb(77, 253, 180);;
+    background-color: var(--color4);
     color: black;
 }
+
+.everyone {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/general/IMG_5998.jpg");
+    background-repeat: no-repeat;
+    ;
+    background-size: cover;
+    margin-top: 130px; 
+}
+
+@media only screen and (min-width: 1001px){
+    .titleBlockFlex {
+        display: flex;
+        flex-direction: row;
+        max-width: 1620px;
+    }
+
+    .flexAlignItems {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: unset;
+    }
+
+    .everyone {
+        width: 90%;
+        margin: unset;
+    }
+
+    .outerCardFlex {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cardFlex {
+        display: flex;
+        max-width: 1620px;
+        align-items: center;
+    }
+
+    .cardFlex > div {
+        width: 50%;
+    }
+    
+    .subBlock {
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        width: 90%;
+
+    }
+
+    .servingFood {
+        background-position: 0px -250px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .carouselDescriptionBlock {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        height: 100%;
+        margin-bottom: 0px;
+    }
+
+    .carouselContainer {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .cardHeight {
+        height: 800px;
+    }
+
+    .carouselBlock {
+        height: 100%;
+    }
+
+}
+

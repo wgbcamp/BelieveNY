@@ -137,16 +137,17 @@
 }
 
 .donateOuterGrid{
-    composes: flexboxAllCenter;
+    composes: flexRightJustifyCenterAlign;
     height: 69px;
     grid-column: 4;
     grid-row: 1;
 }
 
 .donateButton{
-    background-color: var(--color4);
+    background-color: var(--color2);
     height: 50%;
     width: 100%;
+    max-width: 120px;
     composes: flexboxAllCenter;
     border-radius: 20px;
     grid-row: 1;
@@ -154,7 +155,7 @@
 
 .donate{
     cursor: pointer;
-    color: var(--color2);
+    color: white;
     font-weight: 900;
     font-size: 14px;
 }
