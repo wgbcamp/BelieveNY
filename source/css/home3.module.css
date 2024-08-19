@@ -17,4 +17,82 @@
     background-color: var(--color2);
 }
 
+.cardShadow {
+    box-shadow:
+    -3em 5em 6em -2em rgba(0,0,0,.4),
+    -4em 2em 3.5em -2.5em rgba(0,0,0,.4);
+}
+
+.cardShadowSubtle {
+    box-shadow:
+    -2em 5em 6em -2em rgba(0,0,0,.4),
+    -3em 2em 3.5em -2.5em rgba(0,0,0,.4);
+}
+
+.imageResize {
+    height: 500px;
+    width: 95%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;  
+ transform:
+    rotate3d(.5,1,0,15deg)
+    rotate(0deg);
+  box-shadow:
+    -3em 5em 6em -2em rgba(0,0,0,.4),
+    -4em 2em 3.5em -2.5em rgba(0,0,0,.4);
+  transition:
+    transform .4s ease,
+    box-shadow .4s ease;
+  border-radius: .5em;
+
+  &:hover {
+    transform:
+      rotate3d(0,0,0,0deg)
+      rotate(0deg);
+  }
+}
+
+.mhfImage {
+    background-image: url("../images/events/Mentalhealthfair.jpeg");
+    background-position: top -150px right 0px;
+}
+
+.sfImage {
+    background-image: url("../images/general/ServingFood.jpg");
+    background-position: top -150px right 0px;
+}
+
+.donutsImage {
+    background-image: url("../images/events/donuts.jpeg");
+    background-position: top -50px right 0px;
+}
+
+.fdImage {
+    background-image: url("../images/events/foodDelivery.jpeg");
+    background-position: top -20px right;
+}
+
+.revealUnder1200 {
+    visibility: hidden;
+    height: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .hideUnder1200 {
+        visibility: hidden;
+    }
+
+    .revealUnder1200 {
+        visibility: visible;
+        height: unset;
+    }
+
+    .cardShadowSubtle {
+        box-shadow:
+        -3em 5em 6em -2em rgba(0,0,0,.4),
+        -4em 2em 3.5em -2.5em rgba(0,0,0,.4);
+    }
+}
 
