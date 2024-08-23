@@ -2,7 +2,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import React, {useState, useEffect, createRef} from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
-import { ParallaxProvider } from 'react-scroll-parallax';
 import './css/main.css';
 import Header from './components/newHeader.js';
 import Footer from './components/newFooter.js';
@@ -82,10 +81,9 @@ function App(){
         <div>
             <FormHandler payload={{name: payload.name, email: payload.email, phone: payload.phone, path: payload.path, type: payload.type, specific0: payload.specific0, specific1: payload.specific1, specific2: payload.specific2, specific3: payload.specific3, specific4: payload.specific4, specific5: payload.specific5, label: payload.label}} dim={dim} updateDim={updateDim}/>
             <DonateChoices dim2={dim2} updateDim2={updateDim2}/>
-            <div className={`${dim === true || dim2 === true ? "dim" : ""}`}>
+            {/* <div className={`${dim === true || dim2 === true ? "dim" : ""}`}> */}
                 <Header location={location}/>
                 <div className='accomodateHeader'>      
-                    <ParallaxProvider>
                         <Routes>
                             <Route path="*" element={<Home/>}/>
                             <Route path="/faq" element={<Faq/>}/>
@@ -117,11 +115,9 @@ function App(){
                             <Route path="/newHome" element={<NewHome/>}/>
                             <Route path="/newHomeOld" element={<NewHomeOld/>}/>
                         </Routes>  
-                    </ParallaxProvider>
                 </div>                      
                 <Footer updateDim={updateDim} updatePayload={updatePayload}/>
-                {/* <BottomContact/> */}
-            </div>
+            {/* </div> */}
         </div>
     )
 }

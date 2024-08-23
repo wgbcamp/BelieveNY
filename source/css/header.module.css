@@ -185,6 +185,14 @@
     visibility: hidden;
 }
 
+.swTitleGrid {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    z-index: -50;
+    position: absolute;
+}
+
 .centerLargeGrid {
     display: flex;
     justify-content: center;

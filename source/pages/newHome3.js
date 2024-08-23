@@ -19,6 +19,9 @@ import mobileSF from '../images/mobile/ServingFood.jpg';
 import mobile3D from '../images/mobile/threeDudes.jpeg'; 
 
 const newHome3 = () => {
+
+    
+
     return(
         <div>
             <Container id="MISSION STATEMENT">
@@ -90,30 +93,30 @@ const newHome3 = () => {
                         Community Events
                     </Col>
                 </Row>
-                <Row className={custom.revealUnder1200} id="CAROUSEL">
-                    <Col>
-                        <Carousel fade sm={6}>
-                            <Carousel.Item>
-                                <Image src={mobileCA} fluid rounded/>  
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <Image src={mobileDonuts} fluid rounded/>  
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <Image src={mobileFD} fluid rounded/>  
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <Image src={mobileMHF} fluid rounded/>  
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <Image src={mobileSF} fluid rounded/>  
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <Image src={mobile3D} fluid rounded/>  
-                            </Carousel.Item>
-                        </Carousel> 
-                    </Col>
-                </Row> 
+                    <Row className={custom.revealUnder1200} id="CAROUSEL">
+                        <Col>
+                            <Carousel fade sm={6}>
+                                <Carousel.Item>
+                                    <Image src={mobileCA} fluid rounded/>  
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <Image src={mobileDonuts} fluid rounded/>  
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <Image src={mobileFD} fluid rounded/>  
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <Image src={mobileMHF} fluid rounded/>  
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <Image src={mobileSF} fluid rounded/>  
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <Image src={mobile3D} fluid rounded/>  
+                                </Carousel.Item>
+                            </Carousel> 
+                        </Col>
+                    </Row> 
                 <Row className={custom.hideUnder1200} id="COLLAGE">
                     <Col>
                         <Row>
