@@ -66,7 +66,7 @@ function App(){
     }
 
     //set schedule booking to getHelp or OpenSpace
-    var [bookingCategory, updateBC] = useState(false);
+    var [bookingCategory, updateBC] = useState("The Open Space");
     function updateBookingCategory(value) {
         updateBC(value);
     }

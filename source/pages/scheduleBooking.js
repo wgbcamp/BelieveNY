@@ -473,9 +473,9 @@ const scheduleBooking = (props) => {
             <div className="simpleFlex">
                 <div className="maxWidth width80Per">
                     <div className='padTop80'></div>
-                    <div className='weight500 lineHeight25'>Important Disclaimer: {props.bookingCategory} is not a substitute for clinical mental health treatment and/or a cure for any mental health issues and/or disorders. Although our Counselors are comprehensively trained, they are not certified nor licensed mental health specialists. They are trained in active listening techniques, empathy, and compassion and will provide support and resource referrals as needed.</div>
+                    <div className='weight500 lineHeight25'>{props.bookingCategory} is not a substitute for clinical mental health treatment and/or a cure for any mental health issues and/or disorders. Although our Counselors are comprehensively trained, they are not certified nor licensed mental health specialists. They are trained in active listening techniques, empathy, and compassion and will provide support and resource referrals as needed.</div>
                     <div className="padTop40"></div>
-                    <div className='weight500 lineHeight25 padBottom80'>Important Update for New Clients: At this time, we do not have any openings for new clients until September 16th. 
+                    <div className='weight800 lineHeight25 padBottom80'>Important Update for New Clients: At this time, we do not have any openings for new clients until September 16th. 
                         We are currently transitioning to a new operations system and training model designed to enhance our services and support our continued growth. 
                         This temporary pause allows us to ensure that all our staff and volunteers are fully equipped to provide the highest level of care and support to our clients. We appreciate your understanding and patience during this period. Please check back with us after September 16th for updates on availability. 
                         We look forward to continuing to serve our community with improved resources and services. 

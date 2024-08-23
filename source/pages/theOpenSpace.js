@@ -17,7 +17,7 @@ const theOpenSpace = (props) => {
                         <div className="simpleFlex">
                             <div className="padTop20 padBottom40 size18Font max850">Are you living with loneliness? Sadness? Anxiety? Are you stressed about school, work or difficult relationships? Are you struggling with addictions, violence, or losses in your life?</div>
                         </div>
-                        <div className="simpleFlex">
+                        <div className="simpleFlex ">
                             <div>
                                 <Link to="/scheduleBooking" className="submitButton3" onClick={() => {restoreTop(); props.updateBC("The Open Space");}}>
                                     <b>Book a session here</b>
@@ -26,8 +26,9 @@ const theOpenSpace = (props) => {
                         </div>
                         
                     </div>
+
                     <div className="simpleFlex">
-                        <div className="hereForYouGrid max1090">
+                        <div className="hereForYouGrid padTop20 max1090">
                             <div className="simpleFlex hereForYouInner centerText">
                                 <b className="size42Font padTop40 center1200 smallText500">We are here for you.</b>
                                 <div className="size18Font padBottom201200 smallerText500">We are here to listen and help you through your next steps.</div>
