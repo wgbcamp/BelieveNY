@@ -1,3 +1,8 @@
+.maxWidth {
+    max-width: 1620px;
+}
+
+
 .huge {
     font-size: 64px;
     font-weight: 900;
@@ -15,6 +20,10 @@
 
 .backgroundColor2 {
     background-color: var(--color2);
+}
+
+.maxWidth {
+    width: 100%;
 }
 
 .cardShadow {
@@ -73,9 +82,38 @@
     background-position: top -20px right;
 }
 
-.revealUnder1200 {
-    visibility: hidden;
-    height: 0;
+.sponsorPhoto {
+    background-image: url("../images/general/IMG_6364.jpg");
+    height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.donationPhoto {
+    background-image: url("../images/general/Homepage.PNG");
+    height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sponsorHeight {
+    height: 320px;
+}
+
+.sponsorTitle {
+    font-size: 68px;
+    line-height: 70px;
+}
+
+.donationTitle {
+    font-size: 48px;
+    line-height: 50px;
+}
+
+@media only screen and (min-width: 992px) {
+    .shrinkButton {
+        max-width: 190px;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
