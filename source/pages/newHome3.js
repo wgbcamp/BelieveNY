@@ -5,6 +5,7 @@ import { Container, Row, Col, Image, Carousel } from 'react-bootstrap';
 import custom from '../css/home3.module.css';
 
 import everyone from '../images/general/IMG_5998.jpg';
+import donationPhoto from "../images/general/Homepage.PNG";
 import '../images/general/ServingFood.jpg';
 
 import mobileCA from '../images/mobile/CommunityAdvocates.jpeg';
@@ -24,7 +25,7 @@ const newHome3 = () => {
             };
 
             window.addEventListener('resize', handleResize);
-            console.log( width);
+            console.log(width);
 
         }, []);
  
@@ -81,6 +82,35 @@ const newHome3 = () => {
         }
     }
 
+    const testimonials = [
+        {quote: "Before Believe New York I needed soap, deodorant, shampoo, and a toothbrush. I lost my job, couldn’t pay my rent, and lost my apartment. I also needed school supplies for all my children. ... Other people should contact Believe so they can get some help like I did. I really want to thank Believe New York for their generosity.", location: "The Bronx"}, 
+        {quote: "I say to people who have not contacted Believe New York, do not feel ashamed. We all need help sometimes. They are nice and they do not judge. Believe New York is changing lives.", location: "Queens"},
+        {quote: "Believe New York has helped me so much; I was able to talk to them openly. Share things I have not shared with others. They are really awesome.", location: "Brooklyn"},
+        {quote: "Because of Believe New York my situation has improved because I have the things that I needed so badly that I could not afford or find on my own. I feel that somebody cares.", location: "Manhattan"},
+        {quote: "I would tell anyone in my situation to reach out and look for help. It is out there, all we have to do is never give up. I am glad Believe New York is a nonprofit so they can help a lot more people like me.", location: "Queens"},
+        {quote: "No one else was going to help me, but the volunteers at Believe New York finally helped me navigate all the options I had. I still have a long way to go but I could not have gotten treatment without their help.", location: "New Jersey"},
+        {quote: "You guys are awesome, I’ve made it known. I wasn’t alone now, you are here. I will always be grateful to Believe New York, will never forget.", location: "Manhattan"},
+            ];
+
+    const [currentTestimonial, setCurrTest] = useState(0);
+
+    function handleChange(param) {
+        
+        if (param === "up") {
+            if (currentTestimonial === testimonials.length-1) {
+                setCurrTest(0);
+            } else {
+                setCurrTest(currentTestimonial => currentTestimonial + 1);
+            }
+        } else {
+            if (currentTestimonial === 0) {
+                setCurrTest(testimonials.length-1);
+            } else {
+                setCurrTest(currentTestimonial => currentTestimonial - 1);
+            }
+        }
+    }
+    
     return(
         <div>
             <Container id="MISSION STATEMENT">
@@ -154,6 +184,19 @@ const newHome3 = () => {
                 </Row>
                 <Photos/>
             </Container>
+            <Container>
+                <Row className='fw-bold d-flex align-items-center flex-column'>
+                    <Col className='d-flex justify-content-center'>
+                        <div className={`${custom.borderColor} pb-2`}>FOLLOW US ON SOCIAL MEDIA</div>
+                        
+                    </Col>
+                    <Col className='d-flex justify-content-center mt-3'>
+                        <i className="fa-brands fa-facebook fa-3x me-5"></i>
+                        <i className="fa-brands fa-square-instagram fa-3x me-5"></i>
+                        <i className="fa-brands fa-linkedin fa-3x"></i>
+                    </Col>
+                </Row>
+            </Container>
                 <Container fluid className='mt-5 d-flex justify-content-center'>
                     <Row className={`${custom.maxWidth}`}>
                         <Col md={6} className={`d-flex  align-items-center`}>
@@ -172,8 +215,21 @@ const newHome3 = () => {
       
                            
                         </Col>
-                        <Col md={6}>
-                            <div className={`${custom.donationPhoto}`}></div>
+                        <Col md={6} className="d-flex align-items-center">
+                            <Image src={donationPhoto} className='' fluid rounded/> 
+                        </Col>
+                    </Row>
+                </Container>
+                <Container className={`d-flex justify-content-center ${custom.testimonialSizing}`}>
+                    <Row>
+                        <Col className='d-flex align-items-center justify-content-end flex-column mx-2'>
+                            <div className={`${custom.quoteSizing} d-flex align-items-end fw-normal text-center mb-3 fs-6 fst-italic`}>"{testimonials[currentTestimonial].quote}"</div>
+                            <div className='fw-bold border-2 border-top border-primary pt-3 fs-4'>{testimonials[currentTestimonial].location}</div>
+                            <i className={`fa-solid fa-hand-holding-heart fa-3x mt-3 mb-3 ${custom.color1}`}></i>
+                            <div className='my-5'>
+                            <i className={`fa-solid fa-circle-left fa-2x ${custom.color1}`} onClick={() => handleChange("down")}></i>
+                            <i className={`fa-solid fa-circle-right fa-2x ${custom.color1}`} onClick={() => handleChange("up")}></i>
+                            </div>
                         </Col>
                     </Row>
                 </Container>

@@ -4,7 +4,7 @@
 
 
 .huge {
-    font-size: 64px;
+    font-size: 60px;
     font-weight: 900;
     line-height: 70px;
     margin-top: 50px;
@@ -12,6 +12,10 @@
 
 .color2 {
     color: var(--color2);
+}
+
+.borderColor {
+    border-bottom: 2px solid var(--color2);
 }
 
 .backgroundColor1 {
@@ -22,8 +26,21 @@
     background-color: var(--color2);
 }
 
+.color1 {
+    color: var(--color1);
+}
+
 .maxWidth {
     width: 100%;
+}
+
+.quoteSizing {
+    max-width: 800px;
+    height: 100px;
+}
+
+.testimonialSizing {
+    height: 500px;
 }
 
 .cardShadow {

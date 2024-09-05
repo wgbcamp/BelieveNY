@@ -20,7 +20,7 @@ const impactReport = () => {
             updateCS("");
         }
         updateTV(x);
-        document.getElementById('successStats').scrollIntoView();
+        // document.getElementById('successStats').scrollIntoView();
 
     }
     return(
@@ -86,9 +86,9 @@ const impactReport = () => {
                         </ul>
                     </div>
                 </div> */}
-                <div className="expansionButtonContainer">
+                {/* <div className="expansionButtonContainer">
                     <div className="expandAbove900px" onClick={() => swapText()}>{textValue}</div>
-                </div>
+                </div> */}
                 <div className="impactTitle">Impact Report</div>
                 <iframe className="pdfViewer"
                     src="https://drive.google.com/file/d/1d-U2zSdHubcewmihOmyAA9rmKQb0t74n/preview"
