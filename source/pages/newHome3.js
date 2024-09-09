@@ -149,8 +149,8 @@ const newHome3 = () => {
                                             The Open Space
                                         </Col>
                                     </Row>
-                                    <Row className="fs-2 mt-5 mb-5 px-3">
-                                        <Col className='px-3'>   
+                                    <Row className="fs-4 mt-5 mb-5 px-3">
+                                        <Col className='px-3 fw-light'>   
                                             100% free of charge and confidential, the Open Space offers a safe and nonjudgemental place to talk about what you are going through while remaining anonymous.
                                         </Col>
                                     </Row>
@@ -165,8 +165,8 @@ const newHome3 = () => {
                                             Get Help
                                         </Col>
                                     </Row>
-                                    <Row className="fs-2 mt-5 mb-5 px-3">
-                                        <Col className='px-3'>   
+                                    <Row className="fs-4 mt-5 mb-5 px-3">
+                                        <Col className='px-3 fw-light'>   
                                             100% free of charge and confidential, the Open Space offers a safe and nonjudgemental place to talk about what you are going through while remaining anonymous.
                                         </Col>
                                     </Row>
@@ -184,8 +184,8 @@ const newHome3 = () => {
                 </Row>
                 <Photos/>
             </Container>
-            <Container>
-                <Row className='fw-bold d-flex align-items-center flex-column'>
+            <Container className='py-5'>
+                <Row className='fw-bold d-flex align-items-center flex-column pt-1'>
                     <Col className='d-flex justify-content-center'>
                         <div className={`${custom.borderColor} pb-2`}>FOLLOW US ON SOCIAL MEDIA</div>
                         
@@ -197,19 +197,19 @@ const newHome3 = () => {
                     </Col>
                 </Row>
             </Container>
-                <Container fluid className='mt-5 d-flex justify-content-center'>
+                <Container fluid className='py-5 mt-5 d-flex justify-content-center bg-dark text-white'>
                     <Row className={`${custom.maxWidth}`}>
                         <Col md={6} className={`d-flex  align-items-center`}>
                             <div className='d-flex justify-content-center flex-column'>
                                 <div className={`${custom.donationTitle} fw-bold mb-4`}>
                                     Your support goes a long way
                                 </div>
-                                <div className="text-start">
+                                <div className="text-start fs-5">
                                     Give a donation to support New Yorkers in need.
                                 </div>
                                 <div className='mb-4'>                   
-                                    <button type="button" className={`btn btn-primary mt-4 me-3 ${custom.shrinkButton}`}>Donate now</button>
-                                    <button type="button" className={`btn btn-light border-dark-subtle mt-4 ${custom.shrinkButton}`}>About Believe</button>
+                                    <button type="button" className={`btn btn-primary mt-4 me-3 rounded-4 ${custom.shrinkButton}`}>Donate now</button>
+                                    <button type="button" className={`btn btn-light mt-4 rounded-4 ${custom.shrinkButton}`}>About Believe</button>
                                 </div>
                             </div>
       
@@ -223,23 +223,55 @@ const newHome3 = () => {
                 <Container className={`d-flex justify-content-center ${custom.testimonialSizing}`}>
                     <Row>
                         <Col className='d-flex align-items-center justify-content-end flex-column mx-2'>
-                            <div className={`${custom.quoteSizing} d-flex align-items-end fw-normal text-center mb-3 fs-6 fst-italic`}>"{testimonials[currentTestimonial].quote}"</div>
+                            <div className={`${custom.quoteSizing} d-flex align-items-end fw-normal text-center mb-3 fs-5 fst-italic`}>"{testimonials[currentTestimonial].quote}"</div>
                             <div className='fw-bold border-2 border-top border-primary pt-3 fs-4'>{testimonials[currentTestimonial].location}</div>
                             <i className={`fa-solid fa-hand-holding-heart fa-3x mt-3 mb-3 ${custom.color1}`}></i>
-                            <div className='my-5'>
-                            <i className={`fa-solid fa-circle-left fa-2x ${custom.color1}`} onClick={() => handleChange("down")}></i>
-                            <i className={`fa-solid fa-circle-right fa-2x ${custom.color1}`} onClick={() => handleChange("up")}></i>
-                            </div>
+                            
+                                <Row className='my-5 text-center w-100'>
+                                    <Col xs={4} md={5}>
+                                        <div className='d-flex align-items-center me-4'>
+                                            <div className={`${custom.barLine}`}></div>
+                                        </div>
+                                    </Col>
+                                    <Col xs={4} md={2} className='d-flex justify-content-center'>
+                                        <i className={`fa-solid fa-circle-left fa-2x ${custom.color1}`} onClick={() => handleChange("down")}></i>
+                                        <div className={`d-flex align-items-center justify-content-center mx-4`}>{(currentTestimonial) + 1}/7</div>
+                                        <i className={`fa-solid fa-circle-right fa-2x ${custom.color1}`} onClick={() => handleChange("up")}></i>
+                                    </Col>
+                                    <Col xs={4} md={5}>
+                                        <div className='d-flex align-items-center ms-4'>
+                                            <div className={`${custom.barLine}`}></div>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            
                         </Col>
                     </Row>
                 </Container>
-                <Container fluid className={`${custom.backgroundColor1} mx-0 d-flex justify-content-center`}>
+                <Container>
+                    <Row>
+                        <Col>
+                            <Row className={`my-5 py-5 bg-warning bg-gradient bg-opacity-25 text-dark`}>
+                                <Col xs={2} className='d-flex justify-content-center align-items-center '>
+                                    <i class="fa-solid fa-lightbulb fa-3x text-warning"></i>
+                                </Col>
+                                <Col xs={8} className='d-flex justify-content-start align-items-center fs-3 fw-semibold'>Read our impact report, see our accomplishment, and hear more feedback from our clients.</Col>
+                                <Col xs={2} className='d-flex justify-content-center align-items-center'>
+                                    <button type="button" className={`btn btn-primary ${custom.shrinkButton} rounded-5 py-2`}>
+                                        <i className="fa-solid fa-arrow-right fa-lg"></i>
+                                    </button>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                </Container>
+                <Container fluid className={`${custom.backgroundColor1} mx-0 d-flex justify-content-center pb-2`}>
                     <Row className={`${custom.maxWidth}`}>
                         <Col md={6} className={`d-flex align-items-center`}>
-                            <div className={`${custom.sponsorHeight} d-flex justify-content-center flex-column text-white mt-2`}>
+                            <div className={`${custom.sponsorHeight} grid text-white mt-2`}>
                                 <div className={`${custom.sponsorTitle} fw-bold`}>Become a Sponsor</div>
                                 <div className='mt-3'>We're looking to partner with more locally run businesses to help ensure every New Yorker is getting the help they need.</div>
-                                <button type="button" className={`btn btn-primary mt-4 ${custom.shrinkButton}`}>
+                                <button type="button" className={`btn btn-primary mt-4 rounded-4 ${custom.shrinkButton}`}>
                                     Learn more
                                     <i className="ms-2 fa-solid fa-arrow-right"></i>
                                 </button>
@@ -250,7 +282,7 @@ const newHome3 = () => {
                         </Col>
                     </Row>
                 </Container>
-        
+
    
 
   
