@@ -1,86 +1,22 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useRef, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Container, Row, Col, Image, Carousel } from 'react-bootstrap';
 
 import custom from '../css/home3.module.css';
 
-import everyone from '../images/general/IMG_5998.jpg';
 import donationPhoto from "../images/general/Homepage.PNG";
-import '../images/general/ServingFood.jpg';
+import imposter from "../images/general/IMG_4750.jpg";
+import communityAdvocates from '../images/homepage/CommunityAdvocates.jpg';
+import handingOutClothes from '../images/homepage/Handingoutclothes.jpg';
+import trio from '../images/homepage/Trio.jpg';
+import donuts from '../images/homepage/donuts.jpg';
+import bigGroup from '../images/homepage/bigGroup.jpg';
+import tableBending from '../images/homepage/tableBending.jpg';
+import servingFood from '../images/homepage/ServingFood.jpg';
+import mentalHealthFair from '../images/homepage/Mentalhealthfair.jpg';
 
-import mobileCA from '../images/mobile/CommunityAdvocates.jpeg';
-import mobileDonuts from '../images/mobile/donuts.jpeg';
-import mobileFD from '../images/mobile/foodDelivery.jpeg';
-import mobileMHF from '../images/mobile/Mentalhealthfair.jpeg';
-import mobileSF from '../images/mobile/ServingFood.jpg';
-import mobile3D from '../images/mobile/threeDudes.jpeg'; 
 
 const newHome3 = () => {
-
-    const [width, setWidth] = useState(window.innerWidth);
-
-            useEffect(() => {
-            const handleResize = () => {
-                setWidth(window.innerWidth);
-            };
-
-            window.addEventListener('resize', handleResize);
-            console.log(width);
-
-        }, []);
- 
-    function Photos() {
-        if (width >= 1201) {
-            
-            return <Row id="COLLAGE">
-                    <Col>
-                        <Row>
-                            <div className={`${custom.imageResize} ${custom.mhfImage} mt-5 mb-5`}>
-                            </div>
-                        </Row>
-                        <Row>
-                            <div className={`${custom.imageResize} ${custom.sfImage}`}>
-                            </div>
-                        </Row>                            
-                    </Col>
-                    <Col>
-                        <Row>
-                            <div className={`${custom.imageResize} ${custom.donutsImage} mb-5`}>
-                            </div>
-                        </Row>
-                        <Row>
-                            <div className={`${custom.imageResize} ${custom.fdImage}`}>
-                            </div>
-                        </Row>                            
-                    </Col>
-                </Row>;
-        }else{
-             return  <Row id="CAROUSEL">
-                    <Col>
-                        <Carousel fade sm={6}>
-                            <Carousel.Item>
-                                <Image src={mobileCA} fluid rounded/>  
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <Image src={mobileDonuts} fluid rounded/>  
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <Image src={mobileFD} fluid rounded/>  
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <Image src={mobileMHF} fluid rounded/>  
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <Image src={mobileSF} fluid rounded/>  
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <Image src={mobile3D} fluid rounded/>  
-                            </Carousel.Item>
-                        </Carousel> 
-                    </Col>
-                </Row>;
-        }
-    }
 
     const testimonials = [
         {quote: "Before Believe New York I needed soap, deodorant, shampoo, and a toothbrush. I lost my job, couldn’t pay my rent, and lost my apartment. I also needed school supplies for all my children. ... Other people should contact Believe so they can get some help like I did. I really want to thank Believe New York for their generosity.", location: "The Bronx"}, 
@@ -110,90 +46,173 @@ const newHome3 = () => {
             }
         }
     }
-    
+
     return(
         <div>
             <Container id="MISSION STATEMENT">
                 <Row>
-                    <Col xl={6} className="mb-4">
-                        <Row>
-                            <Col className={`${custom.huge}`}>
-                            Advancing our city & the lives of <div className={custom.color2}>New Yorkers</div>
+                    <Col>
+                        <Row className={`${custom.customPaddingTop} mb-5`}>
+                            <Col md={5}>
+                                <div className={`mb-1  ${custom.titleStatement}`}>
+                                    <div>ADVANCING OUR CITY & EMPOWERING NEW YORKERS.</div>
+                                </div>
+                                    <div className={`${custom.mainButtonContainer}`}>
+                                      <Link to="/aboutUs" onClick={() => window.scrollTo(0,0)} className="w-100">
+                                        <button type="button" className={`btn btn-dark mt-4 mb-5 rounded-5 fw-bold ${custom.mainButton}`}>LEARN MORE</button>
+                                        </Link>
+                                </div>
+                                <div className={`d-flex justify-content-center mb-4`}> 
+                                    <div className={`mb-5 mt-2 pt-1  ${custom.imageRestrict}`}></div>  
+                                </div>
+                            </Col>
+                            <Col md={1}></Col>
+                            <Col md={6}>
+                                <i className={`${custom.iconColor} fa-solid fa-handshake-angle fa-3x mb-2`}></i>
+                                <div className={`${custom.categoryFont}`}>Our Mission</div>
+                                <div className={`${custom.customPaddingTop}  ${custom.descriptionFont}`}>
+                                    Believe New York is committed to
+                                    uplifting all individuals and families
+                                    navigating the challenges of poverty,
+                                    abuse, and mental health issues.
+                                </div>
+                                <div className={`${custom.separator}`}></div>
+                                <i className={`fa-solid fa-people-group fa-3x mb-2 ${custom.iconColor}`}></i>
+                                <div className={`${custom.categoryFont}`}>Fostering Community</div>
+                                <div className={`${custom.customPaddingTop}  ${custom.descriptionFont}`}>
+                                    Our philosophy is that no one should feel excluded and alone. We believe in fostering an inclusive, supportive, and healthy community for all.
+                                </div>
+                                <div className={`${custom.separator}`}></div>
+                                <i className={`${custom.iconColor} fa-solid fa-shield-halved fa-3x mb-2`}></i>
+                                <div className={`${custom.categoryFont}`}>Long-term Solutions</div>
+                                <div className={`${custom.customPaddingTop}  ${custom.descriptionFont}`}>
+                                    We empower individuals by addressing the root causes of their challenges and providing personalized care tailored to their unique needs.
+                                </div>
+                                
+                            </Col>
+                        </Row>
+                        <Row className={`pt-4 mb-4`}>
+                            <Col md={4}>
+                                <div className={`${custom.largerDescriptionFont} `}>
+                                    Addressing these concerns goes beyond providing immediate relief.
+                                </div>
+                                <div className={` ${custom.descriptionFont} mt-3 mb-5`}>
+                                    We have 3 core programs, and several ongoing initiatives, that work
+                                    synergistically to address the complex needs of our clients.
+                                </div>
+                            </Col>
+                            <Col md={2}></Col>
+                            <Col md={6}>
+                                <Image src={imposter} fluid rounded className=""/> 
                             </Col>
                         </Row>
                         <Row>
-                            <Col className="fs-5 fw-semibold lh-base mt-4">
-                                Believe New York is on a mission—to improve the lives of all individuals and families in New York City, but we need your help, Donate Now to support our mission!
+                            <div className='d-flex justify-content-center flex-column text-center mt-5'>
+                                <div className={custom.categoryFont}>The Open Space</div>
+                                <div className={`${custom.descriptionFont} mt-3 d-flex justify-content-center`}>
+                                    <div className='w-75'>
+                                        Accessible, no-cost, and confidential platform for clients to freely express their feelings and engage in non-judgmental mental health support while exploring and navigating the different resources available to them.
+                                    </div>
+                                </div>
+                                <div>
+                                    <Link to="/theOpenSpace" onClick={() => window.scrollTo(0,0)}>
+                                        <button type="button" className={`btn btn-dark mt-4 mb-5  rounded-5 fw-bold ${custom.mainButton}`}>MORE INFO</button>
+                                    </Link>
+                                </div>
+                            </div>
+                            <div className='d-flex justify-content-center flex-column text-center mt-5'>
+                                <div className={custom.categoryFont}>Get Help</div>
+                                <div className={`${custom.descriptionFont} mt-3 d-flex justify-content-center`}>
+                                    <div className='w-75'>
+                                        Ongoing individualized support and resource referrals for housing, food, medical and mental healthcare, domestic violence safety, legal services, and more.
+                                    </div>
+                                </div>
+                                <div>
+                                    <Link to="/getHelp" onClick={() => window.scrollTo(0,0)}>
+                                        <button type="button" className={`btn btn-dark mt-4 mb-5  rounded-5 fw-bold ${custom.mainButton}`}>MORE INFO</button>
+                                    </Link>
+                                </div>
+                            </div>
+                        </Row>
+                        <Row>
+                            <Col>
                             </Col>
                         </Row>
-                        
-                    </Col>
-                    <Col xl={6}> 
-                        <Image src={everyone} className='mt-5' fluid rounded/>  
                     </Col>
                 </Row>
             </Container>
-            <div className={`${custom.backgroundColor2} text-light mt-5 pb-5`}>
-                <Container id="SERVICES">
-                    <Row>
-                        <Col className={`${custom.huge} text-center`}>
-                            Our Services
-                        </Col>
-                    </Row>
-                    <Row >
-                        <Col xl={6}>
-                            <Row className={`mt-5 mx-1 ${custom.backgroundColor2} ${custom.cardShadow} bg-white text-dark rounded-5`}>
-                                <Col>
-                                    <Row className={custom.huge}>
-                                        <Col className='px-3'>
-                                            The Open Space
-                                        </Col>
-                                    </Row>
-                                    <Row className="fs-4 mt-5 mb-5 px-3">
-                                        <Col className='px-3 fw-light'>   
-                                            100% free of charge and confidential, the Open Space offers a safe and nonjudgemental place to talk about what you are going through while remaining anonymous.
-                                        </Col>
-                                    </Row>
-                                </Col>
-                            </Row>
-                        </Col>
-                        <Col xl={6}>
-                            <Row className={`mt-5 mx-1 ${custom.backgroundColor2} ${custom.cardShadow} ${custom.cardShadowSubtle} bg-white text-dark rounded-5`}>
-                                <Col>
-                                    <Row className={custom.huge}>
-                                        <Col className='px-3'>
-                                            Get Help
-                                        </Col>
-                                    </Row>
-                                    <Row className="fs-4 mt-5 mb-5 px-3">
-                                        <Col className='px-3 fw-light'>   
-                                            100% free of charge and confidential, the Open Space offers a safe and nonjudgemental place to talk about what you are going through while remaining anonymous.
-                                        </Col>
-                                    </Row>
-                                </Col>
-                            </Row>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
             <Container className='mb-5'>
                 <Row className='mb-2'>
-                    <Col className={`${custom.huge} text-center mb-5`}>
+                    <Col className={`${custom.categoryFont} text-center mt-5 mb-5`}>
                         Community Events
                     </Col>
                 </Row>
-                <Photos/>
+                <Row className={custom.carousel}>
+                   
+                        <div className={` ${custom.carouselWrapper}`}>
+                            <div className={custom.animateSlider}>
+                                <img src={communityAdvocates} className={custom.shrinkImage}></img>
+                            </div>
+                            <div className={custom.animateSlider}>
+                                <img src={handingOutClothes} className={custom.shrinkImage}></img>
+                            </div>
+                            <div className={custom.animateSlider}>
+                                <img src={trio} className={custom.shrinkImage}></img>
+                            </div>
+                            <div className={custom.animateSlider}>
+                                <img src={donuts} className={custom.shrinkImage}></img>
+                            </div>
+                            <div className={custom.animateSlider}>
+                                <img src={bigGroup} className={custom.shrinkImage}></img>
+                            </div>
+                            <div className={custom.animateSlider}>
+                                <img src={tableBending} className={custom.shrinkImage}></img>
+                            </div>
+                            <div className={custom.animateSlider}>
+                                <img src={servingFood} className={custom.shrinkImage}></img>
+                            </div>
+                            <div className={custom.animateSlider}>
+                                <img src={communityAdvocates} className={custom.shrinkImage}></img>
+                            </div>
+                            <div className={custom.animateSlider}>
+                                <img src={handingOutClothes} className={custom.shrinkImage}></img>
+                            </div>
+                            <div className={custom.animateSlider}>
+                                <img src={trio} className={custom.shrinkImage}></img>
+                            </div>
+                            <div className={custom.animateSlider}>
+                                <img src={donuts} className={custom.shrinkImage}></img>
+                            </div>
+                            <div className={custom.animateSlider}>
+                                <img src={bigGroup} className={custom.shrinkImage}></img>
+                            </div>
+                            <div className={custom.animateSlider}>
+                                <img src={tableBending} className={custom.shrinkImage}></img>
+                            </div>
+                            <div className={custom.animateSlider}>
+                                <img src={servingFood} className={custom.shrinkImage}></img>
+                            </div>
+                        </div>
+                   
+                </Row>
+               
             </Container>
             <Container className='py-5'>
                 <Row className='fw-bold d-flex align-items-center flex-column pt-1'>
                     <Col className='d-flex justify-content-center'>
-                        <div className={`${custom.borderColor} pb-2`}>FOLLOW US ON SOCIAL MEDIA</div>
+                        <div className={`${custom.bottomBorderColor} pb-2`}>FOLLOW US ON SOCIAL MEDIA</div>
                         
                     </Col>
                     <Col className='d-flex justify-content-center mt-3'>
+                    <a href="https://www.facebook.com/believeny">
                         <i className="fa-brands fa-facebook fa-3x me-5"></i>
+                    </a>
+                    <a href="https://www.instagram.com/believeny">
                         <i className="fa-brands fa-square-instagram fa-3x me-5"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/believeny">
                         <i className="fa-brands fa-linkedin fa-3x"></i>
+                    </a>
                     </Col>
                 </Row>
             </Container>
@@ -207,9 +226,10 @@ const newHome3 = () => {
                                 <div className="text-start fs-5">
                                     Give a donation to support New Yorkers in need.
                                 </div>
-                                <div className='mb-4'>                   
-                                    <button type="button" className={`btn btn-primary mt-4 me-3 rounded-4 ${custom.shrinkButton}`}>Donate now</button>
-                                    <button type="button" className={`btn btn-light mt-4 rounded-4 ${custom.shrinkButton}`}>About Believe</button>
+                                <div className='mb-4'>
+                                    <Link to="/donate" onClick={() => window.scrollTo(0,0)}>                 
+                                        <button type="button" className={` mt-4 me-3 rounded-5 fw-bold text-white ${custom.mainButton} ${custom.secondaryButton}`}>DONATE NOW</button>
+                                    </Link>  
                                 </div>
                             </div>
       
@@ -223,8 +243,8 @@ const newHome3 = () => {
                 <Container className={`d-flex justify-content-center ${custom.testimonialSizing}`}>
                     <Row>
                         <Col className='d-flex align-items-center justify-content-end flex-column mx-2'>
-                            <div className={`${custom.quoteSizing} d-flex align-items-end fw-normal text-center mb-3 fs-5 fst-italic`}>"{testimonials[currentTestimonial].quote}"</div>
-                            <div className='fw-bold border-2 border-top border-primary pt-3 fs-4'>{testimonials[currentTestimonial].location}</div>
+                            <div className={`${custom.quoteSizing} d-flex align-items-end fw-semibold text-center mb-3 fs-5 `}>"{testimonials[currentTestimonial].quote}"</div>
+                            <div className={`fw-bold ${custom.topBorderColor} pt-3 fs-4`}>{testimonials[currentTestimonial].location}</div>
                             <i className={`fa-solid fa-hand-holding-heart fa-3x mt-3 mb-3 ${custom.color1}`}></i>
                             
                                 <Row className='my-5 text-center w-100'>
@@ -251,34 +271,37 @@ const newHome3 = () => {
                 <Container>
                     <Row>
                         <Col>
-                            <Row className={`my-5 py-5 bg-warning bg-gradient bg-opacity-25 text-dark`}>
-                                <Col xs={2} className='d-flex justify-content-center align-items-center '>
-                                    <i class="fa-solid fa-lightbulb fa-3x text-warning"></i>
+                            <Row className={`my-5 py-5 ${custom.backgroundLight} bg-gradient bg-opacity-25 text-dark`}>
+                                <Col xs={3} className='d-flex justify-content-center align-items-center '>
+                                    <i className={`fa-brands fa-leanpub fa-3x ${custom.iconColor} `}></i>
                                 </Col>
-                                <Col xs={8} className='d-flex justify-content-start align-items-center fs-3 fw-semibold'>Read our impact report, see our accomplishment, and hear more feedback from our clients.</Col>
+                                <Col xs={7} className='d-flex justify-content-start align-items-center fs-3 fw-semibold'>Read our impact report, see our accomplishment, and hear more feedback from our clients.</Col>
                                 <Col xs={2} className='d-flex justify-content-center align-items-center'>
-                                    <button type="button" className={`btn btn-primary ${custom.shrinkButton} rounded-5 py-2`}>
-                                        <i className="fa-solid fa-arrow-right fa-lg"></i>
-                                    </button>
+                                    <Link to="/impactReport" onClick={() => window.scrollTo(0,0)}>
+                                        <button type="button" className={`btn btn-dark ${custom.shrinkButton} rounded-5 py-2`}>
+                                            <i className="fa-solid fa-arrow-right fa-lg"></i>
+                                        </button>
+                                    </Link>
                                 </Col>
                             </Row>
                         </Col>
                     </Row>
                 </Container>
-                <Container fluid className={`${custom.backgroundColor1} mx-0 d-flex justify-content-center pb-2`}>
-                    <Row className={`${custom.maxWidth}`}>
-                        <Col md={6} className={`d-flex align-items-center`}>
-                            <div className={`${custom.sponsorHeight} grid text-white mt-2`}>
+                <Container fluid className={`mx-0 d-flex justify-content-center bg-dark pb-2`}>
+                    <Row className={`${custom.maxWidth} py-5`}>
+                        <Col md={6} className={`d-flex justify-content-center align-items-center`}>
+                            <div className={`d-flex justify-content-center flex-column text-white mt-2`}>
                                 <div className={`${custom.sponsorTitle} fw-bold`}>Become a Sponsor</div>
-                                <div className='mt-3'>We're looking to partner with more locally run businesses to help ensure every New Yorker is getting the help they need.</div>
-                                <button type="button" className={`btn btn-primary mt-4 rounded-4 ${custom.shrinkButton}`}>
-                                    Learn more
-                                    <i className="ms-2 fa-solid fa-arrow-right"></i>
-                                </button>
+                                <div className={`mt-3 ${custom.sponsorDescription}`}>We're looking to partner with more locally run businesses to help ensure every New Yorker is getting the help they need.</div>
+                                <div className='mb-4'>
+                                    <Link to="/eventSponsors" onClick={() => window.scrollTo(0,0)}>                   
+                                        <button type="button" className={`mt-4 me-3 rounded-5 fw-bold text-white ${custom.mainButton} ${custom.secondaryButton}`}>LEARN MORE</button>
+                                    </Link>
+                                </div>
                             </div>
                         </Col>
-                        <Col md={6}>
-                            <div className={`${custom.sponsorPhoto}`}></div>
+                        <Col md={6} className="d-flex align-items-center">
+                            <Image src={mentalHealthFair} className='' fluid rounded/> 
                         </Col>
                     </Row>
                 </Container>

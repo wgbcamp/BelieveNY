@@ -1,9 +1,3 @@
-:root {
-    --color1: #080B38;
-    --color2: #6D74F7;
-    --color3: #AFB0C7;
-}
-
 /* :root {
     --color1: #021526;
     --color2: #03346E;
@@ -18,20 +12,20 @@
 }
 
 .background{
+    border-top: 1px solid rgba(0, 0, 0, 0.493);
+    margin-top: 50px;
     padding-right: 20px;
     padding-left: 20px;
-    background-color: var(--color1);
     display: flex;
     justify-content: center;
-    color: white;
 }
 
 .footerGrid{
-    font-size: 14px;
+    font-size: 16px;
     height: 720px;
     width: 100%;
     color: var(--color6);
-    font-weight: 600;
+    font-weight: 800;
     max-width: 1620px;
 
 }
@@ -114,7 +108,7 @@ visibility: hidden;
 .categoriesTitle{
     padding-bottom: 4px;
     margin-bottom: 20px;
-    border-bottom: 1px solid var(--color3);
+    border-bottom: 1px solid black;
     width: 100%;
 }
 
@@ -123,7 +117,6 @@ visibility: hidden;
     padding-bottom: 10px;
     cursor: pointer;
     text-decoration: none !important;
-    color: white;
 }
 
 .socialMediaOuterFlex{
@@ -147,16 +140,15 @@ visibility: hidden;
 .socialMediaLinksFlex{
     display: flex;
     flex-direction: row;
-    border-top: 1px solid var(--color3);
-    border-bottom: 1px solid var(--color3);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .linkToWhite{
-    color: white;
     text-decoration: none;
     padding: 14px;
-    border-left: 1px solid var(--color3);
-    border-right: 1px solid var(--color3);
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
 .linkToWhiteLeftmost{
@@ -238,7 +230,7 @@ input:focus{
     flex-direction: row;
     justify-content: center;
     background-color:  var(--color2);
-    height: 80px;
+    height: 95px;
     width: 100%;
     transition: all .2s ease-in-out;
     cursor: pointer;
@@ -254,7 +246,7 @@ input:focus{
 }
 
 .donateFlexboxCol{
-    background-color: var(--color2);
+    background-color: var(--colorLight);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -264,30 +256,28 @@ input:focus{
 }
 
 .donateTitle{
-    color: white;
     font-size: 16px;
     padding-bottom: 6px;
     padding-left: 20px;
 }
 
 .donateText{
-    color: var(--color1);
+    color: var(--iconColor);
     padding-left: 20px;
     transition: all .2s ease-in-out;
 }
 
 .donateFlexCenter{
-    border: solid 4px var(--color2);
-    background-color: var(--color2);
+    border: solid 4px var(--colorLight);
+    background-color: var(--colorLight);
     display: flex;
     align-items: center;
     padding-right: 30px;
-    color: white;
     transition: all .2s ease-in-out;
 }
 
 .email, .phone {
-    color: var(--color2)
+    color: var(--iconColor)
 }
 
 @media only screen and (max-width: 600px){
@@ -296,7 +286,7 @@ input:focus{
     }
 
     .footerGrid{
-        height: 780px;
+        height: 860px;
     }
 
 }
@@ -333,7 +323,7 @@ input:focus{
     }   
 
     .footerGrid{
-        height: 579px;
+        height: 620px;
     }
 }
 

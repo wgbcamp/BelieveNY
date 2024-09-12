@@ -79,7 +79,7 @@ const aboutUs = () => {
                     </div>
                     <div className='simpleFlex size22Font padTop20 centerText'>View Believe New York's Bylaws and legal documentation</div>
                 </div>
-                <div className="lawGrid">
+                <div className="lawGrid mb-5 pb-5">
                     <a href={BelieveNyBylaws} download className="styleLink centerFlex">
                         <div
                         className="lawButton centerFlex">

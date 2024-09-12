@@ -1,20 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --color0: #EBE9E1;
+    --colorLight: rgb(255, 253, 250);
+    --color1: #080B38;
+    --color2: #000000;
+    --color3: #AFB0C7;
+    --iconColor: #5d55ce;
+
+    /* --color0: #EBE9E1;
+    --color2: #DC4949; */
+
+    --no-of-slides: 7;
+    --slides-in-view: 4;
+    --slide-width: 500px;
+    --iteration-time: 42s;
+}
+
+body {
+    background-color: var(--color0);
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    color: black;
+    font-size: 18px;
+}
+
 .maxWidth {
     max-width: 1620px;
 }
 
+.sponsorDescription {
+    max-width: 550px;
+}
 
 .huge {
-    font-size: 60px;
     font-weight: 900;
     line-height: 70px;
     margin-top: 50px;
+}
+
+.categoryFont {
+    font-size: 42px;
+    line-height: 45px;
+    font-weight: 700;
+}
+
+.largerDescriptionFont {
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.descriptionFont {
+    line-height: 30px;
+}
+
+.separator {
+    border-top: 2px solid rgba(0, 0, 0, 0.493);
+    padding-top: 30px;
+    margin-top: 30px;
+}
+
+.titleStatement {
+    font-size: 42px;
+    line-height: 45px;
+    font-weight: 600;
+}
+
+.mainButton {
+    width: 100%;
+    height: 55px;
+}
+
+.mainButtonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.secondaryButton {
+    background-color: var(--iconColor);
+    border: unset;
+}
+
+.iconColor {
+    color: var(--iconColor);
+}
+
+.topBorderColor {
+    border-top: 2px solid var(--iconColor);
+}
+
+.responsiveTitle {
+    font-size: clamp(30px, 12.5vw, 120px);
+    line-height: 40px;
+    font-weight: 900;
+}
+
+.titleRelativeUp {
+    position: relative;
+    top: -15px;
+    text-align: center;
+}
+
+.titleRelativeDown {
+    position: relative;
+    top: -83px;
+    text-align: center;
+}
+
+.imageRestrict {
+    background-image: url('../images/general/IMG_5998.jpg');
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    max-height: 440px;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(var(--slide-width) * var(--no-of-slides)* -1));
+    }
+}
+
+.carousel {
+    overflow-x: hidden;
+}
+
+.carouselWrapper {
+    display: flex;
+    align-items: center;
+    width: calc(var(--slides-in-view) * var(--slide-width));
+    overflow: hidden;
+}
+
+.animateSlider {
+    animation: slide var(--iteration-time) linear infinite;
+    width: var(--slide-width);
+}
+
+.shrinkImage {
+    width: 500px;
+}
+
+.customPaddingTop {
+    padding-top: 30px;
+}
+
+.colorText {
+    color: var(--color2);
 }
 
 .color2 {
     color: var(--color2);
 }
 
-.borderColor {
+.bottomBorderColor {
     border-bottom: 2px solid var(--color2);
 }
 
@@ -28,6 +172,10 @@
 
 .backgroundColor3 {
     background-color: var(--color3);
+}
+
+.backgroundLight {
+    background-color: var(--colorLight);
 }
 
 .color1 {
@@ -139,9 +287,49 @@
     background-color: black;
 }
 
+.imageRestrict {
+    height: 300px;
+}
+
+@media only screen and (min-width: 578px) {
+
+    .imageRelative {
+        position: relative;
+        top: -50px;
+        z-index: -1;
+    }
+    
+    .titleRelativeUp {
+        position: relative;
+        top: 25px;
+    }
+
+    .titleRelativeDown {
+        position: relative;
+        top: -120px;
+    }
+
+    .imageRestrict {
+        height: 650px;
+    }
+
+}
+
 @media only screen and (min-width: 600px) {
     .testimonialSizing {
         height: 540px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .mainButton {
+        width: 200px;
+        height: 55px;
+    }
+
+    .mainButtonContainer {
+        display: flex;
+        justify-content: flex-start;
     }
 }
 
