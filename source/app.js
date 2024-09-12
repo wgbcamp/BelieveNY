@@ -5,7 +5,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import './css/main.css';
 import Header from './components/newHeader.js';
 import Footer from './components/newFooter.js';
-import Home from './pages/home.js';
+import Home from './pages/newHome3.js';
 import AboutUs from './pages/aboutUs';
 import DiversityInclusion from './pages/diversityInclusion';
 import FoundingSupporters from './pages/foundingSupporters';

@@ -4,6 +4,7 @@ import { Container, Row, Col, Image, Carousel } from 'react-bootstrap';
 
 import custom from '../css/home3.module.css';
 
+import mainPhoto from '../images/general/IMG_5998.jpg';
 import donationPhoto from "../images/general/Homepage.PNG";
 import imposter from "../images/general/IMG_4750.jpg";
 import communityAdvocates from '../images/homepage/CommunityAdvocates.jpg';
