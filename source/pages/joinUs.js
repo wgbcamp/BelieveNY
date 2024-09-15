@@ -1,29 +1,35 @@
 import React from 'react'
-import VolunteerAppWidget from '../components/volunteerAppWidget';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const volunteer = () => {
     return(
         <div>
             <div className="simpleFlex">
-                {/* 
-                iframe for pdf documents
-                    */}
-                {/* <iframe className="pdfViewer maxWidth"
-                    src="https://drive.google.com/file/d/15UofE2JbZ8Z2xpUGbpD1QSbRaljYsvNt/preview"
-                    height="100%"
-                    width="100%"
-                ></iframe> */}
             </div>
         <div className='simpleFlex padTop40'>
                 <div className='maxWidth width80Per'>
                 <div className="padTop20"></div>
-                <div className="simpleFlex">
-                    <div className="centerText width80Per weight500 marginTop20">We all have skills that contribute to Believe New York's helpful and efficient service for all New Yorkers!</div>
-                </div>
-                <div className="simpleFlex">
-                    <div className="centerText width80Per padTop20 weight500">Do you want to apply to any of these positions? Send your resume to <span className='bold'>admin@believeny.org</span>! All welcome to apply.</div>
-                </div>   
-                            <div className='simpleFlex verticalAlign size42Font weight900 padBottom40 padTop80'>Open Volunteer Positions
+                    <Container className="pt-5 mt-5">
+                        <Col>
+                            <Row>
+                                <div>We believe that <u>everyone</u> has valuable skills to contribute to our mission! 
+                                </div>
+                                <div className='mt-3'>
+                                    For most up to date volunteer recruitment information, please visit and follow our <a href="https://www.instagram.com/believeny">Instagram</a> and/or <a href="https://www.linkedin.com/company/believeny/">LinkedIn</a> pages. 
+                                </div>
+                                <div className='mt-3'>
+                                    As most of our volunteers are students, we organize training for Client and Community Advocates at the end of each semester and the beginning of the next. This ensures that we have a well-coordinated and dedicated team to support our clients and community. Therefore, we host trainings for Client and Community Advocate positions on a need basis during the following periods once or twice a year:
+                                </div>
+                                <ul className="mt-3 ms-5">
+                                    <li>End of August/Early September</li>
+                                    <li>Early-Mid January</li>
+                                    <li>End of May/Early June</li>
+                                </ul>
+                                <div>If you're interested in learning more or joining our team as an Advocate, and/or other volunteer opportunities listed below, please email <a href="mailto:admin@believeny.org">admin@believeny.org</a>. Thank you and we look forward to working with you to improve our community well-being!</div>
+                            </Row>
+                        </Col>
+                    </Container>
+                            <div className='simpleFlex verticalAlign size42Font weight900 padBottom40 padTop80'>Available Volunteer Positions
                             </div>
                     <div className='volPosGrid '>
                         <div>
@@ -51,6 +57,14 @@ const volunteer = () => {
                             <div className="volPosTitle">EVENT COORDINATOR</div>
                             <li className="volPosBullet">Responsible for organizing and hosting the event, recruiting, and managing volunteers, contacting potential sponsors, and organizing materials and plans for events</li>
                             <li className="volPosBullet">Open to all types of events that help the community.</li>
+                        </div>
+                        <div>
+                            <i className="fa-regular fa-newspaper fa-2xl padTop80"></i>
+                            <div className="volPosTitle">EVENT VOLUNTEER</div>
+                            <li className="volPosBullet">Assist with various tasks during our events.</li>
+                            <li className="volPosBullet">Support the Event Coordinator, BNY Leadership, and other team members.</li>
+                            <li className="volPosBullet">Help set up, manage activities, and ensure the smooth operation of events.
+                            </li>
                         </div>
                         <div>
                             <i className="fa-regular fa-newspaper fa-2xl padTop80"></i>

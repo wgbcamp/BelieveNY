@@ -12,7 +12,7 @@ const newHeader = () => {
     //arrays for header category content and paths for links
     const aboutUsContent = [["Who We Are", "aboutUs"],["Our Impact", "impactReport"],["Diversity and Inclusion", "diversityAndInclusion"],["Founding Supporters", "foundingSupporters"]];
 
-    const ourWorkContent = [["Need Help?", "getHelp"],["The Open Space", "theOpenSpace"],["Food First", "foodFirst"],["Environmental projects", "environmentalProjects"]];
+    const ourWorkContent = [["Need Help?", "getHelp"],["The Open Space", "theOpenSpace"], ["Operation Community Success", "operationCommunitySuccess"]];
 
     const eventsContent = [["Upcoming Events", "upcomingEvents"],["Past Events", "pastEvents"],["Event Sponsors", "eventSponsors"],["Donate to Our Events", "donate"]];
 
@@ -29,8 +29,7 @@ const newHeader = () => {
     ["Our Work", "fa-solid fa-arrow-right", ourWorkContent, () => {updateSL(ourWorkContent); updateSLT("OUR WORK"); update02D(true); updateZM(true)}],
     ["Events", "fa-solid fa-arrow-right", eventsContent, () => {updateSL(eventsContent); updateSLT("EVENTS"); update02D(true); updateZM(true)}],
     ["Join Us", "", [""], "/joinus"], 
-    ["Donate", "", [""], "/donate"],
-    ["Take a Survey", "", [""],"/survey"]];
+    ["Donate", "", [""], "/donate"]];
 
     //manipulates state values for present dropdown menus on smaller viewports
     function changeState(){
@@ -42,7 +41,7 @@ const newHeader = () => {
     }
 
     //arrays holding titles, links, and values for categories on larger displays (title, arrow, array content, redirect)
-    const largeWidthGridContent = [["About Us", "fa-solid fa-arrow-right", aboutUsContent], ["Our Work", "fa-solid fa-arrow-right", ourWorkContent], ["Events", "fa-solid fa-arrow-right", eventsContent], ["Join Us", "", [""], () => redirect("/joinus")], ["Take a Survey", "", [""], () => redirect("/survey")]];
+    const largeWidthGridContent = [["About Us", "fa-solid fa-arrow-right", aboutUsContent], ["Our Work", "fa-solid fa-arrow-right", ourWorkContent], ["Events", "fa-solid fa-arrow-right", eventsContent], ["Join Us", "", [""], () => redirect("/joinus")]];
 
     //popup state values for larger displays
     var [currentPopup, updateCP] = useState("");

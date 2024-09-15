@@ -5,7 +5,7 @@ const diversityInclusion = () => {
     return(
         <div>
             <div className="simpleFlex whiten">
-                <div className="maxWidth width80Per">
+                <div className="maxWidth width80Per mb-5 pb-5">
                     <div className="padding20"></div>
                     <div className="simpleTitle"><u>We Believe In Diversity, Sensitivity, and Inclusivity</u>
                     </div>

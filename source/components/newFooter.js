@@ -32,7 +32,7 @@ const newFooter = (props) => {
 
     return(
 
-            <div className={styles.footerContainer}>
+            <div className={`${styles.footerContainer} pt-5`}>
                     <div className={styles.background}>
                         <div className={styles.footerGrid}>
                             {/* Logo and copyright flexbox */}

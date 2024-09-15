@@ -20,7 +20,7 @@ import PastEvents from './pages/pastEvents';
 import SpecialEventsFund from './pages/SpecialEventsFund';
 import Donate from './pages/donate';
 import EventSponsors from './pages/eventSponsors';
-import Volunteer from './pages/volunteer';
+import JoinUs from './pages/joinUs.js';
 import CancelSession from './pages/cancelSession';
 import BottomContact from './components/bottomContact';
 import FormHandler from './components/formHandler';
@@ -32,12 +32,11 @@ import DonationFormQR from './pages/donationFormQR';
 import Survey from './pages/survey.js';
 import DonateChoices from './components/donateChoices.js';
 import UpdateContent from './pages/updateContent.js';
-import Home2 from './pages/home2.js';
 import CollegeResources from './pages/collegeresources.js';
 import MentalHealthFair from './pages/mentalhealthfair.js';
 import CrudAssets from './pages/crudAssets.js';
-import NewHome from './pages/newHome3.js';
-import NewHomeOld from './pages/newHome.js';
+import OperationCommunitySuccess from './pages/operationCommunitySuccess.js';
+
 
 
 function App(){
@@ -100,7 +99,7 @@ function App(){
                             <Route path="/pastEvents" element={<PastEvents/>}/>
                             <Route path="/eventSponsors" element={<EventSponsors updateDim={updateDim} updatePayload={updatePayload}/>}/>
                             <Route path="/SpecialEventsFund" element={<SpecialEventsFund/>}/>
-                            <Route path="/joinus" element={<Volunteer/>}/>
+                            <Route path="/joinus" element={<JoinUs/>}/>
                             <Route path="/donate" element={<Donate showDonateChoices={showDonateChoices}/>}/>
                             <Route path="/cancelSession/*" element={<CancelSession/>}/>
                             <Route path="/donationform" element={<DonateForm1/>}/>
@@ -108,12 +107,10 @@ function App(){
                             <Route path="/donationformQR" element={<DonationFormQR/>}/>
                             <Route path="/survey" element={<Survey/>}/>
                             <Route path="/updateContent" element={<UpdateContent/>}/>
-                            <Route path="/home2" element={<Home2/>}/>
                             <Route path="/collegeresources" element={<CollegeResources/>}/>
                             <Route path="/mentalhealthfair" element={<MentalHealthFair/>}/>
                             <Route path="/crudAssets" element={<CrudAssets/>}/>
-                            <Route path="/newHome" element={<NewHome/>}/>
-                            <Route path="/newHomeOld" element={<NewHomeOld/>}/>
+                            <Route path="/operationCommunitySuccess" element={<OperationCommunitySuccess/>}/>
                         </Routes>  
                 </div>                      
                 <Footer updateDim={updateDim} updatePayload={updatePayload}/>

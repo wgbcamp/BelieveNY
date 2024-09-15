@@ -612,7 +612,6 @@ ul.no-bullets{
 }
 
 .dText{
-    background-color: #ffffff;
     text-align: left;
     font-size: 22px;
     max-width: 85%;
@@ -658,7 +657,6 @@ ul.no-bullets{
 }
 
 .sT{
-    background-color: #f2f2f2;
     border-radius: 15px;
     height: 80px;
     margin-bottom: 50px;
