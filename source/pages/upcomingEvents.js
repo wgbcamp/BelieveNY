@@ -8,9 +8,16 @@ const upcomingEvents = () => {
 
     return(
         <div>
-            <div style={{ display: 'flex', justifyContent: 'center' }} className='py-5'>
-                <InstagramEmbed url="https://www.instagram.com/believeny/" width={'90%'} />
-            </div>
+            <Container className={custom.maxWidth}>
+                <Row>
+                    <Col>
+                        <div style={{ display: 'flex', justifyContent: 'center' }} className={`py-5`}>
+                            <InstagramEmbed url="https://www.instagram.com/believeny/" width={'90%'}/>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+            
             <Container>
                 <Row>
                     <Col>
