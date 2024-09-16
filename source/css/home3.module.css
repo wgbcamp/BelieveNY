@@ -85,6 +85,10 @@ a {
     border: unset;
 }
 
+.eventsDonateButton {
+    min-width: 300px;
+}
+
 .iconColor {
     color: var(--iconColor);
 }
@@ -165,6 +169,10 @@ a {
 
 .bottomBorderColor {
     border-bottom: 2px solid var(--color2);
+}
+
+.backgroundColor0 {
+    background-color: var(--color0);
 }
 
 .backgroundColor1 {

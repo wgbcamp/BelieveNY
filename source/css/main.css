@@ -2356,21 +2356,21 @@ input[type="email"]::placeholder{
 }
 
 .backgroundFadingImage div.third {
-    background-image: url("../images/summerHairCuts/IMG_4340.JPG");
+    background-image: url("../images/events/summerHairCuts/IMG_4340.JPG");
 }
 
 .bannerImageContainer div.first {
-    background-image: url("../images/clothesMealHandOuts/communityEvents.jpeg");
+    background-image: url("../images/events/clothesMealHandOuts/communityEvents.jpeg");
     background-size: cover;  
 }
 
 .bannerImageContainer div.second {
-    background-image: url("../images/clothesMealHandOuts/volunteer.jpeg");
+    background-image: url("../images/events/clothesMealHandOuts/volunteer.jpeg");
     background-size: cover;
 }
 
 .bannerImageContainer div.third {
-    background-image: url("../images/clothesMealHandOuts/donate.jpeg");
+    background-image: url("../images/events/clothesMealHandOuts/donate.jpeg");
     background-size: cover;
 }
 
@@ -2393,17 +2393,17 @@ input[type="email"]::placeholder{
 }
 
 .bannerImageContainer div.first {
-    background-image: url("../images/clothesMealHandOuts/communityEvents.jpeg");
+    background-image: url("../images/events/clothesMealHandOuts/communityEvents.jpeg");
     background-size: cover;  
 }
 
 .bannerImageContainer div.second {
-    background-image: url("../images/clothesMealHandOuts/volunteer.jpeg");
+    background-image: url("../images/events/clothesMealHandOuts/volunteer.jpeg");
     background-size: cover;
 }
 
 .bannerImageContainer div.third {
-    background-image: url("../images/clothesMealHandOuts/donate.jpeg");
+    background-image: url("../images/events/clothesMealHandOuts/donate.jpeg");
     background-size: cover;
 }
 

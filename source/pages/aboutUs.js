@@ -1,4 +1,7 @@
 import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap';
+import custom from '../css/home3.module.css';
+
 import DescriptionBox from '../components/descriptionBox';
 import PersonCard from '../components/personCard';
 import BNYLogoFull from '../images/general/BNYLogoFull-02.png';
@@ -64,9 +67,33 @@ const aboutUs = () => {
                     Who is Believe New York?
                     </div>
                 </div>
-                <p></p>
             <DescriptionBox/> 
-                <div className='cardGrid'>
+                <Container>
+                    <Row>
+                        <Col md={12} xl={4} className={`mb-5`}>
+                            <div className={`${custom.backgroundLight} rounded-4 py-3 px-3 h-100`}>
+                                <div className={`${custom.categoryFont} mt-4`}>Our Mission</div>
+                                <div className='mt-4'>To improve the lives of all New Yorkers, and beyond, and ensure all people, regardless of identity or background (e.g., age, sex, ethnicity, race, gender, religion, sexual orientation, socioeconomic status, or disability), can find and access the resources they need to survive and thrive.
+                                </div>
+                            </div>
+                        </Col>
+                        <Col md={12} xl={4} className={`mb-5`}>
+                            <div className={`${custom.backgroundLight} rounded-4 py-3 px-3 h-100`}>
+                                <div className={`${custom.categoryFont} mt-4`}>Our Target Population</div>
+                                <div className='mt-4'>All individuals and families who need help, specifically individuals experiencing poverty, mental illness, domestic violence, discrimination, unemployment, disability, loss, trauma, and/or any other form of hardship that impacts their well-being.
+                                </div>
+                            </div>
+                        </Col>
+                        <Col md={12} xl={4} className={`mb-5`}>
+                            <div className={`${custom.backgroundLight} rounded-4 py-3 px-3 h-100`}>
+                                <div className={`${custom.categoryFont} mt-4`}>Our Vision</div>
+                                <div className='mt-4'>To empower individuals and families experiencing facing adversity e.g., poverty, abuse, and mental health challenges by improving their overall well-being, ensuring economic stability, and advancing social justice and health equity.
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+                <div className='cardGrid pt-5'>
                 {people.map((value) => (
                     <PersonCard aboutUs={{name: value.name, title: value.title, pronoun: value.pronoun, photo: value.photo, email:value.email, story: value.story}} key={value.toString()}/>
                 ))}

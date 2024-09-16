@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
+import custom from '../css/home3.module.css';
 
 const volunteer = () => {
     return(
@@ -9,7 +10,7 @@ const volunteer = () => {
         <div className='simpleFlex padTop40'>
                 <div className='maxWidth width80Per'>
                 <div className="padTop20"></div>
-                    <Container className="pt-5 mt-5">
+                    <Container className=" mt-5">
                         <Col>
                             <Row>
                                 <div>We believe that <u>everyone</u> has valuable skills to contribute to our mission! 
@@ -25,7 +26,7 @@ const volunteer = () => {
                                     <li>Early-Mid January</li>
                                     <li>End of May/Early June</li>
                                 </ul>
-                                <div>If you're interested in learning more or joining our team as an Advocate, and/or other volunteer opportunities listed below, please email <a href="mailto:admin@believeny.org">admin@believeny.org</a>. Thank you and we look forward to working with you to improve our community well-being!</div>
+                                <div>If you're interested in learning more or joining our team as an Advocate, and/or other volunteer opportunities listed below, please email <a href="mailto:admin@believeny.org" className={custom.iconColor}>admin@believeny.org</a>. Thank you and we look forward to working with you to improve our community well-being!</div>
                             </Row>
                         </Col>
                     </Container>
