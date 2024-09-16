@@ -1,35 +1,36 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import holidayGiftDrive from '../images/general/holidayGiftDrive.jpg';
-import VirtualGedWorkshop from '../images/events/virtualGEDworkshop.jpg';
+import custom from '../css/home3.module.css';
+import { InstagramEmbed } from 'react-social-media-embed';
+import { Container, Row, Col } from 'react-bootstrap';
+
 
 const upcomingEvents = () => {
 
     return(
-        <div className="simpleFlex">
-            <div className="maxWidth width80Per">
-            <div className="centerText size32Font weight700 padTop60">Event Coordinators Needed</div>
-            <div className="size18Font lineHeight30 padTop40">The Event Coordinator is responsible for organizing and hosting the event, recruiting, and managing volunteers, contacting potential sponsors, and organizing materials and plans for events.</div>
-            <p className='size18Font lineHeight30'>Ideally we're looking for 2-3 people to split responsibilities for putting together our Community and Outreach Events. This would be about 2-5 hour weekly commitment, with weekly meetings to discuss updates with leadership. Are you interested in this position? Please email our Executive Director Nicole at <span className="bold">nicole@believeny.org</span>. 
-            </p>
-            <div className="size18Font">
-                <div className="centerText size32Font weight700 padTop40 padBottom40">General Education Diploma (GED) Workshop</div>
-                <b>Thursday, August 15th 6-8pm ET</b>
-                <div>VIRTUAL on Zoom!</div>
-                <a className='linkColorThinner' href="https://www.eventbrite.com/e/general-education-diploma-ged-workshop-by-believe-new-york-tickets-947484350197?aff=oddtdtcreator">GED.eventbrite.com</a>
-                    <ul className='ulLineHeight'>
-                        <li>An online General Education Diploma Workshop </li>
-                        <li>Perfect for those aspiring for a GED</li>
-                        <li>Join us for an introduction to the test and resources to help you move forward with the next steps towards earning your GED</li>
-                        <li>After the workshop, you will be set up with FREE GED tutoring through Columbia Community Impact to prepare you for the test!</li>
-                    </ul>
-                    <div className="simpleFlex padBottom40 padTop20">
-                    <img src={VirtualGedWorkshop} className="upcomingImgResize"></img>
-                </div>
+        <div>
+            <div style={{ display: 'flex', justifyContent: 'center' }} className='py-5'>
+                <InstagramEmbed url="https://www.instagram.com/believeny/" width={'90%'} />
             </div>
-            </div>
-        </div>
+            <Container>
+                <Row>
+                    <Col>
+                        <div className={`${custom.categoryFont} text-center pt-5`}>
+                            Do you want to help with our events?
+                        </div>
+                        <div className='pt-5'>
+                            We are looking for enthusiastic Event Volunteers to help make our Community and Outreach Events a success! If you're interested in volunteering, please email our team at <a href="mailto:admin@believeny.org" className={custom.iconColor}>admin@believeny.org</a>. 
+                        </div>
+                        <div className='pt-5'>
+                            In addition, we are seeking dedicated individuals to join our team as Event Coordinators! In this role, you will be responsible for organizing and hosting events, recruiting and managing volunteers, reaching out to potential sponsors, and coordinating materials and plans to ensure the success of our events. 
+                            
+                            <div className='pt-5'>This position requires a commitment of 2-5 hours per week, including weekly meetings to provide updates and collaborate with our leadership team. If you’re passionate about making a difference and are interested in this position, please email <a href="mailto:admin@believeny.org" className={custom.iconColor}>admin@believeny.org</a>.</div> 
+                        </div>
+                    </Col>
+                </Row>
 
+            </Container>
+
+        </div>
         
 
     )

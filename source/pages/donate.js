@@ -3,12 +3,13 @@ import clothing from "../images/general/clothing.webp";
 import BNYLogoFull from "../images/general/BNYLogoFull-02.png";
 import paypalLogo from "../images/general/paypal-wordmark-color.png";
 import venmoLogo from "../images/general/venmo.svg";
+import custom from '../css/home3.module.css';
 
 const donate = (props) => {
     return(
-        <div className="simpleFlex padTop40">
-            <div className='maxWidth donateBox  simpleFlex'>
-                <div className="financialPlan">
+        <div className={`simpleFlex padTop40`}>
+            <div className='maxWidth donateBox simpleFlex'>
+                <div className={`financialPlan ${custom.backgroundLight}`}>
                 <div className="padLeft30 padRight30">
                     <div className="simpleFlex">
                         <img src={BNYLogoFull} className="downsizeLogo padTop20"></img>
@@ -26,16 +27,19 @@ const donate = (props) => {
                         <div>Your ongoing support will ensure our small organization can grow and save more lives. Give ongoing today!</div>
 
                     </div>
-                    <div className="giveNote">
+                    <div className="giveNote fw-normal">
                         <b>Note from Believe New York</b>
                         <p>
-                        For the past three years, our grassroots 501(c)(3) nonprofit has been dedicated to serving those in need and making a lasting difference in their lives. Since our founding, we have tirelessly worked to support individuals facing extreme poverty, domestic violence, mental illness, and various other hardships. Through our personalized approach, we create individualized plans and meet our clients where they are, fighting to break the cycle of poverty, violence, and inequality.
+                        Since we founded in 2021, our grassroots 501(c)(3) nonprofit has been dedicated to serving those in need and making a lasting difference in their lives. We have tirelessly worked to support individuals facing extreme poverty, domestic violence, mental illness, and various other adversities and hardships. Through our personalized approach, we create individualized plans and meet our clients where they are, fighting to break the cycle of poverty, violence, and social inequality.
                         </p>
                         <p>
-                        Our results speak for themselves! Over two-thirds of our clients have experienced significant improvements in their hardships thanks to our commitment and hard work. And we don't stop there! We also organize regular community events to directly impact and uplift those in need. To date we have severed hundreds of hot meals, warm clothing, and essential items to individuals and families who need it the most. We do all this with your generous support and contributions. 
+                        Our results speak for themselves! 
+                        <div className='fw-semibold py-3'>Over 80% of our clients have experienced significant improvements in their hardships thanks to our commitment and hard work.
+                        </div> 
+                        And we don't stop there! We also organize regular community events and ongoing research to directly serve, support, and uplift those in need. To date we have served thousands of hot meals, warm clothing, and essential items to individuals and families who need it the most. In addition, we regularly host research projects and program evaluations to improve our work and better support the community. We do all this with your generous support and contributions.
                         </p>
                         <p>
-                        We are not a large organization. Your donation WILL help us continue our vital work and make an even greater impact on the lives of those who need it most. We aim to create a brighter future for all. Donate today and be a part of this change! Thank you from all of us at Believe New York. 
+                        We are not a large organization. Your donation <span className="fw-semibold text-decoration-underline">WILL</span> help us continue our vital work and make an even greater impact on the lives of those who need it most. We aim to create a brighter future for all. Donate today and be a part of this change! Thank you from all of us at Believe New York. 
                         </p>
                     </div>
                     {/* <div className="supportGrid">
