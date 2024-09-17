@@ -1,10 +1,19 @@
-import React, {useState, useEffect} from 'react'
-import { Link } from 'react-router-dom'
-import calendarPreview from '../images/general/calendarPreview.jpg'
+import React, { useRef, useState, useEffect } from 'react';
+import { getCalApi } from "@calcom/embed-react";
+import { Container, Row, Col, Image, Carousel } from 'react-bootstrap';
+
+import custom from '../css/home3.module.css';
 
 const getHelp = (props) => {
     function restoreTop(){
         window.scrollTo(0,0);
+    }
+
+    function calcom(){
+        (async function () {
+            const cal = await getCalApi({"namespace":"intake"});
+            cal("ui", {"theme":"light","styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails":false,"layout":"month_view"});
+          })();
     }
 
     return(
@@ -17,14 +26,26 @@ const getHelp = (props) => {
                         <div className="simpleFlex">
                             <div className="padTop20 padBottom40 size18Font max850">Speak with one of our trained Client Advocates that will help your situation by connecting you to referrals and ensuring you achieve your goals in any area of need!</div>
                         </div>
-                        <div className="simpleFlex">
-                            <div>
-                                <Link to="/scheduleBooking" className="submitButton3" onClick={() => {restoreTop(); props.updateBC("Get Help");}}>
-                                    <b>Book a session here</b>
-                                </Link> 
+                    </div>
+                    <div className="simpleFlex">
+                        <div className="hereForYouGrid padTop20 max1090">
+                            <div className="simpleFlex hereForYouInner centerText">
+                                <b className="size42Font padTop40 center1200 smallText500">We are here for you.</b>
+                                <div className="size18Font padBottom201200 smallerText500">We are here to listen and help you through your next steps.</div>
+
+                            </div>
+                            <div className={`simpleFlex center1200 verticalAlign `}>
+                                <Container>
+                                    <Row>
+                                        <Col className="d-flex justify-content-center">
+                                            <button type="button" data-cal-namespace="intake" data-cal-link="believeny/intake" data-cal-config='{"layout":"month_view","theme":"light"}'
+                                            className={`btn btn-dark mt-4 mb-5 rounded-5 fw-bold w-100 ${custom.mainButton} ${custom.maxWidth400px} `} onClick={calcom()}>SCHEDULE APPOINTMENT</button>
+                                        </Col>
+                                    </Row>
+                                </Container>
+                                
                             </div>
                         </div>
-                        
                     </div>
                     <div className='openSpaceDesc padBottom80'>
                         <div className="centerText size42Font padTop40 padBottom40">

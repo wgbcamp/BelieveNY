@@ -1,11 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import calendarPreview from '../images/general/calendarPreview.jpg'
+import { getCalApi } from "@calcom/embed-react";
+import custom from '../css/home3.module.css';
+import { Container, Row, Col, Image, Carousel } from 'react-bootstrap';
 
 const theOpenSpace = (props) => {
 
     function restoreTop(){
         window.scrollTo(0,0);
+    }
+
+    function calcom(){
+        (async function () {
+            const cal = await getCalApi({"namespace":"openspace"});
+            cal("ui", {"theme":"light","styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails":false,"layout":"month_view"});
+          })();
     }
 
     return(
@@ -17,13 +25,6 @@ const theOpenSpace = (props) => {
                         <div className="simpleFlex">
                             <div className="padTop20 padBottom40 size18Font max850">Are you living with loneliness? Sadness? Anxiety? Are you stressed about school, work or difficult relationships? Are you struggling with addictions, violence, or losses in your life?</div>
                         </div>
-                        <div className="simpleFlex ">
-                            <div>
-                                <Link to="/scheduleBooking" className="submitButton3" onClick={() => {restoreTop(); props.updateBC("The Open Space");}}>
-                                    <b>Book a session here</b>
-                                </Link> 
-                            </div>
-                        </div>
                         
                     </div>
 
@@ -34,8 +35,16 @@ const theOpenSpace = (props) => {
                                 <div className="size18Font padBottom201200 smallerText500">We are here to listen and help you through your next steps.</div>
 
                             </div>
-                            <div className="simpleFlex center1200 verticalAlign padTop201200">
-                                <img src={calendarPreview} height="250"></img>
+                            <div className={`simpleFlex center1200 verticalAlign `}>
+                                <Container>
+                                    <Row>
+                                        <Col className="d-flex justify-content-center">
+                                            <button type="button" data-cal-namespace="openspace" data-cal-link="believeny/openspace" data-cal-config='{"layout":"month_view","theme":"light"}'
+                                            className={`btn btn-dark mt-4 mb-5 rounded-5 fw-bold w-100 ${custom.mainButton} ${custom.maxWidth400px} `} onClick={calcom()}>SCHEDULE APPOINTMENT</button>
+                                        </Col>
+                                    </Row>
+                                </Container>
+                                
                             </div>
                         </div>
                     </div>
