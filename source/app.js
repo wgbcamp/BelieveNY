@@ -3,39 +3,33 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, {useState, useEffect, createRef} from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import './css/main.css';
-import Header from './components/newHeader.js';
-import Footer from './components/newFooter.js';
-import Home from './pages/newHome3.js';
-import AboutUs from './pages/aboutUs';
-import DiversityInclusion from './pages/diversityInclusion';
-import FoundingSupporters from './pages/foundingSupporters';
-import GetHelp from './pages/getHelp';
-import FoodFirst from './pages/foodFirst';
-import TheOpenSpace from './pages/theOpenSpace';
-import EnvironmentalProjects from './pages/environmentalProjects';
-import ScheduleBooking from './pages/scheduleBooking';
-import Construction from './components/construction';
-import UpcomingEvents from './pages/upcomingEvents';
-import PastEvents from './pages/pastEvents';
-import SpecialEventsFund from './pages/SpecialEventsFund';
-import Donate from './pages/donate';
-import EventSponsors from './pages/eventSponsors';
-import JoinUs from './pages/joinUs.js';
-import CancelSession from './pages/cancelSession';
-import BottomContact from './components/bottomContact';
-import FormHandler from './components/formHandler';
-import Faq from './pages/faq';
-import ImpactReport from './pages/impactReport';
-import DonateForm1 from './pages/donateFormZeffy';
-import DonateForm2 from './pages/donateFormStripe';
-import DonationFormQR from './pages/donationFormQR';
-import Survey from './pages/survey.js';
-import DonateChoices from './components/donateChoices.js';
-import UpdateContent from './pages/updateContent.js';
-import CollegeResources from './pages/collegeresources.js';
-import MentalHealthFair from './pages/mentalhealthfair.js';
-import CrudAssets from './pages/crudAssets.js';
-import OperationCommunitySuccess from './pages/operationCommunitySuccess.js';
+import Header from './components/items/header.js';
+import Footer from './components/items/footer.js';
+import Homepage from './components/pages/homepage.js';
+import WhoWeAre from './components/pages/whoWeAre.js';
+import DiversityInclusion from './components/pages/diversityInclusion';
+import FoundingSupporters from './components/pages/foundingSupporters';
+import GetHelp from './components/pages/getHelp';
+import TheOpenSpace from './components/pages/theOpenSpace';
+import EnvironmentalProjects from './components/pages/environmentalProjects';
+import ScheduleBooking from './components/pages/scheduleBooking';
+import UpcomingEvents from './components/pages/upcomingEvents';
+import PastEvents from './components/pages/pastEvents';
+import SpecialEventsFund from './components/pages/SpecialEventsFund';
+import Donate from './components/pages/donate';
+import EventSponsors from './components/pages/eventSponsors';
+import JoinUs from './components/pages/joinUs.js';
+import CancelSession from './components/pages/cancelSession';
+import FormHandler from './components/items/formHandler.js';
+import Faq from './components/pages/faq';
+import ImpactReport from './components/pages/impactReport';
+import DonationForm from './components/pages/donationForm';
+import DonationFormQR from './components/pages/donationFormQR';
+import Survey from './components/pages/survey.js';
+import DonateChoices from './components/items/donateChoices.js';
+import CollegeResources from './components/pages/collegeresources.js';
+import MentalHealthFair from './components/pages/mentalhealthfair.js';
+import OperationCommunitySuccess from './components/pages/operationCommunitySuccess.js';
 
 
 
@@ -84,14 +78,13 @@ function App(){
                 <Header location={location}/>
                 <div className='accomodateHeader'>      
                         <Routes>
-                            <Route path="*" element={<Home/>}/>
+                            <Route path="*" element={<Homepage/>}/>
                             <Route path="/faq" element={<Faq/>}/>
-                            <Route path="/aboutUs/" element={<AboutUs/>}/>
+                            <Route path="/whoWeAre" element={<WhoWeAre/>}/>
                             <Route path="/impactReport" element={<ImpactReport/>}/>
                             <Route path="/diversityAndInclusion" element={<DiversityInclusion/>}/>
                             <Route path="/foundingSupporters" element={<FoundingSupporters/>}/>
                             <Route path="/getHelp" element={<GetHelp updateBC={updateBC}/>}/>
-                            <Route path="/foodFirst" element={<FoodFirst/>}/>
                             <Route path="/theOpenSpace" element={<TheOpenSpace updateBC={updateBC}/>}/>
                             <Route path="/environmentalProjects" element={<EnvironmentalProjects/>}/>
                             <Route path="/scheduleBooking" element={<ScheduleBooking updateDim={updateDim} updatePayload={updatePayload} bookingCategory={bookingCategory}/>}/>
@@ -102,14 +95,11 @@ function App(){
                             <Route path="/joinus" element={<JoinUs/>}/>
                             <Route path="/donate" element={<Donate showDonateChoices={showDonateChoices}/>}/>
                             <Route path="/cancelSession/*" element={<CancelSession/>}/>
-                            <Route path="/donationform" element={<DonateForm1/>}/>
-                            <Route path="/donationform2" element={<DonateForm2/>}/>
+                            <Route path="/donationform" element={<DonationForm/>}/>
                             <Route path="/donationformQR" element={<DonationFormQR/>}/>
                             <Route path="/survey" element={<Survey/>}/>
-                            <Route path="/updateContent" element={<UpdateContent/>}/>
                             <Route path="/collegeresources" element={<CollegeResources/>}/>
                             <Route path="/mentalhealthfair" element={<MentalHealthFair/>}/>
-                            <Route path="/crudAssets" element={<CrudAssets/>}/>
                             <Route path="/operationCommunitySuccess" element={<OperationCommunitySuccess/>}/>
                         </Routes>  
                 </div>                      

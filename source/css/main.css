@@ -1,5 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); */
-
 :root{
     --purple: white;
     --darkblue: #6F52AD;
@@ -622,7 +620,6 @@ ul.no-bullets{
 }
 
 .dTextInitial{
-    background-color: #f2f2f2;
     text-align: left;
     font-size: 20px;
     max-width: 85%;
@@ -1202,25 +1199,6 @@ input[type="email"]::placeholder{
 
 .third{
     animation-delay: 14s;
-}
-
-#titleBackground div{
-    position: absolute;
-}
-
-#titleBackground div.first {
-    background-image: url("../images/general/IMG_1876.JPG");
-    background-size: cover;  
-}
-
-#titleBackground div.second {
-    background-image: url("../images/general/IMG_1938.JPG");
-    background-size: cover;
-}
-
-#titleBackground div.third {
-    background-image: url("../images/general/IMG_1979.JPG");
-    background-size: cover;
 }
 
 .statePhotoContainer{
@@ -2345,35 +2323,6 @@ input[type="email"]::placeholder{
     object-position: center;
 }
 
-.backgroundFadingImage div.first {
-    background-image: url("../images/general/clothing.webp");
-}
-
-.backgroundFadingImage div.second {
-    background-image: url("../images/general/IMG_1938.JPG");
-    background-size: 100% 100%;
-
-}
-
-.backgroundFadingImage div.third {
-    background-image: url("../images/events/summerHairCuts/IMG_4340.JPG");
-}
-
-.bannerImageContainer div.first {
-    background-image: url("../images/events/clothesMealHandOuts/communityEvents.jpeg");
-    background-size: cover;  
-}
-
-.bannerImageContainer div.second {
-    background-image: url("../images/events/clothesMealHandOuts/volunteer.jpeg");
-    background-size: cover;
-}
-
-.bannerImageContainer div.third {
-    background-image: url("../images/events/clothesMealHandOuts/donate.jpeg");
-    background-size: cover;
-}
-
 .bannerImageContainer{
     height: 100%;
     background-color: white;
@@ -3244,7 +3193,6 @@ input[type="email"]::placeholder{
     }
 
     .dTextInitial{
-        background-color: #f2f2f2;
         text-align: left;
         max-width: 85%;
         border-radius: 15px;

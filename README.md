@@ -1,8 +1,14 @@
 # BelieveNY
 
-A web application for the non-profit organization, Believe New York. Following the MERN stack architecture, the Believe New York website employs the React.js JavaScript library to build a responsive user interface with reusable components that update and render in response to client-side changes. The React.js frontend is served to clients using the Express.js library that defines routes and handles HTTP requests in addition to interacting with the MongoDB database that stores session bookings for clients to schedule meetings. The Node.js runtime executes server-side code and manages middleware packages that extend Believe New York's website using RESTful APIs to generate business emails and engage with third-party payment processors.
+A web application for the non-profit organization, Believe New York.
 
-The Believe New York front-end is built with Javascript XML syntax and styled with CSS without the usage of additional 3rd party frameworks.
+Following the MERN stack architecture, the Believe New York website utilizes the React.js library to build a responsive user interface with reusable components. 
+
+The frontend is served to clients using the Express.js library that defines routes and handles HTTP requests to interact with the MongoDB database, which stores session bookings for clients to schedule meetings.
+
+The Node.js runtime handles the server-side code that employs RESTful APIs to generate business emails and engage with third-party payment processors and processes the production build of the react application.
+
+The Believe New York front-end is built using JSX syntax, styled with CSS modules, and leverages the Bootstrap framework for responsive grid layouts.
 
 [Believeny.org](https://www.believeny.org/)
 <br>
