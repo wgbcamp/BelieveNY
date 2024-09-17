@@ -3048,7 +3048,6 @@ input[type="email"]::placeholder{
     }
 
     .openSpaceBanner{
-        height: 570px;
         background-color: black;
         padding-left: 10%;
         padding-right: 10%;
@@ -3132,7 +3131,6 @@ input[type="email"]::placeholder{
 
     .openSpaceBanner{
     background-color: black;
-    height: 430px;
     padding-top: 60px;
     padding-left: 10%;
     padding-right: 10%;
@@ -3532,7 +3530,6 @@ input[type="email"]::placeholder{
 
     .openSpaceBanner{
         background-color: black;
-        height: 400px;
         padding-top: 60px;
         padding-left: 10%;
         padding-right: 10%;
@@ -3621,7 +3618,6 @@ input[type="email"]::placeholder{
 
     .openSpaceBanner{
         background-color: black;
-        height: 350px;
     }
 
     .hereForYouGrid{

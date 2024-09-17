@@ -65,7 +65,6 @@ const newFooter = (props) => {
                                             <div className={styles.categoriesTitle}>What We Do</div>
                                             <div className={styles.categoriesLinks}><a href="/getHelp">Get Help</a></div>
                                             <div className={styles.categoriesLinks}><a href="/theOpenSpace">The Open Space</a></div>
-                                            <div className={styles.categoriesLinks}><a href="/foodFirst">Food First</a></div>
                                             <div className={styles.categoriesLinks}><a href="/pastEvents">Community Events</a></div>
                                         </div>
                                     </div>

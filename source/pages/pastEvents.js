@@ -64,7 +64,7 @@ const values = [
         title: "Clothes & Meal Handouts", description: "We started handing out hot meals on Thanksgiving 2020 in Herbert Von King Park in Brooklyn. Since then we've been holding regular food hand outs in public spaces across the city, including the Upper West, Alphabet City, Washington Square Park, and Bedstuy. We've fed over 1,000 food insecure New Yorkers and handed out more than 300 items of clothing at our events alone!", images: clothesHandouts
     },
     {
-        title: "Community Cleanup", description: "Believe New York Volunteers care about your community, and believe that everyone should live in a safe and clean environment. We've held clean up events in Bushwick, Harlem, the Bronx, LES, and Astoria. We're looking to expand on our clean up events, so click Get Involved to help your neighborhood!", images: cleanup
+        title: "Community Cleanup", description: "Believe New York Volunteers care about your community, and believe that everyone should live in a safe and clean environment. We've held clean up events in Bushwick, Harlem, the Bronx, LES, and Astoria. ", images: cleanup
     },
     {
         title: "Free Summer Hair Cuts and Clothes", description: "Like with our Hot Meals and Warm Clothes events, we aspire to make sure that everyone in NYC has access to basic hygiene, clothing, and safety. This past summer we partnered with local stylists at Cutler Salon to give free hair cuts to over 100 people in Washington Square Park, while also handing summer clothes and cool meals.", images: summerHaircuts

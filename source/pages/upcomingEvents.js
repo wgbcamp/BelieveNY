@@ -10,6 +10,11 @@ const upcomingEvents = () => {
         <div>
             <Container className={custom.maxWidth}>
                 <Row>
+                    <Col className={`mt-5 pt-5 pb-4 text-center ${custom.categoryFont}`}>
+                    Follow our instagram for event updates!
+                    </Col>
+                </Row>
+                <Row>
                     <Col>
                         <div style={{ display: 'flex', justifyContent: 'center' }} className={`py-5`}>
                             <InstagramEmbed url="https://www.instagram.com/believeny/" width={'90%'}/>
