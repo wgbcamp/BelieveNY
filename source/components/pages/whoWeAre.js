@@ -93,7 +93,7 @@ const aboutUs = () => {
                         </Col>
                     </Row>
                     <Row>
-                        <Col className='fs-5'>
+                        <Col className='fs-5 my-3'>
                             In addition, we are committed to healthier communities and reducing our carbon footprint. Throughout all our efforts, we are focused on doing our part to improve our environment and overall community health.
                         </Col>
                     </Row>
