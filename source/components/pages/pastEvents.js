@@ -99,7 +99,7 @@ const pastEvents = () => {
                             <div className={`${custom.categoryFont} text-center mt-4`}>
                                 {value.title}
                             </div>
-                            <div className={`${custom.descriptionFont} mt-4`}>
+                            <div className={`${custom.descriptionFont} mt-4 pb-3`}>
                                 {value.description}
                             </div>
                         </Col>
