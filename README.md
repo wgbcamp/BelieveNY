@@ -13,6 +13,6 @@ The Believe New York front-end is built using JSX syntax, styled with CSS module
 [Believeny.org](https://www.believeny.org/)
 <br>
 
-![Preview image](source/images/general/mobileHomepagePreview.png)
-![Preview image](source/images/general/mobileEventsPreview.png)
+![Preview image](source/images/general/mobileHomepagePreview-1.png)
+![Preview image](source/images/general/mobileEventsPreview-1.png)
 ![Preview image](source/images/general/largeHomepagePreview.png)
