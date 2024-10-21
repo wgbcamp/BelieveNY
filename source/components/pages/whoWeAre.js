@@ -26,21 +26,19 @@ import Savannah from "../../images/whoWeAre/savannah.jpeg";
 const people = [
     {name: "Nicole Bulanchuk", title: "President & Executive Director", pronoun: "(she/her)", photo: Nicole, story: "Nicole is a born and raised New Yorker and has lived all over the state including Long Island, Queens, Brooklyn, Albany, and Manhattan. Nicole founded Believe New York after seeing and experiencing first-hand the struggle many New Yorkers live through. Nicole is currently a Clinical Psychology PhD student at Fairleigh Dickinson. She graduated from Columbia University with her masters. Nicole is committed to improving the lives of all people and has always volunteered and worked with nonprofits and community organizations including Columbia Health Sexual Violence Response, The ETS Sponsorship Program, NAMI-NYS, Save the Children, Care International, The Nature Conservancy, ASPCA, Green Peace, Berny's Hope, the Community Emergency Response Team, West Albany FD, Middle Earth Peer-Assistance Program, Women in Need Shelter, and several Rescue Missions. Nicole aspires to develop and expand Believe NY until we are a household charity name. She aims to serve under-resourced areas around the US and world.", email: "nicole@believeny.org"}, 
     {name: "Heather Bowen", title: "Vice President", photo: Heather, pronoun: "(she/her)",  story: "", email: ""},
-    {name: "Chiara Lier", title: "Operations Associate", photo: Chiara, pronoun: "(she/her)",  story: "Chiara (She/They) was raised in France and currently works as a case manager with Safe Horizon in the Family Justice Center in Brooklyn. She has a bachelor's degree in Psychology and Sociology, a master’s degree in psychology, and a certificate in Sexuality, Women, and Gender studies with an LGBTQ+ focus. She worked as a research assistant in a wide variety of psychology research laboratories, and she conducted her master’s thesis on the lack of diversity in sampling methods within the literature on treatment effectiveness for survivors of sexual assaults. She is also currently volunteering with Crime Victims Treatment Center, where she helps victims of domestic violence or sexual assault navigate the hospital setting and where she was trained in crisis counseling and advocacy. Chiara aspires to become a Clinical Psychologist focused on helping LGBTQ+ populations and victims of domestic violence or sexual assault and wishes to work around the world with doctors without borders to help women access mental health services.", email: "chiara@believeny.org"},
-    {name: "Tristan Broomes", title: "Community Liaison", pronoun: "(he/him)",  photo: Tristan, story: "", email: "tristan@believeny.org"},
+    {name: "Tristan Broomes", title: "Community Liaison", pronoun: "(he/him)",  photo: Tristan, story: "", email: ""},
     {name: "Cameron Reicher", title: "Program Manager", photo: Cameron, pronoun: "(he/him)",  story: "", email: "Cameron@believeny.org"},
     {name: "Shyanne Francis", title: "Program Coordinator", photo: Shyanne, pronoun: "(she/her)",  story: "", email: "shyanne@believeny.org"},
     {name: "Rebecca Blyakher", title: "Operations Associate", photo: Rebecca, pronoun: "(she/her)",  story: "", email: "rebecca@believeny.org"},
     {name: "Warren Brown", title: "Web Developer & Manager", photo: Warren, pronoun: "(he/him)",  story: "", email: "warrengbrn@gmail.com"},
     {name: "Anh Le", title: "Board Member", photo: Anh, pronoun: "(she/her)",  story: "", email: ""},
     {name: "Li-Ann Ting", title: "Board Member", photo: Li, pronoun: "(she/her)",  story: "", email: ""},
-    {name: "Zenaida Rodriguez", title: "Board Member", photo: Zenaida, pronoun: "(she/her)",  story: "", email: ""},
     {name: "David Wiecks", title: "Board Member", photo: David, pronoun: "(he/him)",  story: "", email: ""},
     {name: "Xiaotian Chang", title: "Research Coordinator", photo: Xiaotian, pronoun: "(she/her)",  story: "", email: ""},
     {name: "Joe Lebers", title: "Tech Consultant", photo: Joe, pronoun: "(he/him)",  story: "", email: ""},
     {name: "Chris Kang", title: "Research Coordinator & Senior Trainer", photo: Chris, pronoun: "(she/her)",  story: "", email: ""},
     {name: "Savannah Lynn", title: "Advocate Coordinator", photo: Savannah, pronoun: "(she/her)",  story: "", email: ""},
-    {name: "Ashley Fuentes-Miranda", title: "Advocate Coordinator", photo: Ashley, pronoun: "(she/her)",  story: "", email: ""},
+    {name: "Ashley Fuentes-Miranda", title: "Treasurer & Board Secretary", photo: Ashley, pronoun: "(she/her)",  story: "", email: "ashley@believeny.org"},
     ];
 
 const aboutUs = () => {
@@ -87,7 +85,7 @@ const aboutUs = () => {
                         <Col md={12} xl={4} className={`mb-5`}>
                             <div className={`${custom.backgroundLight} rounded-4 py-3 px-3 h-100`}>
                                 <div className={`${custom.categoryFont} mt-4`}>Our Vision</div>
-                                <div className='mt-4'>To empower individuals and families experiencing facing adversity e.g., poverty, abuse, and mental health challenges by improving their overall well-being, ensuring economic stability, and advancing social justice and health equity. 
+                                <div className='mt-4'>To empower individuals and families facing adversity e.g., poverty, abuse, and mental health challenges by improving their overall well-being, ensuring economic stability, and advancing social justice and health equity. 
                                 </div>
                             </div>
                         </Col>
