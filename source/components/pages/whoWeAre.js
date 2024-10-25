@@ -24,7 +24,7 @@ import Ashley from "../../images/whoWeAre/ashley.jpeg";
 import Savannah from "../../images/whoWeAre/savannah.jpeg";
 
 const people = [
-    {name: "Nicole Bulanchuk", title: "President & Executive Director", pronoun: "(she/her)", photo: Nicole, story: "Nicole is a born and raised New Yorker and has lived all over the state including Long Island, Queens, Brooklyn, Albany, and Manhattan. Nicole founded Believe New York after seeing and experiencing first-hand the struggle many New Yorkers live through. Nicole is currently a Clinical Psychology PhD student at Fairleigh Dickinson. She graduated from Columbia University with her masters. Nicole is committed to improving the lives of all people and has always volunteered and worked with nonprofits and community organizations including Columbia Health Sexual Violence Response, The ETS Sponsorship Program, NAMI-NYS, Save the Children, Care International, The Nature Conservancy, ASPCA, Green Peace, Berny's Hope, the Community Emergency Response Team, West Albany FD, Middle Earth Peer-Assistance Program, Women in Need Shelter, and several Rescue Missions. Nicole aspires to develop and expand Believe NY until we are a household charity name. She aims to serve under-resourced areas around the US and world.", email: "nicole@believeny.org"}, 
+    {name: "Nicole Bulanchuk", title: "Executive Director & President", pronoun: "(she/her)", photo: Nicole, story: "Nicole is a born and raised New Yorker and has lived all over the state including Long Island, Queens, Brooklyn, Albany, and Manhattan. Nicole founded Believe New York after seeing and experiencing first-hand the struggle many New Yorkers live through. Nicole is currently a Clinical Psychology PhD student at Fairleigh Dickinson. She graduated from Columbia University with her masters. Nicole is committed to improving the lives of all people and has always volunteered and worked with nonprofits and community organizations including Columbia Health Sexual Violence Response, The ETS Sponsorship Program, NAMI-NYS, Save the Children, Care International, The Nature Conservancy, ASPCA, Green Peace, Berny's Hope, the Community Emergency Response Team, West Albany FD, Middle Earth Peer-Assistance Program, Women in Need Shelter, and several Rescue Missions. Nicole aspires to develop and expand Believe NY until we are a household charity name. She aims to serve under-resourced areas around the US and world.", email: "nicole@believeny.org"}, 
     {name: "Heather Bowen", title: "Vice President", photo: Heather, pronoun: "(she/her)",  story: "", email: ""},
     {name: "Tristan Broomes", title: "Community Liaison", pronoun: "(he/him)",  photo: Tristan, story: "", email: ""},
     {name: "Cameron Reicher", title: "Program Manager", photo: Cameron, pronoun: "(he/him)",  story: "", email: "Cameron@believeny.org"},
@@ -33,12 +33,12 @@ const people = [
     {name: "Warren Brown", title: "Web Developer & Manager", photo: Warren, pronoun: "(he/him)",  story: "", email: "warrengbrn@gmail.com"},
     {name: "Anh Le", title: "Board Member", photo: Anh, pronoun: "(she/her)",  story: "", email: ""},
     {name: "Li-Ann Ting", title: "Board Member", photo: Li, pronoun: "(she/her)",  story: "", email: ""},
-    {name: "David Wiecks", title: "Board Member", photo: David, pronoun: "(he/him)",  story: "", email: ""},
+    {name: "David Wiecks", title: "Treasurer", photo: David, pronoun: "(he/him)",  story: "", email: ""},
     {name: "Xiaotian Chang", title: "Research Coordinator", photo: Xiaotian, pronoun: "(she/her)",  story: "", email: ""},
     {name: "Joe Lebers", title: "Tech Consultant", photo: Joe, pronoun: "(he/him)",  story: "", email: ""},
     {name: "Chris Kang", title: "Research Coordinator & Senior Trainer", photo: Chris, pronoun: "(she/her)",  story: "", email: ""},
     {name: "Savannah Lynn", title: "Advocate Coordinator", photo: Savannah, pronoun: "(she/her)",  story: "", email: ""},
-    {name: "Ashley Fuentes-Miranda", title: "Treasurer & Board Secretary", photo: Ashley, pronoun: "(she/her)",  story: "", email: "ashley@believeny.org"},
+    {name: "Ashley Fuentes-Miranda", title: "Advocate Coordinator & Board Secretary", photo: Ashley, pronoun: "(she/her)",  story: "", email: "ashley@believeny.org"},
     ];
 
 const aboutUs = () => {
