@@ -97,7 +97,7 @@ const newHome3 = () => {
                                     Addressing these concerns goes beyond providing immediate relief.
                                 </div>
                                 <div className={` ${custom.descriptionFont} mt-3 mb-5`}>
-                                    We have 2 core programs, and several ongoing initiatives, that work
+                                    We have 3 core programs, and several ongoing initiatives, that work
                                     synergistically to address the complex needs of our clients.
                                 </div>
                             </Col>
@@ -275,7 +275,7 @@ const newHome3 = () => {
                                 <Col xs={3} className='d-flex justify-content-center align-items-center '>
                                     <i className={`fa-brands fa-leanpub fa-3x ${custom.iconColor} `}></i>
                                 </Col>
-                                <Col xs={7} className='d-flex justify-content-start align-items-center fs-3 fw-semibold'>Read our impact report, see our accomplishments, and hear more feedback from our clients.</Col>
+                                <Col xs={7} className='d-flex justify-content-start align-items-center fs-3 fw-semibold'>Read our impact report, see our accomplishment, and hear more feedback from our clients.</Col>
                                 <Col xs={2} className='d-flex justify-content-center align-items-center'>
                                     <Link to="/impactReport" onClick={() => window.scrollTo(0,0)}>
                                         <button type="button" className={`btn btn-dark ${custom.shrinkButton} rounded-5 py-2`}>
