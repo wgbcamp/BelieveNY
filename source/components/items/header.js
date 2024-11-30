@@ -29,7 +29,7 @@ const newHeader = () => {
     ["Our Work", "fa-solid fa-arrow-right", ourWorkContent, () => {updateSL(ourWorkContent); updateSLT("OUR WORK"); update02D(true); updateZM(true)}],
     ["Events", "fa-solid fa-arrow-right", eventsContent, () => {updateSL(eventsContent); updateSLT("EVENTS"); update02D(true); updateZM(true)}],
     ["Join Us", "", [""], "/joinus"], 
-    ["Donate", "", [""], "/donate"]];
+    ["Donate", "", [""], "https://givebutter.com/newyorkgiftdrive"]];
 
     //manipulates state values for present dropdown menus on smaller viewports
     function changeState(){
