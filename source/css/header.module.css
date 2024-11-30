@@ -144,7 +144,7 @@
 }
 
 .donateButton{
-    background-color: var(--color2);
+    background-color: #118cff;
     height: 50%;
     width: 100%;
     max-width: 120px;
@@ -256,13 +256,13 @@
 
 .popupRows{
     grid-row: 2;
-    background-color: var(--colorLight);
+    background-color: white;
     display: grid;    
     grid-auto-rows: 75px;
     margin-left: -105px;
     margin-right: -105px;
     border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 3px 0px;
+    box-shadow: rgba(0, 0, 0, 0.35) -2px 3px 10px 0px;
 }
 
 .popupPointer{

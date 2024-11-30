@@ -83,7 +83,7 @@ const newHeader = () => {
                     <i className={`fa-solid fa-bars fa-xl ${styles.burger}`} onClick={() => changeState()}></i>
                     <div className={styles.donateOuterGrid}>
                         <div className={styles.donateButton}>
-                            <div className={styles.donate} onClick={() => redirect("/donate")}>DONATE</div>
+                            <div className={styles.donate} onClick={() => redirect("https://givebutter.com/tA5Hd7")}>DONATE</div>
                         </div>
                     </div>
                 </div>

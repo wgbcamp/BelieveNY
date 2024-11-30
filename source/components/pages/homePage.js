@@ -6,6 +6,7 @@ import custom from '../../css/main.module.css';
 
 import donationPhoto from "../../images/homepage/Homepage.PNG";
 import imposter from "../../images/homepage/IMG_4750.jpg";
+import thanksgiving from "../../images/events/thanksgiving2024/IMG_9487.jpeg"
 import communityAdvocates from '../../images/homepage/CommunityAdvocates.jpg';
 import handingOutClothes from '../../images/homepage/Handingoutclothes.jpg';
 import trio from '../../images/homepage/Trio.jpg';
@@ -49,24 +50,29 @@ const newHome3 = () => {
 
     return(
         <div>
+            <Col md={12} className=''>
+                <div className={`d-flex justify-content-center mb-2`}> 
+                    <div className={`mb-5 mt-2 pt-1  ${custom.imageRestrict} ${custom.missionStatementFlex}`}>
+                        <div className={`mb-1 mx-4 ${custom.titleStatement}`}>
+                            <div>ADVANCING OUR CITY & EMPOWERING NEW YORKERS</div>
+                        </div>
+                        <div>
+                            <Link to="https://givebutter.com/tA5Hd7" onClick={() => window.scrollTo(0,0)} 
+                                className={`${custom.mainButtonContainer}`}>
+                                <button type="button" className={`btn btn-dark mt-4 mb-5 rounded-5 fw-bold ${custom.mainButton}`}>
+                                    <div className="d-flex justify-content-center align-items-center">
+                                        Donate
+                                    </div> 
+                                </button>
+                            </Link>
+                        </div>
+                    </div>  
+                </div>
+            </Col>
             <Container id="MISSION STATEMENT">
                 <Row>
                     <Col>
-                        <Row className={`${custom.customPaddingTop} mb-5`}>
-                            <Col md={5}>
-                                <div className={`mb-1  ${custom.titleStatement}`}>
-                                    <div>ADVANCING OUR CITY & EMPOWERING NEW YORKERS.</div>
-                                </div>
-                                    <div className={`${custom.mainButtonContainer}`}>
-                                      <Link to="/whoWeAre" onClick={() => window.scrollTo(0,0)} className="w-100">
-                                        <button type="button" className={`btn btn-dark mt-4 mb-5 rounded-5 fw-bold ${custom.mainButton}`}>LEARN MORE</button>
-                                        </Link>
-                                </div>
-                                <div className={`d-flex justify-content-center mb-4`}> 
-                                    <div className={`mb-5 mt-2 pt-1  ${custom.imageRestrict}`}></div>  
-                                </div>
-                            </Col>
-                            <Col md={1}></Col>
+                        <Row className={`${custom.customPaddingTop} mb-5 pb-2`}>
                             <Col md={6}>
                                 <i className={`${custom.iconColor} fa-solid fa-handshake-angle fa-3x mb-2`}></i>
                                 <div className={`${custom.categoryFont}`}>Our Mission</div>
@@ -88,22 +94,26 @@ const newHome3 = () => {
                                 <div className={`${custom.customPaddingTop}  ${custom.descriptionFont}`}>
                                     We empower individuals by addressing the root causes of their challenges and providing personalized care tailored to their unique needs.
                                 </div>
-                                
+                            </Col>
+                            <Col md={1}></Col>
+                            <Col md={5} className='d-flex align-items-center mt-5'>
+                                    <Image src={thanksgiving} fluid rounded/>
+
                             </Col>
                         </Row>
                         <Row className={`pt-4 mb-4`}>
-                            <Col md={4}>
+                            <Col md={6}>
+                                <Image src={imposter} fluid rounded className=""/> 
+                            </Col>
+                            <Col md={2}></Col>
+                            <Col md={4} className='order-md-1 order-first d-flex justify-content-center flex-column'>
                                 <div className={`${custom.largerDescriptionFont} `}>
                                     Addressing these concerns goes beyond providing immediate relief.
                                 </div>
                                 <div className={` ${custom.descriptionFont} mt-3 mb-5`}>
-                                    We have 3 core programs, and several ongoing initiatives, that work
+                                    We have two core programs, and several ongoing initiatives, that work
                                     synergistically to address the complex needs of our clients.
                                 </div>
-                            </Col>
-                            <Col md={2}></Col>
-                            <Col md={6}>
-                                <Image src={imposter} fluid rounded className=""/> 
                             </Col>
                         </Row>
                         <Row>
@@ -116,7 +126,7 @@ const newHome3 = () => {
                                 </div>
                                 <div>
                                     <Link to="/theOpenSpace" onClick={() => window.scrollTo(0,0)}>
-                                        <button type="button" className={`btn btn-dark mt-4 mb-5  rounded-5 fw-bold ${custom.mainButton}`}>MORE INFO</button>
+                                        <button type="button" className={`btn btn-dark mt-4 mb-5  rounded-5 fw-bold ${custom.mainButton}`}>Learn more</button>
                                     </Link>
                                 </div>
                             </div>
@@ -129,7 +139,7 @@ const newHome3 = () => {
                                 </div>
                                 <div>
                                     <Link to="/getHelp" onClick={() => window.scrollTo(0,0)}>
-                                        <button type="button" className={`btn btn-dark mt-4 mb-5  rounded-5 fw-bold ${custom.mainButton}`}>MORE INFO</button>
+                                        <button type="button" className={`btn btn-dark mt-4 mb-5  rounded-5 fw-bold ${custom.mainButton}`}>Learn more</button>
                                     </Link>
                                 </div>
                             </div>
@@ -141,7 +151,7 @@ const newHome3 = () => {
                     </Col>
                 </Row>
             </Container>
-            <Container className='mb-5'>
+            <div className='mb-5'>
                 <Row className='mb-2'>
                     <Col className={`${custom.categoryFont} text-center mt-5 mb-5`}>
                         Community Events
@@ -196,7 +206,7 @@ const newHome3 = () => {
                    
                 </Row>
                
-            </Container>
+            </div>
             <Container className='py-5'>
                 <Row className='fw-bold d-flex align-items-center flex-column pt-1'>
                     <Col className='d-flex justify-content-center'>
@@ -216,7 +226,7 @@ const newHome3 = () => {
                     </Col>
                 </Row>
             </Container>
-                <Container fluid className='py-5 mt-5 d-flex justify-content-center bg-dark text-white'>
+                <Container fluid className={`py-5 mt-5 d-flex justify-content-center ${custom.bgColor} text-white`}>
                     <Row className={`${custom.maxWidth}`}>
                         <Col md={6} className={`d-flex  align-items-center`}>
                             <div className='d-flex justify-content-center flex-column'>
@@ -228,7 +238,7 @@ const newHome3 = () => {
                                 </div>
                                 <div className='mb-4'>
                                     <Link to="/donate" onClick={() => window.scrollTo(0,0)}>                 
-                                        <button type="button" className={` mt-4 me-3 rounded-5 fw-bold text-white ${custom.mainButton} ${custom.secondaryButton}`}>DONATE NOW</button>
+                                        <button type="button" className={` mt-4 me-3 rounded-5 fw-bold text-white ${custom.mainButton} ${custom.secondaryButton}`}>Donate now</button>
                                     </Link>  
                                 </div>
                             </div>
@@ -287,7 +297,7 @@ const newHome3 = () => {
                         </Col>
                     </Row>
                 </Container>
-                <Container fluid className={`mx-0 d-flex justify-content-center bg-dark pb-2`}>
+                <Container fluid className={`mx-0 d-flex justify-content-center ${custom.bgColor}  pb-2`}>
                     <Row className={`${custom.maxWidth} py-5`}>
                         <Col md={6} className={`d-flex justify-content-center align-items-center`}>
                             <div className={`d-flex justify-content-center flex-column text-white mt-2`}>
@@ -295,7 +305,7 @@ const newHome3 = () => {
                                 <div className={`mt-3 ${custom.sponsorDescription}`}>We're looking to partner with more locally run businesses to help ensure every New Yorker is getting the help they need.</div>
                                 <div className='mb-4'>
                                     <Link to="/eventSponsors" onClick={() => window.scrollTo(0,0)}>                   
-                                        <button type="button" className={`mt-4 me-3 rounded-5 fw-bold text-white ${custom.mainButton} ${custom.secondaryButton}`}>LEARN MORE</button>
+                                        <button type="button" className={`mt-4 me-3 rounded-5 fw-bold text-white ${custom.mainButton} ${custom.secondaryButton}`}>Contribute</button>
                                     </Link>
                                 </div>
                             </div>

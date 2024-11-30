@@ -55,19 +55,26 @@ const newFooter = (props) => {
                                     {/* Sitemap flexbox */}
                                     <div className={styles.categoriesFlex}>
                                         <div className={styles.categoriesGrid}>
-                                            <div className={styles.categoriesTitle}>Who We Are</div>
-                                            <div className={styles.categoriesLinks}><a href="/aboutUs">About Us</a></div>
-                                            <div className={styles.categoriesLinks}><a href="/impactReport">Our Impact</a></div>
-                                            <div className={styles.categoriesLinks}><a href="/diversityAndInclusion">Diversity and Inclusion</a></div>
-                                            <div className={styles.categoriesLinks}><a href="/foundingSupporters">Founding Supporters</a></div>
+                                            <div className={styles.catTitle}>Who We Are</div>
+                                            <div className={styles.catLinks}><a href="/aboutUs" className={styles.linkColor}>About Us</a></div>
+                                            <div className={styles.catLinks}><a href="/impactReport" className={styles.linkColor}>Our Impact</a></div>
+                                            <div className={styles.catLinks}><a href="/diversityAndInclusion" className={styles.linkColor}>Diversity and Inclusion</a></div>
+                                            <div className={styles.catLinks}><a href="/foundingSupporters" className={styles.linkColor}>Founding Supporters</a></div>
                                         </div>
                                         <div className={styles.categoriesGrid}>
-                                            <div className={styles.categoriesTitle}>What We Do</div>
-                                            <div className={styles.categoriesLinks}><a href="/getHelp">Get Help</a></div>
-                                            <div className={styles.categoriesLinks}><a href="/theOpenSpace">The Open Space</a></div>
-                                            <div className={styles.categoriesLinks}><a href="/pastEvents">Community Events</a></div>
+                                            <div className={styles.catTitle}>What We Do</div>
+                                            <div className={styles.catLinks}><a href="/getHelp" className={styles.linkColor}>Get Help</a></div>
+                                            <div className={styles.catLinks}><a href="/theOpenSpace" className={styles.linkColor}>The Open Space</a></div>
+                                            <div className={styles.catLinks}><a href="/pastEvents" className={styles.linkColor}>Community Events</a></div>
                                         </div>
                                     </div>
+                                                                {/* Donation flexbox */}
+                            <a href="/donate" className={styles.donateFlexboxRow}>
+                                <div className={styles.donateFlexboxCol}>
+                                    <div className={styles.donateTitle}>Support Believe New York</div>
+                                    <div className={styles.donateText}>Give a donation to support New Yorkers in need.</div>
+                                </div>
+                            </a>
                                     {/* Social media links flexbox */}
                                     <div className={styles.socialMediaOuterFlex}>
                                         <div className={styles.socialMediaFlex}>
@@ -81,6 +88,12 @@ const newFooter = (props) => {
                                             </div>
                                         </div>
                                     </div>
+
+                                </div>
+                            </div>
+                            <div className={styles.award2Flex}>
+                                <img className={styles.award2} src={candidPlatinum}></img>
+                            </div>
                                     {/* Newsletter flexbox */}
                                     <div className={styles.newsletterFlex}>
                                             <div className={styles.newsletterTitle}>Become a Believer and keep in touch with our progress</div>
@@ -92,21 +105,6 @@ const newFooter = (props) => {
                                                 <div className={styles.newsletterLineBorder}></div>
                                             </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div className={styles.award2Flex}>
-                                <img className={styles.award2} src={candidPlatinum}></img>
-                            </div>
-                            {/* Donation flexbox */}
-                            <a href="/donate" className={styles.donateFlexboxRow}>
-                                <div className={styles.donateFlexboxCol}>
-                                    <div className={styles.donateTitle}>Support Believe New York</div>
-                                    <div className={styles.donateText}>Give a donation to support New Yorkers in need.</div>
-                                </div>
-                                <div className={styles.donateFlexCenter}>
-                                    <i className="fa-solid fa-2xl fa-right-long"></i>
-                                </div>
-                            </a>
                         </div>
                     </div>
             </div>

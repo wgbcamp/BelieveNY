@@ -56,11 +56,11 @@ const aboutUs = () => {
                 <div className="dividerFlex">
                     <div className="divider"></div>
                 </div>
-                <div className="introTitleContainer">
+                <Container className="introTitleContainer">
                     <div className="introTitle">
                     Who is Believe New York?
                     </div>
-                </div>
+                </Container>
                 <Container>
                     <Row className='fs-3 mb-5 mt-3'>
                         <Col>
