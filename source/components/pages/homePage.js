@@ -57,7 +57,7 @@ const newHome3 = () => {
                             <div>ADVANCING OUR CITY & EMPOWERING NEW YORKERS</div>
                         </div>
                         <div>
-                            <Link to="https://givebutter.com/tA5Hd7" onClick={() => window.scrollTo(0,0)} 
+                            <Link to="https://givebutter.com/newyorkgiftdrive" 
                                 className={`${custom.mainButtonContainer}`}>
                                 <button type="button" className={`btn btn-dark mt-4 mb-5 rounded-5 fw-bold ${custom.mainButton}`}>
                                     <div className="d-flex justify-content-center align-items-center">
@@ -151,14 +151,13 @@ const newHome3 = () => {
                     </Col>
                 </Row>
             </Container>
-            <div className='mb-5'>
+            <Container className='mb-5' style={{maxWidth: '4000px'}}>
                 <Row className='mb-2'>
                     <Col className={`${custom.categoryFont} text-center mt-5 mb-5`}>
                         Community Events
                     </Col>
                 </Row>
                 <Row className={custom.carousel}>
-                   
                         <div className={` ${custom.carouselWrapper}`}>
                             <div className={custom.animateSlider}>
                                 <img src={communityAdvocates} className={custom.shrinkImage}></img>
@@ -206,7 +205,7 @@ const newHome3 = () => {
                    
                 </Row>
                
-            </div>
+            </Container>
             <Container className='py-5'>
                 <Row className='fw-bold d-flex align-items-center flex-column pt-1'>
                     <Col className='d-flex justify-content-center'>
