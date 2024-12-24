@@ -48,8 +48,35 @@ const newHome3 = () => {
         }
     }
 
+    const [showPopup, setPopup] = useState(true);
+
+
+
+    function switchPopup() {
+        setPopup(!showPopup);
+    }
+
+    // useEffect(() => {
+    //     if (showPopup === false) {
+    //         document.body.style.overflow = 'visible';
+    //     } else {
+    //         // prevent scrolling unless popup closed 
+    //         document.body.style.overflow = 'hidden';
+    //     }
+    // }, [showPopup]);
+
     return(
         <div>
+            {/* {showPopup === true ? (
+                <div className={custom.eventAttributes}>
+                  <div className={custom.iframeFlex}>
+                      <div className={custom.iframeAttributes}>
+                          <i className={`fa-solid fa-circle-xmark fa-xl ${custom.cancelPopup}`} onClick={() => switchPopup()}></i>
+                      </div>
+                  </div>
+              </div>
+            ) : <></>} */}
+         
             <Col md={12} className=''>
                 <div className={`d-flex justify-content-center mb-2`}> 
                     <div className={`mb-5 mt-2 pt-1  ${custom.imageRestrict} ${custom.missionStatementFlex}`}>
@@ -57,7 +84,7 @@ const newHome3 = () => {
                             <div>ADVANCING OUR CITY & EMPOWERING NEW YORKERS</div>
                         </div>
                         <div>
-                            <Link to="https://givebutter.com/newyorkgiftdrive" 
+                            <Link to="https://www.zeffy.com/en-US/donation-form/00f36686-7c94-4536-9b01-f6705c56e289" 
                                 className={`${custom.mainButtonContainer}`}>
                                 <button type="button" className={`btn btn-dark mt-4 mb-5 rounded-5 fw-bold ${custom.mainButton}`}>
                                     <div className="d-flex justify-content-center align-items-center">
@@ -236,7 +263,7 @@ const newHome3 = () => {
                                     Give a donation to support New Yorkers in need.
                                 </div>
                                 <div className='mb-4'>
-                                    <Link to="/donate" onClick={() => window.scrollTo(0,0)}>                 
+                                    <Link to="https://www.youtube.com/watch?v=n_iRW2QzbuI">                 
                                         <button type="button" className={` mt-4 me-3 rounded-5 fw-bold text-white ${custom.mainButton} ${custom.secondaryButton}`}>Donate now</button>
                                     </Link>  
                                 </div>

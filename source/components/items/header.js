@@ -14,7 +14,7 @@ const newHeader = () => {
 
     const ourWorkContent = [["Get Help", "getHelp"],["The Open Space", "theOpenSpace"], ["Operation Community Success", "operationCommunitySuccess"]];
 
-    const eventsContent = [["Upcoming Events", "upcomingEvents"],["Past Events", "pastEvents"],["Event Sponsors", "eventSponsors"],["Donate to Our Events", "donate"]];
+    const eventsContent = [["Upcoming Events", "upcomingEvents"],["Past Events", "pastEvents"],["Event Sponsors", "eventSponsors"],["Donate to Our Events", "https://www.zeffy.com/en-US/donation-form/00f36686-7c94-4536-9b01-f6705c56e289"]];
 
     //state holding dropdown states and arrays for sub categories on smaller viewports
     var [widthState, updateWS] = useState(false);
@@ -29,7 +29,7 @@ const newHeader = () => {
     ["Our Work", "fa-solid fa-arrow-right", ourWorkContent, () => {updateSL(ourWorkContent); updateSLT("OUR WORK"); update02D(true); updateZM(true)}],
     ["Events", "fa-solid fa-arrow-right", eventsContent, () => {updateSL(eventsContent); updateSLT("EVENTS"); update02D(true); updateZM(true)}],
     ["Join Us", "", [""], "/joinus"], 
-    ["Donate", "", [""], "https://givebutter.com/newyorkgiftdrive"]];
+    ["Donate", "", [""], "https://www.zeffy.com/en-US/donation-form/00f36686-7c94-4536-9b01-f6705c56e289"]];
 
     //manipulates state values for present dropdown menus on smaller viewports
     function changeState(){
@@ -83,7 +83,7 @@ const newHeader = () => {
                     <i className={`fa-solid fa-bars fa-xl ${styles.burger}`} onClick={() => changeState()}></i>
                     <div className={styles.donateOuterGrid}>
                         <div className={styles.donateButton}>
-                            <div className={styles.donate} onClick={() => redirect("https://givebutter.com/newyorkgiftdrive")}>DONATE</div>
+                            <div className={styles.donate} onClick={() => redirect("https://www.zeffy.com/en-US/donation-form/00f36686-7c94-4536-9b01-f6705c56e289")}>DONATE</div>
                         </div>
                     </div>
                 </div>
