@@ -263,7 +263,7 @@ const newHome3 = () => {
                                     Give a donation to support New Yorkers in need.
                                 </div>
                                 <div className='mb-4'>
-                                    <Link to="https://www.youtube.com/watch?v=n_iRW2QzbuI">                 
+                                    <Link to="https://www.zeffy.com/en-US/donation-form/00f36686-7c94-4536-9b01-f6705c56e289">                 
                                         <button type="button" className={` mt-4 me-3 rounded-5 fw-bold text-white ${custom.mainButton} ${custom.secondaryButton}`}>Donate now</button>
                                     </Link>  
                                 </div>
