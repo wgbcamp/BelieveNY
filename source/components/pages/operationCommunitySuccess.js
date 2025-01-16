@@ -13,7 +13,7 @@ const operationCommunitySuccess = () => {
                         Today, OCS is our in-house research team dedicated to staying informed about the latest concerns and needs of the communities we serve. This commitment helps us evaluate our programs, ensure meaningful community impact, and incorporate valuable input as we develop and grow. We understand that ongoing research and continuous evaluation are crucial to adapting our services effectively. 
                     </div>
                     <div>
-                        Currently, we are preparing to publish the results from our Summer 2024 survey, which assesses people's experiences in NYC. Check back here soon for the full results at the end of 2024! 
+                        Currently, we are preparing to publish the results from our Summer 2024 survey, which assesses people's experiences in NYC. Check back here soon for the full results in 2025! 
                     </div>
                 </Col>
             </Row>

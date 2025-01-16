@@ -349,6 +349,14 @@ a {
     
 }
 
+.maxWidth1000px {
+    max-width: 1000px;
+}
+
+.greyBackground {
+    background-color: #ececec;
+}
+
 @media only screen and (min-width: 578px) {
 
     .imageRelative {

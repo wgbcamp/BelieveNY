@@ -20,6 +20,12 @@ const theOpenSpace = (props) => {
         <div>
             <div className="simpleFlex">
                 <div className="widen">
+                    <div className="pt-5 text-center fs-1 pb-3">Disclaimer</div>
+                    <div className="d-flex justify-content-center">
+                        <div className={`px-5 pb-4 fs-6 ${custom.maxWidth1000px}`}>
+                            Although we are fully trained and supported by professionals in the mental health field, The Open Space is not a substitute for licensed mental health therapy or professional counseling services. Additionally, we are not an emergency service and cannot provide immediate crisis intervention. If you are experiencing an emergency, please call 911 or contact a crisis hotline such as the Suicide & Crisis Lifeline by dialing 988. However, if you are interested in accessing therapy or other mental health resources, our program, GetHelp, can assist you in finding the support you need. Please let us know, and we'll work with you to connect to appropriate licensed services.
+                        </div>
+                    </div>
                     <div className="openSpaceBanner padBottom70500 padTop80 whiteText centerText">
                         <b className="size36Font">Your place for active listening and support.</b>
                         <div className="simpleFlex">
@@ -40,7 +46,7 @@ const theOpenSpace = (props) => {
                                     <Row>
                                         <Col className="d-flex justify-content-center">
                                             <button type="button" data-cal-namespace="openspace" data-cal-link="believeny/openspace" data-cal-config='{"layout":"month_view","theme":"light"}'
-                                            className={`btn btn-dark mt-4 mb-5 rounded-5 fw-bold w-100 ${custom.mainButton} ${custom.maxWidth400px} `} onClick={calcom()}>Schedule Appointment</button>
+                                            className={`btn btn-dark mt-4 mb-5 mx-0 rounded-5 fw-bold w-100 ${custom.mainButton} ${custom.maxWidth400px} `} onClick={calcom()}>Schedule Appointment</button>
                                         </Col>
                                     </Row>
                                 </Container>
