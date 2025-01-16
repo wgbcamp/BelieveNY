@@ -1,5 +1,5 @@
-.footerContainer{
-    margin-top: auto;
+.footerContainer {
+
 }
 
 .background{
@@ -12,7 +12,7 @@
     justify-content: center;
     background-color: #1D1D1D;
     color: white;
-    height: 100%;
+    height: 100%;    
 }
 
 .footerGrid{

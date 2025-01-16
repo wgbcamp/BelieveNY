@@ -16,7 +16,7 @@
 }
 
 html {
-    scrollbar-gutter: stable;
+    
 }
 
 body {
@@ -355,6 +355,10 @@ a {
 
 .greyBackground {
     background-color: #ececec;
+}
+
+.redecorate {
+    text-decoration: underline;
 }
 
 @media only screen and (min-width: 578px) {

@@ -71,7 +71,7 @@ function App(){
 
     return(
 
-        <div>
+        <div id="topLevel">
             <FormHandler payload={{name: payload.name, email: payload.email, phone: payload.phone, path: payload.path, type: payload.type, specific0: payload.specific0, specific1: payload.specific1, specific2: payload.specific2, specific3: payload.specific3, specific4: payload.specific4, specific5: payload.specific5, label: payload.label}} dim={dim} updateDim={updateDim}/>
             <DonateChoices dim2={dim2} updateDim2={updateDim2}/>
             <div className={`${dim === true || dim2 === true ? "dim" : ""}`}>
