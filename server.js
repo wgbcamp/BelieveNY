@@ -20,6 +20,18 @@ app.get("/impactworkshop", function (req, res) {
     res.redirect('https://Communityimpactseries.Eventbrite.com');
 })
 
+app.get("/mentalhealthfair", function (req, res) {
+    res.redirect('https://www.eventbrite.com/e/mental-health-resource-fair-hosted-by-believe-new-york-tickets-882643539587?aff=oddtdtcreator');
+})
+
+app.get("/survey", function (req, res) {
+    res.redirect('https://tccolumbia.qualtrics.com/jfe/form/SV_cPhoN9E6m3uUNdI');
+})
+
+app.get("/donationform", function (req, res) {
+    res.redirect('https://www.zeffy.com/en-US/donation-form/00f36686-7c94-4536-9b01-f6705c56e289');
+})
+
 app.get("/getDates", function (req, res) {
     mongoUtil.getDates(req, response);
     function response(result){
