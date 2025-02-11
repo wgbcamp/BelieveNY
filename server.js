@@ -2,8 +2,8 @@ var path = require("path");
 var express = require("express");
 var cors = require('cors');
 const mailer = require("./emailSource/sendMail.js");
-var mongoUtil = require('./mongoUtil');
-mongoUtil.connectServer();
+// var mongoUtil = require('./mongoUtil');
+// mongoUtil.connectServer();
 var mailchimpUtil = require('./mailchimpUtil.js');
 
 var buildDirectory = path.join(__dirname, "build");
@@ -15,6 +15,10 @@ app.options('*', cors());
 
 app.use(express.static(buildDirectory));
 app.use(express.json());
+
+app.get("/impactworkshop", function (req, res) {
+    res.redirect('https://Communityimpactseries.Eventbrite.com');
+})
 
 app.get("/getDates", function (req, res) {
     mongoUtil.getDates(req, response);
