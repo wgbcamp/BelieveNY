@@ -23,12 +23,9 @@ import CancelSession from './components/pages/cancelSession';
 import FormHandler from './components/items/formHandler.js';
 import Faq from './components/pages/faq';
 import ImpactReport from './components/pages/impactReport';
-import DonationForm from './components/pages/donationForm';
 import DonationFormQR from './components/pages/donationFormQR';
-import Survey from './components/pages/survey.js';
 import DonateChoices from './components/items/donateChoices.js';
 import CollegeResources from './components/pages/collegeresources.js';
-import MentalHealthFair from './components/pages/mentalhealthfair.js';
 import OperationCommunitySuccess from './components/pages/operationCommunitySuccess.js';
 
 
