@@ -92,11 +92,8 @@ function App(){
                             <Route path="/joinus" element={<JoinUs/>}/>
                             <Route path="/donate" element={<Donate showDonateChoices={showDonateChoices}/>}/>
                             <Route path="/cancelSession/*" element={<CancelSession/>}/>
-                            <Route path="/donationform" element={<DonationForm/>}/>
                             <Route path="/donationformQR" element={<DonationFormQR/>}/>
-                            <Route path="/survey" element={<Survey/>}/>
                             <Route path="/collegeresources" element={<CollegeResources/>}/>
-                            <Route path="/mentalhealthfair" element={<MentalHealthFair/>}/>
                             <Route path="/operationCommunitySuccess" element={<OperationCommunitySuccess/>}/>
                         </Routes>  
                 </div>                      
