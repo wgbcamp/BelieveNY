@@ -32,6 +32,61 @@ import OperationCommunitySuccess from './components/pages/operationCommunitySucc
 
 function App(){
 
+    //NEW    
+    const [currentRoute, setCurrentRoute] = useState(window.location.pathname);
+
+    function handleUrlChange() {
+        setCurrentRoute(window.location.pathname);
+    }
+
+    useEffect(() => {
+        window.addEventListener('popstate', handleUrlChange);
+        return () => {
+            window.removeEventListener('popstate', handleUrlChange);
+        };
+    }, []);
+
+    const routes = [
+        { path: '/', component: Homepage },
+        { path: '/whoWeAre', component: WhoWeAre },
+        { path: '/impactReport', component: ImpactReport },
+        { path: '/diversityAndInclusion', component: DiversityInclusion },
+        { path: '/faq', component: Faq },
+        { path: '/foundingSupporters', component: FoundingSupporters },
+        { path: '/getHelp', component: GetHelp },
+        { path: '/environmentalProjects', component: EnvironmentalProjects },
+        { path: '/upcomingEvents', component: UpcomingEvents },
+        { path: '/pastEvents', component: PastEvents },
+        { path: '/eventSponsors', component: EventSponsors },
+        { path: '/SpecialEventsFund', component: SpecialEventsFund },
+        { path: '/joinus', component: JoinUs },
+        { path: '/donate', component: Donate },
+        { path: '/donationformQR', component: DonationFormQR },
+        { path: '/collegeresources', component: CollegeResources },
+        { path: '/operationCommunitySuccess', component: OperationCommunitySuccess },
+        { path: '/theOpenSpace', component: TheOpenSpace },
+        { path: '/scheduleBooking', component: Donate },
+        { path: '/eventSponsors', component: EventSponsors },
+        { path: '/cancelSession', component: CancelSession },
+    ];
+
+    const route = routes.find((r) => r.path === currentRoute);
+    const Component = route.component;
+
+    function Link({ to, children }) {
+        function handleClick(e) {
+            e.preventDefault();
+            window.history.pushState(null, '', to);
+            setCurrentRoute(to);
+        }
+
+        return (
+            <a href={to} onClick={handleClick}>
+                {children}
+            </a>
+        );
+    }
+
     //user identification
     if(!localStorage.getItem("userID")) {
         localStorage.setItem("userID", Math.random().toString(36).substring(2, 10) + Math.random().toString(36).substring(2, 10))
@@ -67,36 +122,12 @@ function App(){
 
 
     return(
-
-        <div id="topLevel">
+        <div>
             <FormHandler payload={{name: payload.name, email: payload.email, phone: payload.phone, path: payload.path, type: payload.type, specific0: payload.specific0, specific1: payload.specific1, specific2: payload.specific2, specific3: payload.specific3, specific4: payload.specific4, specific5: payload.specific5, label: payload.label}} dim={dim} updateDim={updateDim}/>
             <DonateChoices dim2={dim2} updateDim2={updateDim2}/>
             <div className={`${dim === true || dim2 === true ? "dim" : ""}`}>
                 <Header location={location}/>
-                <div className='accomodateHeader'>      
-                        <Routes>
-                            <Route path="*" element={<Homepage/>}/>
-                            <Route path="/faq" element={<Faq/>}/>
-                            <Route path="/whoWeAre" element={<WhoWeAre/>}/>
-                            <Route path="/impactReport" element={<ImpactReport/>}/>
-                            <Route path="/diversityAndInclusion" element={<DiversityInclusion/>}/>
-                            <Route path="/foundingSupporters" element={<FoundingSupporters/>}/>
-                            <Route path="/getHelp" element={<GetHelp updateBC={updateBC}/>}/>
-                            <Route path="/theOpenSpace" element={<TheOpenSpace updateBC={updateBC}/>}/>
-                            <Route path="/environmentalProjects" element={<EnvironmentalProjects/>}/>
-                            <Route path="/scheduleBooking" element={<ScheduleBooking updateDim={updateDim} updatePayload={updatePayload} bookingCategory={bookingCategory}/>}/>
-                            <Route path="/upcomingEvents" element={<UpcomingEvents/>}/>
-                            <Route path="/pastEvents" element={<PastEvents/>}/>
-                            <Route path="/eventSponsors" element={<EventSponsors updateDim={updateDim} updatePayload={updatePayload}/>}/>
-                            <Route path="/SpecialEventsFund" element={<SpecialEventsFund/>}/>
-                            <Route path="/joinus" element={<JoinUs/>}/>
-                            <Route path="/donate" element={<Donate showDonateChoices={showDonateChoices}/>}/>
-                            <Route path="/cancelSession/*" element={<CancelSession/>}/>
-                            <Route path="/donationformQR" element={<DonationFormQR/>}/>
-                            <Route path="/collegeresources" element={<CollegeResources/>}/>
-                            <Route path="/operationCommunitySuccess" element={<OperationCommunitySuccess/>}/>
-                        </Routes>  
-                </div>                      
+                <Component updateBC={updateBC} updateDim={updateDim} updatePayload={updatePayload} bookingCategory={bookingCategory} showDonateChoices={showDonateChoices}/>
                 <Footer updateDim={updateDim} updatePayload={updatePayload}/>
             </div>
         </div>

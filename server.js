@@ -16,6 +16,10 @@ app.options('*', cors());
 app.use(express.static(buildDirectory));
 app.use(express.json());
 
+app.get("/*", function (req, res) {
+    res.redirect('/');
+})
+
 app.get("/impactworkshop", function (req, res) {
     res.redirect('https://Communityimpactseries.Eventbrite.com');
 })

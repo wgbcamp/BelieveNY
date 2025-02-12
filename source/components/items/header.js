@@ -47,7 +47,7 @@ const newHeader = () => {
     var [currentPopup, updateCP] = useState("");
 
     return(
-        <div className={styles.hide}>
+        <div className={`${styles.hide} ${styles.accomodateHeader}`}>
             <div className={styles.centerAllGrid}>
             {/*grid for header bar */}
                 <div className={styles.headerGrid} id="headerGrid">

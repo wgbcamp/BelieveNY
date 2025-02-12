@@ -177,6 +177,10 @@
     z-index: 10;
 }
 
+.accomodateHeader{
+    margin-bottom: 71px;
+}
+
 /*above 1000px*/
 @media only screen and (min-width: 1001px){
 
