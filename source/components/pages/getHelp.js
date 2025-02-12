@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { getCalApi } from "@calcom/embed-react";
 import { Container, Row, Col, Image, Carousel } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
 import custom from '../../css/main.module.css';
 

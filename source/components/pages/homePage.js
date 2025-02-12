@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { Container, Row, Col, Image, Carousel } from 'react-bootstrap';
 
 import custom from '../../css/main.module.css';
