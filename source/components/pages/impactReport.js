@@ -89,7 +89,13 @@ const impactReport = () => {
                 {/* <div className="expansionButtonContainer">
                     <div className="expandAbove900px" onClick={() => swapText()}>{textValue}</div>
                 </div> */}
-                <div className="impactTitle">Impact Report</div>
+                <div className="impactTitle">Impact Report 2025</div>
+                <iframe className="pdfViewer mb-5"
+                    src="https://drive.google.com/file/d/1jZ2ANOsAYA5O01Huxbg3f4Fr3WL-5tyh/preview"
+                    height="100%"
+                    width="100%"
+                ></iframe>
+                <div className="impactTitle">Impact Report 2024</div>
                 <iframe className="pdfViewer mb-5"
                     src="https://drive.google.com/file/d/1d-U2zSdHubcewmihOmyAA9rmKQb0t74n/preview"
                     height="100%"

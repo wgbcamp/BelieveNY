@@ -76,10 +76,10 @@ const pastEvents = () => {
         <div>
             <div className={`mt-5 pt-5 ${custom.categoryFont} text-center`}>Our events help your community</div>
             <Container className={`${custom.mainButtonContainer} d-flex justify-content-center`}>
-                <Link to="/donate">
-                    <button type="button" className={`btn btn-dark mt-5 rounded-5 fw-bold ${custom.mainButton} ${custom.eventsDonateButton}`}>
+                <a href="/donate">
+                    <button type="button" className={`btn btn-dark mt-5 rounded-5 fw-bold  ${custom.mainButton} ${custom.eventsDonateButton} ${custom.eDBFix}`}>
                         DONATE TO EVENTS FUND</button>
-                </Link>
+                </a>
             </Container>
             <Container className='mt-5 pt-5'>
                     {values.map((value, key) => (

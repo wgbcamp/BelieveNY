@@ -5,5 +5,5 @@ import './css/main.module.css';
 
 // root.render(<App />);
 const root = createRoot(document.getElementById('App'));
-root.render(<BrowserRouter><App/></BrowserRouter>)
+root.render(<App/>)
 

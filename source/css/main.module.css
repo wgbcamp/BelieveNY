@@ -138,7 +138,11 @@ a {
 }
 
 .eventsDonateButton {
-    min-width: 300px;
+    min-width: 360px;
+}
+
+.eDBFix {
+    margin-left: 0;
 }
 
 .iconColor {

@@ -54,8 +54,8 @@ const newFooter = (props) => {
                                 {/* Sitemap flexbox */}
                                 <div className={styles.categoriesFlex}>
                                     <div className={styles.categoriesGrid}>
-                                        <div className={styles.catTitle}>Who We Are</div>
-                                        <div className={styles.catLinks}><a href="/aboutUs" className={styles.linkColor}>About Us</a></div>
+                                        <div className={styles.catTitle}>About Us</div>
+                                        <div className={styles.catLinks}><a href="/whoWeAre" className={styles.linkColor}>Who We Are</a></div>
                                         <div className={styles.catLinks}><a href="/impactReport" className={styles.linkColor}>Our Impact</a></div>
                                         <div className={styles.catLinks}><a href="/diversityAndInclusion" className={styles.linkColor}>Diversity and Inclusion</a></div>
                                         <div className={styles.catLinks}><a href="/foundingSupporters" className={styles.linkColor}>Founding Supporters</a></div>

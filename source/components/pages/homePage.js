@@ -83,14 +83,14 @@ const newHome3 = () => {
                             <div>ADVANCING OUR CITY & EMPOWERING NEW YORKERS</div>
                         </div>
                         <div>
-                            <Link to="https://www.zeffy.com/en-US/donation-form/00f36686-7c94-4536-9b01-f6705c56e289" 
+                            <a href="https://www.zeffy.com/en-US/donation-form/00f36686-7c94-4536-9b01-f6705c56e289" 
                                 className={`${custom.mainButtonContainer}`}>
                                 <button type="button" className={`btn btn-dark mt-4 mb-5 rounded-5 fw-bold ${custom.mainButton}`}>
                                     <div className="d-flex justify-content-center align-items-center">
                                         Donate
                                     </div> 
                                 </button>
-                            </Link>
+                            </a>
                         </div>
                     </div>  
                 </div>
@@ -151,9 +151,9 @@ const newHome3 = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <Link to="/theOpenSpace" onClick={() => window.scrollTo(0,0)}>
+                                    <a href="/theOpenSpace" onClick={() => window.scrollTo(0,0)}>
                                         <button type="button" className={`btn btn-dark mt-4 mb-5  rounded-5 fw-bold ${custom.mainButton}`}>Learn more</button>
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
                             <div className='d-flex justify-content-center flex-column text-center mt-5'>
@@ -164,9 +164,9 @@ const newHome3 = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <Link to="/getHelp" onClick={() => window.scrollTo(0,0)}>
+                                    <a href="/getHelp" onClick={() => window.scrollTo(0,0)}>
                                         <button type="button" className={`btn btn-dark mt-4 mb-5  rounded-5 fw-bold ${custom.mainButton}`}>Learn more</button>
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
                         </Row>
@@ -262,9 +262,9 @@ const newHome3 = () => {
                                     Give a donation to support New Yorkers in need.
                                 </div>
                                 <div className='mb-4'>
-                                    <Link to="https://www.zeffy.com/en-US/donation-form/00f36686-7c94-4536-9b01-f6705c56e289">                 
+                                    <a href="https://www.zeffy.com/en-US/donation-form/00f36686-7c94-4536-9b01-f6705c56e289">                 
                                         <button type="button" className={` mt-4 me-3 rounded-5 fw-bold text-white ${custom.mainButton} ${custom.secondaryButton}`}>Donate now</button>
-                                    </Link>  
+                                    </a>  
                                 </div>
                             </div>
       
@@ -312,11 +312,11 @@ const newHome3 = () => {
                                 </Col>
                                 <Col xs={7} className='d-flex justify-content-start align-items-center fs-3 fw-semibold'>Read our impact report, see our accomplishment, and hear more feedback from our clients.</Col>
                                 <Col xs={2} className='d-flex justify-content-center align-items-center'>
-                                    <Link to="/impactReport" onClick={() => window.scrollTo(0,0)}>
+                                    <a href="/impactReport" onClick={() => window.scrollTo(0,0)}>
                                         <button type="button" className={`btn btn-dark ${custom.shrinkButton} rounded-5 py-2`}>
                                             <i className="fa-solid fa-arrow-right fa-lg"></i>
                                         </button>
-                                    </Link>
+                                    </a>
                                 </Col>
                             </Row>
                         </Col>
@@ -329,9 +329,9 @@ const newHome3 = () => {
                                 <div className={`${custom.sponsorTitle} fw-bold`}>Become a Sponsor</div>
                                 <div className={`mt-3 ${custom.sponsorDescription}`}>We're looking to partner with more locally run businesses to help ensure every New Yorker is getting the help they need.</div>
                                 <div className='mb-4'>
-                                    <Link to="/eventSponsors" onClick={() => window.scrollTo(0,0)}>                   
+                                    <a href="/eventSponsors" onClick={() => window.scrollTo(0,0)}>                   
                                         <button type="button" className={`mt-4 me-3 rounded-5 fw-bold text-white ${custom.mainButton} ${custom.secondaryButton}`}>Contribute</button>
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
                         </Col>
