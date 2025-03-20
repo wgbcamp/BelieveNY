@@ -69,8 +69,19 @@ function App(){
         { path: '/cancelSession', component: CancelSession },
     ];
 
-    const route = routes.find((r) => r.path === currentRoute);
+    var route;
+    
+    const test = routes.find((r) => r.path === currentRoute);
+    
+    if (test === undefined) {
+        route = { path: '/', component: Homepage};
+        window.history.pushState('redirect', "", "/")
+    } else {
+        route = test;
+    }
+
     const Component = route.component;
+
 
     function Link({ to, children }) {
         function handleClick(e) {
