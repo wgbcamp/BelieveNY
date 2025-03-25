@@ -91,7 +91,7 @@ const impactReport = () => {
                 </div> */}
                 <div className="impactTitle">Impact Report 2025</div>
                 <iframe className="pdfViewer mb-5"
-                    src="https://drive.google.com/file/d/1jZ2ANOsAYA5O01Huxbg3f4Fr3WL-5tyh/preview"
+                    src="https://drive.google.com/file/d/1VZrr-VtP-yObKD1LbJsq6RT2CHG5xMsH/preview"
                     height="100%"
                     width="100%"
                 ></iframe>
