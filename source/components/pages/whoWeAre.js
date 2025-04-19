@@ -9,7 +9,7 @@ import Nicole from "../../images/whoWeAre/nicole.jpeg";
 import Chiara from "../../images/whoWeAre/chiara.webp";
 import Rebecca from "../../images/whoWeAre/rebecca.webp";
 import Tristan from "../../images/whoWeAre/tristan.png";
-import Cameron from "../../images/whoWeAre/Cameron.jpg";
+import Cameron from "../../images/whoWeAre/cameron.jpg";
 import Shyanne from "../../images/whoWeAre/shyanne.webp";
 import Warren from "../../images/whoWeAre/warren.jpg";
 import Heather from "../../images/whoWeAre/heather.webp";
@@ -22,8 +22,8 @@ import Joe from "../../images/whoWeAre/joe.jpg";
 import Chris from "../../images/whoWeAre/chris.jpg";
 import Ashley from "../../images/whoWeAre/ashley.jpeg";
 import Savannah from "../../images/whoWeAre/savannah.jpeg";
-import Elizabeth from "../../images/whoWeAre/Elizabeth.jpg";
-import Zhijiao from "../../images/whoWeAre/Zhijiao.png";
+import Elizabeth from "../../images/whoWeAre/elizabeth.jpg";
+import Zhijiao from "../../images/whoWeAre/zhijiao.png";
 
 const people = [
     {name: "Nicole Bulanchuk", title: "Executive Director & President", pronoun: "(she/her)", photo: Nicole, story: "Nicole is a born and raised New Yorker and has lived all over the state including Long Island, Queens, Brooklyn, Albany, and Manhattan. Nicole founded Believe New York after seeing and experiencing first-hand the struggle many New Yorkers live through. Nicole is currently a Clinical Psychology PhD student at Fairleigh Dickinson. She graduated from Columbia University with her masters. Nicole is committed to improving the lives of all people and has always volunteered and worked with nonprofits and community organizations including Columbia Health Sexual Violence Response, The ETS Sponsorship Program, NAMI-NYS, Save the Children, Care International, The Nature Conservancy, ASPCA, Green Peace, Berny's Hope, the Community Emergency Response Team, West Albany FD, Middle Earth Peer-Assistance Program, Women in Need Shelter, and several Rescue Missions. Nicole aspires to develop and expand Believe NY until we are a household charity name. She aims to serve under-resourced areas around the US and world.", email: "nicole@believeny.org"}, 
