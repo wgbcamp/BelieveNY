@@ -13,24 +13,27 @@ const volunteer = () => {
                     <Container className=" mt-5">
                         <Col>
                             <Row>
-                                <div>We believe that <u>everyone</u> has valuable skills to contribute to our mission! 
+                                <div>
+                                We believe that <u>everyone</u> has valuable skills to contribute to our mission! As most of our volunteers are students, we organize training for volunteers at the end of each semester and the beginning of the next. This ensures that we have a well-coordinated and dedicated team to support our clients and community. 
                                 </div>
+                                
                                 <div className='mt-3'>
-                                    For most up to date volunteer recruitment information, please visit and follow our <a href="https://www.instagram.com/believeny">Instagram</a> and/or <a href="https://www.linkedin.com/company/believeny/">LinkedIn</a> pages. 
-                                </div>
-                                <div className='mt-3'>
-                                    As most of our volunteers are students, we organize training for Client and Community Advocates at the end of each semester and the beginning of the next. This ensures that we have a well-coordinated and dedicated team to support our clients and community. Therefore, we host trainings for Client and Community Advocate positions on a need basis during the following periods once or twice a year:
+                                Therefore, we host trainings for Client and Community Advocate positions on a need basis during the following periods once or twice a year:
                                 </div>
                                 <ul className="mt-3 ms-5">
-                                    <li>End of August/Early September</li>
-                                    <li>Early-Mid January</li>
-                                    <li>End of May/Early June</li>
+                                    <li>August or September</li>
+                                    <li>January or February</li>
+                                    <li>May or June</li>
                                 </ul>
-                                <div>If you're interested in learning more or joining our team as an Advocate, and/or other volunteer opportunities listed below, please email <a href="mailto:admin@believeny.org" className={custom.iconColor}>admin@believeny.org</a>. Thank you and we look forward to working with you to improve our community well-being!</div>
+                                {/* here */}
+                                <div>If you're interested in learning more or joining our team as an Advocate, and/or other volunteer opportunities listed below, please email <a className={custom.emailLink} href="mailto:admin@believeny.org">admin@believeny.org</a>. </div>
+                                <div className="mt-3">Thank you and we look forward to working with you to improve our community well-being!</div>
+                                <b className="mt-3"><u>Recruitment Update!</u></b>
+                                <div className='mt-3'>We are now recruiting Client and Community Advocates to start Summer 2025. <a href="https://forms.gle/PzzYXy6oftQbPrVbA" className={custom.emailLink}>Applications</a> for these positions are due no later than <u>Sunday, June 1 at 11:59pm ET.</u>  For more information on these positions, the application process, and required training dates, please visit this link <a href="https://docs.google.com/document/d/133wkup3s6_AJDdkxak-mYvCXcQEIOBfZ" className={custom.emailLink}>here</a>.</div>
                             </Row>
                         </Col>
                     </Container>
-                            <div className='simpleFlex verticalAlign size42Font weight900 padBottom40 padTop80'>Available Volunteer Positions
+                            <div className='simpleFlex verticalAlign size42Font weight900 padBottom40 padTop80'>Available Positions
                             </div>
                     <div className='volPosGrid '>
                         <div>

@@ -45,8 +45,8 @@ const theOpenSpace = (props) => {
                                 <Container>
                                     <Row>
                                         <Col className="d-flex justify-content-center">
-                                            <button type="button" data-cal-namespace="openspace" data-cal-link="believeny/openspace" data-cal-config='{"layout":"month_view","theme":"light"}'
-                                            className={`btn btn-dark mt-4 mb-5 mx-0 rounded-5 fw-bold w-100 ${custom.mainButton} ${custom.maxWidth400px} `} onClick={calcom()}>Schedule Appointment</button>
+                                            <div data-cal-namespace="openspace" data-cal-link="believeny/openspace" data-cal-config='{"layout":"month_view","theme":"light"}'
+                                            className={`btn btn-dark mt-5 mb-5 mx-0 rounded-5 fw-bold ${custom.scheduleApp}`} onClick={calcom()}>Schedule Appointment</div>
                                         </Col>
                                     </Row>
                                 </Container>

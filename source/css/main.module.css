@@ -9,14 +9,10 @@
     --color3: #AFB0C7;
     --iconColor: #5d55ce;
 
-    --no-of-slides: 7;
+    --no-of-slides: 8;
     --slides-in-view: 4;
     --slide-width: 500px;
     --iteration-time: 42s;
-}
-
-html {
-    
 }
 
 body {
@@ -35,7 +31,6 @@ a {
 }
 
 .eventAttributes {
-
     position: absolute;
     width: 100%;
     height: 100%;
@@ -121,9 +116,25 @@ a {
     width: 90%;
     max-width: 240px;
     height: 55px;
-    background-color: #118cff;
+    background-color: #f5dd42;
+    color: black;
     border: 1px solid #212529;
     font-size: 28px;
+}
+
+.learnMoreButton {
+    background-color: #5D55CE;
+    color: white;
+    border: 2px solid #212529;
+    font-size: 28px;
+    width: 90%;
+    max-width: 240px;
+    height: 55px;
+}
+
+.scheduleApp {
+    composes: mainButton;
+    max-width: 400px;
 }
 
 .mainButtonContainer {
@@ -132,7 +143,7 @@ a {
 }
 
 .secondaryButton {
-    background-color: var(--iconColor);
+    color: black;
     border: unset;
     font-size: 24px;
 }
@@ -176,7 +187,7 @@ a {
 }
 
 .imageRestrict {
-    background: linear-gradient(to bottom,rgba(0, 0, 0, 0) 40%, rgb(0, 0, 0)), url('../images/homepage/IMG_5998.jpg');
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0) 40%, rgb(0, 0, 0)), url('../images/homepage/Home page.jpg');
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -185,8 +196,9 @@ a {
     height: 700px;
 }
 
-.socialMediaSizing {
-    
+.emailLink {
+    color: #5D55CE;
+    text-decoration: underline;
 }
 
 @keyframes slide {
@@ -219,6 +231,7 @@ a {
 
 .shrinkImage {
     width: 500px;
+    height: 375px;
 }
 
 .customPaddingTop {
@@ -417,7 +430,6 @@ a {
     }
 
     .imageRestrict {
-        background: linear-gradient(to bottom,rgba(0, 0, 0, 0) 40%, rgb(0, 0, 0)), url('../images/homepage/IMG_5998.jpg');
         width: 100%;
         background-size: cover;
         background-repeat: no-repeat;

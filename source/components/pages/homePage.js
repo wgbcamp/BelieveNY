@@ -5,7 +5,7 @@ import custom from '../../css/main.module.css';
 
 import donationPhoto from "../../images/homepage/Homepage.PNG";
 import imposter from "../../images/homepage/IMG_4750.jpg";
-import thanksgiving from "../../images/events/thanksgiving2024/IMG_9487.jpeg"
+import thanksgiving from "../../images/events/thanksgiving2024/IMG_9487.jpeg";
 import communityAdvocates from '../../images/homepage/CommunityAdvocates.jpg';
 import handingOutClothes from '../../images/homepage/Handingoutclothes.jpg';
 import trio from '../../images/homepage/Trio.jpg';
@@ -14,7 +14,7 @@ import bigGroup from '../../images/homepage/bigGroup.jpg';
 import tableBending from '../../images/homepage/tableBending.jpg';
 import servingFood from '../../images/homepage/ServingFood.jpg';
 import mentalHealthFair from '../../images/homepage/Mentalhealthfair.jpg';
-
+import groupPhotoOutside from '../../images/homepage/IMG_5998.jpg';
 
 const newHome3 = () => {
 
@@ -80,7 +80,7 @@ const newHome3 = () => {
                 <div className={`d-flex justify-content-center mb-2`}> 
                     <div className={`mb-5 mt-2 pt-1  ${custom.imageRestrict} ${custom.missionStatementFlex}`}>
                         <div className={`mb-1 mx-4 ${custom.titleStatement}`}>
-                            <div>ADVANCING OUR CITY & EMPOWERING NEW YORKERS</div>
+                            <div>ADVANCING OUR HOME & EMPOWERING NEW YORKERS!!</div>
                         </div>
                         <div>
                             <a href="https://www.zeffy.com/en-US/donation-form/00f36686-7c94-4536-9b01-f6705c56e289" 
@@ -103,10 +103,7 @@ const newHome3 = () => {
                                 <i className={`${custom.iconColor} fa-solid fa-handshake-angle fa-3x mb-2`}></i>
                                 <div className={`${custom.categoryFont}`}>Our Mission</div>
                                 <div className={`${custom.customPaddingTop}  ${custom.descriptionFont}`}>
-                                    Believe New York is committed to
-                                    uplifting all individuals and families
-                                    navigating the challenges of poverty,
-                                    abuse, and mental health issues.
+                                Believe New York is dedicated to uplifting individuals and families facing challenges that impact their well-being, including—but not limited to—poverty, abuse, and mental health concerns.
                                 </div>
                                 <div className={`${custom.separator}`}></div>
                                 <i className={`fa-solid fa-people-group fa-3x mb-2 ${custom.iconColor}`}></i>
@@ -134,7 +131,7 @@ const newHome3 = () => {
                             <Col md={2}></Col>
                             <Col md={4} className='order-md-1 order-first d-flex justify-content-center flex-column'>
                                 <div className={`${custom.largerDescriptionFont} `}>
-                                    Addressing these concerns goes beyond providing immediate relief.
+                                Our programs, projects, and events are designed to work synergistically to address the complex needs of our clients and provide lasting relief.
                                 </div>
                                 <div className={` ${custom.descriptionFont} mt-3 mb-5`}>
                                     We have two core programs, and several ongoing initiatives, that work
@@ -151,8 +148,8 @@ const newHome3 = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="/theOpenSpace" onClick={() => window.scrollTo(0,0)}>
-                                        <button type="button" className={`btn btn-dark mt-4 mb-5  rounded-5 fw-bold ${custom.mainButton}`}>Learn more</button>
+                                    <a href="/theOpenSpace" className="d-flex justify-content-center" onClick={() => window.scrollTo(0,0)}>
+                                        <button type="button" className={` btn btn-dark mt-4 mb-5 rounded-5 fw-bold mx-0 ${custom.learnMoreButton}`}>Learn more</button>
                                     </a>
                                 </div>
                             </div>
@@ -164,8 +161,8 @@ const newHome3 = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="/getHelp" onClick={() => window.scrollTo(0,0)}>
-                                        <button type="button" className={`btn btn-dark mt-4 mb-5  rounded-5 fw-bold ${custom.mainButton}`}>Learn more</button>
+                                    <a href="/getHelp" className="d-flex justify-content-center" onClick={() => window.scrollTo(0,0)}>
+                                        <button type="button" className={`btn btn-dark mt-4 mb-5 mx-0 rounded-5 fw-bold ${custom.learnMoreButton}`}>Learn more</button>
                                     </a>
                                 </div>
                             </div>
@@ -207,6 +204,9 @@ const newHome3 = () => {
                                 <img src={servingFood} className={custom.shrinkImage}></img>
                             </div>
                             <div className={custom.animateSlider}>
+                                <img src={groupPhotoOutside} className={custom.shrinkImage}></img>
+                            </div>
+                            <div className={custom.animateSlider}>
                                 <img src={communityAdvocates} className={custom.shrinkImage}></img>
                             </div>
                             <div className={custom.animateSlider}>
@@ -226,6 +226,9 @@ const newHome3 = () => {
                             </div>
                             <div className={custom.animateSlider}>
                                 <img src={servingFood} className={custom.shrinkImage}></img>
+                            </div>
+                            <div className={custom.animateSlider}>
+                                <img src={groupPhotoOutside} className={custom.shrinkImage}></img>
                             </div>
                         </div>
                    
@@ -263,7 +266,7 @@ const newHome3 = () => {
                                 </div>
                                 <div className='mb-4'>
                                     <a href="https://www.zeffy.com/en-US/donation-form/00f36686-7c94-4536-9b01-f6705c56e289">                 
-                                        <button type="button" className={` mt-4 me-3 rounded-5 fw-bold text-white ${custom.mainButton} ${custom.secondaryButton}`}>Donate now</button>
+                                        <button type="button" className={` mt-4 me-3 rounded-5 fw-bold ${custom.mainButton} ${custom.secondaryButton}`}>Donate</button>
                                     </a>  
                                 </div>
                             </div>
@@ -310,7 +313,7 @@ const newHome3 = () => {
                                 <Col xs={3} className='d-flex justify-content-center align-items-center '>
                                     <i className={`fa-brands fa-leanpub fa-3x ${custom.iconColor} `}></i>
                                 </Col>
-                                <Col xs={7} className='d-flex justify-content-start align-items-center fs-3 fw-semibold'>Read our impact report, see our accomplishment, and hear more feedback from our clients.</Col>
+                                <Col xs={7} className='d-flex justify-content-start align-items-center fs-3 fw-semibold'>Read our impact report, see our accomplishments, and learn more about the feedback from the people we serve!</Col>
                                 <Col xs={2} className='d-flex justify-content-center align-items-center'>
                                     <a href="/impactReport" onClick={() => window.scrollTo(0,0)}>
                                         <button type="button" className={`btn btn-dark ${custom.shrinkButton} rounded-5 py-2`}>
@@ -330,7 +333,7 @@ const newHome3 = () => {
                                 <div className={`mt-3 ${custom.sponsorDescription}`}>We're looking to partner with more locally run businesses to help ensure every New Yorker is getting the help they need.</div>
                                 <div className='mb-4'>
                                     <a href="/eventSponsors" onClick={() => window.scrollTo(0,0)}>                   
-                                        <button type="button" className={`mt-4 me-3 rounded-5 fw-bold text-white ${custom.mainButton} ${custom.secondaryButton}`}>Contribute</button>
+                                        <button type="button" className={`mt-4 me-3 rounded-5 fw-bold ${custom.mainButton} ${custom.secondaryButton}`}>Contribute</button>
                                     </a>
                                 </div>
                             </div>
