@@ -439,6 +439,14 @@ ul.no-bullets{
 .volPosTitle{
     padding-top: 35px;
     padding-bottom: 20px;
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+.volPosSubtitle {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-weight: 600;
 }
 
 .volPosText{

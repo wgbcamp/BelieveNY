@@ -30,17 +30,18 @@ const getHelp = (props) => {
                     </div>
                     <div className="simpleFlex">
                         <div className="hereForYouGrid max1090">
-                            <div className="simpleFlex hereForYouInner centerText">
+                            {/* <div className="simpleFlex hereForYouInner centerText">
                                 <b className="size42Font padTop40 center1200 smallText500">We are here for you.</b>
                                 <div className="size18Font padBottom201200 smallerText500">We are here to listen and help you through your next steps.</div>
 
-                            </div>
+                            </div> */}
                             <div className={`simpleFlex center1200 verticalAlign `}>
                                 <Container>
                                     <Row>
-                                        <Col className="d-flex justify-content-center">
-                                            <div type="button" data-cal-namespace="intake" data-cal-link="believeny/intake" data-cal-config='{"layout":"month_view","theme":"light"}'
-                                            className={`btn btn-dark mt-4 mb-5 mx-1 rounded-5 fw-bold w-100 ${custom.scheduleApp}`} onClick={calcom()}>SCHEDULE APPOINTMENT</div>
+                                        <Col className="text-center padTop80">
+                                            {/* <div type="button" data-cal-namespace="intake" data-cal-link="believeny/intake" data-cal-config='{"layout":"month_view","theme":"light"}'
+                                            className={`btn btn-dark mt-4 mb-5 mx-1 rounded-5 fw-bold w-100 ${custom.scheduleApp}`} onClick={calcom()}>SCHEDULE APPOINTMENT</div> */}
+                                            Thank you for your interest in our services! At this time, we are not accepting new clients until June 30, 2025 as we are updating our programs based on community feedback to better serve you. If you'd like to be added to our waitlist, please email us at <a href="mailto:gethelp@believeny.org" className={custom.emailLink}>gethelp@believeny.org</a> and we'll reach out to you after June 30 with next steps! Thanks again and talk soon!
                                         </Col>
                                     </Row>
                                 </Container>
@@ -48,7 +49,7 @@ const getHelp = (props) => {
                             </div>
                         </div>
                     </div>
-                    <div className='openSpaceDesc padBottom80'>
+                    <div className='openSpaceDesc padBottom80 marginTop40'>
                         <div className="centerText size42Font padTop40 padBottom40">
                             <b>Learn about Get Help</b>
                         </div>
