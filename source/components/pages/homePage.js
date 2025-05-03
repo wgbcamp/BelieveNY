@@ -87,7 +87,7 @@ const newHome3 = () => {
                                 className={`${custom.mainButtonContainer}`}>
                                 <button type="button" className={`btn btn-dark mt-4 mb-5 rounded-5 fw-bold ${custom.mainButton}`}>
                                     <div className="d-flex justify-content-center align-items-center">
-                                        Donate
+                                        Donate Now
                                     </div> 
                                 </button>
                             </a>
@@ -131,11 +131,7 @@ const newHome3 = () => {
                             <Col md={2}></Col>
                             <Col md={4} className='order-md-1 order-first d-flex justify-content-center flex-column'>
                                 <div className={`${custom.largerDescriptionFont} `}>
-                                Our programs, projects, and events are designed to work synergistically to address the complex needs of our clients and provide lasting relief.
-                                </div>
-                                <div className={` ${custom.descriptionFont} mt-3 mb-5`}>
-                                    We have two core programs, and several ongoing initiatives, that work
-                                    synergistically to address the complex needs of our clients.
+                                Every program, project, and event we offer is part of a larger mission—to respond in moments of need, improve well-being, and help build a stronger, more secure future for every person we serve.
                                 </div>
                             </Col>
                         </Row>

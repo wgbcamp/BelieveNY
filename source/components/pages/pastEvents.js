@@ -57,16 +57,16 @@ const summerHaircuts = [summer1, summer2, summer3, summer4, summer5, summer6, su
 
 const values = [
     {
-        title: "Resource Fairs", description: "After receiving many requests, we began hosting resource fairs to connect people directly with essential services and support. Our first fair—a Mental Health Resource Fair in July 2024—served hundreds of individuals and featured over 20 mental health organizations and programs. These fairs bring together a wide range of community partners to offer information, support, and direct assistance in one accessible location. Since then, we’ve expanded to include Affordable Housing Fairs and additional Mental Health Fairs. Each event is designed to reduce barriers and help people easily access the resources they need to thrive.", images: resourceFairs
+        title: "Resource Fairs", description: "In response to many community requests, we launched our first Resource Fair in July 2024—our Mental Health Resource Fair, which welcomed over 100 attendees and featured over 20 community organizations. Since then, we've expanded our resource fairs to include Affordable Housing Fairs and additional Mental Health-focused events. These fairs connect people directly with essential services, offering on-the-spot information, support, and care. Designed to reduce barriers, our fairs make critical resources accessible to all who need them.", images: resourceFairs
     },
     {
-        title: "Clothes & Meal Handouts", description: "We started by handing out hot meals on Thanksgiving 2020 in Herbert Von King Park in Brooklyn. Since then, we’ve held regular food distributions in public spaces across the city—including the Upper West Side, Alphabet City, Washington Square Park, and Bed-Stuy. Through these efforts, we've fed thousands of New Yorkers in need of a meal and seasonal clothing.", images: clothesHandouts
+        title: "Hot Meal & Clothing Handouts", description: "What began with hot meal distributions in Herbert Von King Park on Thanksgiving 2020 has grown into regular food and clothing handouts across NYC. Through these events, we've reached thousands of New Yorkers in neighborhoods including the Upper West Side, Alphabet City, Washington Square Park, and Bed-Stuy—ensuring that anyone in need can access a warm meal and seasonal clothing.", images: clothesHandouts
     },
     {
-        title: "Community Cleanup", description: "Believe New York Volunteers care about your community, and believe that everyone should live in a safe and clean environment. We've held clean up events in Bushwick, Harlem, the Bronx, LES, and Astoria. ", images: cleanup
+        title: "Community Cleanups", description: "We believe every New Yorker deserves to live in a clean, healthy, safe neighborhood. Our volunteers have led cleanup events in Bushwick, Harlem, the Bronx, the Lower East Side, and Astoria, demonstrating that collective care for our communities starts with all of us.", images: cleanup
     },
     {
-        title: "Free Summer Hair Cuts and Clothes", description: "Like with our Hot Meals and Warm Clothes events, we aspire to make sure that everyone in NYC has access to basic hygiene, clothing, and safety. This past summer we partnered with local stylists at Cutler Salon to give free hair cuts to over 100 people in Washington Square Park, while also handing summer clothes and cool meals.", images: summerHaircuts
+        title: "Summer Haircuts", description: "In the summer of 2021, through a partnership with a local salon, we provided free haircuts to hundreds of people in Washington Square Park, creating moments of dignity and connection. Alongside fresh cuts, we distributed cool summer meals and lightweight clothing to help neighbors stay nourished and comfortable in the heat. These efforts, like our Hot Meals and Warm Clothes events, reflect our commitment to meeting basic needs with compassion and care. ", images: summerHaircuts
     }
 ]
 

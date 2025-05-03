@@ -44,7 +44,10 @@ const theOpenSpace = (props) => {
                             <div className={`simpleFlex center1200 verticalAlign `}>
                                 <Container>
                                     <Row>
-                                        <Col className=" text-center">
+                                    <div className="d-flex justify-content-center align-items-center padTop20" style={{height: "80px", color: "rgb(255,59,48)"}}>
+                                            <i class="fa-solid fa-circle-exclamation fa-2xl"></i>
+                                        </div>
+                                        <Col className=" text-center padTop40 padBottom40">
                                             {/* <div data-cal-namespace="openspace" data-cal-link="believeny/openspace" data-cal-config='{"layout":"month_view","theme":"light"}'
                                             className={`btn btn-dark mt-5 mb-5 mx-0 rounded-5 fw-bold ${custom.scheduleApp}`} onClick={calcom()}>Schedule Appointment</div> */}
                                             Thank you for your interest in our services! At this time, we are not accepting new clients until June 30, 2025 as we are updating our programs based on community feedback to better serve you. If you'd like to be added to our waitlist, please email us at <a href="mailto:gethelp@believeny.org" className={custom.emailLink}>gethelp@believeny.org</a> and we'll reach out to you after June 30 with next steps! Thanks again and talk soon!
