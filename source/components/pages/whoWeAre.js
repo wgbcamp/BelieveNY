@@ -40,7 +40,7 @@ const people = [
     {name: "Chris Kang", title: "Research Coordinator & Senior Trainer", photo: Chris, pronoun: "(she/her)",  story: "", email: ""},
     {name: "Savannah Lynn", title: "Operations Consultant", photo: Savannah, pronoun: "(she/they)",  story: "", email: ""},
     {name: "Ashley Fuentes-Miranda", title: "Advocate Liaison & Board Secretary", photo: Ashley, pronoun: "(she/her)",  story: "", email: ""},
-    {name: "Elizabeth Krauthamer", title: "Outreach Manager", photo: Elizabeth, pronoun: "(she/her)"},
+    {name: "Elizabeth K.", title: "Outreach Manager", photo: Elizabeth, pronoun: "(she/her)"},
     {name: "Zhijiao Gao", title: "Project Manager", photo: Zhijiao, pronoun: "(she/her)"},
     ];
 
