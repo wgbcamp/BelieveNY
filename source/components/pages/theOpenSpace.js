@@ -43,7 +43,7 @@ const theOpenSpace = (props) => {
                             <div className={`simpleFlex center1200 verticalAlign `}>
                                 <Container>
                                     <Row>
-                                        <Col className="text-center  padBottom40">
+                                        <Col className="text-center padBottom40">
                                             <div data-cal-namespace="openspace" data-cal-link="believeny/openspace" data-cal-config='{"layout":"month_view","theme":"light"}'
                                             className={`btn btn-dark mt-5 mb-5 mx-0 rounded-5 fw-bold ${custom.scheduleApp}`} onClick={calcom()}>Schedule Appointment</div>
                                         </Col>
@@ -70,11 +70,11 @@ const theOpenSpace = (props) => {
                                         </div>
                                     </div>
                                     <div className='boldOSTitle alignLeft color2 padTop20'>
-                                        Schedule a session with a client advocate
+                                        Schedule a session with a Client Advocate
                                     </div>
                                     <div className="size18Font OSExplanation lineHeight25 textAlignRight padTop20 color2">
                                         <div>
-                                        Select an available time to schedule a session with one of our trained client advocates. We are trained in active listening, empathy, and compassion and will provide support and resource referrals to help you through during this difficult time.
+                                        Select an available time to schedule a session with one of our trained Client Advocates. We are trained in active listening, empathy, and compassion and will provide support and resource referrals to help you through during this difficult time.
                                         <div className="padTop20"></div>
                                         Our active listeners will not question, criticize, interrupt, nor judge as you tell us about your situation. We are here to help get you through it.
                                         </div>
