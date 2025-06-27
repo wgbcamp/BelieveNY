@@ -3555,14 +3555,8 @@ input[type="email"]::placeholder{
         background-color: black;
     }
 
-    .hereForYouGrid{
-        display: grid;
-        grid-template-rows: 30% 1fr;
-    }
-
     .hereForYouInner{
         display: grid;
-        grid-template-rows: 105px 60px;
     }
 
     .color1{
@@ -3615,7 +3609,7 @@ input[type="email"]::placeholder{
     .openSpaceWhatIsGrid{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, 280px);
+        grid-template-rows: repeat(3, auto);
         width: 1050px;
         padding-left: 20px;
         padding-right: 20px;

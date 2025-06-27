@@ -51,7 +51,7 @@ const getHelp = (props) => {
                                 <Col className={`${custom.categoryFont} mb-5`} xs={12} lg={6}>
                                     How Does BNY Support Clients?
                                 </Col>
-                                <Col className='fw-semibold'>
+                                <Col className='fw-normal'>
                                     <Row>
                                         <Col>
                                             The best thing about BNY (in our opinion!) is that we provide <b>ongoing, personalized support</b> to everyone who reaches out, regardless of location, language, situation, background, or identity. We start by listening to your needs, your goals, and your priorities, and work with you to build a plan that helps you move forward.
@@ -89,7 +89,7 @@ const getHelp = (props) => {
                                 <Col className={`${custom.categoryFont} mb-5`} xs={12} lg={6}>
                                     What Can I Expect From a Client Advocate?
                                 </Col>
-                                <Col className='fw-semibold'>
+                                <Col className='fw-normal'>
                                     <Row>
                                         <Col>
                                             Client Advocates are our trained volunteers who work directly with people seeking support. They dedicate regular weekly shifts to meet with clients and research resources and solutions on their behalf. Most of our Client Advocates are students in clinical/counseling psychology, social services, and other help-seeking professions.
@@ -125,7 +125,7 @@ const getHelp = (props) => {
                                 <Col className={`${custom.categoryFont} mb-5`} xs={12} lg={6}>
                                     Fast Track Option
                                 </Col>
-                                <Col className='fw-semibold'>
+                                <Col className='fw-normal'>
                                     <Row>
                                         <Col>
                                             Need quick support but not ongoing sessions?
@@ -151,7 +151,7 @@ const getHelp = (props) => {
                                 <Col className={`${custom.categoryFont} mb-5`} xs={12} lg={6}>
                                     Can I Use The Open Space and GetHelp?
                                 </Col>
-                                <Col className='fw-semibold'>
+                                <Col className='fw-normal'>
                                     <Row>
                                         <Col>
                                             Yes! Many of our clients benefit from using both services.
@@ -177,7 +177,7 @@ const getHelp = (props) => {
                                 <Col className={`${custom.categoryFont} mb-5`} xs={12} lg={6}>
                                     Are BNY’s Services Free?
                                 </Col>
-                                <Col className='fw-semibold'>
+                                <Col className='fw-normal'>
                                     <Row>
                                         <Col>
                                             Yes! We are a nonprofit, and <b>all services are 100% free of charge</b>.
@@ -189,7 +189,7 @@ const getHelp = (props) => {
                                 <Col className={`${custom.categoryFont} mb-5`} xs={12} lg={6}>
                                     Disclaimer!
                                 </Col>
-                                <Col className='fw-semibold'>
+                                <Col className='fw-normal'>
                                     <Row>
                                         <Col>
                                             <div>
@@ -217,11 +217,11 @@ const getHelp = (props) => {
                                 <Col className={`${custom.categoryFont} mb-5`} xs={12} lg={6}>
                                     Have Questions or Want to Work With Us?
                                 </Col>
-                                <Col className='fw-semibold'>
+                                <Col className='fw-normal'>
                                     <Row>
                                         <Col>
                                             <div>
-                                                For questions, referrals, or to work with us, please email us at <u><a href="gethelp@believeny.org" className={custom.emailLink}>gethelp@believeny.org</a></u> or book an initial intake <a href="https://cal.com/believeny/intake" className={custom.emailLink}>here!</a>
+                                                For questions, referrals, or to work with us, please email us at <u><a href="mailto:gethelp@believeny.org" className={custom.emailLink}>gethelp@believeny.org</a></u> or book an initial intake <a href="https://cal.com/believeny/intake" className={custom.emailLink}>here!</a>
                                             </div>
                                         </Col>
                                     </Row>
