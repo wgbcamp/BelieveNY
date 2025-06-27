@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import styles from '../../css/footer.module.css'
 import SiteLogo from '../../images/general/BNYLogoFull-02.png'
 import '../../css/main.css';
-import candidPlatinum from '../../images/footer/profile-platinum2024-seal.svg'
+import candidPlatinum from '../../images/footer/profile-platinum2025-seal.png'
 
 const newFooter = (props) => {
 
@@ -38,7 +38,7 @@ const newFooter = (props) => {
                         <div className={styles.copyrightAndAwardFlex}>
                             <div className={styles.logoCopyrightFlex}>
                                 <div className={styles.copyright}>
-                                    <div className={styles.copyrightText}>© 2024 by Believe New York Philanthropies, Inc.</div>
+                                    <div className={styles.copyrightText}>© 2025 by Believe New York Philanthropies, Inc.</div>
                                     <div className="padBottom5">For prospective clients:</div>
                                     <div className={styles.email}> gethelp@believeny.org</div>
                                     <div className={styles.phone}> (347) 692-0011</div>

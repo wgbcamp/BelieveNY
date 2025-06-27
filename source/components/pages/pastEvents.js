@@ -49,13 +49,28 @@ import rF16 from '../../images/events/resourceFairs/IMG_6355.jpeg'
 import rF17 from '../../images/events/resourceFairs/IMG_6357.jpeg'
 import rF18 from '../../images/events/resourceFairs/IMG_6358.jpeg'
 import rF19 from '../../images/events/resourceFairs/Mentalhealthfair.jpeg'
+import giftDrive1 from '../../images/events/holidayGiftDrives/giftDrive1.png'
+import giftDrive2 from '../../images/events/holidayGiftDrives/giftDrive2.png'
+import giftDrive3 from '../../images/events/holidayGiftDrives/giftDrive3.png'
+import giftDrive4 from '../../images/events/holidayGiftDrives/giftDrive4.png'
+import giftDrive5 from '../../images/events/holidayGiftDrives/giftDrive5.png'
+import giftDrive6 from '../../images/events/holidayGiftDrives/giftDrive6.png'
+import giftDrive7 from '../../images/events/holidayGiftDrives/giftDrive7.png'
+import giftDrive8 from '../../images/events/holidayGiftDrives/giftDrive8.png'
+import giftDrive9 from '../../images/events/holidayGiftDrives/giftDrive9.png'
+import giftDrive10 from '../../images/events/holidayGiftDrives/giftDrive10.png'
+
 
 const resourceFairs = [rF1, rF2, rF3, rF4, rF5, rF6, rF7, rF9, rF10, rF11, rF12, rF13, rF14, rF15, rF16, rF17, rF18, rF19];
 const clothesHandouts = [clothes1, clothes2, clothes3, clothes4, clothes5, clothes6, clothes7, clothes8];
 const cleanup = [cleanup1, cleanup2, cleanup3, cleanup4, cleanup5, cleanup6, cleanup7, cleanup8];
 const summerHaircuts = [summer1, summer2, summer3, summer4, summer5, summer6, summer7, summer8, summer9, summer10, summer11, summer12, summer13];
+const holidayGiftDrives = [giftDrive1, giftDrive2, giftDrive3, giftDrive4, giftDrive5, giftDrive6, giftDrive7, giftDrive8, giftDrive9, giftDrive10];
 
 const values = [
+    {
+        title: "Holiday Gift Drives", description: "Since 2021, we’ve hosted annual Holiday Gift Drives to bring joy and relief to families experiencing poverty during the holiday season—particularly single mothers and families living in shelters. Each year, we collect and distribute new toys, books, clothing, and other caregiver-requested items. All gifts are thoughtfully wrapped and hand-delivered to preserve dignity and respect for the families we serve. In 2024, we held our largest drive yet, partnering with Toys for Tots and Sprout Society to provide over 250 gifts to more than 144 children. Since launching, our drives have helped over 500 children receive meaningful, personalized gifts for the holidays.", images: holidayGiftDrives
+    },
     {
         title: "Resource Fairs", description: "In response to many community requests, we launched our first Resource Fair in July 2024—our Mental Health Resource Fair, which welcomed over 100 attendees and featured over 20 community organizations. Since then, we've expanded our resource fairs to include Affordable Housing Fairs and additional Mental Health-focused events. These fairs connect people directly with essential services, offering on-the-spot information, support, and care. Designed to reduce barriers, our fairs make critical resources accessible to all who need them.", images: resourceFairs
     },
@@ -74,7 +89,7 @@ const pastEvents = () => {
 
     return(
         <div>
-            <div className={`mt-5 pt-5 ${custom.categoryFont} text-center`}>Our events help your community</div>
+            <div className={`mt-5 pt-5 ${custom.categoryFont} text-center`}>Events that support our community!</div>
             <Container className={`${custom.mainButtonContainer} d-flex justify-content-center`}>
                 <a href="/donate">
                     <button type="button" className={`btn btn-dark mt-5 rounded-5 fw-bold  ${custom.mainButton} ${custom.eventsDonateButton} ${custom.eDBFix}`}>

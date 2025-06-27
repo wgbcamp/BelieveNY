@@ -3,22 +3,22 @@ import { Container, Row, Col } from 'react-bootstrap';
 import custom from '../../css/main.module.css';
 
 const volunteer = () => {
-    return(
+    return (
         <div>
             <div className="simpleFlex">
             </div>
-        <div className='simpleFlex padTop40'>
+            <div className='simpleFlex padTop40'>
                 <div className='maxWidth width80Per'>
-                <div className="padTop20"></div>
+                    <div className="padTop20"></div>
                     <Container className=" mt-5">
                         <Col>
                             <Row>
                                 <div>
-                                We believe that <u>everyone</u> has valuable skills to contribute to our mission! As most of our volunteers are students, we organize training for volunteers at the end of each semester and the beginning of the next. This ensures that we have a well-coordinated and dedicated team to support our clients and community. 
+                                    We believe that <u>everyone</u> has valuable skills to contribute to our mission! As most of our volunteers are students, we organize training for volunteers at the end of each semester and the beginning of the next. This ensures that we have a well-coordinated and dedicated team to support our clients and community.
                                 </div>
-                                
+
                                 <div className='mt-3'>
-                                Therefore, we host trainings for Client and Community Advocate positions on a need basis during the following periods once or twice a year:
+                                    Therefore, we host trainings for Client and Community Advocate positions on a need basis during the following periods once or twice a year:
                                 </div>
                                 <ul className="mt-3 ms-5">
                                     <li>August or September</li>
@@ -28,13 +28,11 @@ const volunteer = () => {
                                 {/* here */}
                                 <div>If you're interested in learning more or joining our team as an Advocate, and/or other volunteer opportunities listed below, please email <a className={custom.emailLink} href="mailto:admin@believeny.org">admin@believeny.org</a>. </div>
                                 <div className="mt-3">Thank you and we look forward to working with you to improve our community well-being!</div>
-                                <b className="mt-3"><u>Recruitment Update!</u></b>
-                                <div className='mt-3'>We are now recruiting Client and Community Advocates to start Summer 2025. <a href="https://forms.gle/PzzYXy6oftQbPrVbA" className={custom.emailLink}>Applications</a> for these positions are due no later than <u>Sunday, June 1 at 11:59pm ET.</u>  For more information on these positions, the application process, and required training dates, please visit this link <a href="https://docs.google.com/document/d/133wkup3s6_AJDdkxak-mYvCXcQEIOBfZ" className={custom.emailLink}>here</a>.</div>
                             </Row>
                         </Col>
                     </Container>
-                            <div className='simpleFlex verticalAlign size42Font weight900 padBottom40 padTop80'>Available Positions
-                            </div>
+                    <div className='simpleFlex verticalAlign size42Font weight900 padBottom40 padTop80'>Available Positions
+                    </div>
                     <div className='volPosGrid '>
                         <div>
                             <div className="volPosTitle">BNY Client Advocate</div>
@@ -106,8 +104,8 @@ const volunteer = () => {
                             <div>Additional peer groups will be introduced based on community needs. Virtual groups will also be offered. Peer Groups serve as an access point for BNY support, resources, and GetHelp enrollment.</div>
 
 
-                        </div>             
-                    </div>  
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
