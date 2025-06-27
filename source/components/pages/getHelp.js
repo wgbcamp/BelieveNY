@@ -43,7 +43,7 @@ const getHelp = (props) => {
                         </div>
                     </div>
                     <div className='openSpaceDesc padBottom80'>
-                        <div className="centerText size42Font padTop40 padBottom40">
+                        <div className="centerText size42Font padTop80 padBottom40">
                             <b>GetHelp with Believe New York</b>
                         </div>
                         <Container>
