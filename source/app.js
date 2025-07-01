@@ -53,26 +53,25 @@ function App(){
         { path: '/faq', component: Faq },
         { path: '/foundingSupporters', component: FoundingSupporters },
         { path: '/getHelp', component: GetHelp },
-        { path: '/gethelp', component: GetHelp },
         { path: '/environmentalProjects', component: EnvironmentalProjects },
         { path: '/upcomingEvents', component: UpcomingEvents },
         { path: '/pastEvents', component: PastEvents },
         { path: '/eventSponsors', component: EventSponsors },
-        { path: '/SpecialEventsFund', component: SpecialEventsFund },
         { path: '/joinus', component: JoinUs },
         { path: '/donate', component: Donate },
         { path: '/donationformQR', component: DonationFormQR },
         { path: '/collegeresources', component: CollegeResources },
         { path: '/operationCommunitySuccess', component: OperationCommunitySuccess },
         { path: '/theOpenSpace', component: TheOpenSpace },
-        { path: '/scheduleBooking', component: Donate },
         { path: '/eventSponsors', component: EventSponsors },
+        { path: '/SpecialEventsFund', component: SpecialEventsFund },
+        { path: '/scheduleBooking', component: Donate },
         { path: '/cancelSession', component: CancelSession },
     ];
 
     var route;
     
-    const test = routes.find((r) => r.path === currentRoute);
+    const test = routes.find((r) => r.path.toLowerCase() === currentRoute.toLowerCase());
     
     if (test === undefined) {
         route = { path: '/', component: Homepage};
