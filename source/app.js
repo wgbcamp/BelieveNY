@@ -64,9 +64,9 @@ function App(){
         { path: '/operationCommunitySuccess', component: OperationCommunitySuccess },
         { path: '/theOpenSpace', component: TheOpenSpace },
         { path: '/eventSponsors', component: EventSponsors },
-        { path: '/SpecialEventsFund', component: SpecialEventsFund },
-        { path: '/scheduleBooking', component: Donate },
-        { path: '/cancelSession', component: CancelSession },
+        // { path: '/SpecialEventsFund', component: SpecialEventsFund },
+        // { path: '/scheduleBooking', component: Donate },
+        // { path: '/cancelSession', component: CancelSession },
     ];
 
     var route;
