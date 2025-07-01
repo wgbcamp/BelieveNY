@@ -53,6 +53,7 @@ function App(){
         { path: '/faq', component: Faq },
         { path: '/foundingSupporters', component: FoundingSupporters },
         { path: '/getHelp', component: GetHelp },
+        { path: '/gethelp', component: GetHelp },
         { path: '/environmentalProjects', component: EnvironmentalProjects },
         { path: '/upcomingEvents', component: UpcomingEvents },
         { path: '/pastEvents', component: PastEvents },
