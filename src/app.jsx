@@ -2,30 +2,30 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import React, {useState, useEffect, createRef} from 'react'
 import './css/main.css';
-import Header from './components/items/header.js';
-import Footer from './components/items/footer.js';
-import Homepage from './components/pages/homePage.js';
-import WhoWeAre from './components/pages/whoWeAre.js';
-import DiversityInclusion from './components/pages/diversityInclusion';
-import FoundingSupporters from './components/pages/foundingSupporters';
-import GetHelp from './components/pages/getHelp';
-import TheOpenSpace from './components/pages/theOpenSpace';
-import EnvironmentalProjects from './components/pages/environmentalProjects';
-import ScheduleBooking from './components/pages/scheduleBooking';
-import UpcomingEvents from './components/pages/upcomingEvents';
-import PastEvents from './components/pages/pastEvents';
-import SpecialEventsFund from './components/pages/SpecialEventsFund';
-import Donate from './components/pages/donate';
-import EventSponsors from './components/pages/eventSponsors';
-import JoinUs from './components/pages/joinUs.js';
-import CancelSession from './components/pages/cancelSession';
-import FormHandler from './components/items/formHandler.js';
-import Faq from './components/pages/faq';
-import ImpactReport from './components/pages/impactReport';
-import DonationFormQR from './components/pages/donationFormQR';
-import DonateChoices from './components/items/donateChoices.js';
-import CollegeResources from './components/pages/collegeresources.js';
-import OperationCommunitySuccess from './components/pages/operationCommunitySuccess.js';
+import Header from './components/items/header.jsx';
+import Footer from './components/items/footer.jsx';
+import Homepage from './components/pages/homePage.jsx';
+import WhoWeAre from './components/pages/whoWeAre.jsx';
+import DiversityInclusion from './components/pages/diversityInclusion.jsx';
+import FoundingSupporters from './components/pages/foundingSupporters.jsx';
+import GetHelp from './components/pages/getHelp.jsx';
+import TheOpenSpace from './components/pages/theOpenSpace.jsx';
+import EnvironmentalProjects from './components/pages/environmentalProjects.jsx';
+import ScheduleBooking from './components/pages/scheduleBooking.jsx';
+import UpcomingEvents from './components/pages/upcomingEvents.jsx';
+import PastEvents from './components/pages/pastEvents.jsx';
+import SpecialEventsFund from './components/pages/SpecialEventsFund.jsx';
+import Donate from './components/pages/donate.jsx';
+import EventSponsors from './components/pages/eventSponsors.jsx';
+import JoinUs from './components/pages/joinUs.jsx';
+import CancelSession from './components/pages/cancelSession.jsx';
+import FormHandler from './components/items/formHandler.jsx';
+import Faq from './components/pages/faq.jsx';
+import ImpactReport from './components/pages/impactReport.jsx';
+import DonationFormQR from './components/pages/donationFormQR.jsx';
+import DonateChoices from './components/items/donateChoices.jsx';
+import CollegeResources from './components/pages/collegeresources.jsx';
+import OperationCommunitySuccess from './components/pages/operationCommunitySuccess.jsx';
 
 
 
