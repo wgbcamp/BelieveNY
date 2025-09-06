@@ -41,7 +41,7 @@ const people = [
     {name: "Chris Kang", title: "Research Consultant", photo: Chris, pronoun: "(she/her)",  story: "", email: ""},
     {name: "Savannah Lynn", title: "Operations Consultant", photo: Savannah, pronoun: "(she/they)",  story: "", email: ""},
     {name: "Ashley Fuentes-Miranda", title: "Advocate Liaison & Board Secretary", photo: Ashley, pronoun: "(she/her)",  story: "", email: "ashley@believeny.org"},
-    {name: "Elizabeth Krauthamer", title: "Marketing Manager", photo: Elizabeth, pronoun: "(she/her)", email: ""},
+    {name: "Lizzie K.", title: "Marketing Manager", photo: Elizabeth, pronoun: "(she/her)", email: ""},
     {name: "Zhijiao Gao", title: "Project Manager", photo: Zhijiao, pronoun: "(she/her)", email: "zhijiao@believeny.org"},
     {name: "Tiana Allen", title: "Co-Program Manager for Peer Groups & Research", photo: Tiana, pronoun: "(she/her)", email: "tiana@believeny.org"},
     {name: "Sandhya Sriram", title: " Co-Program Manager for Peer Groups & Research", photo: Sandhya, pronoun: "(she/her)", email: "sandhya@believeny.org"},
