@@ -26,6 +26,8 @@ import DonationFormQR from './components/pages/donationFormQR.jsx';
 import DonateChoices from './components/items/donateChoices.jsx';
 import CollegeResources from './components/pages/collegeresources.jsx';
 import OperationCommunitySuccess from './components/pages/operationCommunitySuccess.jsx';
+import MealHandout from './components/pages/mealHandout.jsx';
+
 
 
 
@@ -61,6 +63,7 @@ function App(){
         { path: '/donate', component: Donate },
         { path: '/donationformQR', component: DonationFormQR },
         { path: '/collegeresources', component: CollegeResources },
+        { path: '/mealhandout', component: MealHandout },
         { path: '/operationCommunitySuccess', component: OperationCommunitySuccess },
         { path: '/theOpenSpace', component: TheOpenSpace },
         { path: '/eventSponsors', component: EventSponsors },
