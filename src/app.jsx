@@ -1,7 +1,6 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 import React, {useState, useEffect, createRef} from 'react'
 import './css/main.css';
+
 import Header from './components/items/header.jsx';
 import Footer from './components/items/footer.jsx';
 import Homepage from './components/pages/homePage.jsx';
@@ -27,6 +26,8 @@ import DonateChoices from './components/items/donateChoices.jsx';
 import CollegeResources from './components/pages/collegeresources.jsx';
 import OperationCommunitySuccess from './components/pages/operationCommunitySuccess.jsx';
 import MealHandout from './components/pages/mealHandout.jsx';
+import WomenOwnedBusinesses from './components/pages/womenOwnedBusinesses.jsx';
+
 
 
 
@@ -67,6 +68,7 @@ function App(){
         { path: '/operationCommunitySuccess', component: OperationCommunitySuccess },
         { path: '/theOpenSpace', component: TheOpenSpace },
         { path: '/eventSponsors', component: EventSponsors },
+        { path: '/womenOwnedBusinesses', component: WomenOwnedBusinesses}
         // { path: '/SpecialEventsFund', component: SpecialEventsFund },
         // { path: '/scheduleBooking', component: Donate },
         // { path: '/cancelSession', component: CancelSession },

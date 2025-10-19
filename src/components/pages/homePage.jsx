@@ -1,3 +1,6 @@
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import React, { useRef, useState, useEffect } from 'react';
 import { Container, Row, Col, Image, Carousel } from 'react-bootstrap';
 

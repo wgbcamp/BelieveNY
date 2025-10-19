@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 99px;
     background-color: var(--color0);
 }
 
@@ -208,7 +207,7 @@
     font-size: 14px;
     font-weight: 400;
     display: grid;
-    grid-template-columns: repeat(4, minmax(70px, 100px));
+    grid-template-columns: repeat(5, minmax(70px, 140px));
     grid-template-rows: 69px auto;
     visibility: unset;
     height: unset;
@@ -240,6 +239,11 @@
 }
 
 .animatePopup[id="Events"]:hover ~ .popupRowsSeparator[id="Events"]{
+    transform: scale(1);
+    transition: transform 0.3s;
+}
+
+.animatePopup[id="Businesses Who Believe"]:hover ~ .popupRowsSeparator[id="Businesses Who Believe"]{
     transform: scale(1);
     transition: transform 0.3s;
 }

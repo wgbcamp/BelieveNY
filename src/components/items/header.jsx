@@ -1,6 +1,7 @@
 import React, {useState, useEffect, createRef} from 'react'
 import styles from '../../css/header.module.css'
 import SiteLogo from '../../images/general/BNYLogoFull-02.png'
+import womenOwnedBusinesses from '../pages/womenOwnedBusinesses';
 
 const newHeader = () => {
 
@@ -15,6 +16,8 @@ const newHeader = () => {
     const ourWorkContent = [["Get Help", "getHelp"],["The Open Space", "theOpenSpace"], ["Operation Community Success", "operationCommunitySuccess"]];
 
     const eventsContent = [["Upcoming Events", "upcomingEvents"],["Past Events", "pastEvents"],["Event Sponsors", "eventSponsors"],["Donate to Our Events", "https://www.zeffy.com/en-US/donation-form/00f36686-7c94-4536-9b01-f6705c56e289"]];
+
+    const bwbContent = [["Women-Owned Businesses", "womenOwnedBusinesses"], ["", "placeholder"], ["", "placeholder"]];
 
     //state holding dropdown states and arrays for sub categories on smaller viewports
     var [widthState, updateWS] = useState(false);
@@ -41,7 +44,7 @@ const newHeader = () => {
     }
 
     //arrays holding titles, links, and values for categories on larger displays (title, arrow, array content, redirect)
-    const largeWidthGridContent = [["About Us", "fa-solid fa-arrow-right", aboutUsContent], ["Our Work", "fa-solid fa-arrow-right", ourWorkContent], ["Events", "fa-solid fa-arrow-right", eventsContent], ["Join Us", "", [""], () => redirect("/joinus")]];
+    const largeWidthGridContent = [["About Us", "fa-solid fa-arrow-right", aboutUsContent], ["Our Work", "fa-solid fa-arrow-right", ourWorkContent], ["Events", "fa-solid fa-arrow-right", eventsContent], ["Businesses Who Believe", "fa-solid fa-arrow-right", bwbContent], ["Join Us", "", [""], () => redirect("/joinus")]];
 
     //popup state values for larger displays
     var [currentPopup, updateCP] = useState("");
@@ -51,13 +54,13 @@ const newHeader = () => {
             <div className={styles.centerAllGrid}>
             {/*grid for header bar */}
                 <div className={styles.headerGrid} id="headerGrid">
-                    <img src={SiteLogo} width="145" className={`${styles.cursorPointer} ${styles.siteLogo}`} onClick={() => redirect("/")}></img>
+                    <img src={SiteLogo} width="130" className={`${styles.cursorPointer} ${styles.siteLogo}`} onClick={() => redirect("/")}></img>
                     <div className={styles.centerLargeGrid}>
                         {/*above 1000px, large width menu appears */}
                         <div className={styles.largeWidthGrid}>
                             {largeWidthGridContent.map((value, index) => ( 
                                 <div key={index} id={value[0]} className={`${styles.flexboxAllCenter} ${styles.animatePopup}`} onMouseEnter={() => updateCP(value[0])}>
-                                    <div  id="gridRow">
+                                    <div id="gridRow">
                                         <div className={value[2].length > 1 ? styles.lwTitle : styles.lwLink} onClick={value[3] ? value[3] : () => null}>{value[0]}</div> 
                                     </div>
                                 </div>
