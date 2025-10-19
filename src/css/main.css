@@ -3345,6 +3345,14 @@ input[type="email"]::placeholder{
 }
 
 @media screen and (min-width: 900px){
+    .mScontainer{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        padding-right: 0px;
+        line-height: 35px;
+        overflow: hidden;
+    }
+
     .colorBackground{
         background: radial-gradient(circle at top right, rgba(48, 8, 77, 0.75), rgba(48, 8, 77, 0.75) 20%, rgba(43, 3, 92, 0.85) 47%, rgb(255, 255, 255) 47.1%);
         border-radius: 5px;
@@ -3776,14 +3784,6 @@ input[type="email"]::placeholder{
 
     .statePhotoContainer{
         height: 300px;
-    }
-
-    .mScontainer{
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-        padding-right: 0px;
-        line-height: 35px;
-        overflow: hidden;
     }
 
     .ssBoxContainer{

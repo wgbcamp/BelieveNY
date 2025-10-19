@@ -2,6 +2,7 @@ import Flower from "../../images/womenOwnedBusiness/FlowerPower.jpg";
 import TGB from "../../images/womenOwnedBusiness/TGB_Logo_Orange.png";
 import Stufd from "../../images/womenOwnedBusiness/Stufd.png";
 import Amy from "../../images/womenOwnedBusiness/amy.png";
+import Adrii from "../../images/womenOwnedBusiness/Adrii.jpg";
 
 
 const womenOwnedBusinesses = () => {
@@ -19,6 +20,7 @@ const womenOwnedBusinesses = () => {
                     <img src={TGB} className=" max-w-400"></img>
                     <img src={Amy} className=" max-w-400"></img>
                     <img src={Stufd} className=" max-w-400"></img>
+                    <img src={Adrii} className=" max-w-400"></img>
                 </div>
             </div>
             <div className="flex justify-center items-center flex-col pt-50">

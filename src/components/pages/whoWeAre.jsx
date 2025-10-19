@@ -36,7 +36,7 @@ const people = [
     {name: "Heather Bowen", title: "Board Member", photo: Heather, pronoun: "(she/her)",  story: "", email: ""},
     {name: "Cameron Reicher", title: "Program Manager for Core Services", photo: Cameron, pronoun: "(he/him)",  story: "", email: "cameron@believeny.org"},
     {name: "Shyanne Francis", title: "Program Coordinator", photo: Shyanne, pronoun: "(she/her)",  story: "", email: ""},
-    {name: "Jared Male", title: "Program Coordinator", photo: Jared, pronoun: "", story: "", email: ""},
+    {name: "Jared Male", title: "Program Coordinator", photo: Jared, pronoun: "(he/him)", story: "", email: ""},
     {name: "Warren Brown", title: "Website Manager & Developer", photo: Warren, pronoun: "(he/him)",  story: "", email: ""},
     {name: "Li-Ann Ting", title: "Board Member", photo: Li, pronoun: "(she/her)",  story: "", email: ""},
     {name: "David Wiecks", title: "Treasurer", photo: David, pronoun: "(he/him)",  story: "", email: ""},

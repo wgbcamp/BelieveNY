@@ -15,7 +15,7 @@ import UpcomingEvents from './components/pages/upcomingEvents.jsx';
 import PastEvents from './components/pages/pastEvents.jsx';
 import SpecialEventsFund from './components/pages/SpecialEventsFund.jsx';
 import Donate from './components/pages/donate.jsx';
-import EventSponsors from './components/pages/eventSponsors.jsx';
+import SupportUs from './components/pages/supportUs.jsx';
 import JoinUs from './components/pages/joinUs.jsx';
 import CancelSession from './components/pages/cancelSession.jsx';
 import FormHandler from './components/items/formHandler.jsx';
@@ -27,6 +27,7 @@ import CollegeResources from './components/pages/collegeresources.jsx';
 import OperationCommunitySuccess from './components/pages/operationCommunitySuccess.jsx';
 import MealHandout from './components/pages/mealHandout.jsx';
 import WomenOwnedBusinesses from './components/pages/womenOwnedBusinesses.jsx';
+import PastSponsors from './components/pages/pastSponsors.jsx';
 
 
 
@@ -59,7 +60,7 @@ function App(){
         { path: '/environmentalProjects', component: EnvironmentalProjects },
         { path: '/upcomingEvents', component: UpcomingEvents },
         { path: '/pastEvents', component: PastEvents },
-        { path: '/eventSponsors', component: EventSponsors },
+        { path: '/supportUs', component: SupportUs },
         { path: '/joinus', component: JoinUs },
         { path: '/donate', component: Donate },
         { path: '/donationformQR', component: DonationFormQR },
@@ -67,11 +68,8 @@ function App(){
         { path: '/mealhandout', component: MealHandout },
         { path: '/operationCommunitySuccess', component: OperationCommunitySuccess },
         { path: '/theOpenSpace', component: TheOpenSpace },
-        { path: '/eventSponsors', component: EventSponsors },
-        { path: '/womenOwnedBusinesses', component: WomenOwnedBusinesses}
-        // { path: '/SpecialEventsFund', component: SpecialEventsFund },
-        // { path: '/scheduleBooking', component: Donate },
-        // { path: '/cancelSession', component: CancelSession },
+        { path: '/womenOwnedBusinesses', component: WomenOwnedBusinesses},
+        { path: '/pastSponsors', component: PastSponsors}
     ];
 
     var route;
