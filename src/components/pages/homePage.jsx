@@ -147,7 +147,7 @@ const newHome3 = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="/theOpenSpace" className="d-flex justify-content-center" onClick={() => window.scrollTo(0,0)}>
+                                    <a href="/theOpenSpace" className="d-flex justify-content-center">
                                         <button type="button" className={` btn btn-dark mt-4 mb-5 rounded-5 fw-bold mx-0 ${custom.learnMoreButton}`}>Learn more</button>
                                     </a>
                                 </div>
@@ -160,7 +160,7 @@ const newHome3 = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="/getHelp" className="d-flex justify-content-center" onClick={() => window.scrollTo(0,0)}>
+                                    <a href="/getHelp" className="d-flex justify-content-center">
                                         <button type="button" className={`btn btn-dark mt-4 mb-5 mx-0 rounded-5 fw-bold ${custom.learnMoreButton}`}>Learn more</button>
                                     </a>
                                 </div>
@@ -314,7 +314,7 @@ const newHome3 = () => {
                                 </Col>
                                 <Col xs={7} className='d-flex justify-content-start align-items-center fs-3 fw-semibold'>Read our impact report, see our accomplishments, and learn more about the feedback from the people we serve!</Col>
                                 <Col xs={2} className='d-flex justify-content-center align-items-center'>
-                                    <a href="/impactReport" onClick={() => window.scrollTo(0,0)}>
+                                    <a href="/impactReport">
                                         <button type="button" className={`btn btn-dark ${custom.shrinkButton} rounded-5 py-2`}>
                                             <i className="fa-solid fa-arrow-right fa-lg"></i>
                                         </button>
@@ -331,7 +331,7 @@ const newHome3 = () => {
                                 <div className={`${custom.sponsorTitle} fw-bold`}>Become a Sponsor</div>
                                 <div className={`mt-3 ${custom.sponsorDescription}`}>We're looking to partner with more locally run businesses to help ensure every New Yorker is getting the help they need.</div>
                                 <div className='mb-4'>
-                                    <a href="/supportUs" onClick={() => window.scrollTo(0,0)}>                   
+                                    <a href="/supportUs">                   
                                         <button type="button" className={`mt-4 me-3 rounded-5 fw-bold ${custom.mainButton} ${custom.secondaryButton}`}>Contribute</button>
                                     </a>
                                 </div>
