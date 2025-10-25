@@ -10,17 +10,21 @@ const womenOwnedBusinesses = () => {
     return (
         <div>
             <div className="flex justify-center items-center flex-col pt-50">
-                <div className="text-3xl font-bold">Women-Owned Business Sponsors</div>
+                <div className="text-3xl font-bold max-w-8/10">Women-Owned Business Sponsors</div>
                 <div className="pt-40 w-8/10 max-w-800">We are deeply grateful to the incredible women-owned businesses whose generosity helps sustain our mission and create lasting impact in our communities.</div>
                 <div className="pt-25 font-bold w-8/10 max-w-800">Thank you for your continued support and partnership — we couldn’t do this work without you!</div>
             </div>
             <div className="flex justify-center w-full pt-40">
                 <div className="w-9/10 max-w-1000 flex flex-wrap flex-col sm:flex-row justify-center items-center gap-20">
-                    <img src={Flower} className=" max-w-400"></img>
-                    <img src={TGB} className=" max-w-400"></img>
-                    <img src={Amy} className=" max-w-400"></img>
-                    <img src={Stufd} className=" max-w-400"></img>
-                    <img src={Adrii} className=" max-w-400"></img>
+                <a href="https://flowerpower.net" className="w-9/10 max-w-400"><img src={Flower}></img></a>
+                <a href="https://thegoodbatch.com" className="w-9/10 max-w-400"><img src={TGB}></img></a>
+                <a href="https://amysbread.com" className="w-9/10 max-w-400"><img src={Amy}></img></a>
+                <a href="https://stufdtruck.com" className="w-9/10 max-w-400"><img src={Stufd}></img></a>
+                <a href="https://adriiskitchen.com" className="w-9/10 max-w-400"><img src={Adrii}></img></a>
+                    
+                    
+                    
+                   
                 </div>
             </div>
             <div className="flex justify-center items-center flex-col pt-50">

@@ -331,7 +331,7 @@ const newHome3 = () => {
                                 <div className={`${custom.sponsorTitle} fw-bold`}>Become a Sponsor</div>
                                 <div className={`mt-3 ${custom.sponsorDescription}`}>We're looking to partner with more locally run businesses to help ensure every New Yorker is getting the help they need.</div>
                                 <div className='mb-4'>
-                                    <a href="/eventSponsors" onClick={() => window.scrollTo(0,0)}>                   
+                                    <a href="/supportUs" onClick={() => window.scrollTo(0,0)}>                   
                                         <button type="button" className={`mt-4 me-3 rounded-5 fw-bold ${custom.mainButton} ${custom.secondaryButton}`}>Contribute</button>
                                     </a>
                                 </div>
