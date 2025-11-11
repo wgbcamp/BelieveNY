@@ -109,9 +109,14 @@ const theOpenSpace = (props) => {
                                 <div className='boldOSTitle alignLeft color1 padTop20'>
                                     Have Questions or Want to Work With Us?
                                 </div>
-                                <div className="size18Font OSExplanation lineHeight25  padBottom40  color1 padTop20">
+                                {/* <div className="size18Font OSExplanation lineHeight25  padBottom40  color1 padTop20">
                                     <div className="">
                                         For questions or to work with us, please email us at <u><a href="mailto:gethelp@believeny.org" className={custom.emailLink}>gethelp@believeny.org</a></u> or book your first session <a href="https://cal.com/believeny/openspace" className={custom.emailLink}>here!</a>    
+                                    </div>
+                                </div> */}
+                                <div className="size18Font OSExplanation lineHeight25  padBottom40  color1 padTop20">
+                                    <div className="">
+                                        For questions or to work with us, please email us at <u><a href="mailto:gethelp@believeny.org" className={custom.emailLink}>gethelp@believeny.org</a></u>.
                                     </div>
                                 </div>
                             </div>

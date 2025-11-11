@@ -241,8 +241,11 @@ const getHelp = (props) => {
                                 <Col className='fw-normal'>
                                     <Row>
                                         <Col>
-                                            <div>
+                                            {/* <div>
                                                 For questions, referrals, or to work with us, please email us at <u><a href="mailto:gethelp@believeny.org" className={custom.emailLink}>gethelp@believeny.org</a></u> or book an initial intake <a href="https://cal.com/believeny/intake" className={custom.emailLink}>here!</a>
+                                            </div> */}
+                                            <div>
+                                                For questions, referrals, or to work with us, please email us at <u><a href="mailto:gethelp@believeny.org" className={custom.emailLink}>gethelp@believeny.org</a></u>.
                                             </div>
                                         </Col>
                                     </Row>
