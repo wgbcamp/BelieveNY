@@ -11,13 +11,30 @@ const newHeader = () => {
     }
 
     //arrays for header category content and paths for links
-    const aboutUsContent = [["Who We Are", "whoWeAre"],["Our Impact", "impactReport"],["Diversity and Inclusion", "diversityAndInclusion"],["Founding Supporters", "foundingSupporters"]];
+    const aboutUsContent = [
+        ["Who We Are", "whoWeAre"],
+        ["Our Impact", "impactReport"],
+        ["Diversity and Inclusion", "diversityAndInclusion"],
+        ["Founding Supporters", "foundingSupporters"]
+    ];
 
-    const ourWorkContent = [["Get Help", "getHelp"],["The Open Space", "theOpenSpace"], ["Operation Community Success", "operationCommunitySuccess"]];
+    const ourWorkContent = [
+        ["Get Help", "getHelp"],
+        ["The Open Space", "theOpenSpace"], 
+        ["Operation Community Success", "operationCommunitySuccess"]
+    ];
 
-    const eventsContent = [["Upcoming Events", "upcomingEvents"], ["Past Events", "pastEvents"] ,["Donate to Our Events", "https://www.zeffy.com/en-US/donation-form/00f36686-7c94-4536-9b01-f6705c56e289"]];
+    const eventsContent = [
+        ["Upcoming Events", "upcomingEvents"], 
+        ["Past Events", "pastEvents"],
+        ["Donate to Our Events", "https://www.zeffy.com/en-US/donation-form/00f36686-7c94-4536-9b01-f6705c56e289"]
+    ];
 
-    const bwbContent = [["Women-Owned Businesses", "womenOwnedBusinesses"], ["Past Sponsorship", "pastSponsors"], ["Support Us!", "supportUs"]];
+    const bwbContent = [
+        ["Women-Owned Businesses", "womenOwnedBusinesses"], 
+        ["Past Sponsorship", "pastSponsors"], 
+        ["Support Us!", "supportUs"]
+    ];
 
     //state holding dropdown states and arrays for sub categories on smaller viewports
     var [widthState, updateWS] = useState(false);

@@ -28,10 +28,9 @@ const theOpenSpace = (props) => {
                         <div className="simpleFlex">
                             <div className="padTop20 padBottom40 size18Font max850">Are you living with loneliness? Sadness? Anxiety? Are you stressed about school, work or difficult relationships? Are you struggling with addictions, violence, or losses in your life?</div>
                         </div>
-
                     </div>
 
-                    <div className="simpleFlex">
+                    {/* <div className="simpleFlex">
                         <div className="padTop20 max1090">
                             <div className="simpleFlex hereForYouInner centerText">
                                 <b className="size42Font padTop40 center1200 smallText500">We are here for you.</b>
@@ -49,7 +48,26 @@ const theOpenSpace = (props) => {
 
                             </div>
                         </div>
-                    </div>
+                    </div> */}
+
+                        <div className="flex justify-center pt-40 pb-40 px-25">
+                            <div className="pb-30 max-w-800">
+                                <div className="padTop20 size18Font max850">
+                                    Thank you for your interest in 
+                                    working with us! Due to high demand and upcoming program updates to better serve our 
+                                    community, we are not accepting new clients at this time. We hope to be able to accept 
+                                    more new clients in the near future.
+                                </div>
+                                <div className="padTop20 size18Font max850">
+                                    If you'd like to join our waitlist, please email our team at <b>gethelp@believeny.org</b> with 
+                                    your name and phone number.
+                                </div>
+                                <div className="padTop20 size18Font max850">
+                                    Thank you for your patience and understanding! 
+                                </div>
+                            </div>
+                        </div>
+
                     <div className='openSpaceDesc padBottom80'>
                         <div className="centerText size42Font padTop40 padBottom40">
                             <b>What is The Open Space?</b>

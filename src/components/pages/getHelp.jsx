@@ -21,21 +21,42 @@ const getHelp = (props) => {
 
         <div>
             <div>
-                <div className="widen">
-                    <div className="openSpaceBanner padTop80 pb-3 whiteText centerText">
-                        <b className="size36Font">GetHelp Here!</b>
-                        <div className="simpleFlex">
-                            <div className="padTop20 padBottom40 size18Font max850">Speak with a trained Client Advocate who will support you in overcoming your concerns across any area of need. We are here for you!</div>
+                <div className="">
+                    <div className="openSpaceBanner padTop80 pb-3 whiteText">
+                        <div className="w-full flex justify-center">
+                            <b className="text-[36px] text-center w-500">GetHelp Here!</b>
                         </div>
-                        <Container>
+                        <div className="flex justify-center">
+                            <div className="simpleFlex">
+                                <div className="padTop20 padBottom40 size18Font max850 text-center">Speak with a trained Client Advocate who will support you in overcoming your concerns across any area of need. We are here for you!</div>
+                            </div>
+                        </div>
+                        {/* <Container>
                             <Row>
                                 <Col className='d-flex justify-content-center'>
                                     <div type="button" data-cal-namespace="intake" data-cal-link="believeny/intake" data-cal-config='{"layout":"month_view","theme":"light"}' Add commentMore actions
                                         className={`btn btn-dark mt-4 mb-5 mx-1 rounded-5 fw-bold w-100 ${custom.scheduleApp}`} onClick={calcom()}>Schedule Appointment</div>
                                 </Col>
                             </Row>
-                        </Container>
+                        </Container> */}
                     </div>
+                       <div className="flex justify-center py-40 px-25">
+                            <div className="pb-30 max-w-800">
+                                <div className="padTop20 size18Font max850">
+                                    Thank you for your interest in 
+                                    working with us! Due to high demand and upcoming program updates to better serve our 
+                                    community, we are not accepting new clients at this time. We hope to be able to accept 
+                                    more new clients in the near future.
+                                </div>
+                                <div className="padTop20 size18Font max850">
+                                    If you'd like to join our waitlist, please email our team at <b>gethelp@believeny.org</b> with 
+                                    your name and phone number.
+                                </div>
+                                <div className="padTop20 size18Font max850">
+                                    Thank you for your patience and understanding! 
+                                </div>
+                            </div>
+                        </div>
                     <div className="simpleFlex">
                         <div>
                             <div className={`simpleFlex center1200 verticalAlign`}>
