@@ -50,11 +50,8 @@ const womenOwnedBusinesses = () => {
             </div>
             <div className="flex justify-center items-center flex-col pt-50">
                 <div className="pt-40 w-8/10 max-w-800">
-                    Want to see your business featured here? 
-                    <a href="supportUs" className="!text-[#5d55ce]">
-                        Contact us
-                    </a> 
-                    to learn how you can become a sponsor and join our growing
+                    Want to see your business featured here? <a href="supportUs" className="!text-[#5d55ce]">
+                    Contact us</a> to learn how you can become a sponsor and join our growing
                     network of women entrepreneurs making a difference.
                 </div>
             </div>
