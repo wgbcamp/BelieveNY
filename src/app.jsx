@@ -28,10 +28,7 @@ import OperationCommunitySuccess from './components/pages/operationCommunitySucc
 import MealHandout from './components/pages/mealHandout.jsx';
 import WomenOwnedBusinesses from './components/pages/womenOwnedBusinesses.jsx';
 import PastSponsors from './components/pages/pastSponsors.jsx';
-
-
-
-
+import HolidayGiftDrive from './components/pages/holidayGiftDrive.jsx';
 
 function App(){
 
@@ -68,8 +65,9 @@ function App(){
         { path: '/mealhandout', component: MealHandout },
         { path: '/operationCommunitySuccess', component: OperationCommunitySuccess },
         { path: '/theOpenSpace', component: TheOpenSpace },
-        { path: '/womenOwnedBusinesses', component: WomenOwnedBusinesses},
-        { path: '/pastSponsors', component: PastSponsors}
+        { path: '/womenOwnedBusinesses', component: WomenOwnedBusinesses },
+        { path: '/pastSponsors', component: PastSponsors },
+        { path: '/holidaygift', component: HolidayGiftDrive }
     ];
 
     var route;
