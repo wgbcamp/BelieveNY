@@ -228,6 +228,13 @@ const getHelp = (props) => {
                                     <Row className="mt-4">
                                         <Col>
                                             <div>
+                                                Additionally, we provide guidance and resources to support you, but please note that each situation is unique and outcomes vary based on individual circumstances. Participation in our programs or referrals does not guarantee specific results.
+                                            </div>
+                                        </Col>
+                                    </Row>
+                                    <Row className="mt-4">
+                                        <Col>
+                                            <div>
                                                 Lastly, we are committed to providing a safe and respectful environment for all. As such, <b><u>we do not tolerate hostile, aggressive, abusive, or inappropriate behavior</u></b> toward our volunteers or staff. If such behavior occurs, we reserve the right to discontinue services at our discretion.
                                             </div>
                                         </Col>

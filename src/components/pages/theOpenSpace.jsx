@@ -99,11 +99,18 @@ const theOpenSpace = (props) => {
                                 </div>
                                 <div className="size18Font OSExplanation lineHeight25  padBottom40  color1 padTop20">
                                     <div className="">
-                                        Although we are fully trained and supported by professionals in the mental health and social services field, The Open Space is not a substitute for licensed mental health therapy or professional counseling services. Additionally, <b><u>we are not an emergency service and cannot provide immediate crisis intervention</u></b>. If you are in crisis, experiencing suicidal thoughts, or in immediate danger, please contact <b>911</b> or the <b>988 Suicide & Crisis Lifeline (call or text 988)</b> for immediate support.
-                                        <div className="padTop20"></div>
-                                        However, if you are interested in accessing therapy or other mental health resources, our service option, <u>GetHelp</u>, can assist you in finding the support you need. We encourage you to choose the <b>Hybrid Track</b> during your intake to utilize both The Open Space and GetHelp services. Please let us know, and we'll work with you to connect to appropriate licensed services!
-                                        <div className="padTop20"></div>
-                                        Lastly, we are committed to providing a safe and respectful environment for all. As such, <b><u>we do not tolerate hostile, aggressive, abusive, or inappropriate behavior</u></b> toward our volunteers or staff. If such behavior occurs, we reserve the right to discontinue services at our discretion.
+                                        <div className="padTop20">
+                                            Although we are fully trained and supported by professionals in the mental health and social services field, The Open Space is not a substitute for licensed mental health therapy or professional counseling services. Additionally, <b><u>we are not an emergency service and cannot provide immediate crisis intervention</u></b>. If you are in crisis, experiencing suicidal thoughts, or in immediate danger, please contact <b>911</b> or the <b>988 Suicide & Crisis Lifeline (call or text 988)</b> for immediate support.
+                                        </div>
+                                        <div className="padTop20">
+                                            Additionally, we provide guidance and resources to support you, but please note that each situation is unique and outcomes vary based on individual circumstances. Participation in our programs or referrals does not guarantee specific results.
+                                        </div>
+                                        <div className="padTop20">
+                                            However, if you are interested in accessing therapy or other mental health resources, our service option, <u>GetHelp</u>, can assist you in finding the support you need. We encourage you to choose the <b>Hybrid Track</b> during your intake to utilize both The Open Space and GetHelp services. Please let us know, and we'll work with you to connect to appropriate licensed services!
+                                        </div>
+                                        <div className="padTop20">
+                                            Lastly, we are committed to providing a safe and respectful environment for all. As such, <b><u>we do not tolerate hostile, aggressive, abusive, or inappropriate behavior</u></b> toward our volunteers or staff. If such behavior occurs, we reserve the right to discontinue services at our discretion.
+                                        </div>
                                     </div>
                                 </div>
                                 <div className='boldOSTitle alignLeft color1 padTop20'>
