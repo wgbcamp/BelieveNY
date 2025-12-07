@@ -3,6 +3,7 @@ import TGB from "../../images/womenOwnedBusiness/TGB_Logo_Orange.png";
 import Stufd from "../../images/womenOwnedBusiness/Stufd.png";
 import Amy from "../../images/womenOwnedBusiness/amy.png";
 import Adrii from "../../images/womenOwnedBusiness/Adrii.jpg";
+import CafeConLibros from "../../images/womenOwnedBusiness/cafeconlibros.jpg";
 
 
 const womenOwnedBusinesses = () => {
@@ -45,6 +46,10 @@ const womenOwnedBusinesses = () => {
                     <a href="https://adriiskitchen.com" className="w-9/10 
                     max-w-400">
                         <img src={Adrii}></img>
+                    </a>
+                    <a href="https://cafeconlibrosbk.com/" className="w-9/10 
+                    max-w-400">
+                        <img src={CafeConLibros}></img>
                     </a>
                 </div>
             </div>
