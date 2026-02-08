@@ -22,13 +22,11 @@ import Joe from "../../images/whoWeAre/joe.jpg";
 import Chris from "../../images/whoWeAre/chris.jpg";
 import Ashley from "../../images/whoWeAre/ashley.jpeg";
 import Savannah from "../../images/whoWeAre/savannah.jpeg";
-import Elizabeth from "../../images/whoWeAre/elizabeth.jpg";
 import Zhijiao from "../../images/whoWeAre/Zhijiao.jpg"; 
 import Tiana from "../../images/whoWeAre/Tiana.png";
 import Sandhya from "../../images/whoWeAre/Sandhya.jpg";
 import Jared from "../../images/whoWeAre/jared.jpeg";
 import Amethyst from "../../images/whoWeAre/amethyst.jpeg";
-import Stephanie from "../../images/whoWeAre/stephanie.jpeg";
 
 const people = [
     {name: "Nicole Bulanchuk", title: "Executive Director & President", pronoun: "(she/her)", photo: Nicole, story: "Nicole is a born and raised New Yorker and has lived all over the state including Long Island, Queens, Brooklyn, Albany, and Manhattan. Nicole founded Believe New York after seeing and experiencing first-hand the struggle many New Yorkers live through. Nicole is currently a Clinical Psychology PhD student at Fairleigh Dickinson. She graduated from Columbia University with her masters. Nicole is committed to improving the lives of all people and has always volunteered and worked with nonprofits and community organizations including Columbia Health Sexual Violence Response, The ETS Sponsorship Program, NAMI-NYS, Save the Children, Care International, The Nature Conservancy, ASPCA, Green Peace, Berny's Hope, the Community Emergency Response Team, West Albany FD, Middle Earth Peer-Assistance Program, Women in Need Shelter, and several Rescue Missions. Nicole aspires to develop and expand Believe NY until we are a household charity name. She aims to serve under-resourced areas around the US and world.", email: "nicole@believeny.org"}, 
@@ -45,12 +43,10 @@ const people = [
     {name: "Chris Kang", title: "Research Consultant", photo: Chris, pronoun: "(she/her)",  story: "", email: ""},
     {name: "Savannah Lynn", title: "Operations Consultant", photo: Savannah, pronoun: "(she/they)",  story: "", email: ""},
     {name: "Ashley Fuentes-Miranda", title: "Advocate Liaison & Board Secretary", photo: Ashley, pronoun: "(she/her)",  story: "", email: "ashley@believeny.org"},
-    {name: "Lizzie K.", title: "Marketing Manager", photo: Elizabeth, pronoun: "(she/her)", email: ""},
     {name: "Zhijiao Gao", title: "Project Manager", photo: Zhijiao, pronoun: "(she/her)", email: "zhijiao@believeny.org"},
     {name: "Tiana Allen", title: "Co-Program Manager for Peer Groups & Research", photo: Tiana, pronoun: "(she/her)", email: "tiana@believeny.org"},
     {name: "Sandhya Sriram", title: " Co-Program Manager for Peer Groups & Research", photo: Sandhya, pronoun: "(she/her)", email: "sandhya@believeny.org"},
     {name: "Amethyst St. Thomas", title: "Board Member", photo: Amethyst, pronoun: "(she/her)"},
-    {name: "Stephanie Stevens", title: "Board Member", photo: Stephanie, pronoun: "(she/her)"},
 ];
 
 const aboutUs = () => {
