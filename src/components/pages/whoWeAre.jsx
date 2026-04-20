@@ -1,4 +1,3 @@
-import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import custom from '../../css/main.module.css';
 import PersonCard from '../items/personCard';
@@ -6,27 +5,23 @@ import BNYLogoFull from '../../images/general/BNYLogoFull-02.png';
 import BelieveNyBylaws from "../../documents/BelieveNyBylaws.pdf";
 import CC from "../../documents/CC_BELIEVE NEW YORK PHILANTHROPIES.pdf";
 import Nicole from "../../images/whoWeAre/nicole.jpeg";
-import Chiara from "../../images/whoWeAre/chiara.webp";
-import Rebecca from "../../images/whoWeAre/rebecca.webp";
-import Tristan from "../../images/whoWeAre/tristan.png";
 import Cameron from "../../images/whoWeAre/cameron.jpg";
 import Shyanne from "../../images/whoWeAre/shyanne.webp";
 import Warren from "../../images/whoWeAre/warren.jpg";
 import Heather from "../../images/whoWeAre/heather.webp";
 import Anh from "../../images/whoWeAre/anh.webp";
 import Li from "../../images/whoWeAre/Li-ann.jpeg";
-import Zenaida from "../../images/whoWeAre/zenaida.webp";
 import David from "../../images/whoWeAre/david.webp";
 import Xiaotian from "../../images/whoWeAre/xiaotian.webp";
 import Joe from "../../images/whoWeAre/joe.jpg";
 import Chris from "../../images/whoWeAre/chris.jpg";
 import Ashley from "../../images/whoWeAre/ashley.jpeg";
-import Savannah from "../../images/whoWeAre/savannah.jpeg";
 import Zhijiao from "../../images/whoWeAre/Zhijiao.jpg"; 
 import Tiana from "../../images/whoWeAre/Tiana.png";
 import Sandhya from "../../images/whoWeAre/Sandhya.jpg";
 import Jared from "../../images/whoWeAre/jared.jpeg";
 import Amethyst from "../../images/whoWeAre/amethyst.jpeg";
+import Amanda from "../../images/whoWeAre/amanda_hunt_headshot.jpeg";
 
 const people = [
     {name: "Nicole Bulanchuk", title: "Executive Director & President", pronoun: "(she/her)", photo: Nicole, story: "Nicole is a born and raised New Yorker and has lived all over the state including Long Island, Queens, Brooklyn, Albany, and Manhattan. Nicole founded Believe New York after seeing and experiencing first-hand the struggle many New Yorkers live through. Nicole is currently a Clinical Psychology PhD student at Fairleigh Dickinson. She graduated from Columbia University with her masters. Nicole is committed to improving the lives of all people and has always volunteered and worked with nonprofits and community organizations including Columbia Health Sexual Violence Response, The ETS Sponsorship Program, NAMI-NYS, Save the Children, Care International, The Nature Conservancy, ASPCA, Green Peace, Berny's Hope, the Community Emergency Response Team, West Albany FD, Middle Earth Peer-Assistance Program, Women in Need Shelter, and several Rescue Missions. Nicole aspires to develop and expand Believe NY until we are a household charity name. She aims to serve under-resourced areas around the US and world.", email: "nicole@believeny.org"}, 
@@ -41,12 +36,12 @@ const people = [
     {name: "Xiaotian Chang", title: "Research Consultant", photo: Xiaotian, pronoun: "(she/her)",  story: "", email: ""},
     {name: "Joe Lebers", title: "Technology Consultant", photo: Joe, pronoun: "(he/him)",  story: "", email: ""},
     {name: "Chris Kang", title: "Research Consultant", photo: Chris, pronoun: "(she/her)",  story: "", email: ""},
-    {name: "Savannah Lynn", title: "Operations Consultant", photo: Savannah, pronoun: "(she/they)",  story: "", email: ""},
+    {name: "Amanda Hunt", title: "Social Media Lead", photo: Amanda, pronoun: "(she/her)",  story: "", email: ""},
     {name: "Ashley Fuentes-Miranda", title: "Advocate Liaison & Board Secretary", photo: Ashley, pronoun: "(she/her)",  story: "", email: "ashley@believeny.org"},
     {name: "Zhijiao Gao", title: "Project Manager", photo: Zhijiao, pronoun: "(she/her)", email: "zhijiao@believeny.org"},
     {name: "Tiana Allen", title: "Co-Program Manager for Peer Groups & Research", photo: Tiana, pronoun: "(she/her)", email: "tiana@believeny.org"},
     {name: "Sandhya Sriram", title: " Co-Program Manager for Peer Groups & Research", photo: Sandhya, pronoun: "(she/her)", email: "sandhya@believeny.org"},
-    {name: "Amethyst St. Thomas", title: "Board Member", photo: Amethyst, pronoun: "(she/her)"},
+    {name: "Amethyst St. Thomas", title: "Board Member", photo: Amethyst, pronoun: "(she/her)"}
 ];
 
 const aboutUs = () => {
