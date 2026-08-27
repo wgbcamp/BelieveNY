@@ -39,10 +39,10 @@ const impactReport = () => {
                             <ul className="size18Font">
                                 <li>Fed and clothed over 100 people experiencing homelessness in Tompkins Sq Park at our Valentine’s Day spread the love event</li>
                                 <li>Hosted a community clean up by Maria Hernandez Park, Brooklyn on April 24th</li>
-                                <li>Hosted a summer clothing and supplies drive for children in shelters and transitional homes, collecting hundreds of items (school supplies, art supplies, and summer clothing) for children in two different shelters and one community center in Manhattan</li>
+                                <li>Hosted a summer clothing and supplies drive for children in shelters and transitional homes, collecting hundreds of items (school supplies, art supplies, and su[...]
                                 <li>Hosted a community clean up by Arthur S. Somers Park, Brooklyn on August 6th </li>
                                 <li>Delivered 34 children and their single mothers living in shelters, or transitional homes, holiday homes holiday gifts, totally 61 gifts </li>
-                                <li>Collected 4 dozen first aid kits and Narcan kits for the East Village and Washington Sq Park mutual aid to distribute to almost 50 people experiencing homelessness and substance use disorder in downtown Manhattan </li>
+                                <li>Collected 4 dozen first aid kits and Narcan kits for the East Village and Washington Sq Park mutual aid to distribute to almost 50 people experiencing homelessn[...]
                             </ul>
                        <div className="purpleDate">2021</div>
                         <ul className="size18Font">
@@ -61,13 +61,13 @@ const impactReport = () => {
                             <li>Executive Director, Assistant Director, and several volunteers participated in the week long Global Mental Health Summer Institute Training at Columbia University</li>
                             <li>Fed and clothed over 100 people experiencing homelessness in Washington Sq Park at our June 13th event</li>
                             <li>At this same event, we partnered with a local hair salon and gave out over 2 dozen haircuts to people experiencing homelessness</li>
-                            <li>Fed over 75 people at a meal hand out in Lincoln Center on Sept 21. The traffic was a bit slow at Lincoln Center, so several of our volunteers packed up the food and gave it out to people experiencing homelessness at Penn Station and Bryant Park
+                            <li>Fed over 75 people at a meal hand out in Lincoln Center on Sept 21. The traffic was a bit slow at Lincoln Center, so several of our volunteers packed up the food an[...]
                                 <ul>
                                     <li>During this same event, we handed out dozens of items of PPE, hand sanitizer, and hand warmers to event attendees</li>
                                 </ul>
                             </li>
                             <li>Hosted a community clean up in Hylan Park, The Bronx on Oct 3rd</li>
-                            <li>Served over 80 hot meals and hundreds of warm clothing items to people experiencing homelessness during our Thanksgiving meal and clothing hand out on November 28 in Tompkins Sq Park
+                            <li>Served over 80 hot meals and hundreds of warm clothing items to people experiencing homelessness during our Thanksgiving meal and clothing hand out on November 28 in To[...]
                                 <ul>
                                     <li>During this same event, we handed out dozens of items of PPE, hand sanitizer, and hand warmers to event attendees</li>
                                 </ul>
@@ -81,7 +81,7 @@ const impactReport = () => {
                                     <li>During this same event, we handed out dozens of items of PPE, hand sanitizer, and hand warmers to event attendees</li>
                                 </ul>
                             </li>
-                            <li>Registered over 200 people to vote in underserved areas in Brooklyn, Manhattan, Queens, and The Bronx, majority of people who were first time votes and people of color 
+                            <li>Registered over 200 people to vote in underserved areas in Brooklyn, Manhattan, Queens, and The Bronx, majority of people who were first time votes and people of co[...]
                             </li>
                         </ul>
                     </div>
@@ -91,7 +91,7 @@ const impactReport = () => {
                 </div> */}
                 <div className="impactTitle">Impact Report 2026</div>
                 <iframe className="pdfViewer mb-5"
-                    src="https://drive.google.com/file/d/1IOBT14QGwVEjUEfWzhxIgO8EN1Lm3Rln/preview"
+                    src="https://drive.google.com/file/d/1R_8ljwENxVibC9izv8AeM__4ngMmU648/preview"
                     height="100%"
                     width="100%"
                 ></iframe>
