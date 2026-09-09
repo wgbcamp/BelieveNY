@@ -84,19 +84,19 @@ function App(){
     const Component = route.component;
 
 
-    function Link({ to, children }) {
-        function handleClick(e) {
-            e.preventDefault();
-            window.history.pushState(null, '', to);
-            setCurrentRoute(to);
-        }
+    // function Link({ to, children }) {
+    //     function handleClick(e) {
+    //         e.preventDefault();
+    //         window.history.pushState(null, '', to);
+    //         setCurrentRoute(to);
+    //     }
 
-        return (
-            <a href={to} onClick={handleClick}>
-                {children}
-            </a>
-        );
-    }
+    //     return (
+    //         <a href={to} onClick={handleClick}>
+    //             {children}
+    //         </a>
+    //     );
+    // }
 
     //user identification
     if(!localStorage.getItem("userID")) {

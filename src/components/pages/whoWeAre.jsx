@@ -6,7 +6,6 @@ import BelieveNyBylaws from "../../documents/BelieveNyBylaws.pdf";
 import CC from "../../documents/CC_BELIEVE NEW YORK PHILANTHROPIES.pdf";
 import Nicole from "../../images/whoWeAre/nicole.jpeg";
 import Cameron from "../../images/whoWeAre/cameron.jpg";
-import Shyanne from "../../images/whoWeAre/shyanne.webp";
 import Warren from "../../images/whoWeAre/warren.jpg";
 import Heather from "../../images/whoWeAre/heather.webp";
 import Anh from "../../images/whoWeAre/anh.webp";
@@ -19,17 +18,15 @@ import Ashley from "../../images/whoWeAre/ashley.jpeg";
 import Zhijiao from "../../images/whoWeAre/Zhijiao.jpg"; 
 import Tiana from "../../images/whoWeAre/Tiana.png";
 import Sandhya from "../../images/whoWeAre/Sandhya.jpg";
-import Jared from "../../images/whoWeAre/jared.jpeg";
 import Amethyst from "../../images/whoWeAre/amethyst.jpeg";
 import Amanda from "../../images/whoWeAre/amanda.jpeg";
+import Sarah from "../../images/whoWeAre/sarah.jpg";
 
 const people = [
     {name: "Nicole Bulanchuk", title: "Executive Director & President", pronoun: "(she/her)", photo: Nicole, story: "Nicole is a born and raised New Yorker and has lived all over the state including Long Island, Queens, Brooklyn, Albany, and Manhattan. Nicole founded Believe New York after seeing and experiencing first-hand the struggle many New Yorkers live through. Nicole is currently a Clinical Psychology PhD student at Fairleigh Dickinson. She graduated from Columbia University with her masters. Nicole is committed to improving the lives of all people and has always volunteered and worked with nonprofits and community organizations including Columbia Health Sexual Violence Response, The ETS Sponsorship Program, NAMI-NYS, Save the Children, Care International, The Nature Conservancy, ASPCA, Green Peace, Berny's Hope, the Community Emergency Response Team, West Albany FD, Middle Earth Peer-Assistance Program, Women in Need Shelter, and several Rescue Missions. Nicole aspires to develop and expand Believe NY until we are a household charity name. She aims to serve under-resourced areas around the US and world.", email: "nicole@believeny.org"}, 
     {name: "Anh Le", title: "Vice President", photo: Anh, pronoun: "(she/her)",  story: "", email: ""},
     {name: "Heather Bowen", title: "Board Member", photo: Heather, pronoun: "(she/her)",  story: "", email: ""},
     {name: "Cameron Reicher", title: "Program Manager for Core Services", photo: Cameron, pronoun: "(he/him)",  story: "", email: "cameron@believeny.org"},
-    {name: "Shyanne Francis", title: "Program Coordinator", photo: Shyanne, pronoun: "(she/her)",  story: "", email: ""},
-    {name: "Jared Male", title: "Program Coordinator", photo: Jared, pronoun: "(he/him)", story: "", email: ""},
     {name: "Warren Brown", title: "Website Manager & Developer", photo: Warren, pronoun: "(he/him)",  story: "", email: ""},
     {name: "Li-Ann Ting", title: "Board Member", photo: Li, pronoun: "(she/her)",  story: "", email: ""},
     {name: "David Wiecks", title: "Treasurer", photo: David, pronoun: "(he/him)",  story: "", email: ""},
@@ -39,8 +36,9 @@ const people = [
     {name: "Amanda Hunt", title: "Social Media Lead", photo: Amanda, pronoun: "(she/her)",  story: "", email: ""},
     {name: "Ashley Fuentes-Miranda", title: "Advocate Liaison & Board Secretary", photo: Ashley, pronoun: "(she/her)",  story: "", email: "ashley@believeny.org"},
     {name: "Zhijiao Gao", title: "Project Manager", photo: Zhijiao, pronoun: "(she/her)", email: "zhijiao@believeny.org"},
-    {name: "Tiana Allen", title: "Co-Program Manager for Peer Groups & Research", photo: Tiana, pronoun: "(she/her)", email: "tiana@believeny.org"},
-    {name: "Sandhya Sriram", title: " Co-Program Manager for Peer Groups & Research", photo: Sandhya, pronoun: "(she/her)", email: "sandhya@believeny.org"},
+    {name: "Tiana Allen", title: "Program Coordinator", photo: Tiana, pronoun: "(she/her)", email: "tiana@believeny.org"},
+    {name: "Sandhya Sriram", title: "Program Coordinator", photo: Sandhya, pronoun: "(she/her)", email: "sandhya@believeny.org"},
+    {name: "Sarah Alzarooni", title: "Program Coordinator", photo: Sarah, pronoun: "(she/her)", email: ""},
     {name: "Amethyst St. Thomas", title: "Board Member", photo: Amethyst, pronoun: "(she/her)"}
 ];
 

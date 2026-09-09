@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import styles from '../../css/footer.module.css'
 import SiteLogo from '../../images/general/BNYLogoFull-02.png'
 import '../../css/main.css';
-import candidPlatinum from '../../images/footer/profile-platinum2025-seal.png'
+import candidPlatinum from '../../images/footer/candid-seal-platinum-2026.svg'
 
 const newFooter = (props) => {
 
