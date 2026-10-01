@@ -97,11 +97,7 @@ const newFooter = (props) => {
                                 <div className={styles.newsletterFlex}>
                                         <div className={styles.newsletterTitle}>Become a Believer and keep in touch with our progress</div>
                                         <div className={styles.newsletterBox}>
-                                            <div className={styles.newsletterBoxFlex}>
-                                                <input className={styles.newsletterText} placeholder="Email address" value={email} onChange={updateEmail}></input>
-                                                <input type="submit" value="Subscribe" className={styles.newsletterSubmitBox} onClick={() => signup(email)}></input>        
-                                            </div>
-                                            <div className={styles.newsletterLineBorder}></div>
+                                            <a href="https://believenewyork.substack.com/" className={styles.linkColor}>Subscribe</a>
                                         </div>
                                 </div>
                     </div>

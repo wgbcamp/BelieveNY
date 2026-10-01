@@ -113,6 +113,13 @@
 
 .linkColor {
     color: #F5F5F5B3;
+    cursor: pointer;
+    transition-duration: 200ms;
+}
+
+.linkColor:hover {
+    color: white;
+    transition: all;
 }
 
 .socialMediaOuterFlex{
@@ -159,7 +166,7 @@
 }
 
 .newsletterTitle{
-    padding-bottom: 5px;
+    padding-bottom: 7px;
 }
 
 .newsletterBox{
